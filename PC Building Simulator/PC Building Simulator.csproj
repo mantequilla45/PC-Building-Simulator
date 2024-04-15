@@ -1,0 +1,712 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0653906F-683E-48D3-A7F9-208EA017A38D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PC_Building_Simulator</RootNamespace>
+    <AssemblyName>PC Building Simulator</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\..\..\..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adminpanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminpanel.Designer.cs">
+      <DependentUpon>adminpanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buildmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buildmenu.Designer.cs">
+      <DependentUpon>buildmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="productmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="productmenu.Designer.cs">
+      <DependentUpon>productmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="casespecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="casespecs.Designer.cs">
+      <DependentUpon>casespecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="coolermenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coolermenu.Designer.cs">
+      <DependentUpon>coolermenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cpuspecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cpuspecs.Designer.cs">
+      <DependentUpon>cpuspecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database Manager.cs" />
+    <Compile Include="Display Manager.cs" />
+    <Compile Include="gpumenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gpumenu.Designer.cs">
+      <DependentUpon>gpumenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gpuspecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gpuspecs.Designer.cs">
+      <DependentUpon>gpuspecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="keyboardmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="keyboardmenu.Designer.cs">
+      <DependentUpon>keyboardmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainApp.Designer.cs">
+      <DependentUpon>MainApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mbmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mbmenu.Designer.cs">
+      <DependentUpon>mbmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mbspecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mbspecs.Designer.cs">
+      <DependentUpon>mbspecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Memory Manager.cs" />
+    <Compile Include="monitormenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monitormenu.Designer.cs">
+      <DependentUpon>monitormenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mousemenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mousemenu.Designer.cs">
+      <DependentUpon>mousemenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="profilemenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="profilemenu.Designer.cs">
+      <DependentUpon>profilemenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="psumenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="psumenu.Designer.cs">
+      <DependentUpon>psumenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="psuspecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="psuspecs.Designer.cs">
+      <DependentUpon>psuspecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rammenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rammenu.Designer.cs">
+      <DependentUpon>rammenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ramspecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ramspecs.Designer.cs">
+      <DependentUpon>ramspecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignupForm.Designer.cs">
+      <DependentUpon>SignupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="speakersmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="speakersmenu.Designer.cs">
+      <DependentUpon>speakersmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storagemenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storagemenu.Designer.cs">
+      <DependentUpon>storagemenu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="adminpanel.resx">
+      <DependentUpon>adminpanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buildmenu.resx">
+      <DependentUpon>buildmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="productmenu.resx">
+      <DependentUpon>productmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="casespecs.resx">
+      <DependentUpon>casespecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coolermenu.resx">
+      <DependentUpon>coolermenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cpuspecs.resx">
+      <DependentUpon>cpuspecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gpumenu.resx">
+      <DependentUpon>gpumenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gpuspecs.resx">
+      <DependentUpon>gpuspecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="keyboardmenu.resx">
+      <DependentUpon>keyboardmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainApp.resx">
+      <DependentUpon>MainApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mbmenu.resx">
+      <DependentUpon>mbmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mbspecs.resx">
+      <DependentUpon>mbspecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monitormenu.resx">
+      <DependentUpon>monitormenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mousemenu.resx">
+      <DependentUpon>mousemenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="profilemenu.resx">
+      <DependentUpon>profilemenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="psumenu.resx">
+      <DependentUpon>psumenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="psuspecs.resx">
+      <DependentUpon>psuspecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rammenu.resx">
+      <DependentUpon>rammenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ramspecs.resx">
+      <DependentUpon>ramspecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignupForm.resx">
+      <DependentUpon>SignupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="speakersmenu.resx">
+      <DependentUpon>speakersmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storagemenu.resx">
+      <DependentUpon>storagemenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Intel-Core-i9-11900K.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PowerColor Radeon RX 580.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PowerColor Radeon RX 6800 XT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sapphire NITRO+  Radeon RX 6600 XT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sapphire PULSE Radeon RX 570 8G G5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XFX Radeon RX 5700 XT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XFX Radeon RX 6700 XT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XFX RX 5600 XT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ASRock AMD Radeon RX 6600 Challenger D 8GB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asus ROG Strix GeForce GTX 1060.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ASUS TUF Gaming RX 7800 XT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EVGA GeForce RTX 2080 Super.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gigabyte GeForce GTX 1070.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gigabyte GeForce GTX 1080 Ti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gigabyte GeForce GTX 1660 Ti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gigabyte GeForce RTX 2070 Super.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gigabyte GeForce RTX 3080 Ti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Intel Arc A770.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSI GeForce RTX 3070.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nvidia GeForce RTX 3060 Ti Founders Edition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nvidia GeForce RTX 4080 Founders Edition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-EVGA X570 Dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-Gigabyte B450M DS3H WIFI.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-Gigabyte B460M DS3H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-Gigabyte B550M Aorus Pro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-Gigabyte Z490 Aorus Elite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-MSI B460M Bazooka V2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-MSI B460M Mortar Micro ATX WiFi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-MSI B550M Mortar Micro ATX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-MSI B560M Mortar WiFi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-MSI MEG Z690 Godlike.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-MSI MPG X570 Gaming Plus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-MSI MPG Z490 Gaming Carbon WiFi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-ASRock B450M Steel Legend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-ASRock B460M Pro4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-ASRock B550 Phantom Gaming 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-ASRock Z690 Extreme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-ASUS Prime B460M-A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-ASUS ROG Strix B550-F Gaming WiFi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-ASUS ROG Strix X570-E Gaming.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb-ASUS ROG Strix X570-I Gaming WiFi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_Ballistix MAX RGB DDR5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_Ballistix RGB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_Dominator Platinum 32GB DDR5-5200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_Fury Beast RGB DDR5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_Fury Beast RGB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_FURY Renegade RGB DDR5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_Gammix D10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_Ripjaws S5 Series DDR5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_Ripjaws V Series.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_T-Force Dark Z Alpha DDR5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_T-Force Delta RGB DDR5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_T-Force Delta RGB.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_TridentZ RGB Series.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_TridentZ5 RGB Series.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_Vengeance RGB DDR5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_Vengeance RGB PRO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_Viper Steel Series DDR4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_XPG Lancer RGB DDR5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_Aegis F4 Series.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_T-Force Vulcan Z.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-AMD Ryzen 7 7700X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-AMD Ryzen 7 5800X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-AMD Ryzen 5 5600X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-AMD Ryzen 3 3300X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-AMD Ryzen 3 3200G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-Intel Core i9-14900K.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-Intel Core i9-12900K.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-Intel Core i9-10900K.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-Intel Core i7-12700K.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-Intel Core i7-11700K.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-Intel Core i5-12600K.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-Intel Core i5-12400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-Intel Core i5-11600K.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-Intel Core i3-10100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-Intel-Core-i9-11900K.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-AMD Ryzen 9 7900X3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-AMD Ryzen 9 7900X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-AMD Ryzen 9 5950X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-AMD Ryzen 9 5900X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-AMD Ryzen 7 7800X3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_Asus ROG Thor 1200W Platinum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_Asus TUF Gaming 750W Bronze.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_be quiet! Pure Power 10 CM 850W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_Cooler Master MasterWatt Maker 1200 Titanium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_Cooler Master MWE Bronze V650.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_Corsair AX1500i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_Corsair CX450M.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_Corsair RM1000x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_EVGA B550 Bronze.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_EVGA G+ 1000W Gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_EVGA SuperNOVA 1600 T2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_Gigabyte P850W Gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_MSI MPG A-GF AI 850W Gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_NZXT C850 Gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_Seasonic Prime PX-1000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_Seasonic PRIME TX-1600 Titanium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_Seasonic S12III Bronze 550W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_Super Flower Leadex III Gold 750W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_Thermaltake Smart 650W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psu_Thermaltake Toughpower Grand RGB 1200W Gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_ASUS ROG Strix Helios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_be quiet! Pure Base 500DX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_be quiet! Silent Base 802.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_Cooler Master MasterBox NR200P.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_Cooler Master MasterCase H500M.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_Corsair 4000D Airflow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_Corsair iCUE 500X RGB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_Fractal Design Define 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_Fractal Design Meshify C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_Lian Li Lancool 215.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_Lian Li O11 Dynamic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_MasterBox NR200P SE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_MSI MPG Sekira 500X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_MSI MPG Velox 100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_NZXT H510.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_NZXT H710i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_Phanteks Eclipse G360A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_Phanteks Eclipse P400A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_Thermaltake H500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_Thermaltake S100 TG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_Acer Predator XB323QK NV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_AOC Agon AG352UCG6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_AOC CQ32G1S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_Apple Pro Display XDR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_Asus ProArt Display PA32UCG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_Asus ROG Strix XG43UQ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_BenQ PD3220U.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_Dell UltraSharp U3223QE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_Gigabyte M32U.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_HP Z34C G4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_iiyama G-Master GB3466WQSU-B1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_Lenovo ThinkVision P34w-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_LG 27GP950-B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_LG UltraFine Ergo 32EP950-B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_MSI MEG 341CQR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_MSI Modern AM271CQP Monitor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_Philips Evnia 34M2C7600MV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_Samsung Odyssey G9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_Samsung Odyssey Neo G8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon_ViewSonic Elite XG270QG.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
