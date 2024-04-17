@@ -286,6 +286,8 @@
             this.speakersicon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.speakersicon1.TabIndex = 64;
             this.speakersicon1.TabStop = false;
+            this.speakersicon1.MouseLeave += new System.EventHandler(this.but_speakers_MouseLeave);
+            this.speakersicon1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_speakers_MouseMove);
             // 
             // bluebar13
             // 
@@ -342,6 +344,8 @@
             this.mouseicon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.mouseicon1.TabIndex = 60;
             this.mouseicon1.TabStop = false;
+            this.mouseicon1.MouseLeave += new System.EventHandler(this.but_mouse_MouseLeave);
+            this.mouseicon1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_mouse_MouseMove);
             // 
             // bluebar12
             // 
@@ -388,6 +392,7 @@
             this.keybicon2.TabIndex = 59;
             this.keybicon2.TabStop = false;
             this.keybicon2.Visible = false;
+            this.keybicon2.Click += new System.EventHandler(this.keybicon2_Click);
             // 
             // keybicon1
             // 
@@ -398,11 +403,13 @@
             this.keybicon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.keybicon1.TabIndex = 45;
             this.keybicon1.TabStop = false;
+            this.keybicon1.MouseLeave += new System.EventHandler(this.but_keyb_MouseLeave);
+            this.keybicon1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_keyb_MouseMove);
             // 
             // monitoricon2
             // 
             this.monitoricon2.Image = ((System.Drawing.Image)(resources.GetObject("monitoricon2.Image")));
-            this.monitoricon2.Location = new System.Drawing.Point(41, 519);
+            this.monitoricon2.Location = new System.Drawing.Point(40, 519);
             this.monitoricon2.Name = "monitoricon2";
             this.monitoricon2.Size = new System.Drawing.Size(34, 33);
             this.monitoricon2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -419,11 +426,12 @@
             this.pcicon2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcicon2.TabIndex = 49;
             this.pcicon2.TabStop = false;
+            this.pcicon2.Click += new System.EventHandler(this.but_build_Click);
             // 
             // coolericon2
             // 
             this.coolericon2.Image = ((System.Drawing.Image)(resources.GetObject("coolericon2.Image")));
-            this.coolericon2.Location = new System.Drawing.Point(41, 480);
+            this.coolericon2.Location = new System.Drawing.Point(40, 480);
             this.coolericon2.Name = "coolericon2";
             this.coolericon2.Size = new System.Drawing.Size(34, 33);
             this.coolericon2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -546,12 +554,14 @@
             // monitoricon1
             // 
             this.monitoricon1.Image = ((System.Drawing.Image)(resources.GetObject("monitoricon1.Image")));
-            this.monitoricon1.Location = new System.Drawing.Point(42, 519);
+            this.monitoricon1.Location = new System.Drawing.Point(41, 519);
             this.monitoricon1.Name = "monitoricon1";
             this.monitoricon1.Size = new System.Drawing.Size(34, 33);
             this.monitoricon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.monitoricon1.TabIndex = 41;
             this.monitoricon1.TabStop = false;
+            this.monitoricon1.MouseLeave += new System.EventHandler(this.but_monitor_MouseLeave);
+            this.monitoricon1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_monitor_MouseMove);
             // 
             // bluebar10
             // 
@@ -591,12 +601,14 @@
             // coolericon1
             // 
             this.coolericon1.Image = ((System.Drawing.Image)(resources.GetObject("coolericon1.Image")));
-            this.coolericon1.Location = new System.Drawing.Point(42, 480);
+            this.coolericon1.Location = new System.Drawing.Point(41, 480);
             this.coolericon1.Name = "coolericon1";
             this.coolericon1.Size = new System.Drawing.Size(34, 33);
             this.coolericon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.coolericon1.TabIndex = 37;
             this.coolericon1.TabStop = false;
+            this.coolericon1.MouseLeave += new System.EventHandler(this.but_cooler_MouseLeave);
+            this.coolericon1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_cooler_MouseMove);
             // 
             // bluebar9
             // 
@@ -642,6 +654,8 @@
             this.caseicon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.caseicon1.TabIndex = 33;
             this.caseicon1.TabStop = false;
+            this.caseicon1.MouseLeave += new System.EventHandler(this.but_case_MouseLeave);
+            this.caseicon1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_case_MouseMove);
             // 
             // bluebar8
             // 
@@ -687,6 +701,8 @@
             this.psuicon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.psuicon1.TabIndex = 29;
             this.psuicon1.TabStop = false;
+            this.psuicon1.MouseLeave += new System.EventHandler(this.but_psu_MouseLeave);
+            this.psuicon1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_psu_MouseMove);
             // 
             // bluebar7
             // 
@@ -707,6 +723,8 @@
             this.storageicon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.storageicon1.TabIndex = 25;
             this.storageicon1.TabStop = false;
+            this.storageicon1.MouseLeave += new System.EventHandler(this.but_storage_MouseLeave);
+            this.storageicon1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_storage_MouseMove);
             // 
             // bluebar6
             // 
@@ -751,6 +769,8 @@
             this.ramicon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ramicon1.TabIndex = 21;
             this.ramicon1.TabStop = false;
+            this.ramicon1.MouseLeave += new System.EventHandler(this.but_ram_MouseLeave);
+            this.ramicon1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_ram_MouseMove);
             // 
             // bluebar5
             // 
@@ -795,6 +815,8 @@
             this.mbicon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.mbicon1.TabIndex = 17;
             this.mbicon1.TabStop = false;
+            this.mbicon1.MouseLeave += new System.EventHandler(this.but_mb_MouseLeave);
+            this.mbicon1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_mb_MouseMove);
             // 
             // bluebar4
             // 
@@ -839,6 +861,8 @@
             this.gpuicon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gpuicon1.TabIndex = 13;
             this.gpuicon1.TabStop = false;
+            this.gpuicon1.MouseLeave += new System.EventHandler(this.but_gpu_MouseLeave);
+            this.gpuicon1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_gpu_MouseMove);
             // 
             // bluebar3
             // 
@@ -882,6 +906,8 @@
             this.cpuicon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cpuicon1.TabIndex = 9;
             this.cpuicon1.TabStop = false;
+            this.cpuicon1.MouseLeave += new System.EventHandler(this.but_cpu_MouseLeave);
+            this.cpuicon1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_cpu_MouseMove);
             // 
             // bluebar2
             // 
@@ -911,6 +937,8 @@
             this.pcicon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcicon1.TabIndex = 2;
             this.pcicon1.TabStop = false;
+            this.pcicon1.MouseLeave += new System.EventHandler(this.but_build_MouseLeave);
+            this.pcicon1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_build_MouseMove);
             // 
             // panel2
             // 
@@ -963,7 +991,7 @@
             this.userlabel.TabIndex = 1;
             this.userlabel.Text = "User";
             this.userlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.userlabel.Click += new System.EventHandler(this.userlabel_Click);
+            this.userlabel.Click += new System.EventHandler(this.lab_profile_Click);
             // 
             // profilepic
             // 
@@ -1075,7 +1103,6 @@
             this.backicon.Visible = false;
             this.backicon.Click += new System.EventHandler(this.backicon_Click);
             this.backicon.MouseLeave += new System.EventHandler(this.backicon_MouseLeave);
-            this.backicon.MouseMove += new System.Windows.Forms.MouseEventHandler(this.backicon_MouseMove);
             // 
             // MainApp
             // 

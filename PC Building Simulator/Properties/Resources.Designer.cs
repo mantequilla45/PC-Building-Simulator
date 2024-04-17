@@ -553,9 +553,409 @@ namespace PC_Building_Simulator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hdd_HGST_Deskstar_NAS_4TB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_HGST_Deskstar_NAS_4TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdd_HGST_Ultrastar_12TB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_HGST_Ultrastar_12TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdd_Hitachi_Deskstar_500GB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_Hitachi_Deskstar_500GB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdd_Hitachi_Ultrastar_5TB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_Hitachi_Ultrastar_5TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdd_Samsung_Spinpoint_1TB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_Samsung_Spinpoint_1TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdd_Seagate_Barracuda_3TB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_Seagate_Barracuda_3TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdd_Seagate_BarraCuda_Pro_14TB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_Seagate_BarraCuda_Pro_14TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdd_Seagate_Constellation_3TB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_Seagate_Constellation_3TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdd_Seagate_FireCuda_8TB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_Seagate_FireCuda_8TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdd_Seagate_IronWolf_10TB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_Seagate_IronWolf_10TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdd_Seagate_SkyHawk_14TB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_Seagate_SkyHawk_14TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdd_Toshiba_DT01ACA_1TB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_Toshiba_DT01ACA_1TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdd_Toshiba_N300_14TB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_Toshiba_N300_14TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdd_Toshiba_P300_3TB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_Toshiba_P300_3TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdd_Toshiba_X300_6TB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_Toshiba_X300_6TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdd_WD_VelociRaptor_1TB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_WD_VelociRaptor_1TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdd_Western_Digital_Black_2_5TB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_Western_Digital_Black_2_5TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdd_Western_Digital_Blue_2TB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_Western_Digital_Blue_2TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdd_Western_Digital_Gold_18TB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_Western_Digital_Gold_18TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hdd_Western_Digital_Red_8TB {
+            get {
+                object obj = ResourceManager.GetObject("hdd_Western_Digital_Red_8TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Intel_Arc_A770 {
             get {
                 object obj = ResourceManager.GetObject("Intel_Arc_A770", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_Anne_Pro_2 {
+            get {
+                object obj = ResourceManager.GetObject("key_Anne_Pro_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_Apple_Magic_Keyboard {
+            get {
+                object obj = ResourceManager.GetObject("key_Apple_Magic_Keyboard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_Asus_ROG_Strix_Scope_TKL {
+            get {
+                object obj = ResourceManager.GetObject("key_Asus_ROG_Strix_Scope_TKL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_Cooler_Master_SK622 {
+            get {
+                object obj = ResourceManager.GetObject("key_Cooler_Master_SK622", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_CORSAIR_K100_RGB {
+            get {
+                object obj = ResourceManager.GetObject("key_CORSAIR_K100_RGB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_Ducky_One_3_Mini {
+            get {
+                object obj = ResourceManager.GetObject("key_Ducky_One_3_Mini", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_Epomaker_GK68XS {
+            get {
+                object obj = ResourceManager.GetObject("key_Epomaker_GK68XS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_Fnatic_STREAK65_LP {
+            get {
+                object obj = ResourceManager.GetObject("key_Fnatic_STREAK65_LP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_Glorious_GMMK_Pro {
+            get {
+                object obj = ResourceManager.GetObject("key_Glorious_GMMK_Pro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_HyperX_Alloy_Origins_Core {
+            get {
+                object obj = ResourceManager.GetObject("key_HyperX_Alloy_Origins_Core", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_Keychron_Q1 {
+            get {
+                object obj = ResourceManager.GetObject("key_Keychron_Q1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_Leopold_FC980M_PD {
+            get {
+                object obj = ResourceManager.GetObject("key_Leopold_FC980M_PD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_Logitech_G915_TKL {
+            get {
+                object obj = ResourceManager.GetObject("key_Logitech_G915_TKL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_Logitech_MX_Mechanical_Mini {
+            get {
+                object obj = ResourceManager.GetObject("key_Logitech_MX_Mechanical_Mini", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_MSI_Vigor_GK71 {
+            get {
+                object obj = ResourceManager.GetObject("key_MSI_Vigor_GK71", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_Niz_Plum_82 {
+            get {
+                object obj = ResourceManager.GetObject("key_Niz_Plum_82", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_NuPhy_Air75 {
+            get {
+                object obj = ResourceManager.GetObject("key_NuPhy_Air75", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_Razer_Blackwidow_V3_Pro {
+            get {
+                object obj = ResourceManager.GetObject("key_Razer_Blackwidow_V3_Pro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_Redragon_K552 {
+            get {
+                object obj = ResourceManager.GetObject("key_Redragon_K552", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_SteelSeries_Apex_Pro_TKL {
+            get {
+                object obj = ResourceManager.GetObject("key_SteelSeries_Apex_Pro_TKL", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -963,6 +1363,206 @@ namespace PC_Building_Simulator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mou_Apple_Magic_Mouse_2 {
+            get {
+                object obj = ResourceManager.GetObject("mou_Apple_Magic_Mouse_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mou_Corsair_Dark_Core_Pro_RGB_SE {
+            get {
+                object obj = ResourceManager.GetObject("mou_Corsair_Dark_Core_Pro_RGB_SE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mou_Ducky_Feather {
+            get {
+                object obj = ResourceManager.GetObject("mou_Ducky_Feather", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mou_Fnatic_Flick_2 {
+            get {
+                object obj = ResourceManager.GetObject("mou_Fnatic_Flick_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mou_Glorious_Model_D_Wireless {
+            get {
+                object obj = ResourceManager.GetObject("mou_Glorious_Model_D_Wireless", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mou_Glorious_Model_O {
+            get {
+                object obj = ResourceManager.GetObject("mou_Glorious_Model_O", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mou_HyperX_Pulsefire_Haste {
+            get {
+                object obj = ResourceManager.GetObject("mou_HyperX_Pulsefire_Haste", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mou_Logitech_G_Pro_Wireless {
+            get {
+                object obj = ResourceManager.GetObject("mou_Logitech_G_Pro_Wireless", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mou_Logitech_G305_Lightspeed {
+            get {
+                object obj = ResourceManager.GetObject("mou_Logitech_G305_Lightspeed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mou_Logitech_G502_Hero {
+            get {
+                object obj = ResourceManager.GetObject("mou_Logitech_G502_Hero", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mou_Logitech_M220_Silent {
+            get {
+                object obj = ResourceManager.GetObject("mou_Logitech_M220_Silent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mou_Logitech_MX_Anywhere_3 {
+            get {
+                object obj = ResourceManager.GetObject("mou_Logitech_MX_Anywhere_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mou_Logitech_MX_Master_3 {
+            get {
+                object obj = ResourceManager.GetObject("mou_Logitech_MX_Master_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mou_Logitech_MX_Vertical_Ergonomic_Mouse {
+            get {
+                object obj = ResourceManager.GetObject("mou_Logitech_MX_Vertical_Ergonomic_Mouse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mou_Razer_Basilisk_V3 {
+            get {
+                object obj = ResourceManager.GetObject("mou_Razer_Basilisk_V3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mou_Razer_DeathAdder_V2_Mini {
+            get {
+                object obj = ResourceManager.GetObject("mou_Razer_DeathAdder_V2_Mini", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mou_Razer_Naga_Trinity {
+            get {
+                object obj = ResourceManager.GetObject("mou_Razer_Naga_Trinity", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mou_SteelSeries_Rival_650_Wireless {
+            get {
+                object obj = ResourceManager.GetObject("mou_SteelSeries_Rival_650_Wireless", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mou_SteelSeries_Rival_710 {
+            get {
+                object obj = ResourceManager.GetObject("mou_SteelSeries_Rival_710", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mou_Zowie_S2_C_Divina_Series {
+            get {
+                object obj = ResourceManager.GetObject("mou_Zowie_S2_C_Divina_Series", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MSI_GeForce_RTX_3070 {
             get {
                 object obj = ResourceManager.GetObject("MSI_GeForce_RTX_3070", resourceCulture);
@@ -1105,7 +1705,7 @@ namespace PC_Building_Simulator.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap psu_EVGA_G__1000W_Gold {
             get {
-                object obj = ResourceManager.GetObject("psu_EVGA_G__1000W_Gold", resourceCulture);
+                object obj = ResourceManager.GetObject("psu_EVGA_G+_1000W_Gold", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1426,6 +2026,206 @@ namespace PC_Building_Simulator.Properties {
         internal static System.Drawing.Bitmap Sapphire_PULSE_Radeon_RX_570_8G_G5 {
             get {
                 object obj = ResourceManager.GetObject("Sapphire_PULSE_Radeon_RX_570_8G_G5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_Audioengine_A2__Wireless {
+            get {
+                object obj = ResourceManager.GetObject("spe_Audioengine_A2__Wireless", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_Audioengine_A5__Wireless {
+            get {
+                object obj = ResourceManager.GetObject("spe_Audioengine_A5__Wireless", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_Audioengine_HD3 {
+            get {
+                object obj = ResourceManager.GetObject("spe_Audioengine_HD3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_Bose_Companion_20 {
+            get {
+                object obj = ResourceManager.GetObject("spe_Bose_Companion_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_Creative_Pebble_Plus_2_0 {
+            get {
+                object obj = ResourceManager.GetObject("spe_Creative_Pebble_Plus_2_0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_Edifier_R1280T {
+            get {
+                object obj = ResourceManager.GetObject("spe_Edifier_R1280T", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_Edifier_S350DB {
+            get {
+                object obj = ResourceManager.GetObject("spe_Edifier_S350DB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_IK_Multimedia_iLoud_Micro_Monitor {
+            get {
+                object obj = ResourceManager.GetObject("spe_IK_Multimedia_iLoud_Micro_Monitor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_JBL_Studio_530 {
+            get {
+                object obj = ResourceManager.GetObject("spe_JBL_Studio_530", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_Kali_Audio_LP_6 {
+            get {
+                object obj = ResourceManager.GetObject("spe_Kali_Audio_LP_6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_Kanto_YU4 {
+            get {
+                object obj = ResourceManager.GetObject("spe_Kanto_YU4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_Klipsch_R_41M {
+            get {
+                object obj = ResourceManager.GetObject("spe_Klipsch_R_41M", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_Logitech_G560_LIGHTSYNC {
+            get {
+                object obj = ResourceManager.GetObject("spe_Logitech_G560_LIGHTSYNC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_Mackie_CR3_XBT {
+            get {
+                object obj = ResourceManager.GetObject("spe_Mackie_CR3_XBT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_Micca_RB42 {
+            get {
+                object obj = ResourceManager.GetObject("spe_Micca_RB42", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_Monoprice_DT_3BT {
+            get {
+                object obj = ResourceManager.GetObject("spe_Monoprice_DT_3BT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_Neumi_BS5 {
+            get {
+                object obj = ResourceManager.GetObject("spe_Neumi_BS5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_PreSonus_Eris_E3_5 {
+            get {
+                object obj = ResourceManager.GetObject("spe_PreSonus_Eris_E3_5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_Razer_Nommo_Chroma {
+            get {
+                object obj = ResourceManager.GetObject("spe_Razer_Nommo_Chroma", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spe_Swan_M10_Plus {
+            get {
+                object obj = ResourceManager.GetObject("spe_Swan_M10_Plus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

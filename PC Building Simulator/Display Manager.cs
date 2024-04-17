@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace PC_Building_Simulator
 {
@@ -12,34 +13,20 @@ namespace PC_Building_Simulator
     {
         public MainApp mainApp;
         private buildmenu buildMenuForm;
-        private gpumenu gpuMenuForm;
-        private mbmenu mbMenuForm;
-        private rammenu ramMenuForm;
-        private psumenu psuMenuForm;
         private productmenu productMenuForm;
+        private productspecs productSpecsForm;
         public DisplayManager(buildmenu buildMenuForm)
         {
             this.buildMenuForm = buildMenuForm;
         }
-        public DisplayManager(gpumenu gpuMenuForm)
-        {
-            this.gpuMenuForm = gpuMenuForm;
-        }
-        public DisplayManager(mbmenu mbMenuForm)
-        {
-            this.mbMenuForm = mbMenuForm;
-        }
-        public DisplayManager(rammenu ramMenuForm)
-        {
-            this.ramMenuForm = ramMenuForm;
-        }
-        public DisplayManager(psumenu psuMenuForm)
-        {
-            this.psuMenuForm = psuMenuForm;
-        }
+        
         public DisplayManager(productmenu productMenuForm)
         {
             this.productMenuForm = productMenuForm;
+        }
+        public DisplayManager(productspecs productSpecsForm)
+        {
+            this.productSpecsForm = productSpecsForm;
         }
         public DisplayManager(MainApp mainApp)
         {
@@ -256,7 +243,7 @@ namespace PC_Building_Simulator
             ButtonAppearance.Reset.Keyboard(mainApp);
             ButtonAppearance.Reset.Mouse(mainApp);
             ButtonAppearance.Reset.Speakers(mainApp);
-        }   
+        }
         private void DisposeAllMenuForms()
         {
             if (buildMenuForm != null)
@@ -264,35 +251,21 @@ namespace PC_Building_Simulator
                 buildMenuForm.Dispose();
                 buildMenuForm = null;
             }
-            if (gpuMenuForm != null)
-            {
-                gpuMenuForm.Dispose();
-                gpuMenuForm = null;
-            }
-            if (mbMenuForm != null)
-            {
-                mbMenuForm.Dispose();
-                mbMenuForm = null;
-            }
-            if (ramMenuForm != null)
-            {
-                ramMenuForm.Dispose();
-                ramMenuForm = null;
-            }
-            if (psuMenuForm != null)
-            {
-                psuMenuForm.Dispose();
-                psuMenuForm = null;
-            }
             if (productMenuForm != null)
             {
                 productMenuForm.Dispose();
                 productMenuForm = null;
             }
-        }
 
+            if (productSpecsForm != null)
+            {
+                productSpecsForm.Dispose();
+                productSpecsForm = null;
+            }
+        }
         public void menuselect(int menuchoice)
         {
+            MemoryManager memoryManager;
             productmenu productpanel;
             switch (menuchoice)
             {
@@ -313,8 +286,8 @@ namespace PC_Building_Simulator
                     productpanel = new productmenu(mainApp, 1) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
                     productpanel.FormBorderStyle = FormBorderStyle.None;
                     mainApp.panelmain.Controls.Add(productpanel);
-                    productpanel.Show();
                     DisposeAllMenuForms();
+                    productpanel.Show();
                     productMenuForm = productpanel;
                     break;
 
@@ -354,7 +327,7 @@ namespace PC_Building_Simulator
                 case 6:
                     mainApp.label_menu.Text = "Drives";
                     mainApp.panelmain.Controls.Clear();
-                    storagemenu storagepanel = new storagemenu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    storagemenu storagepanel = new storagemenu(mainApp) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
                     storagepanel.FormBorderStyle = FormBorderStyle.None;
                     mainApp.panelmain.Controls.Add(storagepanel);
                     DisposeAllMenuForms();
@@ -382,6 +355,7 @@ namespace PC_Building_Simulator
                     DisposeAllMenuForms();
                     productMenuForm = productpanel;
                     break;
+
                 case 9:
                     mainApp.label_menu.Text = "Cooling System";
                     mainApp.panelmain.Controls.Clear();
@@ -391,42 +365,59 @@ namespace PC_Building_Simulator
                     DisposeAllMenuForms();
                     coolerpanel.Show();
                     break;
+
                 case 10:
                     mainApp.label_menu.Text = "Monitor";
                     mainApp.panelmain.Controls.Clear();
-                    productmenu monitorpanel = new productmenu(mainApp, 9) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-                    monitorpanel.FormBorderStyle = FormBorderStyle.None;
-                    mainApp.panelmain.Controls.Add(monitorpanel);
+                    productpanel = new productmenu(mainApp, 9) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    productpanel.FormBorderStyle = FormBorderStyle.None;
+                    mainApp.panelmain.Controls.Add(productpanel);
                     DisposeAllMenuForms();
-                    monitorpanel.Show();
+                    productpanel.Show();
                     break;
 
                 case 11:
                     mainApp.label_menu.Text = "Keyboard";
                     mainApp.panelmain.Controls.Clear();
-                    keyboardmenu keybpanel = new keyboardmenu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-                    keybpanel.FormBorderStyle = FormBorderStyle.None;
-                    mainApp.panelmain.Controls.Add(keybpanel);
+                    productpanel = new productmenu(mainApp, 10) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    productpanel.FormBorderStyle = FormBorderStyle.None;
+                    mainApp.panelmain.Controls.Add(productpanel);
+                    productpanel.Show();
                     DisposeAllMenuForms();
-                    keybpanel.Show();
+                    productMenuForm = productpanel;
                     break;
+
                 case 12:
                     mainApp.label_menu.Text = "Mouse";
                     mainApp.panelmain.Controls.Clear();
-                    mousemenu mousepanel = new mousemenu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-                    mousepanel.FormBorderStyle = FormBorderStyle.None;
-                    mainApp.panelmain.Controls.Add(mousepanel);
+                    productpanel = new productmenu(mainApp, 11) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    productpanel.FormBorderStyle = FormBorderStyle.None;
+                    mainApp.panelmain.Controls.Add(productpanel);
+                    productpanel.Show();
                     DisposeAllMenuForms();
-                    mousepanel.Show();
+                    productMenuForm = productpanel;
                     break;
+
                 case 13:
                     mainApp.label_menu.Text = "Speakers";
                     mainApp.panelmain.Controls.Clear();
-                    speakersmenu speakpanel = new speakersmenu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-                    speakpanel.FormBorderStyle = FormBorderStyle.None;
-                    mainApp.panelmain.Controls.Add(speakpanel);
+                    productpanel = new productmenu(mainApp, 12) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    productpanel.FormBorderStyle = FormBorderStyle.None;
+                    mainApp.panelmain.Controls.Add(productpanel);
+                    productpanel.Show();
                     DisposeAllMenuForms();
-                    speakpanel.Show();
+                    productMenuForm = productpanel;
+                    break;
+
+                case 14:
+                    mainApp.label_menu.Text = "HDD";
+                    mainApp.panelmain.Controls.Clear();
+                    productpanel = new productmenu(mainApp, 13) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    productpanel.FormBorderStyle = FormBorderStyle.None;
+                    mainApp.panelmain.Controls.Add(productpanel);
+                    productpanel.Show();
+                    DisposeAllMenuForms();
+                    productMenuForm = productpanel;
                     break;
 
                 default:
@@ -445,19 +436,22 @@ namespace PC_Building_Simulator
 
             if (num >= 1 && num <= cpuNames.Length)
             {
+
                 string cpuName = cpuNames[num - 1];
                 mainApp.label_menu.Text = $"{cpuName} Specifications";
 
                 mainApp.panelmain.Controls.Clear();
-                cpuspecs cpuspecs = new cpuspecs(cpuName)
+
+                productspecs productspecs = new productspecs(cpuName, 1, mainApp)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
                     TopMost = true,
                     FormBorderStyle = FormBorderStyle.None
                 };
-                mainApp.panelmain.Controls.Add(cpuspecs);
-                cpuspecs.Show();
+                mainApp.panelmain.Controls.Add(productspecs);
+                DisposeAllMenuForms();
+                productspecs.Show();
             }
         }
         public void gpumenu(int num)
@@ -476,17 +470,17 @@ namespace PC_Building_Simulator
             {
                 string gpuName = gpuNames[num - 1];
                 mainApp.label_menu.Text = $"{gpuName} Specifications";
-
                 mainApp.panelmain.Controls.Clear();
-                gpuspecs gpuspecs = new gpuspecs(gpuName)
+                productspecs productspecs = new productspecs(gpuName, 2, mainApp)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
                     TopMost = true,
                     FormBorderStyle = FormBorderStyle.None
                 };
-                mainApp.panelmain.Controls.Add(gpuspecs);
-                gpuspecs.Show();
+                mainApp.panelmain.Controls.Add(productspecs);
+                DisposeAllMenuForms();
+                productspecs.Show();
             }
         }
         public void mbmenu(int num)
@@ -507,15 +501,16 @@ namespace PC_Building_Simulator
                 mainApp.label_menu.Text = $"{mbName} Specifications";
 
                 mainApp.panelmain.Controls.Clear();
-                mbspecs mbspecs = new mbspecs(mbName)
+                productspecs productspecs = new productspecs(mbName, 3, mainApp)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
                     TopMost = true,
                     FormBorderStyle = FormBorderStyle.None
                 };
-                mainApp.panelmain.Controls.Add(mbspecs);
-                mbspecs.Show();
+                mainApp.panelmain.Controls.Add(productspecs);
+                DisposeAllMenuForms();
+                productspecs.Show();
             }
         }
 
@@ -536,15 +531,16 @@ namespace PC_Building_Simulator
                 mainApp.label_menu.Text = $"{ramName} Specifications";
 
                 mainApp.panelmain.Controls.Clear();
-                ramspecs ramspecs = new ramspecs(ramName)
+                productspecs productspecs = new productspecs(ramName, 4, mainApp)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
                     TopMost = true,
                     FormBorderStyle = FormBorderStyle.None
                 };
-                mainApp.panelmain.Controls.Add(ramspecs);
-                ramspecs.Show();
+                mainApp.panelmain.Controls.Add(productspecs);
+                DisposeAllMenuForms();
+                productspecs.Show();
             }
         }
         public void psumenu(int num)
@@ -562,18 +558,19 @@ namespace PC_Building_Simulator
             {
                 string psuName = psuNames[num - 1];
                 mainApp.label_menu.Text = $"{psuName} Specifications";
-
                 mainApp.panelmain.Controls.Clear();
-                psuspecs psuspecs = new psuspecs(psuName)
+
+                productspecs productspecs = new productspecs(psuName, 6, mainApp)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
                     TopMost = true,
                     FormBorderStyle = FormBorderStyle.None
                 };
-                mainApp.panelmain.Controls.Add(psuspecs);
-                psuspecs.Show();
-            }
+                mainApp.panelmain.Controls.Add(productspecs);
+                DisposeAllMenuForms();
+                productspecs.Show();
+            }   
         }
         public void casemenu(int num)
         {
@@ -592,15 +589,15 @@ namespace PC_Building_Simulator
                 mainApp.label_menu.Text = $"{caseName} Specifications";
 
                 mainApp.panelmain.Controls.Clear();
-                casespecs casespecs = new casespecs(caseName)
+                productspecs productspecs = new productspecs(caseName, 7, mainApp)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
                     TopMost = true,
                     FormBorderStyle = FormBorderStyle.None
                 };
-                mainApp.panelmain.Controls.Add(casespecs);
-                casespecs.Show();
+                mainApp.panelmain.Controls.Add(productspecs);
+                productspecs.Show();
             }
         }
         public void monitormenu(int num)
@@ -616,23 +613,132 @@ namespace PC_Building_Simulator
 
 
             if (num >= 1 && num <= monitorNames.Length)
-            { 
-                /*
+            {
                 string monitorName = monitorNames[num - 1];
                 mainApp.label_menu.Text = $"{monitorName} Specifications";
 
                 mainApp.panelmain.Controls.Clear();
-                monitorspecs monitorspecs = new monitorspecs(monitorName)
+                productspecs productspecs = new productspecs(monitorName, 9, mainApp)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
                     TopMost = true,
                     FormBorderStyle = FormBorderStyle.None
                 };
-                mainApp.panelmain.Controls.Add(monitorspecs);
-                monitorspecs.Show();
-                */
+                mainApp.panelmain.Controls.Add(productspecs);
+                productspecs.Show();
             }
         }
+        public void keyboardmenu(int num)
+        {
+            string[] keyboardNames = {
+                "Razer Blackwidow V3 Pro", "Logitech MX Mechanical Mini", "Apple Magic Keyboard", "CORSAIR K100 RGB",
+                "SteelSeries Apex Pro TKL", "Glorious GMMK Pro", "HyperX Alloy Origins Core", "Fnatic STREAK65 LP",
+                "Ducky One 3 Mini", "Leopold FC980M PD", "Niz Plum 82", "Keychron Q1", "Epomaker GK68XS",
+                "Anne Pro 2", "Redragon K552", "Logitech G915 TKL", "MSI Vigor GK71", "Asus ROG Strix Scope TKL",
+                "Cooler Master SK622", "NuPhy Air75"
+            };
+
+            if (num >= 1 && num <= keyboardNames.Length)
+            {
+                string keybName = keyboardNames[num - 1];
+                mainApp.label_menu.Text = $"{keybName} Specifications";
+
+                mainApp.panelmain.Controls.Clear();
+                productspecs productspecs = new productspecs(keybName, 10, mainApp)
+                {
+                    Dock = DockStyle.Fill,
+                    TopLevel = false,
+                    TopMost = true,
+                    FormBorderStyle = FormBorderStyle.None
+                };
+                mainApp.panelmain.Controls.Add(productspecs);
+                productspecs.Show();
+            }
+        }
+        public void mousemenu(int num)
+        {
+            string[] mouseNames = {
+                "Logitech MX Master 3", "Razer DeathAdder V2 Mini", "Apple Magic Mouse 2", "Glorious Model O",
+                "SteelSeries Rival 650 Wireless", "HyperX Pulsefire Haste", "Fnatic Flick 2", "Ducky Feather",
+                "Logitech G502 Hero", "Corsair Dark Core Pro RGB SE", "Logitech M220 Silent", "Logitech G305 Lightspeed",
+                "Razer Basilisk V3", "Logitech MX Anywhere 3", "SteelSeries Rival 710", "Razer Naga Trinity",
+                "Glorious Model D Wireless", "Logitech G Pro Wireless", "Zowie S2-C Divina Series",
+                "Logitech MX Vertical Ergonomic Mouse"
+            };
+
+            if (num >= 1 && num <= mouseNames.Length)
+            {
+                string mouseName = mouseNames[num - 1];
+                mainApp.label_menu.Text = $"{mouseName} Specifications";
+
+                mainApp.panelmain.Controls.Clear();
+                productspecs productspecs = new productspecs(mouseName, 11, mainApp)
+                {
+                    Dock = DockStyle.Fill,
+                    TopLevel = false,
+                    TopMost = true,
+                    FormBorderStyle = FormBorderStyle.None
+                };
+                mainApp.panelmain.Controls.Add(productspecs);
+                productspecs.Show();
+            }
+        }
+
+        public void speakersmenu(int num)
+        {
+            string[] speakerNames = {
+                "Bose Companion 20", "Logitech G560 LIGHTSYNC", "Razer Nommo Chroma", "Creative Pebble Plus 2.0",
+                "Edifier R1280T", "Audioengine A2+ Wireless", "Mackie CR3-XBT", "Kanto YU4", "Swan M10 Plus",
+                "IK Multimedia iLoud Micro Monitor", "Micca RB42", "Edifier S350DB", "Audioengine A5+ Wireless",
+                "PreSonus Eris E3.5", "JBL Studio 530", "Kali Audio LP-6", "Neumi BS5", "Monoprice DT-3BT",
+                "Klipsch R-41M", "Audioengine HD3"
+            };
+
+            if (num >= 1 && num <= speakerNames.Length)
+            {
+                string speakerName = speakerNames[num - 1];
+                mainApp.label_menu.Text = $"{speakerName} Specifications";
+
+                mainApp.panelmain.Controls.Clear();
+                productspecs productSpecs = new productspecs(speakerName, 12, mainApp)
+                {
+                    Dock = DockStyle.Fill,
+                    TopLevel = false,
+                    TopMost = true,
+                    FormBorderStyle = FormBorderStyle.None
+                };
+                mainApp.panelmain.Controls.Add(productSpecs);
+                productSpecs.Show();
+            }
+        }
+        public void hddmenu(int num)
+        {
+            string[] hddNames = {
+                "HGST Deskstar NAS 4TB", "HGST Ultrastar 12TB", "Hitachi Deskstar 500GB", "Hitachi Ultrastar 5TB",
+                "Samsung Spinpoint 1TB", "Seagate Barracuda 3TB", "Seagate BarraCuda Pro 16TB", "Seagate Constellation 3TB",
+                "Seagate FireCuda 8TB", "Seagate IronWolf 10TB", "Seagate SkyHawk 14TB", "Toshiba DT01ACA 1TB",
+                "Toshiba N300 14TB", "Toshiba P300 3TB", "Toshiba X300 6TB", "WD VelociRaptor 1TB",
+                "Western Digital Black 2.5TB", "Western Digital Blue 2TB", "Western Digital Gold 18TB", "Western Digital Red 8TB"
+            };
+
+            if (num >= 1 && num <= hddNames.Length)
+            {
+                string hddName = hddNames[num - 1];
+                mainApp.label_menu.Text = $"{hddName} Specifications";
+
+                mainApp.panelmain.Controls.Clear();
+                productspecs productSpecs = new productspecs(hddName, 13, mainApp)
+                {
+                    Dock = DockStyle.Fill,
+                    TopLevel = false,
+                    TopMost = true,
+                    FormBorderStyle = FormBorderStyle.None
+                };
+                mainApp.panelmain.Controls.Add(productSpecs);
+                productSpecs.Show();
+            }
+        }
+
     }
 }

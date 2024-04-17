@@ -28,6 +28,10 @@ namespace PC_Building_Simulator
             string psu = "";
             string user = "";
             string ccase = "";
+            string moni = "";
+            string keyb = "";
+            string mouse = "";
+            string spk = "";
             string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
 
             // Get the current user
@@ -44,7 +48,7 @@ namespace PC_Building_Simulator
                     }
                 }
             }
-            string query = "SELECT CPU, GPU, Motherboard, RAM, PSU, [Computer Case] FROM Builds WHERE [user] = @Username";
+            string query = "SELECT CPU, GPU, Motherboard, RAM, PSU, [Computer Case], Monitor, Keyboard, Mouse, Speakers FROM Builds WHERE [user] = @Username";
             using (OleDbConnection connection = new OleDbConnection(connectionString))
             {
                 using (OleDbCommand command = new OleDbCommand(query, connection))
@@ -61,6 +65,10 @@ namespace PC_Building_Simulator
                             ram = reader["RAM"].ToString();
                             psu = reader["PSU"].ToString();
                             ccase = reader["Computer Case"].ToString();
+                            moni = reader["Monitor"].ToString();
+                            keyb = reader["Keyboard"].ToString();
+                            mouse = reader["Mouse"].ToString();
+                            spk = reader["Speakers"].ToString();
                         }
                     }
                 }
@@ -71,12 +79,14 @@ namespace PC_Building_Simulator
             label4.Text = ram;
             label5.Text = psu;
             label6.Text = ccase;
-
+            label7.Text = moni;
+            label8.Text = keyb;
+            label9.Text = mouse;
+            label10.Text = spk;
             InitializeDisplayManager();
             
-            string cpuimage = cpu.Replace(' ', '_');
-            string cpuimage1 = cpuimage.Replace('-', '_');
-            string resourcecpu = $"cpu_{cpuimage1}";
+            string cpuimage = cpu.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
+            string resourcecpu = $"cpu_{cpuimage}";
             pBox1.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcecpu);
             if(cpu != "")
             {
@@ -84,9 +94,8 @@ namespace PC_Building_Simulator
                 border1.Visible = true;
             }
 
-            string gpuimage = gpu.Replace(' ', '_');
-            string gpuimage1 = gpuimage.Replace('-', '_');
-            string resourcegpu = $"{gpuimage1}";
+            string gpuimage = gpu.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
+            string resourcegpu = $"{gpuimage}";
             pBox2.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcegpu);
             if (gpu != "")
             {
@@ -94,9 +103,8 @@ namespace PC_Building_Simulator
                 border2.Visible = true;
             }
 
-            string mbimage = mb.Replace(' ', '_');
-            string mbimage1 = mbimage.Replace('-', '_');
-            string resourcemb = $"mb_{mbimage1}";
+            string mbimage = mb.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
+            string resourcemb = $"mb_{mbimage}";
             pBox3.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcemb);
             if (mb != "")
             {
@@ -104,9 +112,8 @@ namespace PC_Building_Simulator
                 border3.Visible = true;
             }
 
-            string ramimage = ram.Replace(' ', '_');
-            string ramimage1 = ramimage.Replace('-', '_');
-            string resourceram = $"ram_{ramimage1}";
+            string ramimage = ram.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
+            string resourceram = $"ram_{ramimage}";
             pBox4.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourceram);
             if (ram != "")
             {
@@ -114,20 +121,16 @@ namespace PC_Building_Simulator
                 border4.Visible = true;
             }
 
-            string psuimage = psu.Replace(' ', '_');
-            string psuimage1 = psuimage.Replace('-', '_');
-            string resourcepsu = $"psu_{psuimage1}";
+            string psuimage = psu.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
+            string resourcepsu = $"psu_{psuimage}";
             pBox6.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcepsu);
             if (psu != "")
             {
                 pBox6.Visible = true;
                 border6.Visible = true;
             }
-
-
-            string caseimage = ccase.Replace(' ', '_');
-            string caseimage1 = caseimage.Replace('-', '_');
-            string resourcecase = $"case_{caseimage1}";
+            string caseimage = ccase.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
+            string resourcecase = $"case_{caseimage}";
             pBox7.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcecase);
             if (ccase != "")
             {
@@ -135,8 +138,43 @@ namespace PC_Building_Simulator
                 border7.Visible = true;
             }
 
+            string monitorimage = moni.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
+            string resourcemoni = $"mon_{monitorimage}";
+            pBox8.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcemoni);
+            if (moni != "")
+            {
+                pBox8.Visible = true;
+                border8.Visible = true;
+            }
 
-            
+            string keybimage = keyb.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
+            string resourcekeyb = $"key_{keybimage}";
+            pBox9.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcekeyb);
+            if (keyb != "")
+            {
+                pBox9.Visible = true;
+                border9.Visible = true;
+            }
+            string mouseimage = mouse.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
+            string resourcemou = $"mou_{mouseimage}";
+            pBox10.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcemou);
+            if (keyb != "")
+            {
+                pBox10.Visible = true;
+                border10.Visible = true;
+            }
+
+
+            string spkimage = spk.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('+', '_').Replace('.', '_');
+            string resourcespk = $"spe_{spkimage}";
+            pBox11.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcespk);
+            if (spk != "")
+            {
+                pBox11.Visible = true;
+                border11.Visible = true;
+            }
+
+
 
         }
         private void InitializeDisplayManager()
@@ -144,60 +182,21 @@ namespace PC_Building_Simulator
             buildmenu buildMenuForm = this; 
             DisplayManager displayManager = new DisplayManager(buildMenuForm);
         }
-
-        private void label1_MouseMove(object sender, MouseEventArgs e)
-        {
-            Label label = sender as Label;
-            label.ForeColor = Color.FromArgb(44, 135, 195);
-            label.Font = new Font(label.Font, FontStyle.Underline);
-        }
-
-        private void label1_MouseLeave(object sender, EventArgs e)
-        {
-            Label label = sender as Label;
-            label.ForeColor = SystemColors.ControlText;
-            label.Font = new Font(label.Font, FontStyle.Regular);
-        }
-        private void label2_MouseMove(object sender, MouseEventArgs e)
-        {
-            Label label = sender as Label;
-            label.ForeColor = Color.FromArgb(44, 135, 195);
-            label.Font = new Font(label.Font, FontStyle.Underline);
-        }
-
-        private void label2_MouseLeave(object sender, EventArgs e)
-        {
-            Label label = sender as Label;
-            label.ForeColor = SystemColors.ControlText;
-            label.Font = new Font(label.Font, FontStyle.Regular);
-        }
-        private void label3_MouseMove(object sender, MouseEventArgs e)
-        {
-            Label label = sender as Label;
-            label.ForeColor = Color.FromArgb(44, 135, 195);
-            label.Font = new Font(label.Font, FontStyle.Underline);
-        }
-
-        private void label3_MouseLeave(object sender, EventArgs e)
-        {
-            Label label = sender as Label;
-            label.ForeColor = SystemColors.ControlText;
-            label.Font = new Font(label.Font, FontStyle.Regular);
-        }
-        private void label4_MouseMove(object sender, MouseEventArgs e)
-        {
-            Label label = sender as Label;
-            label.ForeColor = Color.FromArgb(44, 135, 195);
-            label.Font = new Font(label.Font, FontStyle.Underline);
-        }
-
-        private void label4_MouseLeave(object sender, EventArgs e)
+        private void label_MouseLeave(object sender, EventArgs e)
         {
             Label label = sender as Label;
             label.ForeColor = SystemColors.ControlText;
             label.Font = new Font(label.Font, FontStyle.Regular);
         }
 
+        private void label_MouseMove(object sender, MouseEventArgs e)
+        {
+            Label label = sender as Label;
+            label.ForeColor = Color.FromArgb(44, 135, 195);
+            label.Font = new Font(label.Font, FontStyle.Underline);
+        }
+
+        
 
     }
 }

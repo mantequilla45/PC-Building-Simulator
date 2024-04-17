@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(productmenu));
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labprice1 = new System.Windows.Forms.Label();
@@ -106,10 +105,30 @@
             this.labprice19 = new System.Windows.Forms.Label();
             this.pbox19 = new System.Windows.Forms.PictureBox();
             this.labname19 = new System.Windows.Forms.Label();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.labprice20 = new System.Windows.Forms.Label();
-            this.pbox20 = new System.Windows.Forms.PictureBox();
             this.labname20 = new System.Windows.Forms.Label();
+            this.pbox20 = new System.Windows.Forms.PictureBox();
+            this.labprice20 = new System.Windows.Forms.Label();
+            this.border20 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.border19 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border18 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border17 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border8 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border9 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border10 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border12 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border13 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border14 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border15 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border16 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbox1)).BeginInit();
@@ -149,8 +168,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbox18)).BeginInit();
             this.panel19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbox19)).BeginInit();
-            this.panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbox20)).BeginInit();
+            this.panel20.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -186,12 +205,12 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.labprice1);
             this.panel1.Controls.Add(this.labname1);
             this.panel1.Controls.Add(this.pbox1);
+            this.panel1.Controls.Add(this.border1);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(240, 309);
@@ -200,8 +219,9 @@
             // labprice1
             // 
             this.labprice1.AutoSize = true;
+            this.labprice1.BackColor = System.Drawing.Color.White;
             this.labprice1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labprice1.Location = new System.Drawing.Point(165, 268);
+            this.labprice1.Location = new System.Drawing.Point(166, 268);
             this.labprice1.Name = "labprice1";
             this.labprice1.Size = new System.Drawing.Size(31, 21);
             this.labprice1.TabIndex = 2;
@@ -210,18 +230,19 @@
             // labname1
             // 
             this.labname1.AutoSize = true;
+            this.labname1.BackColor = System.Drawing.Color.White;
             this.labname1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labname1.Location = new System.Drawing.Point(23, 226);
+            this.labname1.Location = new System.Drawing.Point(24, 226);
             this.labname1.MaximumSize = new System.Drawing.Size(184, 42);
             this.labname1.Name = "labname1";
             this.labname1.Size = new System.Drawing.Size(58, 21);
             this.labname1.TabIndex = 1;
             this.labname1.Text = "--------";
-            this.labname1.Click += new System.EventHandler(this.labname1_Click);
             // 
             // pbox1
             // 
-            this.pbox1.Location = new System.Drawing.Point(27, 9);
+            this.pbox1.BackColor = System.Drawing.Color.White;
+            this.pbox1.Location = new System.Drawing.Point(28, 9);
             this.pbox1.Name = "pbox1";
             this.pbox1.Size = new System.Drawing.Size(184, 214);
             this.pbox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -230,12 +251,12 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.labprice2);
             this.panel2.Controls.Add(this.pbox2);
             this.panel2.Controls.Add(this.labname2);
+            this.panel2.Controls.Add(this.border2);
             this.panel2.Location = new System.Drawing.Point(249, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(240, 309);
@@ -244,8 +265,9 @@
             // labprice2
             // 
             this.labprice2.AutoSize = true;
+            this.labprice2.BackColor = System.Drawing.Color.White;
             this.labprice2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labprice2.Location = new System.Drawing.Point(167, 268);
+            this.labprice2.Location = new System.Drawing.Point(166, 268);
             this.labprice2.Name = "labprice2";
             this.labprice2.Size = new System.Drawing.Size(31, 21);
             this.labprice2.TabIndex = 5;
@@ -253,7 +275,8 @@
             // 
             // pbox2
             // 
-            this.pbox2.Location = new System.Drawing.Point(29, 9);
+            this.pbox2.BackColor = System.Drawing.Color.White;
+            this.pbox2.Location = new System.Drawing.Point(28, 9);
             this.pbox2.Name = "pbox2";
             this.pbox2.Size = new System.Drawing.Size(184, 214);
             this.pbox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -263,23 +286,23 @@
             // labname2
             // 
             this.labname2.AutoSize = true;
+            this.labname2.BackColor = System.Drawing.Color.White;
             this.labname2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labname2.Location = new System.Drawing.Point(25, 226);
+            this.labname2.Location = new System.Drawing.Point(24, 226);
             this.labname2.MaximumSize = new System.Drawing.Size(184, 42);
             this.labname2.Name = "labname2";
             this.labname2.Size = new System.Drawing.Size(58, 21);
             this.labname2.TabIndex = 4;
             this.labname2.Text = "--------";
-            this.labname2.Click += new System.EventHandler(this.labname2_Click);
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.Controls.Add(this.labprice3);
             this.panel3.Controls.Add(this.pbox3);
             this.panel3.Controls.Add(this.labname3);
+            this.panel3.Controls.Add(this.border3);
             this.panel3.Location = new System.Drawing.Point(495, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(240, 309);
@@ -288,6 +311,7 @@
             // labprice3
             // 
             this.labprice3.AutoSize = true;
+            this.labprice3.BackColor = System.Drawing.Color.White;
             this.labprice3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labprice3.Location = new System.Drawing.Point(166, 268);
             this.labprice3.Name = "labprice3";
@@ -297,6 +321,7 @@
             // 
             // pbox3
             // 
+            this.pbox3.BackColor = System.Drawing.Color.White;
             this.pbox3.Location = new System.Drawing.Point(28, 9);
             this.pbox3.Name = "pbox3";
             this.pbox3.Size = new System.Drawing.Size(184, 214);
@@ -307,6 +332,7 @@
             // labname3
             // 
             this.labname3.AutoSize = true;
+            this.labname3.BackColor = System.Drawing.Color.White;
             this.labname3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labname3.Location = new System.Drawing.Point(24, 226);
             this.labname3.MaximumSize = new System.Drawing.Size(184, 42);
@@ -314,16 +340,15 @@
             this.labname3.Size = new System.Drawing.Size(58, 21);
             this.labname3.TabIndex = 7;
             this.labname3.Text = "--------";
-            this.labname3.Click += new System.EventHandler(this.labname3_Click);
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel4.Controls.Add(this.labprice4);
             this.panel4.Controls.Add(this.pbox4);
             this.panel4.Controls.Add(this.labname4);
+            this.panel4.Controls.Add(this.border4);
             this.panel4.Location = new System.Drawing.Point(741, 3);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(240, 309);
@@ -332,6 +357,7 @@
             // labprice4
             // 
             this.labprice4.AutoSize = true;
+            this.labprice4.BackColor = System.Drawing.Color.White;
             this.labprice4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labprice4.Location = new System.Drawing.Point(166, 268);
             this.labprice4.Name = "labprice4";
@@ -341,6 +367,7 @@
             // 
             // pbox4
             // 
+            this.pbox4.BackColor = System.Drawing.Color.White;
             this.pbox4.Location = new System.Drawing.Point(28, 9);
             this.pbox4.Name = "pbox4";
             this.pbox4.Size = new System.Drawing.Size(184, 214);
@@ -351,6 +378,7 @@
             // labname4
             // 
             this.labname4.AutoSize = true;
+            this.labname4.BackColor = System.Drawing.Color.White;
             this.labname4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labname4.Location = new System.Drawing.Point(24, 226);
             this.labname4.MaximumSize = new System.Drawing.Size(184, 42);
@@ -358,16 +386,15 @@
             this.labname4.Size = new System.Drawing.Size(58, 21);
             this.labname4.TabIndex = 7;
             this.labname4.Text = "--------";
-            this.labname4.Click += new System.EventHandler(this.labname4_Click);
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
+            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel5.Controls.Add(this.labprice5);
             this.panel5.Controls.Add(this.pbox5);
             this.panel5.Controls.Add(this.labname5);
+            this.panel5.Controls.Add(this.border5);
             this.panel5.Location = new System.Drawing.Point(3, 318);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(240, 309);
@@ -376,8 +403,9 @@
             // labprice5
             // 
             this.labprice5.AutoSize = true;
+            this.labprice5.BackColor = System.Drawing.Color.White;
             this.labprice5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labprice5.Location = new System.Drawing.Point(165, 268);
+            this.labprice5.Location = new System.Drawing.Point(166, 268);
             this.labprice5.Name = "labprice5";
             this.labprice5.Size = new System.Drawing.Size(31, 21);
             this.labprice5.TabIndex = 8;
@@ -385,7 +413,8 @@
             // 
             // pbox5
             // 
-            this.pbox5.Location = new System.Drawing.Point(27, 9);
+            this.pbox5.BackColor = System.Drawing.Color.White;
+            this.pbox5.Location = new System.Drawing.Point(28, 9);
             this.pbox5.Name = "pbox5";
             this.pbox5.Size = new System.Drawing.Size(184, 214);
             this.pbox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -395,23 +424,23 @@
             // labname5
             // 
             this.labname5.AutoSize = true;
+            this.labname5.BackColor = System.Drawing.Color.White;
             this.labname5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labname5.Location = new System.Drawing.Point(23, 226);
+            this.labname5.Location = new System.Drawing.Point(24, 226);
             this.labname5.MaximumSize = new System.Drawing.Size(184, 42);
             this.labname5.Name = "labname5";
             this.labname5.Size = new System.Drawing.Size(58, 21);
             this.labname5.TabIndex = 7;
             this.labname5.Text = "--------";
-            this.labname5.Click += new System.EventHandler(this.labname5_Click);
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
+            this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel6.Controls.Add(this.labprice6);
             this.panel6.Controls.Add(this.pbox6);
             this.panel6.Controls.Add(this.labname6);
+            this.panel6.Controls.Add(this.border6);
             this.panel6.Location = new System.Drawing.Point(249, 318);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(240, 309);
@@ -420,8 +449,9 @@
             // labprice6
             // 
             this.labprice6.AutoSize = true;
+            this.labprice6.BackColor = System.Drawing.Color.White;
             this.labprice6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labprice6.Location = new System.Drawing.Point(167, 268);
+            this.labprice6.Location = new System.Drawing.Point(166, 268);
             this.labprice6.Name = "labprice6";
             this.labprice6.Size = new System.Drawing.Size(31, 21);
             this.labprice6.TabIndex = 8;
@@ -429,7 +459,8 @@
             // 
             // pbox6
             // 
-            this.pbox6.Location = new System.Drawing.Point(29, 9);
+            this.pbox6.BackColor = System.Drawing.Color.White;
+            this.pbox6.Location = new System.Drawing.Point(28, 9);
             this.pbox6.Name = "pbox6";
             this.pbox6.Size = new System.Drawing.Size(184, 214);
             this.pbox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -439,23 +470,23 @@
             // labname6
             // 
             this.labname6.AutoSize = true;
+            this.labname6.BackColor = System.Drawing.Color.White;
             this.labname6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labname6.Location = new System.Drawing.Point(25, 226);
+            this.labname6.Location = new System.Drawing.Point(24, 226);
             this.labname6.MaximumSize = new System.Drawing.Size(184, 42);
             this.labname6.Name = "labname6";
             this.labname6.Size = new System.Drawing.Size(58, 21);
             this.labname6.TabIndex = 7;
             this.labname6.Text = "--------";
-            this.labname6.Click += new System.EventHandler(this.labname6_Click);
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel7.BackgroundImage")));
+            this.panel7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel7.Controls.Add(this.labprice7);
             this.panel7.Controls.Add(this.pbox7);
             this.panel7.Controls.Add(this.labname7);
+            this.panel7.Controls.Add(this.border7);
             this.panel7.Location = new System.Drawing.Point(495, 318);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(240, 309);
@@ -464,6 +495,7 @@
             // labprice7
             // 
             this.labprice7.AutoSize = true;
+            this.labprice7.BackColor = System.Drawing.Color.White;
             this.labprice7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labprice7.Location = new System.Drawing.Point(166, 268);
             this.labprice7.Name = "labprice7";
@@ -473,6 +505,7 @@
             // 
             // pbox7
             // 
+            this.pbox7.BackColor = System.Drawing.Color.White;
             this.pbox7.Location = new System.Drawing.Point(28, 9);
             this.pbox7.Name = "pbox7";
             this.pbox7.Size = new System.Drawing.Size(184, 214);
@@ -483,6 +516,7 @@
             // labname7
             // 
             this.labname7.AutoSize = true;
+            this.labname7.BackColor = System.Drawing.Color.White;
             this.labname7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labname7.Location = new System.Drawing.Point(24, 226);
             this.labname7.MaximumSize = new System.Drawing.Size(184, 42);
@@ -493,12 +527,12 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
+            this.panel8.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel8.Controls.Add(this.labprice8);
             this.panel8.Controls.Add(this.pbox8);
             this.panel8.Controls.Add(this.labname8);
+            this.panel8.Controls.Add(this.border8);
             this.panel8.Location = new System.Drawing.Point(741, 318);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(240, 309);
@@ -507,6 +541,7 @@
             // labprice8
             // 
             this.labprice8.AutoSize = true;
+            this.labprice8.BackColor = System.Drawing.Color.White;
             this.labprice8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labprice8.Location = new System.Drawing.Point(166, 268);
             this.labprice8.Name = "labprice8";
@@ -516,6 +551,7 @@
             // 
             // pbox8
             // 
+            this.pbox8.BackColor = System.Drawing.Color.White;
             this.pbox8.Location = new System.Drawing.Point(28, 9);
             this.pbox8.Name = "pbox8";
             this.pbox8.Size = new System.Drawing.Size(184, 214);
@@ -526,6 +562,7 @@
             // labname8
             // 
             this.labname8.AutoSize = true;
+            this.labname8.BackColor = System.Drawing.Color.White;
             this.labname8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labname8.Location = new System.Drawing.Point(24, 226);
             this.labname8.MaximumSize = new System.Drawing.Size(184, 42);
@@ -533,16 +570,15 @@
             this.labname8.Size = new System.Drawing.Size(58, 21);
             this.labname8.TabIndex = 7;
             this.labname8.Text = "--------";
-            this.labname8.Click += new System.EventHandler(this.labname8_Click);
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel9.BackgroundImage")));
+            this.panel9.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel9.Controls.Add(this.labprice9);
             this.panel9.Controls.Add(this.pbox9);
             this.panel9.Controls.Add(this.labname9);
+            this.panel9.Controls.Add(this.border9);
             this.panel9.Location = new System.Drawing.Point(3, 633);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(240, 309);
@@ -551,8 +587,9 @@
             // labprice9
             // 
             this.labprice9.AutoSize = true;
+            this.labprice9.BackColor = System.Drawing.Color.White;
             this.labprice9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labprice9.Location = new System.Drawing.Point(165, 268);
+            this.labprice9.Location = new System.Drawing.Point(166, 268);
             this.labprice9.Name = "labprice9";
             this.labprice9.Size = new System.Drawing.Size(31, 21);
             this.labprice9.TabIndex = 8;
@@ -560,7 +597,8 @@
             // 
             // pbox9
             // 
-            this.pbox9.Location = new System.Drawing.Point(27, 9);
+            this.pbox9.BackColor = System.Drawing.Color.White;
+            this.pbox9.Location = new System.Drawing.Point(28, 9);
             this.pbox9.Name = "pbox9";
             this.pbox9.Size = new System.Drawing.Size(184, 214);
             this.pbox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -570,8 +608,9 @@
             // labname9
             // 
             this.labname9.AutoSize = true;
+            this.labname9.BackColor = System.Drawing.Color.White;
             this.labname9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labname9.Location = new System.Drawing.Point(23, 226);
+            this.labname9.Location = new System.Drawing.Point(24, 226);
             this.labname9.MaximumSize = new System.Drawing.Size(184, 42);
             this.labname9.Name = "labname9";
             this.labname9.Size = new System.Drawing.Size(58, 21);
@@ -580,12 +619,12 @@
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel10.BackgroundImage")));
+            this.panel10.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel10.Controls.Add(this.labprice10);
             this.panel10.Controls.Add(this.pbox10);
             this.panel10.Controls.Add(this.labname10);
+            this.panel10.Controls.Add(this.border10);
             this.panel10.Location = new System.Drawing.Point(249, 633);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(240, 309);
@@ -594,8 +633,9 @@
             // labprice10
             // 
             this.labprice10.AutoSize = true;
+            this.labprice10.BackColor = System.Drawing.Color.White;
             this.labprice10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labprice10.Location = new System.Drawing.Point(176, 268);
+            this.labprice10.Location = new System.Drawing.Point(166, 268);
             this.labprice10.Name = "labprice10";
             this.labprice10.Size = new System.Drawing.Size(31, 21);
             this.labprice10.TabIndex = 8;
@@ -603,7 +643,8 @@
             // 
             // pbox10
             // 
-            this.pbox10.Location = new System.Drawing.Point(29, 9);
+            this.pbox10.BackColor = System.Drawing.Color.White;
+            this.pbox10.Location = new System.Drawing.Point(28, 9);
             this.pbox10.Name = "pbox10";
             this.pbox10.Size = new System.Drawing.Size(184, 214);
             this.pbox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -613,8 +654,9 @@
             // labname10
             // 
             this.labname10.AutoSize = true;
+            this.labname10.BackColor = System.Drawing.Color.White;
             this.labname10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labname10.Location = new System.Drawing.Point(25, 226);
+            this.labname10.Location = new System.Drawing.Point(24, 226);
             this.labname10.MaximumSize = new System.Drawing.Size(184, 42);
             this.labname10.Name = "labname10";
             this.labname10.Size = new System.Drawing.Size(58, 21);
@@ -623,12 +665,12 @@
             // 
             // panel11
             // 
-            this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel11.BackgroundImage")));
+            this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel11.Controls.Add(this.labprice11);
             this.panel11.Controls.Add(this.pbox11);
             this.panel11.Controls.Add(this.labname11);
+            this.panel11.Controls.Add(this.border11);
             this.panel11.Location = new System.Drawing.Point(495, 633);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(240, 309);
@@ -637,6 +679,7 @@
             // labprice11
             // 
             this.labprice11.AutoSize = true;
+            this.labprice11.BackColor = System.Drawing.Color.White;
             this.labprice11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labprice11.Location = new System.Drawing.Point(166, 268);
             this.labprice11.Name = "labprice11";
@@ -646,6 +689,7 @@
             // 
             // pbox11
             // 
+            this.pbox11.BackColor = System.Drawing.Color.White;
             this.pbox11.Location = new System.Drawing.Point(28, 9);
             this.pbox11.Name = "pbox11";
             this.pbox11.Size = new System.Drawing.Size(184, 214);
@@ -656,6 +700,7 @@
             // labname11
             // 
             this.labname11.AutoSize = true;
+            this.labname11.BackColor = System.Drawing.Color.White;
             this.labname11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labname11.Location = new System.Drawing.Point(24, 226);
             this.labname11.MaximumSize = new System.Drawing.Size(184, 42);
@@ -666,12 +711,12 @@
             // 
             // panel12
             // 
-            this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel12.BackgroundImage")));
+            this.panel12.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel12.Controls.Add(this.labprice12);
             this.panel12.Controls.Add(this.pbox12);
             this.panel12.Controls.Add(this.labname12);
+            this.panel12.Controls.Add(this.border12);
             this.panel12.Location = new System.Drawing.Point(741, 633);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(240, 309);
@@ -680,6 +725,7 @@
             // labprice12
             // 
             this.labprice12.AutoSize = true;
+            this.labprice12.BackColor = System.Drawing.Color.White;
             this.labprice12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labprice12.Location = new System.Drawing.Point(166, 268);
             this.labprice12.Name = "labprice12";
@@ -689,6 +735,7 @@
             // 
             // pbox12
             // 
+            this.pbox12.BackColor = System.Drawing.Color.White;
             this.pbox12.Location = new System.Drawing.Point(28, 9);
             this.pbox12.Name = "pbox12";
             this.pbox12.Size = new System.Drawing.Size(184, 214);
@@ -699,6 +746,7 @@
             // labname12
             // 
             this.labname12.AutoSize = true;
+            this.labname12.BackColor = System.Drawing.Color.White;
             this.labname12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labname12.Location = new System.Drawing.Point(24, 226);
             this.labname12.MaximumSize = new System.Drawing.Size(184, 42);
@@ -709,12 +757,12 @@
             // 
             // panel13
             // 
-            this.panel13.BackColor = System.Drawing.Color.White;
-            this.panel13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel13.BackgroundImage")));
+            this.panel13.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel13.Controls.Add(this.labprice13);
             this.panel13.Controls.Add(this.pbox13);
             this.panel13.Controls.Add(this.labname13);
+            this.panel13.Controls.Add(this.border13);
             this.panel13.Location = new System.Drawing.Point(3, 948);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(240, 309);
@@ -723,8 +771,9 @@
             // labprice13
             // 
             this.labprice13.AutoSize = true;
+            this.labprice13.BackColor = System.Drawing.Color.White;
             this.labprice13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labprice13.Location = new System.Drawing.Point(165, 268);
+            this.labprice13.Location = new System.Drawing.Point(166, 268);
             this.labprice13.Name = "labprice13";
             this.labprice13.Size = new System.Drawing.Size(31, 21);
             this.labprice13.TabIndex = 8;
@@ -732,7 +781,8 @@
             // 
             // pbox13
             // 
-            this.pbox13.Location = new System.Drawing.Point(27, 9);
+            this.pbox13.BackColor = System.Drawing.Color.White;
+            this.pbox13.Location = new System.Drawing.Point(28, 9);
             this.pbox13.Name = "pbox13";
             this.pbox13.Size = new System.Drawing.Size(184, 214);
             this.pbox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -742,8 +792,9 @@
             // labname13
             // 
             this.labname13.AutoSize = true;
+            this.labname13.BackColor = System.Drawing.Color.White;
             this.labname13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labname13.Location = new System.Drawing.Point(23, 226);
+            this.labname13.Location = new System.Drawing.Point(24, 226);
             this.labname13.MaximumSize = new System.Drawing.Size(184, 42);
             this.labname13.Name = "labname13";
             this.labname13.Size = new System.Drawing.Size(58, 21);
@@ -752,12 +803,12 @@
             // 
             // panel14
             // 
-            this.panel14.BackColor = System.Drawing.Color.White;
-            this.panel14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel14.BackgroundImage")));
+            this.panel14.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel14.Controls.Add(this.labprice14);
             this.panel14.Controls.Add(this.pbox14);
             this.panel14.Controls.Add(this.labname14);
+            this.panel14.Controls.Add(this.border14);
             this.panel14.Location = new System.Drawing.Point(249, 948);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(240, 309);
@@ -766,8 +817,9 @@
             // labprice14
             // 
             this.labprice14.AutoSize = true;
+            this.labprice14.BackColor = System.Drawing.Color.White;
             this.labprice14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labprice14.Location = new System.Drawing.Point(167, 268);
+            this.labprice14.Location = new System.Drawing.Point(166, 268);
             this.labprice14.Name = "labprice14";
             this.labprice14.Size = new System.Drawing.Size(31, 21);
             this.labprice14.TabIndex = 8;
@@ -775,7 +827,8 @@
             // 
             // pbox14
             // 
-            this.pbox14.Location = new System.Drawing.Point(29, 9);
+            this.pbox14.BackColor = System.Drawing.Color.White;
+            this.pbox14.Location = new System.Drawing.Point(28, 9);
             this.pbox14.Name = "pbox14";
             this.pbox14.Size = new System.Drawing.Size(184, 214);
             this.pbox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -785,8 +838,9 @@
             // labname14
             // 
             this.labname14.AutoSize = true;
+            this.labname14.BackColor = System.Drawing.Color.White;
             this.labname14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labname14.Location = new System.Drawing.Point(25, 226);
+            this.labname14.Location = new System.Drawing.Point(24, 226);
             this.labname14.MaximumSize = new System.Drawing.Size(184, 42);
             this.labname14.Name = "labname14";
             this.labname14.Size = new System.Drawing.Size(58, 21);
@@ -795,12 +849,12 @@
             // 
             // panel15
             // 
-            this.panel15.BackColor = System.Drawing.Color.White;
-            this.panel15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel15.BackgroundImage")));
+            this.panel15.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel15.Controls.Add(this.labprice15);
             this.panel15.Controls.Add(this.pbox15);
             this.panel15.Controls.Add(this.labname15);
+            this.panel15.Controls.Add(this.border15);
             this.panel15.Location = new System.Drawing.Point(495, 948);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(240, 309);
@@ -809,6 +863,7 @@
             // labprice15
             // 
             this.labprice15.AutoSize = true;
+            this.labprice15.BackColor = System.Drawing.Color.White;
             this.labprice15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labprice15.Location = new System.Drawing.Point(166, 268);
             this.labprice15.Name = "labprice15";
@@ -818,6 +873,7 @@
             // 
             // pbox15
             // 
+            this.pbox15.BackColor = System.Drawing.Color.White;
             this.pbox15.Location = new System.Drawing.Point(28, 9);
             this.pbox15.Name = "pbox15";
             this.pbox15.Size = new System.Drawing.Size(184, 214);
@@ -828,6 +884,7 @@
             // labname15
             // 
             this.labname15.AutoSize = true;
+            this.labname15.BackColor = System.Drawing.Color.White;
             this.labname15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labname15.Location = new System.Drawing.Point(24, 226);
             this.labname15.MaximumSize = new System.Drawing.Size(184, 42);
@@ -838,12 +895,12 @@
             // 
             // panel16
             // 
-            this.panel16.BackColor = System.Drawing.Color.White;
-            this.panel16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel16.BackgroundImage")));
+            this.panel16.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel16.Controls.Add(this.labprice16);
             this.panel16.Controls.Add(this.pbox16);
             this.panel16.Controls.Add(this.labname16);
+            this.panel16.Controls.Add(this.border16);
             this.panel16.Location = new System.Drawing.Point(741, 948);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(240, 309);
@@ -852,6 +909,7 @@
             // labprice16
             // 
             this.labprice16.AutoSize = true;
+            this.labprice16.BackColor = System.Drawing.Color.White;
             this.labprice16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labprice16.Location = new System.Drawing.Point(166, 268);
             this.labprice16.Name = "labprice16";
@@ -861,6 +919,7 @@
             // 
             // pbox16
             // 
+            this.pbox16.BackColor = System.Drawing.Color.White;
             this.pbox16.Location = new System.Drawing.Point(28, 9);
             this.pbox16.Name = "pbox16";
             this.pbox16.Size = new System.Drawing.Size(184, 214);
@@ -871,6 +930,7 @@
             // labname16
             // 
             this.labname16.AutoSize = true;
+            this.labname16.BackColor = System.Drawing.Color.White;
             this.labname16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labname16.Location = new System.Drawing.Point(24, 226);
             this.labname16.MaximumSize = new System.Drawing.Size(184, 42);
@@ -881,12 +941,12 @@
             // 
             // panel17
             // 
-            this.panel17.BackColor = System.Drawing.Color.White;
-            this.panel17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel17.BackgroundImage")));
+            this.panel17.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel17.Controls.Add(this.labprice17);
             this.panel17.Controls.Add(this.pbox17);
             this.panel17.Controls.Add(this.labname17);
+            this.panel17.Controls.Add(this.border17);
             this.panel17.Location = new System.Drawing.Point(3, 1263);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(240, 309);
@@ -895,8 +955,9 @@
             // labprice17
             // 
             this.labprice17.AutoSize = true;
+            this.labprice17.BackColor = System.Drawing.Color.White;
             this.labprice17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labprice17.Location = new System.Drawing.Point(165, 268);
+            this.labprice17.Location = new System.Drawing.Point(166, 268);
             this.labprice17.Name = "labprice17";
             this.labprice17.Size = new System.Drawing.Size(31, 21);
             this.labprice17.TabIndex = 8;
@@ -904,7 +965,8 @@
             // 
             // pbox17
             // 
-            this.pbox17.Location = new System.Drawing.Point(27, 9);
+            this.pbox17.BackColor = System.Drawing.Color.White;
+            this.pbox17.Location = new System.Drawing.Point(28, 9);
             this.pbox17.Name = "pbox17";
             this.pbox17.Size = new System.Drawing.Size(184, 214);
             this.pbox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -914,8 +976,9 @@
             // labname17
             // 
             this.labname17.AutoSize = true;
+            this.labname17.BackColor = System.Drawing.Color.White;
             this.labname17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labname17.Location = new System.Drawing.Point(23, 226);
+            this.labname17.Location = new System.Drawing.Point(24, 226);
             this.labname17.MaximumSize = new System.Drawing.Size(184, 42);
             this.labname17.Name = "labname17";
             this.labname17.Size = new System.Drawing.Size(58, 21);
@@ -924,12 +987,12 @@
             // 
             // panel18
             // 
-            this.panel18.BackColor = System.Drawing.Color.White;
-            this.panel18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel18.BackgroundImage")));
+            this.panel18.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel18.Controls.Add(this.labprice18);
             this.panel18.Controls.Add(this.pbox18);
             this.panel18.Controls.Add(this.labname18);
+            this.panel18.Controls.Add(this.border18);
             this.panel18.Location = new System.Drawing.Point(249, 1263);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(240, 309);
@@ -938,8 +1001,9 @@
             // labprice18
             // 
             this.labprice18.AutoSize = true;
+            this.labprice18.BackColor = System.Drawing.Color.White;
             this.labprice18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labprice18.Location = new System.Drawing.Point(167, 268);
+            this.labprice18.Location = new System.Drawing.Point(166, 268);
             this.labprice18.Name = "labprice18";
             this.labprice18.Size = new System.Drawing.Size(31, 21);
             this.labprice18.TabIndex = 8;
@@ -947,7 +1011,8 @@
             // 
             // pbox18
             // 
-            this.pbox18.Location = new System.Drawing.Point(29, 9);
+            this.pbox18.BackColor = System.Drawing.Color.White;
+            this.pbox18.Location = new System.Drawing.Point(28, 9);
             this.pbox18.Name = "pbox18";
             this.pbox18.Size = new System.Drawing.Size(184, 214);
             this.pbox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -957,8 +1022,9 @@
             // labname18
             // 
             this.labname18.AutoSize = true;
+            this.labname18.BackColor = System.Drawing.Color.White;
             this.labname18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labname18.Location = new System.Drawing.Point(25, 226);
+            this.labname18.Location = new System.Drawing.Point(24, 226);
             this.labname18.MaximumSize = new System.Drawing.Size(184, 42);
             this.labname18.Name = "labname18";
             this.labname18.Size = new System.Drawing.Size(58, 21);
@@ -967,12 +1033,12 @@
             // 
             // panel19
             // 
-            this.panel19.BackColor = System.Drawing.Color.White;
-            this.panel19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel19.BackgroundImage")));
+            this.panel19.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel19.Controls.Add(this.labprice19);
             this.panel19.Controls.Add(this.pbox19);
             this.panel19.Controls.Add(this.labname19);
+            this.panel19.Controls.Add(this.border19);
             this.panel19.Location = new System.Drawing.Point(495, 1263);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(240, 309);
@@ -981,6 +1047,7 @@
             // labprice19
             // 
             this.labprice19.AutoSize = true;
+            this.labprice19.BackColor = System.Drawing.Color.White;
             this.labprice19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labprice19.Location = new System.Drawing.Point(166, 268);
             this.labprice19.Name = "labprice19";
@@ -990,6 +1057,7 @@
             // 
             // pbox19
             // 
+            this.pbox19.BackColor = System.Drawing.Color.White;
             this.pbox19.Location = new System.Drawing.Point(28, 9);
             this.pbox19.Name = "pbox19";
             this.pbox19.Size = new System.Drawing.Size(184, 214);
@@ -1000,6 +1068,7 @@
             // labname19
             // 
             this.labname19.AutoSize = true;
+            this.labname19.BackColor = System.Drawing.Color.White;
             this.labname19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labname19.Location = new System.Drawing.Point(24, 226);
             this.labname19.MaximumSize = new System.Drawing.Size(184, 42);
@@ -1008,41 +1077,10 @@
             this.labname19.TabIndex = 7;
             this.labname19.Text = "--------";
             // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.White;
-            this.panel20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel20.BackgroundImage")));
-            this.panel20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel20.Controls.Add(this.labprice20);
-            this.panel20.Controls.Add(this.pbox20);
-            this.panel20.Controls.Add(this.labname20);
-            this.panel20.Location = new System.Drawing.Point(741, 1263);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(240, 309);
-            this.panel20.TabIndex = 13;
-            // 
-            // labprice20
-            // 
-            this.labprice20.AutoSize = true;
-            this.labprice20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labprice20.Location = new System.Drawing.Point(166, 268);
-            this.labprice20.Name = "labprice20";
-            this.labprice20.Size = new System.Drawing.Size(31, 21);
-            this.labprice20.TabIndex = 8;
-            this.labprice20.Text = "$--";
-            // 
-            // pbox20
-            // 
-            this.pbox20.Location = new System.Drawing.Point(28, 9);
-            this.pbox20.Name = "pbox20";
-            this.pbox20.Size = new System.Drawing.Size(184, 214);
-            this.pbox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbox20.TabIndex = 6;
-            this.pbox20.TabStop = false;
-            // 
             // labname20
             // 
             this.labname20.AutoSize = true;
+            this.labname20.BackColor = System.Drawing.Color.White;
             this.labname20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labname20.Location = new System.Drawing.Point(24, 226);
             this.labname20.MaximumSize = new System.Drawing.Size(184, 42);
@@ -1050,6 +1088,360 @@
             this.labname20.Size = new System.Drawing.Size(58, 21);
             this.labname20.TabIndex = 7;
             this.labname20.Text = "--------";
+            // 
+            // pbox20
+            // 
+            this.pbox20.BackColor = System.Drawing.Color.White;
+            this.pbox20.Location = new System.Drawing.Point(28, 9);
+            this.pbox20.Name = "pbox20";
+            this.pbox20.Size = new System.Drawing.Size(184, 214);
+            this.pbox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbox20.TabIndex = 6;
+            this.pbox20.TabStop = false;
+            // 
+            // labprice20
+            // 
+            this.labprice20.AutoSize = true;
+            this.labprice20.BackColor = System.Drawing.Color.White;
+            this.labprice20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labprice20.Location = new System.Drawing.Point(166, 268);
+            this.labprice20.Name = "labprice20";
+            this.labprice20.Size = new System.Drawing.Size(31, 21);
+            this.labprice20.TabIndex = 8;
+            this.labprice20.Text = "$--";
+            // 
+            // border20
+            // 
+            this.border20.Enabled = false;
+            this.border20.Location = new System.Drawing.Point(0, 0);
+            this.border20.Name = "border20";
+            this.border20.Size = new System.Drawing.Size(240, 309);
+            this.border20.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border20.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border20.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border20.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border20.StateCommon.Border.Rounding = 15;
+            this.border20.TabIndex = 13;
+            this.border20.Values.Text = "";
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel20.Controls.Add(this.labprice20);
+            this.panel20.Controls.Add(this.pbox20);
+            this.panel20.Controls.Add(this.labname20);
+            this.panel20.Controls.Add(this.border20);
+            this.panel20.Location = new System.Drawing.Point(741, 1263);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(240, 309);
+            this.panel20.TabIndex = 13;
+            // 
+            // border19
+            // 
+            this.border19.Enabled = false;
+            this.border19.Location = new System.Drawing.Point(0, 0);
+            this.border19.Name = "border19";
+            this.border19.Size = new System.Drawing.Size(240, 309);
+            this.border19.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border19.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border19.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border19.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border19.StateCommon.Border.Rounding = 15;
+            this.border19.TabIndex = 14;
+            this.border19.Values.Text = "";
+            // 
+            // border18
+            // 
+            this.border18.Enabled = false;
+            this.border18.Location = new System.Drawing.Point(0, 0);
+            this.border18.Name = "border18";
+            this.border18.Size = new System.Drawing.Size(240, 309);
+            this.border18.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border18.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border18.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border18.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border18.StateCommon.Border.Rounding = 15;
+            this.border18.TabIndex = 15;
+            this.border18.Values.Text = "";
+            // 
+            // border17
+            // 
+            this.border17.Enabled = false;
+            this.border17.Location = new System.Drawing.Point(0, 0);
+            this.border17.Name = "border17";
+            this.border17.Size = new System.Drawing.Size(240, 309);
+            this.border17.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border17.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border17.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border17.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border17.StateCommon.Border.Rounding = 15;
+            this.border17.TabIndex = 16;
+            this.border17.Values.Text = "";
+            // 
+            // border1
+            // 
+            this.border1.Enabled = false;
+            this.border1.Location = new System.Drawing.Point(0, 0);
+            this.border1.Name = "border1";
+            this.border1.Size = new System.Drawing.Size(240, 309);
+            this.border1.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border1.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border1.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border1.StateCommon.Border.Rounding = 15;
+            this.border1.TabIndex = 17;
+            this.border1.Values.Text = "";
+            // 
+            // border2
+            // 
+            this.border2.Enabled = false;
+            this.border2.Location = new System.Drawing.Point(0, 0);
+            this.border2.Name = "border2";
+            this.border2.Size = new System.Drawing.Size(240, 309);
+            this.border2.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border2.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border2.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border2.StateCommon.Border.Rounding = 15;
+            this.border2.TabIndex = 18;
+            this.border2.Values.Text = "";
+            // 
+            // border3
+            // 
+            this.border3.Enabled = false;
+            this.border3.Location = new System.Drawing.Point(0, 0);
+            this.border3.Name = "border3";
+            this.border3.Size = new System.Drawing.Size(240, 309);
+            this.border3.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border3.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border3.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border3.StateCommon.Border.Rounding = 15;
+            this.border3.TabIndex = 19;
+            this.border3.Values.Text = "";
+            // 
+            // border4
+            // 
+            this.border4.Enabled = false;
+            this.border4.Location = new System.Drawing.Point(0, 0);
+            this.border4.Name = "border4";
+            this.border4.Size = new System.Drawing.Size(240, 309);
+            this.border4.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border4.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border4.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border4.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border4.StateCommon.Border.Rounding = 15;
+            this.border4.TabIndex = 20;
+            this.border4.Values.Text = "";
+            // 
+            // border5
+            // 
+            this.border5.Enabled = false;
+            this.border5.Location = new System.Drawing.Point(0, 0);
+            this.border5.Name = "border5";
+            this.border5.Size = new System.Drawing.Size(240, 309);
+            this.border5.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border5.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border5.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border5.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border5.StateCommon.Border.Rounding = 15;
+            this.border5.TabIndex = 21;
+            this.border5.Values.Text = "";
+            // 
+            // border6
+            // 
+            this.border6.Enabled = false;
+            this.border6.Location = new System.Drawing.Point(0, 0);
+            this.border6.Name = "border6";
+            this.border6.Size = new System.Drawing.Size(240, 309);
+            this.border6.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border6.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border6.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border6.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border6.StateCommon.Border.Rounding = 15;
+            this.border6.TabIndex = 22;
+            this.border6.Values.Text = "";
+            // 
+            // border7
+            // 
+            this.border7.Enabled = false;
+            this.border7.Location = new System.Drawing.Point(0, 0);
+            this.border7.Name = "border7";
+            this.border7.Size = new System.Drawing.Size(240, 309);
+            this.border7.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border7.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border7.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border7.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border7.StateCommon.Border.Rounding = 15;
+            this.border7.TabIndex = 23;
+            this.border7.Values.Text = "";
+            // 
+            // border8
+            // 
+            this.border8.Enabled = false;
+            this.border8.Location = new System.Drawing.Point(0, 0);
+            this.border8.Name = "border8";
+            this.border8.Size = new System.Drawing.Size(240, 309);
+            this.border8.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border8.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border8.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border8.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border8.StateCommon.Border.Rounding = 15;
+            this.border8.TabIndex = 24;
+            this.border8.Values.Text = "";
+            // 
+            // border9
+            // 
+            this.border9.Enabled = false;
+            this.border9.Location = new System.Drawing.Point(0, 0);
+            this.border9.Name = "border9";
+            this.border9.Size = new System.Drawing.Size(240, 309);
+            this.border9.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border9.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border9.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border9.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border9.StateCommon.Border.Rounding = 15;
+            this.border9.TabIndex = 25;
+            this.border9.Values.Text = "";
+            // 
+            // border10
+            // 
+            this.border10.Enabled = false;
+            this.border10.Location = new System.Drawing.Point(0, 0);
+            this.border10.Name = "border10";
+            this.border10.Size = new System.Drawing.Size(240, 309);
+            this.border10.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border10.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border10.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border10.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border10.StateCommon.Border.Rounding = 15;
+            this.border10.TabIndex = 26;
+            this.border10.Values.Text = "";
+            // 
+            // border11
+            // 
+            this.border11.Enabled = false;
+            this.border11.Location = new System.Drawing.Point(0, 0);
+            this.border11.Name = "border11";
+            this.border11.Size = new System.Drawing.Size(240, 309);
+            this.border11.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border11.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border11.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border11.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border11.StateCommon.Border.Rounding = 15;
+            this.border11.TabIndex = 27;
+            this.border11.Values.Text = "";
+            // 
+            // border12
+            // 
+            this.border12.Enabled = false;
+            this.border12.Location = new System.Drawing.Point(0, 0);
+            this.border12.Name = "border12";
+            this.border12.Size = new System.Drawing.Size(240, 309);
+            this.border12.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border12.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border12.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border12.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border12.StateCommon.Border.Rounding = 15;
+            this.border12.TabIndex = 28;
+            this.border12.Values.Text = "";
+            // 
+            // border13
+            // 
+            this.border13.Enabled = false;
+            this.border13.Location = new System.Drawing.Point(0, 0);
+            this.border13.Name = "border13";
+            this.border13.Size = new System.Drawing.Size(240, 309);
+            this.border13.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border13.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border13.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border13.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border13.StateCommon.Border.Rounding = 15;
+            this.border13.TabIndex = 29;
+            this.border13.Values.Text = "";
+            // 
+            // border14
+            // 
+            this.border14.Enabled = false;
+            this.border14.Location = new System.Drawing.Point(0, 0);
+            this.border14.Name = "border14";
+            this.border14.Size = new System.Drawing.Size(240, 309);
+            this.border14.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border14.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border14.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border14.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border14.StateCommon.Border.Rounding = 15;
+            this.border14.TabIndex = 30;
+            this.border14.Values.Text = "";
+            // 
+            // border15
+            // 
+            this.border15.Enabled = false;
+            this.border15.Location = new System.Drawing.Point(0, 0);
+            this.border15.Name = "border15";
+            this.border15.Size = new System.Drawing.Size(240, 309);
+            this.border15.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border15.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border15.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border15.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border15.StateCommon.Border.Rounding = 15;
+            this.border15.TabIndex = 31;
+            this.border15.Values.Text = "";
+            // 
+            // border16
+            // 
+            this.border16.Enabled = false;
+            this.border16.Location = new System.Drawing.Point(0, 0);
+            this.border16.Name = "border16";
+            this.border16.Size = new System.Drawing.Size(240, 309);
+            this.border16.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border16.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border16.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border16.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border16.StateCommon.Border.Rounding = 15;
+            this.border16.TabIndex = 32;
+            this.border16.Values.Text = "";
             // 
             // productmenu
             // 
@@ -1119,9 +1511,9 @@
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox20)).EndInit();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbox20)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1204,10 +1596,30 @@
         private System.Windows.Forms.Label labprice19;
         private System.Windows.Forms.PictureBox pbox19;
         private System.Windows.Forms.Label labname19;
+        private System.Windows.Forms.PictureBox pbox18;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Label labprice20;
         private System.Windows.Forms.PictureBox pbox20;
         private System.Windows.Forms.Label labname20;
-        private System.Windows.Forms.PictureBox pbox18;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border20;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border18;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border19;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border3;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border4;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border5;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border6;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border7;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border17;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border8;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border9;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border10;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border11;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border12;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border13;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border14;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border15;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border16;
     }
 }

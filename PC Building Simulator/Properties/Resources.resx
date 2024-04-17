@@ -265,8 +265,128 @@
   <data name="Gigabyte_GeForce_RTX_3080_Ti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gigabyte GeForce RTX 3080 Ti.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hdd_HGST_Deskstar_NAS_4TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_HGST Deskstar NAS 4TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_HGST_Ultrastar_12TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_HGST Ultrastar 12TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_Hitachi_Deskstar_500GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_Hitachi Deskstar 500GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_Hitachi_Ultrastar_5TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_Hitachi Ultrastar 5TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_Samsung_Spinpoint_1TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_Samsung Spinpoint 1TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_Seagate_Barracuda_3TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_Seagate Barracuda 3TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_Seagate_BarraCuda_Pro_14TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_Seagate BarraCuda Pro 14TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_Seagate_Constellation_3TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_Seagate Constellation 3TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_Seagate_FireCuda_8TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_Seagate FireCuda 8TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_Seagate_IronWolf_10TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_Seagate IronWolf 10TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_Seagate_SkyHawk_14TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_Seagate SkyHawk 14TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_Toshiba_DT01ACA_1TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_Toshiba DT01ACA 1TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_Toshiba_N300_14TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_Toshiba N300 14TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_Toshiba_P300_3TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_Toshiba P300 3TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_Toshiba_X300_6TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_Toshiba X300 6TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_WD_VelociRaptor_1TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_WD VelociRaptor 1TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_Western_Digital_Black_2_5TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_Western Digital Black 2.5TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_Western_Digital_Blue_2TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_Western Digital Blue 2TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_Western_Digital_Gold_18TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_Western Digital Gold 18TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_Western_Digital_Red_8TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_Western Digital Red 8TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Intel_Arc_A770" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Intel Arc A770.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_Anne_Pro_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_Anne Pro 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_Apple_Magic_Keyboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_Apple Magic Keyboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_Asus_ROG_Strix_Scope_TKL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_Asus ROG Strix Scope TKL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_Cooler_Master_SK622" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_Cooler Master SK622.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_CORSAIR_K100_RGB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_CORSAIR K100 RGB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_Ducky_One_3_Mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_Ducky One 3 Mini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_Epomaker_GK68XS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_Epomaker GK68XS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_Fnatic_STREAK65_LP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_Fnatic STREAK65 LP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_Glorious_GMMK_Pro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_Glorious GMMK Pro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_HyperX_Alloy_Origins_Core" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_HyperX Alloy Origins Core.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_Keychron_Q1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_Keychron Q1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_Leopold_FC980M_PD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_Leopold FC980M PD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_Logitech_G915_TKL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_Logitech G915 TKL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_Logitech_MX_Mechanical_Mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_Logitech MX Mechanical Mini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_MSI_Vigor_GK71" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_MSI Vigor GK71.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_Niz_Plum_82" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_Niz Plum 82.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_NuPhy_Air75" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_NuPhy Air75.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_Razer_Blackwidow_V3_Pro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_Razer Blackwidow V3 Pro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_Redragon_K552" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_Redragon K552.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_SteelSeries_Apex_Pro_TKL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_SteelSeries Apex Pro TKL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mb_ASRock_B450M_Steel_Legend" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mb-ASRock B450M Steel Legend.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -388,6 +508,66 @@
   <data name="mon_ViewSonic_Elite_XG270QG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mon_ViewSonic Elite XG270QG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="mou_Apple_Magic_Mouse_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_Apple Magic Mouse 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mou_Corsair_Dark_Core_Pro_RGB_SE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_Corsair Dark Core Pro RGB SE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mou_Ducky_Feather" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_Ducky Feather.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mou_Fnatic_Flick_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_Fnatic Flick 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mou_Glorious_Model_D_Wireless" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_Glorious Model D Wireless.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mou_Glorious_Model_O" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_Glorious Model O.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mou_HyperX_Pulsefire_Haste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_HyperX Pulsefire Haste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mou_Logitech_G305_Lightspeed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_Logitech G305 Lightspeed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mou_Logitech_G502_Hero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_Logitech G502 Hero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mou_Logitech_G_Pro_Wireless" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_Logitech G Pro Wireless.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mou_Logitech_M220_Silent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_Logitech M220 Silent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mou_Logitech_MX_Anywhere_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_Logitech MX Anywhere 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mou_Logitech_MX_Master_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_Logitech MX Master 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mou_Logitech_MX_Vertical_Ergonomic_Mouse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_Logitech MX Vertical Ergonomic Mouse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mou_Razer_Basilisk_V3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_Razer Basilisk V3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mou_Razer_DeathAdder_V2_Mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_Razer DeathAdder V2 Mini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mou_Razer_Naga_Trinity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_Razer Naga Trinity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mou_SteelSeries_Rival_650_Wireless" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_SteelSeries Rival 650 Wireless.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mou_SteelSeries_Rival_710" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_SteelSeries Rival 710.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mou_Zowie_S2_C_Divina_Series" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mou_Zowie S2-C Divina Series.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MSI_GeForce_RTX_3070" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MSI GeForce RTX 3070.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -430,7 +610,7 @@
   <data name="psu_EVGA_B550_Bronze" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\psu_EVGA B550 Bronze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="psu_EVGA_G__1000W_Gold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="psu_EVGA_G+_1000W_Gold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\psu_EVGA G+ 1000W Gold.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="psu_EVGA_SuperNOVA_1600_T2" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -528,6 +708,66 @@
   </data>
   <data name="Sapphire_PULSE_Radeon_RX_570_8G_G5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sapphire PULSE Radeon RX 570 8G G5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_Audioengine_A2__Wireless" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_Audioengine A2+ Wireless.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_Audioengine_A5__Wireless" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_Audioengine A5+ Wireless.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_Audioengine_HD3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_Audioengine HD3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_Bose_Companion_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_Bose Companion 20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_Creative_Pebble_Plus_2_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_Creative Pebble Plus 2.0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_Edifier_R1280T" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_Edifier R1280T.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_Edifier_S350DB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_Edifier S350DB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_IK_Multimedia_iLoud_Micro_Monitor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_IK Multimedia iLoud Micro Monitor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_JBL_Studio_530" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_JBL Studio 530.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_Kali_Audio_LP_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_Kali Audio LP-6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_Kanto_YU4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_Kanto YU4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_Klipsch_R_41M" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_Klipsch R-41M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_Logitech_G560_LIGHTSYNC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_Logitech G560 LIGHTSYNC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_Mackie_CR3_XBT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_Mackie CR3-XBT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_Micca_RB42" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_Micca RB42.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_Monoprice_DT_3BT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_Monoprice DT-3BT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_Neumi_BS5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_Neumi BS5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_PreSonus_Eris_E3_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_PreSonus Eris E3.5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_Razer_Nommo_Chroma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_Razer Nommo Chroma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spe_Swan_M10_Plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spe_Swan M10 Plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="XFX_Radeon_RX_5700_XT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\XFX Radeon RX 5700 XT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

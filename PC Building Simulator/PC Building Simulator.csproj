@@ -62,50 +62,26 @@
     <Compile Include="buildmenu.Designer.cs">
       <DependentUpon>buildmenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="productmenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="productmenu.Designer.cs">
-      <DependentUpon>productmenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="casespecs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="casespecs.Designer.cs">
-      <DependentUpon>casespecs.cs</DependentUpon>
-    </Compile>
     <Compile Include="coolermenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="coolermenu.Designer.cs">
       <DependentUpon>coolermenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="cpuspecs.cs">
+    <Compile Include="productmenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cpuspecs.Designer.cs">
-      <DependentUpon>cpuspecs.cs</DependentUpon>
+    <Compile Include="productmenu.Designer.cs">
+      <DependentUpon>productmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="productspecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="productspecs.Designer.cs">
+      <DependentUpon>productspecs.cs</DependentUpon>
     </Compile>
     <Compile Include="Database Manager.cs" />
     <Compile Include="Display Manager.cs" />
-    <Compile Include="gpumenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="gpumenu.Designer.cs">
-      <DependentUpon>gpumenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="gpuspecs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="gpuspecs.Designer.cs">
-      <DependentUpon>gpuspecs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="keyboardmenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="keyboardmenu.Designer.cs">
-      <DependentUpon>keyboardmenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,31 +94,7 @@
     <Compile Include="MainApp.Designer.cs">
       <DependentUpon>MainApp.cs</DependentUpon>
     </Compile>
-    <Compile Include="mbmenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="mbmenu.Designer.cs">
-      <DependentUpon>mbmenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="mbspecs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="mbspecs.Designer.cs">
-      <DependentUpon>mbspecs.cs</DependentUpon>
-    </Compile>
     <Compile Include="Memory Manager.cs" />
-    <Compile Include="monitormenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="monitormenu.Designer.cs">
-      <DependentUpon>monitormenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="mousemenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="mousemenu.Designer.cs">
-      <DependentUpon>mousemenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="profilemenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,41 +103,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="psumenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="psumenu.Designer.cs">
-      <DependentUpon>psumenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="psuspecs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="psuspecs.Designer.cs">
-      <DependentUpon>psuspecs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="rammenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="rammenu.Designer.cs">
-      <DependentUpon>rammenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ramspecs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ramspecs.Designer.cs">
-      <DependentUpon>ramspecs.cs</DependentUpon>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SignupForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SignupForm.Designer.cs">
       <DependentUpon>SignupForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="speakersmenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="speakersmenu.Designer.cs">
-      <DependentUpon>speakersmenu.cs</DependentUpon>
     </Compile>
     <Compile Include="storagemenu.cs">
       <SubType>Form</SubType>
@@ -199,26 +126,14 @@
     <EmbeddedResource Include="buildmenu.resx">
       <DependentUpon>buildmenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="productmenu.resx">
-      <DependentUpon>productmenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="casespecs.resx">
-      <DependentUpon>casespecs.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="coolermenu.resx">
       <DependentUpon>coolermenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="cpuspecs.resx">
-      <DependentUpon>cpuspecs.cs</DependentUpon>
+    <EmbeddedResource Include="productmenu.resx">
+      <DependentUpon>productmenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="gpumenu.resx">
-      <DependentUpon>gpumenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="gpuspecs.resx">
-      <DependentUpon>gpuspecs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="keyboardmenu.resx">
-      <DependentUpon>keyboardmenu.cs</DependentUpon>
+    <EmbeddedResource Include="productspecs.resx">
+      <DependentUpon>productspecs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -226,48 +141,16 @@
     <EmbeddedResource Include="MainApp.resx">
       <DependentUpon>MainApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mbmenu.resx">
-      <DependentUpon>mbmenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="mbspecs.resx">
-      <DependentUpon>mbspecs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="monitormenu.resx">
-      <DependentUpon>monitormenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="mousemenu.resx">
-      <DependentUpon>mousemenu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="profilemenu.resx">
       <DependentUpon>profilemenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="psumenu.resx">
-      <DependentUpon>psumenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="psuspecs.resx">
-      <DependentUpon>psuspecs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="rammenu.resx">
-      <DependentUpon>rammenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ramspecs.resx">
-      <DependentUpon>ramspecs.cs</DependentUpon>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="SignupForm.resx">
       <DependentUpon>SignupForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="speakersmenu.resx">
-      <DependentUpon>speakersmenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="storagemenu.resx">
       <DependentUpon>storagemenu.cs</DependentUpon>
@@ -707,6 +590,246 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mon_ViewSonic Elite XG270QG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_Anne Pro 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_Apple Magic Keyboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_Asus ROG Strix Scope TKL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_Cooler Master SK622.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_CORSAIR K100 RGB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_Ducky One 3 Mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_Epomaker GK68XS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_Fnatic STREAK65 LP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_Glorious GMMK Pro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_HyperX Alloy Origins Core.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_Keychron Q1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_Leopold FC980M PD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_Logitech G915 TKL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_Logitech MX Mechanical Mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_MSI Vigor GK71.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_Niz Plum 82.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_NuPhy Air75.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_Razer Blackwidow V3 Pro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_Redragon K552.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_SteelSeries Apex Pro TKL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_Apple Magic Mouse 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_Corsair Dark Core Pro RGB SE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_Ducky Feather.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_Fnatic Flick 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_Glorious Model D Wireless.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_Glorious Model O.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_HyperX Pulsefire Haste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_Logitech G Pro Wireless.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_Logitech G305 Lightspeed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_Logitech G502 Hero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_Logitech M220 Silent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_Logitech MX Anywhere 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_Logitech MX Master 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_Logitech MX Vertical Ergonomic Mouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_Razer Basilisk V3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_Razer DeathAdder V2 Mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_Razer Naga Trinity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_SteelSeries Rival 650 Wireless.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_SteelSeries Rival 710.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mou_Zowie S2-C Divina Series.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_Monoprice DT-3BT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_Neumi BS5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_PreSonus Eris E3.5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_Razer Nommo Chroma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_Swan M10 Plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_Audioengine A2+ Wireless.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_Audioengine A5+ Wireless.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_Audioengine HD3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_Bose Companion 20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_Creative Pebble Plus 2.0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_Edifier R1280T.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_Edifier S350DB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_IK Multimedia iLoud Micro Monitor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_JBL Studio 530.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_Kali Audio LP-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_Kanto YU4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_Klipsch R-41M.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_Logitech G560 LIGHTSYNC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_Mackie CR3-XBT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spe_Micca RB42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_Samsung Spinpoint 1TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_Hitachi Ultrastar 5TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_Hitachi Deskstar 500GB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_HGST Ultrastar 12TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_HGST Deskstar NAS 4TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_Western Digital Red 8TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_Western Digital Gold 18TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_Western Digital Blue 2TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_Western Digital Black 2.5TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_WD VelociRaptor 1TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_Toshiba X300 6TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_Toshiba P300 3TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_Toshiba N300 14TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_Toshiba DT01ACA 1TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_Seagate SkyHawk 14TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_Seagate IronWolf 10TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_Seagate FireCuda 8TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_Seagate Constellation 3TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_Seagate BarraCuda Pro 14TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_Seagate Barracuda 3TB.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(buildmenu));
-            this.border1 = new System.Windows.Forms.Panel();
-            this.pBox7 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.border11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.border10 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.border9 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.border8 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.label7 = new System.Windows.Forms.Label();
             this.border7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.pBox5 = new System.Windows.Forms.PictureBox();
             this.border5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.pBox6 = new System.Windows.Forms.PictureBox();
             this.border6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.pBox4 = new System.Windows.Forms.PictureBox();
             this.border4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.pBox3 = new System.Windows.Forms.PictureBox();
             this.border3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.pBox2 = new System.Windows.Forms.PictureBox();
             this.border2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.pBox1 = new System.Windows.Forms.PictureBox();
             this.lab_quanspe = new System.Windows.Forms.Label();
             this.lab_quanmou = new System.Windows.Forms.Label();
             this.lab_quankey = new System.Windows.Forms.Label();
@@ -73,10 +74,25 @@
             this.label_mb = new System.Windows.Forms.Label();
             this.label_gpu = new System.Windows.Forms.Label();
             this.label_cpu = new System.Windows.Forms.Label();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.but_guide = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.but_combuild = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border1.SuspendLayout();
+            this.pBox11 = new System.Windows.Forms.PictureBox();
+            this.pBox10 = new System.Windows.Forms.PictureBox();
+            this.pBox9 = new System.Windows.Forms.PictureBox();
+            this.pBox8 = new System.Windows.Forms.PictureBox();
+            this.pBox7 = new System.Windows.Forms.PictureBox();
+            this.pBox5 = new System.Windows.Forms.PictureBox();
+            this.pBox6 = new System.Windows.Forms.PictureBox();
+            this.pBox4 = new System.Windows.Forms.PictureBox();
+            this.pBox3 = new System.Windows.Forms.PictureBox();
+            this.pBox2 = new System.Windows.Forms.PictureBox();
+            this.pBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox6)).BeginInit();
@@ -86,68 +102,184 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // border1
+            // panel1
             // 
-            this.border1.Controls.Add(this.pBox7);
-            this.border1.Controls.Add(this.border7);
-            this.border1.Controls.Add(this.pBox5);
-            this.border1.Controls.Add(this.border5);
-            this.border1.Controls.Add(this.pBox6);
-            this.border1.Controls.Add(this.border6);
-            this.border1.Controls.Add(this.pBox4);
-            this.border1.Controls.Add(this.border4);
-            this.border1.Controls.Add(this.pBox3);
-            this.border1.Controls.Add(this.border3);
-            this.border1.Controls.Add(this.pBox2);
-            this.border1.Controls.Add(this.border2);
-            this.border1.Controls.Add(this.pBox1);
-            this.border1.Controls.Add(this.lab_quanspe);
-            this.border1.Controls.Add(this.lab_quanmou);
-            this.border1.Controls.Add(this.lab_quankey);
-            this.border1.Controls.Add(this.lab_quanmon);
-            this.border1.Controls.Add(this.lab_quancoo);
-            this.border1.Controls.Add(this.lab_quancas);
-            this.border1.Controls.Add(this.lab_quanpsu);
-            this.border1.Controls.Add(this.lab_quandri);
-            this.border1.Controls.Add(this.lab_quanram);
-            this.border1.Controls.Add(this.lab_quanmb);
-            this.border1.Controls.Add(this.lab_quangpu);
-            this.border1.Controls.Add(this.lab_quancpu);
-            this.border1.Controls.Add(this.label6);
-            this.border1.Controls.Add(this.label5);
-            this.border1.Controls.Add(this.label4);
-            this.border1.Controls.Add(this.label3);
-            this.border1.Controls.Add(this.label_speak);
-            this.border1.Controls.Add(this.label_mouse);
-            this.border1.Controls.Add(this.label_keyb);
-            this.border1.Controls.Add(this.label_moni);
-            this.border1.Controls.Add(this.label_cooler);
-            this.border1.Controls.Add(this.label_case);
-            this.border1.Controls.Add(this.label2);
-            this.border1.Controls.Add(this.label1);
-            this.border1.Controls.Add(this.label_psu);
-            this.border1.Controls.Add(this.label_storage);
-            this.border1.Controls.Add(this.label_ram);
-            this.border1.Controls.Add(this.label_mb);
-            this.border1.Controls.Add(this.label_gpu);
-            this.border1.Controls.Add(this.label_cpu);
-            this.border1.Controls.Add(this.kryptonButton1);
-            this.border1.Location = new System.Drawing.Point(12, 44);
-            this.border1.Name = "border1";
-            this.border1.Size = new System.Drawing.Size(974, 643);
-            this.border1.TabIndex = 77;
+            this.panel1.Controls.Add(this.pBox11);
+            this.panel1.Controls.Add(this.border11);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.pBox10);
+            this.panel1.Controls.Add(this.border10);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.pBox9);
+            this.panel1.Controls.Add(this.border9);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.pBox8);
+            this.panel1.Controls.Add(this.border8);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.pBox7);
+            this.panel1.Controls.Add(this.border7);
+            this.panel1.Controls.Add(this.pBox5);
+            this.panel1.Controls.Add(this.border5);
+            this.panel1.Controls.Add(this.pBox6);
+            this.panel1.Controls.Add(this.border6);
+            this.panel1.Controls.Add(this.pBox4);
+            this.panel1.Controls.Add(this.border4);
+            this.panel1.Controls.Add(this.pBox3);
+            this.panel1.Controls.Add(this.border3);
+            this.panel1.Controls.Add(this.pBox2);
+            this.panel1.Controls.Add(this.border2);
+            this.panel1.Controls.Add(this.pBox1);
+            this.panel1.Controls.Add(this.lab_quanspe);
+            this.panel1.Controls.Add(this.lab_quanmou);
+            this.panel1.Controls.Add(this.lab_quankey);
+            this.panel1.Controls.Add(this.lab_quanmon);
+            this.panel1.Controls.Add(this.lab_quancoo);
+            this.panel1.Controls.Add(this.lab_quancas);
+            this.panel1.Controls.Add(this.lab_quanpsu);
+            this.panel1.Controls.Add(this.lab_quandri);
+            this.panel1.Controls.Add(this.lab_quanram);
+            this.panel1.Controls.Add(this.lab_quanmb);
+            this.panel1.Controls.Add(this.lab_quangpu);
+            this.panel1.Controls.Add(this.lab_quancpu);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label_speak);
+            this.panel1.Controls.Add(this.label_mouse);
+            this.panel1.Controls.Add(this.label_keyb);
+            this.panel1.Controls.Add(this.label_moni);
+            this.panel1.Controls.Add(this.label_cooler);
+            this.panel1.Controls.Add(this.label_case);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label_psu);
+            this.panel1.Controls.Add(this.label_storage);
+            this.panel1.Controls.Add(this.label_ram);
+            this.panel1.Controls.Add(this.label_mb);
+            this.panel1.Controls.Add(this.label_gpu);
+            this.panel1.Controls.Add(this.label_cpu);
+            this.panel1.Controls.Add(this.border1);
+            this.panel1.Location = new System.Drawing.Point(12, 44);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(974, 643);
+            this.panel1.TabIndex = 77;
             // 
-            // pBox7
+            // border11
             // 
-            this.pBox7.BackColor = System.Drawing.Color.White;
-            this.pBox7.Image = ((System.Drawing.Image)(resources.GetObject("pBox7.Image")));
-            this.pBox7.Location = new System.Drawing.Point(374, 327);
-            this.pBox7.Name = "pBox7";
-            this.pBox7.Size = new System.Drawing.Size(37, 35);
-            this.pBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBox7.TabIndex = 128;
-            this.pBox7.TabStop = false;
-            this.pBox7.Visible = false;
+            this.border11.Enabled = false;
+            this.border11.Location = new System.Drawing.Point(370, 568);
+            this.border11.Name = "border11";
+            this.border11.Size = new System.Drawing.Size(45, 47);
+            this.border11.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border11.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border11.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.border11.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border11.StateCommon.Border.Rounding = 8;
+            this.border11.TabIndex = 141;
+            this.border11.Values.Text = "";
+            this.border11.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(432, 574);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(106, 28);
+            this.label10.TabIndex = 139;
+            this.label10.Text = "\"Speakers\"";
+            this.label10.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label10.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            // 
+            // border10
+            // 
+            this.border10.Enabled = false;
+            this.border10.Location = new System.Drawing.Point(370, 520);
+            this.border10.Name = "border10";
+            this.border10.Size = new System.Drawing.Size(45, 47);
+            this.border10.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border10.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border10.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.border10.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border10.StateCommon.Border.Rounding = 8;
+            this.border10.TabIndex = 138;
+            this.border10.Values.Text = "";
+            this.border10.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(432, 526);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 28);
+            this.label9.TabIndex = 136;
+            this.label9.Text = "\"Mouse\"";
+            this.label9.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label9.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            // 
+            // border9
+            // 
+            this.border9.Enabled = false;
+            this.border9.Location = new System.Drawing.Point(370, 470);
+            this.border9.Name = "border9";
+            this.border9.Size = new System.Drawing.Size(45, 47);
+            this.border9.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border9.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border9.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.border9.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border9.StateCommon.Border.Rounding = 8;
+            this.border9.TabIndex = 135;
+            this.border9.Values.Text = "";
+            this.border9.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(432, 476);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(113, 28);
+            this.label8.TabIndex = 133;
+            this.label8.Text = "\"Keyboard\"";
+            this.label8.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            // 
+            // border8
+            // 
+            this.border8.Enabled = false;
+            this.border8.Location = new System.Drawing.Point(370, 420);
+            this.border8.Name = "border8";
+            this.border8.Size = new System.Drawing.Size(45, 47);
+            this.border8.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border8.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border8.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.border8.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border8.StateCommon.Border.Rounding = 8;
+            this.border8.TabIndex = 132;
+            this.border8.Values.Text = "";
+            this.border8.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(432, 428);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 28);
+            this.label7.TabIndex = 130;
+            this.label7.Text = "\"Monitor\"";
+            this.label7.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
             // 
             // border7
             // 
@@ -164,18 +296,7 @@
             this.border7.StateCommon.Border.Rounding = 8;
             this.border7.TabIndex = 129;
             this.border7.Values.Text = "";
-            // 
-            // pBox5
-            // 
-            this.pBox5.BackColor = System.Drawing.Color.White;
-            this.pBox5.Image = ((System.Drawing.Image)(resources.GetObject("pBox5.Image")));
-            this.pBox5.Location = new System.Drawing.Point(374, 227);
-            this.pBox5.Name = "pBox5";
-            this.pBox5.Size = new System.Drawing.Size(37, 35);
-            this.pBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBox5.TabIndex = 126;
-            this.pBox5.TabStop = false;
-            this.pBox5.Visible = false;
+            this.border7.Visible = false;
             // 
             // border5
             // 
@@ -192,18 +313,7 @@
             this.border5.StateCommon.Border.Rounding = 8;
             this.border5.TabIndex = 127;
             this.border5.Values.Text = "";
-            // 
-            // pBox6
-            // 
-            this.pBox6.BackColor = System.Drawing.Color.White;
-            this.pBox6.Image = ((System.Drawing.Image)(resources.GetObject("pBox6.Image")));
-            this.pBox6.Location = new System.Drawing.Point(374, 277);
-            this.pBox6.Name = "pBox6";
-            this.pBox6.Size = new System.Drawing.Size(37, 35);
-            this.pBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBox6.TabIndex = 124;
-            this.pBox6.TabStop = false;
-            this.pBox6.Visible = false;
+            this.border5.Visible = false;
             // 
             // border6
             // 
@@ -220,18 +330,7 @@
             this.border6.StateCommon.Border.Rounding = 8;
             this.border6.TabIndex = 125;
             this.border6.Values.Text = "";
-            // 
-            // pBox4
-            // 
-            this.pBox4.BackColor = System.Drawing.Color.White;
-            this.pBox4.Image = ((System.Drawing.Image)(resources.GetObject("pBox4.Image")));
-            this.pBox4.Location = new System.Drawing.Point(374, 177);
-            this.pBox4.Name = "pBox4";
-            this.pBox4.Size = new System.Drawing.Size(37, 35);
-            this.pBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBox4.TabIndex = 122;
-            this.pBox4.TabStop = false;
-            this.pBox4.Visible = false;
+            this.border6.Visible = false;
             // 
             // border4
             // 
@@ -248,18 +347,7 @@
             this.border4.StateCommon.Border.Rounding = 8;
             this.border4.TabIndex = 123;
             this.border4.Values.Text = "";
-            // 
-            // pBox3
-            // 
-            this.pBox3.BackColor = System.Drawing.Color.White;
-            this.pBox3.Image = ((System.Drawing.Image)(resources.GetObject("pBox3.Image")));
-            this.pBox3.Location = new System.Drawing.Point(374, 127);
-            this.pBox3.Name = "pBox3";
-            this.pBox3.Size = new System.Drawing.Size(37, 35);
-            this.pBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBox3.TabIndex = 120;
-            this.pBox3.TabStop = false;
-            this.pBox3.Visible = false;
+            this.border4.Visible = false;
             // 
             // border3
             // 
@@ -276,18 +364,7 @@
             this.border3.StateCommon.Border.Rounding = 8;
             this.border3.TabIndex = 121;
             this.border3.Values.Text = "";
-            // 
-            // pBox2
-            // 
-            this.pBox2.BackColor = System.Drawing.Color.White;
-            this.pBox2.Image = ((System.Drawing.Image)(resources.GetObject("pBox2.Image")));
-            this.pBox2.Location = new System.Drawing.Point(374, 77);
-            this.pBox2.Name = "pBox2";
-            this.pBox2.Size = new System.Drawing.Size(37, 35);
-            this.pBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBox2.TabIndex = 118;
-            this.pBox2.TabStop = false;
-            this.pBox2.Visible = false;
+            this.border3.Visible = false;
             // 
             // border2
             // 
@@ -304,18 +381,7 @@
             this.border2.StateCommon.Border.Rounding = 8;
             this.border2.TabIndex = 119;
             this.border2.Values.Text = "";
-            // 
-            // pBox1
-            // 
-            this.pBox1.BackColor = System.Drawing.Color.White;
-            this.pBox1.Image = ((System.Drawing.Image)(resources.GetObject("pBox1.Image")));
-            this.pBox1.Location = new System.Drawing.Point(374, 27);
-            this.pBox1.Name = "pBox1";
-            this.pBox1.Size = new System.Drawing.Size(37, 35);
-            this.pBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBox1.TabIndex = 114;
-            this.pBox1.TabStop = false;
-            this.pBox1.Visible = false;
+            this.border2.Visible = false;
             // 
             // lab_quanspe
             // 
@@ -458,6 +524,8 @@
             this.label6.Size = new System.Drawing.Size(161, 28);
             this.label6.TabIndex = 100;
             this.label6.Text = "\"Computer Case\"";
+            this.label6.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
             // 
             // label5
             // 
@@ -468,6 +536,8 @@
             this.label5.Size = new System.Drawing.Size(64, 28);
             this.label5.TabIndex = 99;
             this.label5.Text = "\"PSU\"";
+            this.label5.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
             // 
             // label4
             // 
@@ -478,8 +548,8 @@
             this.label4.Size = new System.Drawing.Size(71, 28);
             this.label4.TabIndex = 98;
             this.label4.Text = "\"RAM\"";
-            this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
-            this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label4_MouseMove);
+            this.label4.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
             // 
             // label3
             // 
@@ -490,8 +560,8 @@
             this.label3.Size = new System.Drawing.Size(146, 28);
             this.label3.TabIndex = 97;
             this.label3.Text = "\"Motherboard\"";
-            this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
-            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label3_MouseMove);
+            this.label3.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
             // 
             // label_speak
             // 
@@ -562,8 +632,8 @@
             this.label2.Size = new System.Drawing.Size(67, 28);
             this.label2.TabIndex = 90;
             this.label2.Text = "\"GPU\"";
-            this.label2.MouseLeave += new System.EventHandler(this.label2_MouseLeave);
-            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label2_MouseMove);
+            this.label2.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
             // 
             // label1
             // 
@@ -574,8 +644,8 @@
             this.label1.Size = new System.Drawing.Size(65, 28);
             this.label1.TabIndex = 89;
             this.label1.Text = "\"CPU\"";
-            this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
-            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
+            this.label1.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
             // 
             // label_psu
             // 
@@ -637,21 +707,22 @@
             this.label_cpu.TabIndex = 77;
             this.label_cpu.Text = "CPU";
             // 
-            // kryptonButton1
+            // border1
             // 
-            this.kryptonButton1.Enabled = false;
-            this.kryptonButton1.Location = new System.Drawing.Point(370, 21);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(45, 47);
-            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonButton1.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
-            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.border1.Enabled = false;
+            this.border1.Location = new System.Drawing.Point(370, 21);
+            this.border1.Name = "border1";
+            this.border1.Size = new System.Drawing.Size(45, 47);
+            this.border1.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border1.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border1.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.border1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StateCommon.Border.Rounding = 8;
-            this.kryptonButton1.TabIndex = 117;
-            this.kryptonButton1.Values.Text = "";
+            this.border1.StateCommon.Border.Rounding = 8;
+            this.border1.TabIndex = 117;
+            this.border1.Values.Text = "";
+            this.border1.Visible = false;
             // 
             // but_guide
             // 
@@ -775,21 +846,157 @@
             this.but_combuild.TabIndex = 90;
             this.but_combuild.Values.Text = "Completed Builds";
             // 
+            // pBox11
+            // 
+            this.pBox11.BackColor = System.Drawing.Color.White;
+            this.pBox11.Image = ((System.Drawing.Image)(resources.GetObject("pBox11.Image")));
+            this.pBox11.Location = new System.Drawing.Point(374, 574);
+            this.pBox11.Name = "pBox11";
+            this.pBox11.Size = new System.Drawing.Size(37, 35);
+            this.pBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox11.TabIndex = 140;
+            this.pBox11.TabStop = false;
+            this.pBox11.Visible = false;
+            // 
+            // pBox10
+            // 
+            this.pBox10.BackColor = System.Drawing.Color.White;
+            this.pBox10.Image = ((System.Drawing.Image)(resources.GetObject("pBox10.Image")));
+            this.pBox10.Location = new System.Drawing.Point(374, 526);
+            this.pBox10.Name = "pBox10";
+            this.pBox10.Size = new System.Drawing.Size(37, 35);
+            this.pBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox10.TabIndex = 137;
+            this.pBox10.TabStop = false;
+            this.pBox10.Visible = false;
+            // 
+            // pBox9
+            // 
+            this.pBox9.BackColor = System.Drawing.Color.White;
+            this.pBox9.Image = ((System.Drawing.Image)(resources.GetObject("pBox9.Image")));
+            this.pBox9.Location = new System.Drawing.Point(374, 476);
+            this.pBox9.Name = "pBox9";
+            this.pBox9.Size = new System.Drawing.Size(37, 35);
+            this.pBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox9.TabIndex = 134;
+            this.pBox9.TabStop = false;
+            this.pBox9.Visible = false;
+            // 
+            // pBox8
+            // 
+            this.pBox8.BackColor = System.Drawing.Color.White;
+            this.pBox8.Image = ((System.Drawing.Image)(resources.GetObject("pBox8.Image")));
+            this.pBox8.Location = new System.Drawing.Point(374, 426);
+            this.pBox8.Name = "pBox8";
+            this.pBox8.Size = new System.Drawing.Size(37, 35);
+            this.pBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox8.TabIndex = 131;
+            this.pBox8.TabStop = false;
+            this.pBox8.Visible = false;
+            // 
+            // pBox7
+            // 
+            this.pBox7.BackColor = System.Drawing.Color.White;
+            this.pBox7.Image = ((System.Drawing.Image)(resources.GetObject("pBox7.Image")));
+            this.pBox7.Location = new System.Drawing.Point(374, 327);
+            this.pBox7.Name = "pBox7";
+            this.pBox7.Size = new System.Drawing.Size(37, 35);
+            this.pBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox7.TabIndex = 128;
+            this.pBox7.TabStop = false;
+            this.pBox7.Visible = false;
+            // 
+            // pBox5
+            // 
+            this.pBox5.BackColor = System.Drawing.Color.White;
+            this.pBox5.Image = ((System.Drawing.Image)(resources.GetObject("pBox5.Image")));
+            this.pBox5.Location = new System.Drawing.Point(374, 227);
+            this.pBox5.Name = "pBox5";
+            this.pBox5.Size = new System.Drawing.Size(37, 35);
+            this.pBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox5.TabIndex = 126;
+            this.pBox5.TabStop = false;
+            this.pBox5.Visible = false;
+            // 
+            // pBox6
+            // 
+            this.pBox6.BackColor = System.Drawing.Color.White;
+            this.pBox6.Image = ((System.Drawing.Image)(resources.GetObject("pBox6.Image")));
+            this.pBox6.Location = new System.Drawing.Point(374, 277);
+            this.pBox6.Name = "pBox6";
+            this.pBox6.Size = new System.Drawing.Size(37, 35);
+            this.pBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox6.TabIndex = 124;
+            this.pBox6.TabStop = false;
+            this.pBox6.Visible = false;
+            // 
+            // pBox4
+            // 
+            this.pBox4.BackColor = System.Drawing.Color.White;
+            this.pBox4.Image = ((System.Drawing.Image)(resources.GetObject("pBox4.Image")));
+            this.pBox4.Location = new System.Drawing.Point(374, 177);
+            this.pBox4.Name = "pBox4";
+            this.pBox4.Size = new System.Drawing.Size(37, 35);
+            this.pBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox4.TabIndex = 122;
+            this.pBox4.TabStop = false;
+            this.pBox4.Visible = false;
+            // 
+            // pBox3
+            // 
+            this.pBox3.BackColor = System.Drawing.Color.White;
+            this.pBox3.Image = ((System.Drawing.Image)(resources.GetObject("pBox3.Image")));
+            this.pBox3.Location = new System.Drawing.Point(374, 127);
+            this.pBox3.Name = "pBox3";
+            this.pBox3.Size = new System.Drawing.Size(37, 35);
+            this.pBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox3.TabIndex = 120;
+            this.pBox3.TabStop = false;
+            this.pBox3.Visible = false;
+            // 
+            // pBox2
+            // 
+            this.pBox2.BackColor = System.Drawing.Color.White;
+            this.pBox2.Image = ((System.Drawing.Image)(resources.GetObject("pBox2.Image")));
+            this.pBox2.Location = new System.Drawing.Point(374, 77);
+            this.pBox2.Name = "pBox2";
+            this.pBox2.Size = new System.Drawing.Size(37, 35);
+            this.pBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox2.TabIndex = 118;
+            this.pBox2.TabStop = false;
+            this.pBox2.Visible = false;
+            // 
+            // pBox1
+            // 
+            this.pBox1.BackColor = System.Drawing.Color.White;
+            this.pBox1.Image = ((System.Drawing.Image)(resources.GetObject("pBox1.Image")));
+            this.pBox1.Location = new System.Drawing.Point(374, 27);
+            this.pBox1.Name = "pBox1";
+            this.pBox1.Size = new System.Drawing.Size(37, 35);
+            this.pBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox1.TabIndex = 114;
+            this.pBox1.TabStop = false;
+            this.pBox1.Visible = false;
+            // 
             // buildmenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(998, 699);
             this.Controls.Add(this.but_guide);
-            this.Controls.Add(this.border1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.but_combuild);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "buildmenu";
             this.ShowIcon = false;
             this.Text = "buildmenu";
             this.Load += new System.EventHandler(this.buildmenu_Load);
-            this.border1.ResumeLayout(false);
-            this.border1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox6)).EndInit();
@@ -803,7 +1010,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel border1;
+        private System.Windows.Forms.Panel panel1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton but_guide;
         private ComponentFactory.Krypton.Toolkit.KryptonButton but_combuild;
         private System.Windows.Forms.Label label_psu;
@@ -837,7 +1044,7 @@
         private System.Windows.Forms.Label lab_quanram;
         private System.Windows.Forms.Label lab_quanmb;
         private System.Windows.Forms.PictureBox pBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border1;
         private System.Windows.Forms.PictureBox pBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton border2;
         private System.Windows.Forms.PictureBox pBox3;
@@ -850,5 +1057,17 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton border5;
         private System.Windows.Forms.PictureBox pBox6;
         private ComponentFactory.Krypton.Toolkit.KryptonButton border6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pBox8;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border8;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pBox9;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border9;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pBox10;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border10;
+        private System.Windows.Forms.PictureBox pBox11;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border11;
+        private System.Windows.Forms.Label label10;
     }
 }

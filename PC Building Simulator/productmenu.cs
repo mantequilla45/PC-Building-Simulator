@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +7,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,32 +29,7 @@ namespace PC_Building_Simulator
             display(choice);
             InitializeControls();
         }
-        private void InitializeControls()
-        {
-            for (int i = 0; i < 20; i++)
-            {
-                Panel panel = (Panel)this.Controls.Find($"panel{i + 1}", true).FirstOrDefault();
-                PictureBox pictureBox = (PictureBox)this.Controls.Find($"pbox{i + 1}", true).FirstOrDefault();
-                Label nameLabel = (Label)this.Controls.Find($"labname{i + 1}", true).FirstOrDefault();
-                Label priceLabel = (Label)this.Controls.Find($"labprice{i + 1}", true).FirstOrDefault();
-
-                if (panel != null && pictureBox != null && nameLabel != null && priceLabel != null)
-                {
-                    panel.MouseLeave += Panel_MouseLeave;
-                    panel.MouseMove += Panel_MouseMove;
-                    panel.MouseDown += Panel1_MouseDown;
-                    pictureBox.MouseMove += ChildControl_MouseMove;
-                    nameLabel.MouseMove += ChildControl_MouseMove;
-                    priceLabel.MouseMove += ChildControl_MouseMove;
-                    pictureBox.MouseLeave += ChildControl_MouseLeave;
-                    nameLabel.MouseLeave += ChildControl_MouseLeave;
-                    priceLabel.MouseLeave += ChildControl_MouseLeave;
-                    pictureBox.MouseDown += ChildControl_MouseDown;
-                    nameLabel.MouseDown += ChildControl_MouseDown;
-                    priceLabel.MouseDown += ChildControl_MouseDown;
-                }
-            }
-        }
+        
         private void display(int menuchoice)
         {
             dbManager = new DatabaseManager("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb");
@@ -267,7 +244,7 @@ namespace PC_Building_Simulator
                     for (int i = 0; i < psuNames.Length; i++)
                     {
                         string psuName = psuNames[i];
-                        string psuImage = psuName.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('+', '_');
+                        string psuImage = psuName.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
                         string resourcePsu = $"psu_{psuImage}";
 
                         PictureBox pictureBox = Controls.Find($"pbox{i + 1}", true).FirstOrDefault() as PictureBox;
@@ -288,9 +265,6 @@ namespace PC_Building_Simulator
                             nameLabel.Text = psuName;
                         }
                     }
-
-
-
                     break;
 
                 case 7:
@@ -336,7 +310,217 @@ namespace PC_Building_Simulator
                     }
                     break;
 
+                case 9:
+                    string[] monitorNames = {
+                        "Asus ROG Strix XG43UQ", "Samsung Odyssey G9", "LG 27GP950-B", "Acer Predator XB323QK NV",
+                        "MSI MEG 341CQR", "Gigabyte M32U", "AOC Agon AG352UCG6", "ViewSonic Elite XG270QG",
+                        "Asus ProArt Display PA32UCG", "BenQ PD3220U", "Dell UltraSharp U3223QE", "Apple Pro Display XDR",
+                        "LG UltraFine Ergo 32EP950-B", "Samsung Odyssey Neo G8", "HP Z34C G3", "iiyama G-Master GB3466WQSU-B1",
+                        "Philips Evnia 34M2C7600MV", "Lenovo ThinkVision P34w-20", "MSI Modern AM271CQP Monitor",
+                        "AOC CQ32G1S"
+                    };
 
+                    price = new int[]{
+                        70, 80, 80, 70, 100,
+                        80, 300, 120, 70, 150,
+                        180, 150, 140, 170, 120,
+                        200, 80, 80, 80, 100
+                    };
+
+                    for (int i = 0; i < monitorNames.Length; i++)
+                    {
+                        string monitorName = monitorNames[i];
+                        string monitorImage = monitorName.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
+                        string resourceMonitor = $"mon_{monitorImage}";
+
+                        PictureBox pictureBox = Controls.Find($"pbox{i + 1}", true).FirstOrDefault() as PictureBox;
+                        if (pictureBox != null)
+                        {
+                            pictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourceMonitor);
+                        }
+
+                        Label priceLabel = pricelabels[i];
+                        if (priceLabel != null)
+                        {
+                            priceLabel.Text = $"${price[i]}";
+                        }
+
+                        Label nameLabel = namelabels[i];
+                        if (nameLabel != null)
+                        {
+                            nameLabel.Text = monitorName;
+                        }
+                    }
+                break;
+
+                case 10:
+                    string[] keyboardNames = {
+                        "Razer Blackwidow V3 Pro", "Logitech MX Mechanical Mini", "Apple Magic Keyboard", "CORSAIR K100 RGB",
+                        "SteelSeries Apex Pro TKL", "Glorious GMMK Pro", "HyperX Alloy Origins Core", "Fnatic STREAK65 LP",
+                        "Ducky One 3 Mini", "Leopold FC980M PD", "Niz Plum 82", "Keychron Q1", "Epomaker GK68XS",
+                        "Anne Pro 2", "Redragon K552", "Logitech G915 TKL", "MSI Vigor GK71", "Asus ROG Strix Scope TKL",
+                        "Cooler Master SK622", "NuPhy Air75"
+                    };
+
+                    price = new int[] {
+                        155, 125, 115, 200, 175,
+                        145, 100, 125, 140, 275,
+                        200, 175, 100, 85, 40,
+                        200, 120, 150, 85, 140
+                    };
+
+                    for (int i = 0; i < keyboardNames.Length; i++)
+                    {
+                        string keyboardName = keyboardNames[i];
+                        string keyboardImage = keyboardName.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
+
+                        PictureBox pictureBox = Controls.Find($"pbox{i + 1}", true).FirstOrDefault() as PictureBox;
+                        if (pictureBox != null)
+                        {
+                            string resourceKeyboard = $"key_{keyboardImage}";
+                            pictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourceKeyboard);
+                        }
+
+                        Label priceLabel = pricelabels[i];
+                        if (priceLabel != null)
+                        {
+                            priceLabel.Text = $"${price[i]}";
+                        }
+
+                        Label nameLabel = namelabels[i];
+                        if (nameLabel != null)
+                        {
+                            nameLabel.Text = keyboardName;
+                        }
+                    }
+                    break;
+
+                case 11:
+                    string[] mouseNames = {
+                        "Logitech MX Master 3", "Razer DeathAdder V2 Mini", "Apple Magic Mouse 2", "Glorious Model O",
+                        "SteelSeries Rival 650 Wireless", "HyperX Pulsefire Haste", "Fnatic Flick 2", "Ducky Feather",
+                        "Logitech G502 Hero", "Corsair Dark Core Pro RGB SE", "Logitech M220 Silent", "Logitech G305 Lightspeed",
+                        "Razer Basilisk V3", "Logitech MX Anywhere 3", "SteelSeries Rival 710", "Razer Naga Trinity",
+                        "Glorious Model D Wireless", "Logitech G Pro Wireless", "Zowie S2-C Divina Series", "Logitech MX Vertical Ergonomic Mouse"
+                    };
+
+                     price = new int[]{
+                        100, 60, 80, 65, 100,
+                        60, 70, 70, 65, 100,
+                        25, 50, 70, 85, 70,
+                        100, 100, 120, 90, 85
+                    };
+
+                    for (int i = 0; i < mouseNames.Length; i++)
+                    {
+                        string mouseName = mouseNames[i];
+                        string mouseImage = mouseName.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
+
+                        PictureBox pictureBox = Controls.Find($"pbox{i + 1}", true).FirstOrDefault() as PictureBox;
+                        if (pictureBox != null)
+                        {
+                            string resourceMouse = $"mou_{mouseImage}";
+                            pictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourceMouse);
+                        }
+
+                        Label priceLabel = pricelabels[i];
+                        if (priceLabel != null)
+                        {
+                            priceLabel.Text = $"${price[i]}";
+                        }
+
+                        Label nameLabel = namelabels[i];
+                        if (nameLabel != null)
+                        {
+                            nameLabel.Text = mouseName;
+                        }
+                    }
+                    break;
+
+                case 12:
+                    string[] speakerNames = {
+                        "Bose Companion 20", "Logitech G560 LIGHTSYNC", "Razer Nommo Chroma", "Creative Pebble Plus 2.0",
+                        "Edifier R1280T", "Audioengine A2+ Wireless", "Mackie CR3-XBT", "Kanto YU4", "Swan M10 Plus",
+                        "IK Multimedia iLoud Micro Monitor", "Micca RB42", "Edifier S350DB", "Audioengine A5+ Wireless",
+                        "PreSonus Eris E3.5", "JBL Studio 530", "Kali Audio LP-6", "Neumi BS5", "Monoprice DT-3BT",
+                        "Klipsch R-41M", "Audioengine HD3"
+                    };
+
+                    price = new int[]{
+                        40, 200, 150, 40, 120,
+                        300, 200, 250, 156, 200,
+                        150, 200, 400, 150, 200,
+                        350, 250, 150, 150, 350
+                    };
+
+                    for (int i = 0; i < speakerNames.Length; i++)
+                    {
+                        string speakerName = speakerNames[i];
+                        string speakerImage = speakerName.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('+', '_').Replace('.', '_');
+
+                        PictureBox pictureBox = Controls.Find($"pbox{i + 1}", true).FirstOrDefault() as PictureBox;
+                        if (pictureBox != null)
+                        {
+                            string resourceSpeaker = $"spe_{speakerImage}";
+                            pictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourceSpeaker);
+                        }
+
+                        Label priceLabel = pricelabels[i];
+                        if (priceLabel != null)
+                        {
+                            priceLabel.Text = $"${price[i]}";
+                        }
+
+                        Label nameLabel = namelabels[i];
+                        if (nameLabel != null)
+                        {
+                            nameLabel.Text = speakerName;
+                        }
+                    }
+                    break;
+
+                case 13:
+                    string[] hddNames = {
+                        "HGST Deskstar NAS 4TB", "HGST Ultrastar 12TB", "Hitachi Deskstar 500GB", "Hitachi Ultrastar 5TB",
+                        "Samsung Spinpoint 1TB", "Seagate Barracuda 3TB", "Seagate BarraCuda Pro 14TB", "Seagate Constellation 3TB",
+                        "Seagate FireCuda 8TB", "Seagate IronWolf 10TB", "Seagate SkyHawk 14TB", "Toshiba DT01ACA 1TB",
+                        "Toshiba N300 14TB", "Toshiba P300 3TB", "Toshiba X300 6TB", "WD VelociRaptor 1TB",
+                        "Western Digital Black 2.5TB", "Western Digital Blue 2TB", "Western Digital Gold 18TB", "Western Digital Red 8TB"
+                    };
+
+                    price = new int[]{
+                        115, 450, 25, 175, 45,
+                        70, 425, 125, 225, 275,
+                        375, 35, 325, 70, 135,
+                        200, 90, 50, 475, 225
+                    };
+
+
+                    for (int i = 0; i < hddNames.Length; i++)
+                    {
+                        string hddName = hddNames[i];
+                        string hddImage = hddName.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('+', '_').Replace('.', '_');
+
+                        PictureBox pictureBox = Controls.Find($"pbox{i + 1}", true).FirstOrDefault() as PictureBox;
+                        if (pictureBox != null)
+                        {
+                            string resourceHDD = $"hdd_{hddImage}";
+                            pictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourceHDD);
+                        }
+
+                        Label priceLabel = pricelabels[i];
+                        if (priceLabel != null)
+                        {
+                            priceLabel.Text = $"${price[i]}";
+                        }
+
+                        Label nameLabel = namelabels[i];
+                        if (nameLabel != null)
+                        {
+                            nameLabel.Text = hddName;
+                        }
+                    }
+                    break;
             }
         }
         
@@ -372,8 +556,54 @@ namespace PC_Building_Simulator
                         case 7:
                             displayManager.casemenu(menuIndex);
                             break;
+                        case 9:
+                            displayManager.monitormenu(menuIndex);
+                            break;
+                        case 10:
+                            displayManager.keyboardmenu(menuIndex);
+                            break;
+                        case 11:
+                            displayManager.mousemenu(menuIndex);
+                            break;
+                        case 12:
+                            displayManager.speakersmenu(menuIndex);
+                            break;
+                        case 13:
+                            displayManager.hddmenu(menuIndex);
+
+                            break;
                     }
                     mainApp.backicon.Visible = true;
+                }
+            }
+        }
+        private void InitializeControls()
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                Panel panel = (Panel)this.Controls.Find($"panel{i + 1}", true).FirstOrDefault();
+                PictureBox pictureBox = (PictureBox)this.Controls.Find($"pbox{i + 1}", true).FirstOrDefault();
+                Label nameLabel = (Label)this.Controls.Find($"labname{i + 1}", true).FirstOrDefault();
+                Label priceLabel = (Label)this.Controls.Find($"labprice{i + 1}", true).FirstOrDefault();
+                KryptonButton border = (KryptonButton)this.Controls.Find($"border{i + 1}", true).FirstOrDefault();
+
+                if (panel != null && pictureBox != null && nameLabel != null && priceLabel != null)
+                {
+                    panel.MouseLeave += Panel_MouseLeave;
+                    panel.MouseMove += Panel_MouseMove;
+                    panel.MouseDown += Panel_MouseDown;
+                    border.MouseLeave += Panel_MouseLeave;
+                    border.MouseMove += Panel_MouseMove;
+                    border.MouseDown += Panel_MouseDown;
+                    pictureBox.MouseLeave += ChildControl_MouseLeave;
+                    pictureBox.MouseMove += ChildControl_MouseMove;
+                    pictureBox.MouseDown += ChildControl_MouseDown;
+                    nameLabel.MouseLeave += ChildControl_MouseLeave;
+                    nameLabel.MouseMove += ChildControl_MouseMove;
+                    nameLabel.MouseDown += ChildControl_MouseDown;
+                    priceLabel.MouseLeave += ChildControl_MouseLeave;
+                    priceLabel.MouseMove += ChildControl_MouseMove;
+                    priceLabel.MouseDown += ChildControl_MouseDown;
                 }
             }
         }
@@ -385,27 +615,47 @@ namespace PC_Building_Simulator
 
         private void InitializeDisplayManager()
         {
-            productmenu caseMenuForm = this;
-            DisplayManager displayManager = new DisplayManager(caseMenuForm);
+            productmenu productmenuform = this;
+            MemoryManager displayManager = new MemoryManager(productmenuform);
         }
-
         private void Panel_MouseLeave(object sender, EventArgs e)
         {
-            Panel panel = sender as Panel;
+            Panel panel = GetPanelFromControl(sender as Control);
             if (panel != null)
             {
-                panel.BorderStyle = BorderStyle.None;
+                KryptonButton border = GetBorderFromPanel(panel);
+                if (border != null)
+                {
+                    border.StateCommon.Border.Color1 = Color.White; // Set border color to White (change as needed)
+                }
             }
         }
         private void Panel_MouseMove(object sender, MouseEventArgs e)
         {
-            Panel panel = sender as Panel;
+            Panel panel = GetPanelFromControl(sender as Control);
             if (panel != null)
             {
-                panel.BorderStyle = BorderStyle.FixedSingle;
+                KryptonButton border = GetBorderFromPanel(panel);
+                if (border != null)
+                {
+                    border.StateCommon.Border.Color1 = Color.Silver; // Set border color to Red (change as needed)
+                }
             }
         }
-        private void Panel1_MouseDown(object sender, MouseEventArgs e)
+        private KryptonButton GetBorderFromPanel(Panel panel)
+        {
+
+            foreach (Control control in panel.Controls)
+            {
+                if (control is KryptonButton)
+                {
+                    return (KryptonButton)control;
+                }
+            }
+            return null;
+        }
+
+        private void Panel_MouseDown(object sender, MouseEventArgs e)
         {
             Panel panel = sender as Panel;
             if (panel != null && e.Button == MouseButtons.Left)
@@ -444,41 +694,6 @@ namespace PC_Building_Simulator
                 control = control.Parent;
             }
             return control as Panel;
-        }
-
-        private void labname1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labname2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labname3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labname4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labname8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labname6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labname5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

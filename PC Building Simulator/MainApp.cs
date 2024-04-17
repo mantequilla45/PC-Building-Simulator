@@ -15,7 +15,7 @@ namespace PC_Building_Simulator
     public partial class MainApp : KryptonForm
     {
         bool clicked;
-        int back = 0;
+        public int back = 0;
         public string username;
         private DisplayManager displayManager;
         private DatabaseManager dbManager;
@@ -29,7 +29,6 @@ namespace PC_Building_Simulator
             displayManager = new DisplayManager(this);
             displayManager.menuselect(1);
             dbManager = new DatabaseManager("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb");
-
             dbManager.OpenConnection();
             string checkAdminQuery = "SELECT * FROM users WHERE username = @Username AND usertype = @UserType";
             using (OleDbCommand cmd = new OleDbCommand(checkAdminQuery, dbManager.GetConnection()))
@@ -52,6 +51,8 @@ namespace PC_Building_Simulator
                 cmd.Parameters.AddWithValue("@Username", username);
             }
             dbManager.CloseConnection();
+
+            but_build_Click(this, EventArgs.Empty);
         }
 
         private void MainApp_Load(object sender, EventArgs e)
@@ -76,7 +77,7 @@ namespace PC_Building_Simulator
         }
         private void but_build_MouseMove(object sender, MouseEventArgs e)
         {
-            if (clicked && !bluebar1.Visible)
+           if (clicked && !bluebar1.Visible)
             {
                 DisplayManager.ButtonAppearance.Activate.Build(displayManager.mainApp);
                 bluebar1.Visible = false;
@@ -445,12 +446,20 @@ namespace PC_Building_Simulator
         //------------------------------ monitor menu -------------------------------
         private void but_monitor_Click(object sender, EventArgs e)
         {
-            backicon.Visible = false;
-            back = 9;
-            clicked = true;
-            displayManager.otherButton_Click(clicked);
-            displayManager.menuselect(10);
-            DisplayManager.ButtonAppearance.Activate.Monitor(displayManager.mainApp);
+            if (label_menu.Text == "Monitor")
+            {
+                
+            }
+            else
+            {
+                backicon.Visible = false;
+                back = 9;
+                clicked = true;
+                displayManager.otherButton_Click(clicked);
+                displayManager.menuselect(10);
+                DisplayManager.ButtonAppearance.Activate.Monitor(displayManager.mainApp);
+            }
+                
         }
 
         private void but_monitor_MouseMove(object sender, MouseEventArgs e)
@@ -484,12 +493,19 @@ namespace PC_Building_Simulator
         //------------------------------ keyboard menu ------------------------------
         private void but_keyb_Click(object sender, EventArgs e)
         {
-            backicon.Visible = false;
-            back = 10;
-            clicked = true;
-            displayManager.otherButton_Click(clicked);
-            displayManager.menuselect(11);
-            DisplayManager.ButtonAppearance.Activate.Keyboard(displayManager.mainApp);
+            if (label_menu.Text == "Keyboard")
+            {
+
+            }
+            else
+            {
+                backicon.Visible = false;
+                back = 10;
+                clicked = true;
+                displayManager.otherButton_Click(clicked);
+                displayManager.menuselect(11);
+                DisplayManager.ButtonAppearance.Activate.Keyboard(displayManager.mainApp);
+            }
         }
 
         private void but_keyb_MouseMove(object sender, MouseEventArgs e)
@@ -523,12 +539,19 @@ namespace PC_Building_Simulator
         //------------------------------ mouse menu ---------------------------------
         private void but_mouse_Click(object sender, EventArgs e)
         {
-            backicon.Visible = false;
-            back = 11;
-            clicked = true;
-            displayManager.otherButton_Click(clicked);
-            displayManager.menuselect(12);
-            DisplayManager.ButtonAppearance.Activate.Mouse(displayManager.mainApp);
+            if (label_menu.Text == "Mouse")
+            {
+
+            }
+            else
+            {
+                backicon.Visible = false;
+                back = 11;
+                clicked = true;
+                displayManager.otherButton_Click(clicked);
+                displayManager.menuselect(12);
+                DisplayManager.ButtonAppearance.Activate.Mouse(displayManager.mainApp);
+            }
         }
 
         private void but_mouse_MouseMove(object sender, MouseEventArgs e)
@@ -562,12 +585,19 @@ namespace PC_Building_Simulator
         //------------------------------ speakers menu ------------------------------
         private void but_speakers_Click(object sender, EventArgs e)
         {
-            backicon.Visible = false;
-            back = 12;
-            clicked = true;
-            displayManager.otherButton_Click(clicked);
-            displayManager.menuselect(13);
-            DisplayManager.ButtonAppearance.Activate.Speakers(displayManager.mainApp);
+            if (label_menu.Text == "Speakers")
+            {
+
+            }
+            else
+            {
+                backicon.Visible = false;
+                back = 12;
+                clicked = true;
+                displayManager.otherButton_Click(clicked);
+                displayManager.menuselect(13);
+                DisplayManager.ButtonAppearance.Activate.Speakers(displayManager.mainApp);
+            }
         }
 
         private void but_speakers_MouseMove(object sender, MouseEventArgs e)
@@ -614,20 +644,11 @@ namespace PC_Building_Simulator
         //---------------------------------------------------------------------------
 
         //------------------------------ profile menu -------------------------------
-        private void label_profile_Click(object sender, EventArgs e)
+
+
+        private void lab_profile_Click(object sender, EventArgs e)
         {
             backicon.Visible = false;
-            clicked = true;
-            panelmain.Controls.Clear();
-            profilemenu profilepanel = new profilemenu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            profilepanel.FormBorderStyle = FormBorderStyle.None;
-            panelmain.Controls.Add(profilepanel);
-            displayManager.otherButton_Click(clicked); label_menu.Text = "Profile";
-            profilepanel.Show();
-        }
-
-        private void userlabel_Click(object sender, EventArgs e)
-        {
             clicked = true;
             panelmain.Controls.Clear();
             profilemenu profilepanel = new profilemenu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -667,64 +688,69 @@ namespace PC_Building_Simulator
 
         private void backicon_Click(object sender, EventArgs e)
         {
+            MainApp mainApp = new MainApp(username);
             switch (back)
             {
 
                 case 1:
                     displayManager.menuselect(2);
+                    backicon.Visible = false;
                     break;
                 case 2:
                     displayManager.menuselect(3);
+                    backicon.Visible = false;
                     break;
                 case 3:
                     displayManager.menuselect(4);
+                    backicon.Visible = false;
                     break;
                 case 4:
                     displayManager.menuselect(5);
+                    backicon.Visible = false;
                     break;
                 case 5:
                     displayManager.menuselect(6);
+                    backicon.Visible = false;
                     break;
                 case 6:
                     displayManager.menuselect(7);
+                    backicon.Visible = false;
                     break;
                 case 7:
                     displayManager.menuselect(8);
+                    backicon.Visible = false;
                     break;
                 case 8:
                     displayManager.menuselect(9);
+                    backicon.Visible = false;
                     break;
                 case 9:
                     displayManager.menuselect(10);
+                    backicon.Visible = false;
                     break;
                 case 10:
                     displayManager.menuselect(11);
+                    backicon.Visible = false;
                     break;
                 case 11:
                     displayManager.menuselect(12);
+                    backicon.Visible = false;
                     break;
                 case 12:
                     displayManager.menuselect(13);
+                    backicon.Visible = false;
                     break;
+                case 13:
+                    displayManager.menuselect(14);
+                    back = 5;
+                    break;
+
                 default:
                     break;
 
             }
-            backicon.Visible = false;
-
         }
 
-        private void lab_profile_Click(object sender, EventArgs e)
-        {
-            backicon.Visible = false;
-            clicked = true;
-            panelmain.Controls.Clear();
-            profilemenu profilepanel = new profilemenu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            profilepanel.FormBorderStyle = FormBorderStyle.None;
-            panelmain.Controls.Add(profilepanel);
-            displayManager.otherButton_Click(clicked); label_menu.Text = "Profile";
-            profilepanel.Show();
-        }
 
         private void lab_profile_MouseLeave(object sender, EventArgs e)
         {
@@ -742,14 +768,9 @@ namespace PC_Building_Simulator
             backicon.BackColor = Color.WhiteSmoke;
         }
 
-        private void backicon_MouseMove(object sender, MouseEventArgs e)
+        private void keybicon2_Click(object sender, EventArgs e)
         {
-            backicon.BackColor = Color.LightGray;
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            displayManager.menuselect(1);
         }
     }
 }
