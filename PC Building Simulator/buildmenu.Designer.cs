@@ -40,6 +40,7 @@
             this.border1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.remove_gpu = new System.Windows.Forms.Label();
             this.quan_gpu = new System.Windows.Forms.Label();
             this.price_gpu = new System.Windows.Forms.Label();
             this.label_gpu = new System.Windows.Forms.Label();
@@ -48,6 +49,7 @@
             this.border2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.remove_mb = new System.Windows.Forms.Label();
             this.quan_mb = new System.Windows.Forms.Label();
             this.price_mb = new System.Windows.Forms.Label();
             this.label_mb = new System.Windows.Forms.Label();
@@ -56,6 +58,7 @@
             this.border3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.remove_ram = new System.Windows.Forms.Label();
             this.price_ram = new System.Windows.Forms.Label();
             this.quan_ram = new System.Windows.Forms.Label();
             this.label_ram = new System.Windows.Forms.Label();
@@ -72,6 +75,7 @@
             this.border5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton9 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.remove_psu = new System.Windows.Forms.Label();
             this.quan_psu = new System.Windows.Forms.Label();
             this.price_psu = new System.Windows.Forms.Label();
             this.label_psu = new System.Windows.Forms.Label();
@@ -80,6 +84,7 @@
             this.border6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.remove_case = new System.Windows.Forms.Label();
             this.quan_case = new System.Windows.Forms.Label();
             this.price_case = new System.Windows.Forms.Label();
             this.label_case = new System.Windows.Forms.Label();
@@ -96,6 +101,7 @@
             this.border8 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton15 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.remove_moni = new System.Windows.Forms.Label();
             this.quan_moni = new System.Windows.Forms.Label();
             this.price_moni = new System.Windows.Forms.Label();
             this.label_mon = new System.Windows.Forms.Label();
@@ -104,6 +110,7 @@
             this.border9 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton17 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.remove_keyb = new System.Windows.Forms.Label();
             this.quan_keyb = new System.Windows.Forms.Label();
             this.price_keyb = new System.Windows.Forms.Label();
             this.label_key = new System.Windows.Forms.Label();
@@ -112,6 +119,7 @@
             this.border10 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton19 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.remove_mous = new System.Windows.Forms.Label();
             this.quan_mous = new System.Windows.Forms.Label();
             this.price_mou = new System.Windows.Forms.Label();
             this.label_mouse = new System.Windows.Forms.Label();
@@ -120,6 +128,7 @@
             this.border11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton21 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.remove_spk = new System.Windows.Forms.Label();
             this.quan_spk = new System.Windows.Forms.Label();
             this.price_spk = new System.Windows.Forms.Label();
             this.label_spk = new System.Windows.Forms.Label();
@@ -207,7 +216,8 @@
             this.remove_cpu.Size = new System.Drawing.Size(19, 13);
             this.remove_cpu.TabIndex = 127;
             this.remove_cpu.Text = "✖";
-            this.remove_cpu.Click += new System.EventHandler(this.but_remove1_Click);
+            this.remove_cpu.Visible = false;
+            this.remove_cpu.Click += new System.EventHandler(this.removecpu_Click);
             this.remove_cpu.MouseLeave += new System.EventHandler(this.remove_MouseLeave);
             this.remove_cpu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.remove_MouseMove);
             // 
@@ -300,6 +310,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.remove_gpu);
             this.panel1.Controls.Add(this.quan_gpu);
             this.panel1.Controls.Add(this.price_gpu);
             this.panel1.Controls.Add(this.label_gpu);
@@ -311,6 +322,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1017, 55);
             this.panel1.TabIndex = 120;
+            // 
+            // remove_gpu
+            // 
+            this.remove_gpu.AutoSize = true;
+            this.remove_gpu.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remove_gpu.Location = new System.Drawing.Point(969, 25);
+            this.remove_gpu.Name = "remove_gpu";
+            this.remove_gpu.Size = new System.Drawing.Size(19, 13);
+            this.remove_gpu.TabIndex = 128;
+            this.remove_gpu.Text = "✖";
+            this.remove_gpu.Visible = false;
+            this.remove_gpu.Click += new System.EventHandler(this.removegpu_Click);
+            this.remove_gpu.MouseLeave += new System.EventHandler(this.remove_MouseLeave);
+            this.remove_gpu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.remove_MouseMove);
             // 
             // quan_gpu
             // 
@@ -401,6 +426,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.remove_mb);
             this.panel2.Controls.Add(this.quan_mb);
             this.panel2.Controls.Add(this.price_mb);
             this.panel2.Controls.Add(this.label_mb);
@@ -412,6 +438,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1017, 55);
             this.panel2.TabIndex = 121;
+            // 
+            // remove_mb
+            // 
+            this.remove_mb.AutoSize = true;
+            this.remove_mb.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remove_mb.Location = new System.Drawing.Point(969, 25);
+            this.remove_mb.Name = "remove_mb";
+            this.remove_mb.Size = new System.Drawing.Size(19, 13);
+            this.remove_mb.TabIndex = 129;
+            this.remove_mb.Text = "✖";
+            this.remove_mb.Visible = false;
+            this.remove_mb.Click += new System.EventHandler(this.removemb_Click);
+            this.remove_mb.MouseLeave += new System.EventHandler(this.remove_MouseLeave);
+            this.remove_mb.MouseMove += new System.Windows.Forms.MouseEventHandler(this.remove_MouseMove);
             // 
             // quan_mb
             // 
@@ -502,6 +542,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.remove_ram);
             this.panel4.Controls.Add(this.price_ram);
             this.panel4.Controls.Add(this.quan_ram);
             this.panel4.Controls.Add(this.label_ram);
@@ -513,6 +554,20 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1017, 55);
             this.panel4.TabIndex = 122;
+            // 
+            // remove_ram
+            // 
+            this.remove_ram.AutoSize = true;
+            this.remove_ram.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remove_ram.Location = new System.Drawing.Point(969, 25);
+            this.remove_ram.Name = "remove_ram";
+            this.remove_ram.Size = new System.Drawing.Size(19, 13);
+            this.remove_ram.TabIndex = 130;
+            this.remove_ram.Text = "✖";
+            this.remove_ram.Visible = false;
+            this.remove_ram.Click += new System.EventHandler(this.removeram_Click);
+            this.remove_ram.MouseLeave += new System.EventHandler(this.remove_MouseLeave);
+            this.remove_ram.MouseMove += new System.Windows.Forms.MouseEventHandler(this.remove_MouseMove);
             // 
             // price_ram
             // 
@@ -704,6 +759,7 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.remove_psu);
             this.panel6.Controls.Add(this.quan_psu);
             this.panel6.Controls.Add(this.price_psu);
             this.panel6.Controls.Add(this.label_psu);
@@ -715,6 +771,20 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1017, 55);
             this.panel6.TabIndex = 124;
+            // 
+            // remove_psu
+            // 
+            this.remove_psu.AutoSize = true;
+            this.remove_psu.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remove_psu.Location = new System.Drawing.Point(969, 25);
+            this.remove_psu.Name = "remove_psu";
+            this.remove_psu.Size = new System.Drawing.Size(19, 13);
+            this.remove_psu.TabIndex = 131;
+            this.remove_psu.Text = "✖";
+            this.remove_psu.Visible = false;
+            this.remove_psu.Click += new System.EventHandler(this.removepsu_Click);
+            this.remove_psu.MouseLeave += new System.EventHandler(this.remove_MouseLeave);
+            this.remove_psu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.remove_MouseMove);
             // 
             // quan_psu
             // 
@@ -805,6 +875,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.remove_case);
             this.panel7.Controls.Add(this.quan_case);
             this.panel7.Controls.Add(this.price_case);
             this.panel7.Controls.Add(this.label_case);
@@ -816,6 +887,20 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1017, 55);
             this.panel7.TabIndex = 125;
+            // 
+            // remove_case
+            // 
+            this.remove_case.AutoSize = true;
+            this.remove_case.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remove_case.Location = new System.Drawing.Point(969, 25);
+            this.remove_case.Name = "remove_case";
+            this.remove_case.Size = new System.Drawing.Size(19, 13);
+            this.remove_case.TabIndex = 132;
+            this.remove_case.Text = "✖";
+            this.remove_case.Visible = false;
+            this.remove_case.Click += new System.EventHandler(this.removecase_Click);
+            this.remove_case.MouseLeave += new System.EventHandler(this.remove_MouseLeave);
+            this.remove_case.MouseMove += new System.Windows.Forms.MouseEventHandler(this.remove_MouseMove);
             // 
             // quan_case
             // 
@@ -1007,6 +1092,7 @@
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.remove_moni);
             this.panel9.Controls.Add(this.quan_moni);
             this.panel9.Controls.Add(this.price_moni);
             this.panel9.Controls.Add(this.label_mon);
@@ -1018,6 +1104,20 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1017, 55);
             this.panel9.TabIndex = 127;
+            // 
+            // remove_moni
+            // 
+            this.remove_moni.AutoSize = true;
+            this.remove_moni.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remove_moni.Location = new System.Drawing.Point(969, 27);
+            this.remove_moni.Name = "remove_moni";
+            this.remove_moni.Size = new System.Drawing.Size(19, 13);
+            this.remove_moni.TabIndex = 134;
+            this.remove_moni.Text = "✖";
+            this.remove_moni.Visible = false;
+            this.remove_moni.Click += new System.EventHandler(this.removemoni_Click);
+            this.remove_moni.MouseLeave += new System.EventHandler(this.remove_MouseLeave);
+            this.remove_moni.MouseMove += new System.Windows.Forms.MouseEventHandler(this.remove_MouseMove);
             // 
             // quan_moni
             // 
@@ -1108,6 +1208,7 @@
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.remove_keyb);
             this.panel10.Controls.Add(this.quan_keyb);
             this.panel10.Controls.Add(this.price_keyb);
             this.panel10.Controls.Add(this.label_key);
@@ -1119,6 +1220,20 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(1017, 55);
             this.panel10.TabIndex = 128;
+            // 
+            // remove_keyb
+            // 
+            this.remove_keyb.AutoSize = true;
+            this.remove_keyb.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remove_keyb.Location = new System.Drawing.Point(969, 25);
+            this.remove_keyb.Name = "remove_keyb";
+            this.remove_keyb.Size = new System.Drawing.Size(19, 13);
+            this.remove_keyb.TabIndex = 135;
+            this.remove_keyb.Text = "✖";
+            this.remove_keyb.Visible = false;
+            this.remove_keyb.Click += new System.EventHandler(this.removekeyb_Click);
+            this.remove_keyb.MouseLeave += new System.EventHandler(this.remove_MouseLeave);
+            this.remove_keyb.MouseMove += new System.Windows.Forms.MouseEventHandler(this.remove_MouseMove);
             // 
             // quan_keyb
             // 
@@ -1209,6 +1324,7 @@
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.remove_mous);
             this.panel11.Controls.Add(this.quan_mous);
             this.panel11.Controls.Add(this.price_mou);
             this.panel11.Controls.Add(this.label_mouse);
@@ -1220,6 +1336,20 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1017, 55);
             this.panel11.TabIndex = 129;
+            // 
+            // remove_mous
+            // 
+            this.remove_mous.AutoSize = true;
+            this.remove_mous.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remove_mous.Location = new System.Drawing.Point(969, 25);
+            this.remove_mous.Name = "remove_mous";
+            this.remove_mous.Size = new System.Drawing.Size(19, 13);
+            this.remove_mous.TabIndex = 136;
+            this.remove_mous.Text = "✖";
+            this.remove_mous.Visible = false;
+            this.remove_mous.Click += new System.EventHandler(this.removemous_Click);
+            this.remove_mous.MouseLeave += new System.EventHandler(this.remove_MouseLeave);
+            this.remove_mous.MouseMove += new System.Windows.Forms.MouseEventHandler(this.remove_MouseMove);
             // 
             // quan_mous
             // 
@@ -1310,6 +1440,7 @@
             // 
             // panel12
             // 
+            this.panel12.Controls.Add(this.remove_spk);
             this.panel12.Controls.Add(this.quan_spk);
             this.panel12.Controls.Add(this.price_spk);
             this.panel12.Controls.Add(this.label_spk);
@@ -1321,6 +1452,20 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(1017, 55);
             this.panel12.TabIndex = 130;
+            // 
+            // remove_spk
+            // 
+            this.remove_spk.AutoSize = true;
+            this.remove_spk.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remove_spk.Location = new System.Drawing.Point(969, 25);
+            this.remove_spk.Name = "remove_spk";
+            this.remove_spk.Size = new System.Drawing.Size(19, 13);
+            this.remove_spk.TabIndex = 133;
+            this.remove_spk.Text = "✖";
+            this.remove_spk.Visible = false;
+            this.remove_spk.Click += new System.EventHandler(this.removespk_Click);
+            this.remove_spk.MouseLeave += new System.EventHandler(this.remove_MouseLeave);
+            this.remove_spk.MouseMove += new System.Windows.Forms.MouseEventHandler(this.remove_MouseMove);
             // 
             // quan_spk
             // 
@@ -1735,5 +1880,14 @@
         private System.Windows.Forms.Label quan_mous;
         private System.Windows.Forms.Label quan_spk;
         private System.Windows.Forms.Label remove_cpu;
+        private System.Windows.Forms.Label remove_gpu;
+        private System.Windows.Forms.Label remove_mb;
+        private System.Windows.Forms.Label remove_ram;
+        private System.Windows.Forms.Label remove_psu;
+        private System.Windows.Forms.Label remove_case;
+        private System.Windows.Forms.Label remove_moni;
+        private System.Windows.Forms.Label remove_keyb;
+        private System.Windows.Forms.Label remove_mous;
+        private System.Windows.Forms.Label remove_spk;
     }
 }

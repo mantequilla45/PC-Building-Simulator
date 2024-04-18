@@ -14,6 +14,7 @@ namespace PC_Building_Simulator
 {
     public partial class buildmenu : Form
     {
+        private string user = "";
         public buildmenu()
         {
             InitializeComponent();
@@ -27,7 +28,6 @@ namespace PC_Building_Simulator
             string mb = "";
             string ram = "";
             string psu = "";
-            string user = "";
             string ccase = "";
             string moni = "";
             string keyb = "";
@@ -53,7 +53,6 @@ namespace PC_Building_Simulator
 
             string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
 
-            // Get the current user
             string query1 = "SELECT TOP 1 [user] FROM currentuser";
             using (OleDbConnection connection = new OleDbConnection(connectionString))
             {
@@ -145,6 +144,7 @@ namespace PC_Building_Simulator
                 border1.Visible = true;
                 price_cpu.Visible = true;
                 quan_cpu.Visible = true;
+                remove_cpu.Visible = true;
             }
 
             string gpuimage = gpu.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
@@ -156,6 +156,7 @@ namespace PC_Building_Simulator
                 border2.Visible = true;
                 price_gpu.Visible = true;
                 quan_gpu.Visible = true;
+                remove_gpu.Visible = true;
             }
 
             string mbimage = mb.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
@@ -167,6 +168,7 @@ namespace PC_Building_Simulator
                 border3.Visible = true;
                 price_mb.Visible = true;
                 quan_mb.Visible = true;
+                remove_mb.Visible = true;
             }
 
             string ramimage = ram.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
@@ -178,6 +180,7 @@ namespace PC_Building_Simulator
                 border4.Visible = true;
                 price_ram.Visible = true;
                 quan_ram.Visible = true;
+                remove_ram.Visible = true;
             }
 
             //panel5.Size = new Size(1017, 110);
@@ -201,6 +204,7 @@ namespace PC_Building_Simulator
                 border6.Visible = true;
                 price_psu.Visible = true;
                 quan_psu.Visible = true;
+                remove_psu.Visible = true;
             }
 
             string caseimage = ccase.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
@@ -212,6 +216,7 @@ namespace PC_Building_Simulator
                 border7.Visible = true;
                 price_case.Visible = true;
                 quan_case.Visible = true;
+                remove_case.Visible = true;
             }
 
             string monitorimage = moni.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
@@ -223,6 +228,7 @@ namespace PC_Building_Simulator
                 border9.Visible = true;
                 price_moni.Visible = true;
                 quan_moni.Visible = true;
+                remove_moni.Visible = true;
             }
 
             string keybimage = keyb.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
@@ -234,6 +240,7 @@ namespace PC_Building_Simulator
                 border10.Visible = true;
                 price_keyb.Visible = true;
                 quan_keyb.Visible = true;
+                remove_keyb.Visible = true;
             }
 
             string mouseimage = mouse.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
@@ -245,6 +252,7 @@ namespace PC_Building_Simulator
                 border11.Visible = true;
                 price_mou.Visible = true;
                 quan_mous.Visible = true;
+                remove_mous.Visible = true;
             }
 
             string spkimage = spk.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('+', '_').Replace('.', '_');
@@ -256,8 +264,8 @@ namespace PC_Building_Simulator
                 border12.Visible = true;
                 price_spk.Visible = true;
                 quan_spk.Visible = true;
+                remove_spk.Visible = true;
             }
-
         }
         private void InitializeDisplayManager()
         {
@@ -278,7 +286,7 @@ namespace PC_Building_Simulator
             label.Font = new Font(label.Font, FontStyle.Underline);
         }
 
-        private void but_remove1_Click(object sender, EventArgs e)
+        private void removecpu_Click(object sender, EventArgs e)
         {
             label1.Text = "";
             price_cpu.Text = "";
@@ -286,7 +294,323 @@ namespace PC_Building_Simulator
             border1.Visible = false;
             quan_cpu.Visible = false;
             remove_cpu.Visible = false;
+
+            string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
+            string userToUpdate = user;
+
+            string updateQuery = "UPDATE Builds SET CPU = '', [CPU price] = '' WHERE [user] = @UserToUpdate";
+
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    using (OleDbCommand command = new OleDbCommand(updateQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserToUpdate", userToUpdate);
+
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating data: " + ex.Message);
+            }
         }
+
+        private void removegpu_Click(object sender, EventArgs e)
+        {
+            label2.Text = "";
+            price_gpu.Text = "";
+            pBox2.Visible = false;
+            border2.Visible = false;
+            quan_gpu.Visible = false;
+            remove_gpu.Visible = false;
+
+            string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
+            string userToUpdate = user;
+
+            string updateQuery = "UPDATE Builds SET GPU = '', [GPU price] = '' WHERE [user] = @UserToUpdate";
+
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    using (OleDbCommand command = new OleDbCommand(updateQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserToUpdate", userToUpdate);
+
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating data: " + ex.Message);
+            }
+        }
+        private void removemb_Click(object sender, EventArgs e)
+        {
+            label3.Text = "";
+            price_mb.Text = "";
+            pBox3.Visible = false;
+            border3.Visible = false;
+            quan_mb.Visible = false;
+            remove_mb.Visible = false;
+
+            string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
+            string userToUpdate = user;
+
+            string updateQuery = "UPDATE Builds SET Motherboard = '', [Motherboard price] = '' WHERE [user] = @UserToUpdate";
+
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    using (OleDbCommand command = new OleDbCommand(updateQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserToUpdate", userToUpdate);
+
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating data: " + ex.Message);
+            }
+        }
+        private void removeram_Click(object sender, EventArgs e)
+        {
+            label4.Text = "";
+            price_ram.Text = "";
+            pBox4.Visible = false;
+            border4.Visible = false;
+            quan_ram.Visible = false;
+            remove_ram.Visible = false;
+
+            string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
+            string userToUpdate = user;
+
+            string updateQuery = "UPDATE Builds SET RAM = '', [RAM price] = '', [RAM quantity] = '' WHERE [user] = @UserToUpdate";
+
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    using (OleDbCommand command = new OleDbCommand(updateQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserToUpdate", userToUpdate);
+
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating data: " + ex.Message);
+            }
+        }
+
+        private void removepsu_Click(object sender, EventArgs e)
+        {
+            label6.Text = "";
+            price_psu.Text = "";
+            pBox6.Visible = false;
+            border6.Visible = false;
+            quan_psu.Visible = false;
+            remove_psu.Visible = false;
+
+            string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
+            string userToUpdate = user;
+
+            string updateQuery = "UPDATE Builds SET PSU = '', [PSU price] = ''WHERE [user] = @UserToUpdate";
+
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    using (OleDbCommand command = new OleDbCommand(updateQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserToUpdate", userToUpdate);
+
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating data: " + ex.Message);
+            }
+        }
+        private void removecase_Click(object sender, EventArgs e)
+        {
+            label7.Text = "";
+            price_case.Text = "";
+            pBox7.Visible = false;
+            border7.Visible = false;
+            quan_case.Visible = false;
+            remove_case.Visible = false;
+
+            string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
+            string userToUpdate = user;
+
+            string updateQuery = "UPDATE Builds SET [Computer Case] = '', [Case price] = ''WHERE [user] = @UserToUpdate";
+
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    using (OleDbCommand command = new OleDbCommand(updateQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserToUpdate", userToUpdate);
+
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating data: " + ex.Message);
+            }
+        }
+
+        private void removemoni_Click(object sender, EventArgs e)
+        {
+            label9.Text = "";
+            price_moni.Text = "";
+            pBox9.Visible = false;
+            border9.Visible = false;
+            quan_moni.Visible = false;
+            remove_moni.Visible = false;
+
+            string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
+            string userToUpdate = user;
+
+            string updateQuery = "UPDATE Builds SET Monitor = '', [Monitor price] = ''WHERE [user] = @UserToUpdate";
+
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    using (OleDbCommand command = new OleDbCommand(updateQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserToUpdate", userToUpdate);
+
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating data: " + ex.Message);
+            }
+        }
+        private void removekeyb_Click(object sender, EventArgs e)
+        {
+            label10.Text = "";
+            price_keyb.Text = "";
+            pBox10.Visible = false;
+            border10.Visible = false;
+            quan_keyb.Visible = false;
+            remove_keyb.Visible = false;
+
+            string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
+            string userToUpdate = user;
+
+            string updateQuery = "UPDATE Builds SET Keyboard = '', [Keyboard price] = ''WHERE [user] = @UserToUpdate";
+
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    using (OleDbCommand command = new OleDbCommand(updateQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserToUpdate", userToUpdate);
+
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating data: " + ex.Message);
+            }
+        }
+
+        private void removemous_Click(object sender, EventArgs e)
+        {
+            label11.Text = "";
+            price_mou.Text = "";
+            pBox11.Visible = false;
+            border11.Visible = false;
+            quan_mous.Visible = false;
+            remove_mous.Visible = false;
+
+            string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
+            string userToUpdate = user;
+
+            string updateQuery = "UPDATE Builds SET Mouse = '', [Mouse price] = ''WHERE [user] = @UserToUpdate";
+
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    using (OleDbCommand command = new OleDbCommand(updateQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserToUpdate", userToUpdate);
+
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating data: " + ex.Message);
+            }
+        }
+        private void removespk_Click(object sender, EventArgs e)
+        {
+            label12.Text = "";
+            price_spk.Text = "";
+            pBox12.Visible = false;
+            border12.Visible = false;
+            quan_spk.Visible = false;
+            remove_spk.Visible = false;
+
+            string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
+            string userToUpdate = user;
+
+            string updateQuery = "UPDATE Builds SET Speakers = '', [Speakers price] = ''WHERE [user] = @UserToUpdate";
+
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    using (OleDbCommand command = new OleDbCommand(updateQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserToUpdate", userToUpdate);
+
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating data: " + ex.Message);
+            }
+        }
+
         private void remove_MouseLeave(object sender, EventArgs e)
         {
             Label label = sender as Label;
