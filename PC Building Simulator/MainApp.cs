@@ -19,15 +19,15 @@ namespace PC_Building_Simulator
         public string username;
         private DisplayManager displayManager;
         private DatabaseManager dbManager;
-        string user1;
         public MainApp(string username)
         {
             InitializeComponent();
-            string user1 = username;
             this.username = username;
             userlabel.Text = username;
             displayManager = new DisplayManager(this);
+
             displayManager.menuselect(1);
+
             dbManager = new DatabaseManager("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb");
             dbManager.OpenConnection();
             string checkAdminQuery = "SELECT * FROM users WHERE username = @Username AND usertype = @UserType";
@@ -688,56 +688,56 @@ namespace PC_Building_Simulator
 
         private void backicon_Click(object sender, EventArgs e)
         {
-            MainApp mainApp = new MainApp(username);
+            displayManager.DisposeAllMenuForms();
             switch (back)
             {
 
                 case 1:
-                    displayManager.menuselect(2);
+                    but_cpu_Click(sender, e);
                     backicon.Visible = false;
                     break;
                 case 2:
-                    displayManager.menuselect(3);
+                    but_gpu_Click(sender, e);
                     backicon.Visible = false;
                     break;
                 case 3:
-                    displayManager.menuselect(4);
+                    but_mb_Click(sender, e);
                     backicon.Visible = false;
                     break;
                 case 4:
-                    displayManager.menuselect(5);
+                    but_ram_Click(sender, e);
                     backicon.Visible = false;
                     break;
                 case 5:
-                    displayManager.menuselect(6);
+                    but_storage_Click(sender, e);
                     backicon.Visible = false;
                     break;
                 case 6:
-                    displayManager.menuselect(7);
+                    but_psu_Click(sender, e);
                     backicon.Visible = false;
                     break;
                 case 7:
-                    displayManager.menuselect(8);
+                    but_case_Click(sender, e);
                     backicon.Visible = false;
                     break;
                 case 8:
-                    displayManager.menuselect(9);
+                    but_cooler_Click(sender, e);
                     backicon.Visible = false;
                     break;
                 case 9:
-                    displayManager.menuselect(10);
+                    but_monitor_Click(sender, e);
                     backicon.Visible = false;
                     break;
                 case 10:
-                    displayManager.menuselect(11);
+                    but_keyb_Click(sender, e);
                     backicon.Visible = false;
                     break;
                 case 11:
-                    displayManager.menuselect(12);
+                    but_mouse_Click(sender, e);
                     backicon.Visible = false;
                     break;
                 case 12:
-                    displayManager.menuselect(13);
+                    but_speakers_Click(sender, e);
                     backicon.Visible = false;
                     break;
                 case 13:
@@ -753,8 +753,8 @@ namespace PC_Building_Simulator
                     break;
 
             }
-        }
 
+        }
 
         private void lab_profile_MouseLeave(object sender, EventArgs e)
         {
@@ -770,11 +770,6 @@ namespace PC_Building_Simulator
         private void backicon_MouseLeave(object sender, EventArgs e)
         {
             backicon.BackColor = Color.WhiteSmoke;
-        }
-
-        private void keybicon2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

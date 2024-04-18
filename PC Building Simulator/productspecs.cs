@@ -17,21 +17,34 @@ namespace PC_Building_Simulator
         private DatabaseManager dbManager;
         private string choice;
         private int menuchoice;
+        private int quantity = 1;
         private MainApp mainApp;
         private DisplayManager displayManager;
-        public productspecs(string ccase, int num, MainApp mainApp)
+        private string price;
+        private buildmenu buildMenu;
+        public productspecs(string prodchoice, int num, MainApp mainApp, string price)
         {
             InitializeComponent();
             dbManager = new DatabaseManager("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb");
-            choice = ccase;
+            choice = prodchoice;
             menuchoice = num;
+            this.price = price;
             this.mainApp = mainApp;
             displayManager = new DisplayManager(mainApp);
-        }
-        private void casespecs_Load(object sender, EventArgs e)
-        {
             display(choice);
+            InitializeDisplayManager();
         }
+
+        private void productmenu_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void InitializeDisplayManager()
+        {
+            productspecs productspecsform = this;
+            DisplayManager displayManager = new DisplayManager(productspecsform);
+        }
+
         private void but_add_Click(object sender, EventArgs e)
         {
             string user;
@@ -73,19 +86,22 @@ namespace PC_Building_Simulator
             {
                 dbManager.CloseConnection();
             }
-            
+
             switch (menuchoice)
             {
                 case 1:
+
                     if (userCount > 0)
                     {
-                        string updateQuery = "UPDATE Builds SET CPU = @CPU WHERE [user] = @Username";
+                        string updateQuery = "UPDATE Builds SET CPU = @CPU, [CPU price] = @price WHERE [user] = @Username";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
                             {
+
                                 updateCmd.Parameters.AddWithValue("@CPU", choice);
+                                updateCmd.Parameters.AddWithValue("@price", price);
                                 updateCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = updateCmd.ExecuteNonQuery();
@@ -102,13 +118,14 @@ namespace PC_Building_Simulator
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds (CPU, [user]) VALUES (@CPU, @Username)";
+                        string insertQuery = "INSERT INTO Builds (CPU, [user], [CPU price]) VALUES (@CPU, @Username, @price)";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
                             {
                                 insertCmd.Parameters.AddWithValue("@CPU", choice);
+                                insertCmd.Parameters.AddWithValue("@price", price);
                                 insertCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = insertCmd.ExecuteNonQuery();
@@ -128,13 +145,14 @@ namespace PC_Building_Simulator
                 case 2:
                     if (userCount > 0)
                     {
-                        string updateQuery = "UPDATE Builds SET GPU = @GPU WHERE [user] = @Username";
+                        string updateQuery = "UPDATE Builds SET GPU = @GPU, [GPU price] = @price WHERE [user] = @Username";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
                             {
                                 updateCmd.Parameters.AddWithValue("@GPU", choice);
+                                updateCmd.Parameters.AddWithValue("@price", price);
                                 updateCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = updateCmd.ExecuteNonQuery();
@@ -151,13 +169,14 @@ namespace PC_Building_Simulator
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds (GPU, [user]) VALUES (@GPU, @Username)";
+                        string insertQuery = "INSERT INTO Builds (GPU, [user], [GPU price]) VALUES (@GPU, @Username, @price)";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
                             {
                                 insertCmd.Parameters.AddWithValue("@GPU", choice);
+                                insertCmd.Parameters.AddWithValue("@price", price);
                                 insertCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = insertCmd.ExecuteNonQuery();
@@ -176,13 +195,14 @@ namespace PC_Building_Simulator
                 case 3:
                     if (userCount > 0)
                     {
-                        string updateQuery = "UPDATE Builds SET Motherboard = @mb WHERE [user] = @Username";
+                        string updateQuery = "UPDATE Builds SET Motherboard = @mb, [Motherboard price] = @price WHERE [user] = @Username";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
                             {
                                 updateCmd.Parameters.AddWithValue("@mb", choice);
+                                updateCmd.Parameters.AddWithValue("@price", price);
                                 updateCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = updateCmd.ExecuteNonQuery();
@@ -199,13 +219,14 @@ namespace PC_Building_Simulator
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds (Motherboard, [user]) VALUES (@mb, @Username)";
+                        string insertQuery = "INSERT INTO Builds (Motherboard, [user], [Motherboard price]) VALUES (@mb, @Username, @price)";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
                             {
                                 insertCmd.Parameters.AddWithValue("@mb", choice);
+                                insertCmd.Parameters.AddWithValue("@price", price);
                                 insertCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = insertCmd.ExecuteNonQuery();
@@ -225,13 +246,16 @@ namespace PC_Building_Simulator
                 case 4:
                     if (userCount > 0)
                     {
-                        string updateQuery = "UPDATE Builds SET RAM = @ram WHERE [user] = @Username";
+                        quantity = int.Parse(comboBox1.Text);
+                        string updateQuery = "UPDATE Builds SET RAM = @ram, [RAM Quantity] = @ramQuantity, [RAM price] = @price WHERE [user] = @Username";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
                             {
                                 updateCmd.Parameters.AddWithValue("@ram", choice);
+                                updateCmd.Parameters.AddWithValue("@ramQuantity", quantity);
+                                updateCmd.Parameters.AddWithValue("@price", price);
                                 updateCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = updateCmd.ExecuteNonQuery();
@@ -239,7 +263,7 @@ namespace PC_Building_Simulator
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Error updating RAM for existing user: " + ex.Message);
+                            MessageBox.Show("Error updating RAM and RAM quantity for existing user: " + ex.Message);
                         }
                         finally
                         {
@@ -248,13 +272,15 @@ namespace PC_Building_Simulator
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds (RAM, [user]) VALUES (@ram, @Username)";
+                        string insertQuery = "INSERT INTO Builds (RAM, [RAM Quantity], [user], [RAM price]) VALUES (@ram, @ramQuantity, @Username, @price)";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
                             {
                                 insertCmd.Parameters.AddWithValue("@ram", choice);
+                                insertCmd.Parameters.AddWithValue("@ramQuantity", quantity);
+                                insertCmd.Parameters.AddWithValue("@price", price);
                                 insertCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = insertCmd.ExecuteNonQuery();
@@ -262,7 +288,7 @@ namespace PC_Building_Simulator
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Error inserting RAM for new user: " + ex.Message);
+                            MessageBox.Show("Error inserting RAM and RAM quantity for new user: " + ex.Message);
                         }
                         finally
                         {
@@ -271,16 +297,18 @@ namespace PC_Building_Simulator
                     }
                     break;
 
+
                 case 6:
                     if (userCount > 0)
                     {
-                        string updateQuery = "UPDATE Builds SET PSU = @psu WHERE [user] = @Username";
+                        string updateQuery = "UPDATE Builds SET PSU = @psu, [PSU price] = @price WHERE [user] = @Username";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
                             {
                                 updateCmd.Parameters.AddWithValue("@psu", choice);
+                                updateCmd.Parameters.AddWithValue("@price", price);
                                 updateCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = updateCmd.ExecuteNonQuery();
@@ -297,13 +325,14 @@ namespace PC_Building_Simulator
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds (PSU, [user]) VALUES (@psu, @Username)";
+                        string insertQuery = "INSERT INTO Builds (PSU, [user], [PSU price]) VALUES (@psu, @Username, @price)";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
                             {
                                 insertCmd.Parameters.AddWithValue("@psu", choice);
+                                insertCmd.Parameters.AddWithValue("@price", price);
                                 insertCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = insertCmd.ExecuteNonQuery();
@@ -322,13 +351,14 @@ namespace PC_Building_Simulator
                 case 7:
                     if (userCount > 0)
                     {
-                        string updateQuery = "UPDATE Builds SET [Computer Case] = @ccase WHERE [user] = @Username";
+                        string updateQuery = "UPDATE Builds SET [Computer Case] = @ccase, [Case price] = @price WHERE [user] = @Username";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
                             {
                                 updateCmd.Parameters.AddWithValue("@ccase", choice);
+                                updateCmd.Parameters.AddWithValue("@price", price);
                                 updateCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = updateCmd.ExecuteNonQuery();
@@ -345,13 +375,14 @@ namespace PC_Building_Simulator
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds ([Computer Case], [user]) VALUES (@ccase, @Username)";
+                        string insertQuery = "INSERT INTO Builds ([Computer Case], [user], [Case price]) VALUES (@ccase, @Username, @price)";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
                             {
                                 insertCmd.Parameters.AddWithValue("@ccase", choice);
+                                insertCmd.Parameters.AddWithValue("@price", price);
                                 insertCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = insertCmd.ExecuteNonQuery();
@@ -371,13 +402,14 @@ namespace PC_Building_Simulator
                 case 9:
                     if (userCount > 0)
                     {
-                        string updateQuery = "UPDATE Builds SET [Monitor] = @monitor WHERE [user] = @Username";
+                        string updateQuery = "UPDATE Builds SET [Monitor] = @monitor, [Monitor price] = @price WHERE [user] = @Username";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
                             {
                                 updateCmd.Parameters.AddWithValue("@monitor", choice);
+                                updateCmd.Parameters.AddWithValue("@price", price);
                                 updateCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = updateCmd.ExecuteNonQuery();
@@ -394,13 +426,14 @@ namespace PC_Building_Simulator
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds ([Monitor], [user]) VALUES (@monitor, @Username)";
+                        string insertQuery = "INSERT INTO Builds ([Monitor], [user], [Monitor price]) VALUES (@monitor, @Username, @price)";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
                             {
                                 insertCmd.Parameters.AddWithValue("@monitor", choice);
+                                insertCmd.Parameters.AddWithValue("@price", price);
                                 insertCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = insertCmd.ExecuteNonQuery();
@@ -420,13 +453,14 @@ namespace PC_Building_Simulator
                 case 10:
                     if (userCount > 0)
                     {
-                        string updateQuery = "UPDATE Builds SET [Keyboard] = @keyboard WHERE [user] = @Username";
+                        string updateQuery = "UPDATE Builds SET [Keyboard] = @keyboard, [Keyboard price] = @price WHERE [user] = @Username";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
                             {
                                 updateCmd.Parameters.AddWithValue("@keyboard", choice);
+                                updateCmd.Parameters.AddWithValue("@price", price);
                                 updateCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = updateCmd.ExecuteNonQuery();
@@ -443,13 +477,14 @@ namespace PC_Building_Simulator
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds ([Keyboard], [user]) VALUES (@keyboard, @Username)";
+                        string insertQuery = "INSERT INTO Builds ([Keyboard], [user], [Keyboard price]) VALUES (@keyboard, @Username, @price)";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
                             {
                                 insertCmd.Parameters.AddWithValue("@keyboard", choice);
+                                insertCmd.Parameters.AddWithValue("@price", price);
                                 insertCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = insertCmd.ExecuteNonQuery();
@@ -468,13 +503,14 @@ namespace PC_Building_Simulator
                 case 11:
                     if (userCount > 0)
                     {
-                        string updateQuery = "UPDATE Builds SET [Mouse] = @mouse WHERE [user] = @Username";
+                        string updateQuery = "UPDATE Builds SET [Mouse] = @mouse, [Mouse price] = @price WHERE [user] = @Username";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
                             {
                                 updateCmd.Parameters.AddWithValue("@mouse", choice);
+                                updateCmd.Parameters.AddWithValue("@price", price);
                                 updateCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = updateCmd.ExecuteNonQuery();
@@ -491,13 +527,14 @@ namespace PC_Building_Simulator
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds ([Mouse], [user]) VALUES (@mouse, @Username)";
+                        string insertQuery = "INSERT INTO Builds ([Mouse], [user], [Mouse price]) VALUES (@mouse, @Username, @price)";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
                             {
                                 insertCmd.Parameters.AddWithValue("@mouse", choice);
+                                insertCmd.Parameters.AddWithValue("@price", price);
                                 insertCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = insertCmd.ExecuteNonQuery();
@@ -516,13 +553,14 @@ namespace PC_Building_Simulator
                 case 12:
                     if (userCount > 0)
                     {
-                        string updateQuery = "UPDATE Builds SET [Speakers] = @speaker WHERE [user] = @Username";
+                        string updateQuery = "UPDATE Builds SET [Speakers] = @speaker, [Speakers price] = @price WHERE [user] = @Username";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
                             {
                                 updateCmd.Parameters.AddWithValue("@speaker", choice);
+                                updateCmd.Parameters.AddWithValue("@price", price);
                                 updateCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = updateCmd.ExecuteNonQuery();
@@ -539,13 +577,14 @@ namespace PC_Building_Simulator
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds ([Speaker], [user]) VALUES (@speaker, @Username)";
+                        string insertQuery = "INSERT INTO Builds ([Speaker], [user], [Speakers price]) VALUES (@speaker, @Username, @price)";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
                             {
                                 insertCmd.Parameters.AddWithValue("@speaker", choice);
+                                insertCmd.Parameters.AddWithValue("@price", price);
                                 insertCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = insertCmd.ExecuteNonQuery();
@@ -564,13 +603,14 @@ namespace PC_Building_Simulator
                 case 13:
                     if (userCount > 0)
                     {
-                        string updateQuery = "UPDATE Builds SET [HDD] = @hdd WHERE [user] = @Username";
+                        string updateQuery = "UPDATE Builds SET [HDD] = @hdd, [HDD price] = @price WHERE [user] = @Username";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
                             {
                                 updateCmd.Parameters.AddWithValue("@hdd", choice);
+                                updateCmd.Parameters.AddWithValue("@price", price);
                                 updateCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = updateCmd.ExecuteNonQuery();
@@ -587,13 +627,14 @@ namespace PC_Building_Simulator
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds ([HDD], [user]) VALUES (@hdd, @Username)";
+                        string insertQuery = "INSERT INTO Builds ([HDD], [user], [HDD price]) VALUES (@hdd, @Username, @price)";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
                             {
                                 insertCmd.Parameters.AddWithValue("@hdd", choice);
+                                insertCmd.Parameters.AddWithValue("@price", price);
                                 insertCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = insertCmd.ExecuteNonQuery();
@@ -613,13 +654,14 @@ namespace PC_Building_Simulator
                 case 14:
                     if (userCount > 0)
                     {
-                        string updateQuery = "UPDATE Builds SET [SSD] = @ssd WHERE [user] = @Username";
+                        string updateQuery = "UPDATE Builds SET [SSD] = @ssd, [SSD price] = @price WHERE [user] = @Username";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
                             {
                                 updateCmd.Parameters.AddWithValue("@ssd", choice);
+                                updateCmd.Parameters.AddWithValue("@price", price);
                                 updateCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = updateCmd.ExecuteNonQuery();
@@ -636,13 +678,14 @@ namespace PC_Building_Simulator
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds ([SSD], [user]) VALUES (@ssd, @Username)";
+                        string insertQuery = "INSERT INTO Builds ([SSD], [user], [SSD price]) VALUES (@ssd, @Username, @price)";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
                             {
                                 insertCmd.Parameters.AddWithValue("@ssd", choice);
+                                insertCmd.Parameters.AddWithValue("@price", price);
                                 insertCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = insertCmd.ExecuteNonQuery();
@@ -667,7 +710,7 @@ namespace PC_Building_Simulator
         {
             Dictionary<string, System.Drawing.Image> images = null;
             string query = null;
-
+            int quan = 1;
             switch (menuchoice)
             {
                 case 1:
@@ -775,6 +818,7 @@ namespace PC_Building_Simulator
                         { "T-Force Dark Z Alpha DDR5", Properties.Resources.ram_T_Force_Dark_Z_Alpha_DDR5 }
                     };
                     query = "SELECT * FROM [RAM specs] WHERE [RAM Module Name] = @name";
+                    comboBox1.Items.Insert(1, "2");
                     break;
 
                 case 6:
@@ -948,7 +992,7 @@ namespace PC_Building_Simulator
                         { "Hitachi Ultrastar 5TB", Properties.Resources.hdd_Hitachi_Ultrastar_5TB },
                         { "Samsung Spinpoint 1TB", Properties.Resources.hdd_Samsung_Spinpoint_1TB },
                         { "Seagate Barracuda 3TB", Properties.Resources.hdd_Seagate_Barracuda_3TB },
-                        { "Seagate BarraCuda Pro 16TB", Properties.Resources.hdd_Seagate_BarraCuda_Pro_14TB },
+                        { "Seagate BarraCuda Pro 14TB", Properties.Resources.hdd_Seagate_BarraCuda_Pro_14TB },
                         { "Seagate Constellation 3TB", Properties.Resources.hdd_Seagate_Constellation_3TB },
                         { "Seagate FireCuda 8TB", Properties.Resources.hdd_Seagate_FireCuda_8TB },
                         { "Seagate IronWolf 10TB", Properties.Resources.hdd_Seagate_IronWolf_10TB },
@@ -1029,17 +1073,6 @@ namespace PC_Building_Simulator
                     dataGridView1.Rows.Add(column.ColumnName, dataTable.Rows[0][column]);
                 }
             }
-        }
-        private void productmenu_Load(object sender, EventArgs e)
-        {
-
-            InitializeDisplayManager();
-        }
-
-        private void InitializeDisplayManager()
-        {
-            productspecs productspecsform = this;
-            DisplayManager displayManager = new DisplayManager(productspecsform);
         }
     }
 }

@@ -388,6 +388,66 @@
   <data name="key_SteelSeries_Apex_Pro_TKL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\key_SteelSeries Apex Pro TKL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="m2_Adata_SU800_512GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_Adata SU800 512GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m2_Corsair_Force_Series_MP510_500GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_Corsair Force Series MP510 500GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m2_Crucial_P5_Plus_2TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_Crucial P5 Plus 2TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m2_Gigabyte_AORUS_NVMe_Gen4_SSD_1TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_Gigabyte AORUS NVMe Gen4 SSD 1TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m2_HP_S700_Pro_512GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_HP S700 Pro 512GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m2_Intel_SSD_545s_256GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_Intel SSD 545s 256GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m2_Kingston_UV500_240GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_Kingston UV500 240GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m2_Lexar_NM710_M_2_1TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_Lexar NM710 M.2 1TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m2_Mushkin_Enhanced_Vortex_M_2_2280_512GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_Mushkin Enhanced Vortex M.2 2280 512GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m2_OWC_Aura_Pro_X2_1TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_OWC Aura Pro X2 1TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m2_Patriot_Memory_Scorch_512GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_Patriot Memory Scorch 512GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m2_PNY_CS900_M_2_SATA_III_SSD_500GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_PNY CS900 M.2 SATA III SSD 500GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m2_Samsung_980_PRO_1TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_Samsung 980 PRO 1TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m2_Sandisk_SSD_Plus_M_2_NVME_500GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_Sandisk SSD Plus M.2 NVME 500GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m2_Seagate_Barracuda_PCIe_2TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_Seagate Barracuda PCIe 2TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m2_Silicon_Power_Ace_A55_1TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_Silicon Power Ace A55 1TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m2_Team_Group_MP33_PRO_1TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_Team Group MP33 PRO 1TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m2_Toshiba_XG6_SSD_512GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_Toshiba XG6 SSD 512GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m2_Transcend_PCIe_SSD_250H_4TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_Transcend PCIe SSD 250H 4TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m2_WD_Black_SN850_2TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m2_WD Black SN850 2TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="mb_ASRock_B450M_Steel_Legend" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mb-ASRock B450M Steel Legend.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

@@ -392,7 +392,6 @@
             this.keybicon2.TabIndex = 59;
             this.keybicon2.TabStop = false;
             this.keybicon2.Visible = false;
-            this.keybicon2.Click += new System.EventHandler(this.keybicon2_Click);
             // 
             // keybicon1
             // 

@@ -18,6 +18,7 @@ namespace PC_Building_Simulator
     public partial class productmenu : Form
     {
         private DatabaseManager dbManager;
+        private DisplayManager displayManager;
         private MainApp mainApp;
         private int choice;
 
@@ -26,10 +27,20 @@ namespace PC_Building_Simulator
             InitializeComponent();
             choice = menuchoice;
             this.mainApp = mainApp;
+            displayManager = new DisplayManager(mainApp);
             display(choice);
             InitializeControls();
+            InitializeDisplayManager();
         }
-        
+        private void productmenu_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void InitializeDisplayManager()
+        {
+            productmenu productmenuform = this;
+            DisplayManager displayManager = new DisplayManager(productmenuform);
+        }
         private void display(int menuchoice)
         {
             dbManager = new DatabaseManager("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb");
@@ -49,6 +60,7 @@ namespace PC_Building_Simulator
             int[] price;
 
 
+            displayManager.DisposeAllMenuForms();
             switch (choice)
             {
                 case 1:
@@ -136,7 +148,6 @@ namespace PC_Building_Simulator
                             nameLabel.Text = gpuName;
                         }
                     }
-
                     break;
 
                 case 3:
@@ -321,11 +332,12 @@ namespace PC_Building_Simulator
                     };
 
                     price = new int[]{
-                        70, 80, 80, 70, 100,
-                        80, 300, 120, 70, 150,
-                        180, 150, 140, 170, 120,
-                        200, 80, 80, 80, 100
+                        1200, 1800, 800, 1000, 1400,
+                        850, 900, 700, 1600, 750,
+                        1300, 4999, 800, 1500, 1000,
+                        700, 850, 800, 400, 300
                     };
+
 
                     for (int i = 0; i < monitorNames.Length; i++)
                     {
@@ -351,7 +363,7 @@ namespace PC_Building_Simulator
                             nameLabel.Text = monitorName;
                         }
                     }
-                break;
+                    break;
 
                 case 10:
                     string[] keyboardNames = {
@@ -563,67 +575,71 @@ namespace PC_Building_Simulator
                             nameLabel.Text = ssdName;
                         }
                     }
-
                     break;
             }
         }
-        
+
         private void HandlePanelClick(Panel panel)
         {
             DisplayManager displayManager = new DisplayManager(mainApp);
             Panel[] panels = { panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9, panel10,
-                panel11, panel12, panel13, panel14, panel15, panel16, panel17, panel18, panel19, panel20
-            };
+        panel11, panel12, panel13, panel14, panel15, panel16, panel17, panel18, panel19, panel20
+    };
+            Label[] prices = { labprice1, labprice2, labprice3, labprice4, labprice5, labprice6, labprice7, labprice8,
+        labprice9, labprice10, labprice11, labprice12, labprice13, labprice14, labprice15, labprice16, labprice17,
+        labprice18, labprice19, labprice20
+    };
 
             for (int i = 0; i < panels.Length; i++)
             {
                 if (panel == panels[i])
                 {
                     int menuIndex = i + 1;
-                    switch(choice)
+                    switch (choice)
                     {
                         case 1:
-                            displayManager.cpumenu(menuIndex);
+                            displayManager.cpumenu(menuIndex, prices[i]);
                             break;
                         case 2:
-                            displayManager.gpumenu(menuIndex);
+                            displayManager.gpumenu(menuIndex, prices[i]);
                             break;
                         case 3:
-                            displayManager.mbmenu(menuIndex);
+                            displayManager.mbmenu(menuIndex, prices[i]);
                             break;
                         case 4:
-                            displayManager.rammenu(menuIndex);
+                            displayManager.rammenu(menuIndex, prices[i]);
                             break;
                         case 6:
-                            displayManager.psumenu(menuIndex);
+                            displayManager.psumenu(menuIndex, prices[i]);
                             break;
                         case 7:
-                            displayManager.casemenu(menuIndex);
+                            displayManager.casemenu(menuIndex, prices[i]);
                             break;
                         case 9:
-                            displayManager.monitormenu(menuIndex);
+                            displayManager.monitormenu(menuIndex, prices[i]);
                             break;
                         case 10:
-                            displayManager.keyboardmenu(menuIndex);
+                            displayManager.keyboardmenu(menuIndex, prices[i]);
                             break;
                         case 11:
-                            displayManager.mousemenu(menuIndex);
+                            displayManager.mousemenu(menuIndex, prices[i]);
                             break;
                         case 12:
-                            displayManager.speakersmenu(menuIndex);
+                            displayManager.speakersmenu(menuIndex, prices[i]);
                             break;
                         case 13:
-                            displayManager.hddmenu(menuIndex);
+                            displayManager.hddmenu(menuIndex, prices[i]);
                             break;
                         case 14:
-                            displayManager.ssdmenu(menuIndex);
+                            displayManager.ssdmenu(menuIndex, prices[i]);
                             break;
-
                     }
                     mainApp.backicon.Visible = true;
+                    break; // Exit the loop once the panel is found
                 }
             }
         }
+
         private void InitializeControls()
         {
             for (int i = 0; i < 20; i++)
@@ -653,17 +669,6 @@ namespace PC_Building_Simulator
                     priceLabel.MouseDown += ChildControl_MouseDown;
                 }
             }
-        }
-        private void productmenu_Load(object sender, EventArgs e)
-        {
-
-            InitializeDisplayManager();
-        }
-
-        private void InitializeDisplayManager()
-        {
-            productmenu productmenuform = this;
-            MemoryManager displayManager = new MemoryManager(productmenuform);
         }
 
         private void Panel_MouseLeave(object sender, EventArgs e)

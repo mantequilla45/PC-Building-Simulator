@@ -963,6 +963,206 @@ namespace PC_Building_Simulator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap m2_Adata_SU800_512GB {
+            get {
+                object obj = ResourceManager.GetObject("m2_Adata_SU800_512GB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m2_Corsair_Force_Series_MP510_500GB {
+            get {
+                object obj = ResourceManager.GetObject("m2_Corsair_Force_Series_MP510_500GB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m2_Crucial_P5_Plus_2TB {
+            get {
+                object obj = ResourceManager.GetObject("m2_Crucial_P5_Plus_2TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m2_Gigabyte_AORUS_NVMe_Gen4_SSD_1TB {
+            get {
+                object obj = ResourceManager.GetObject("m2_Gigabyte_AORUS_NVMe_Gen4_SSD_1TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m2_HP_S700_Pro_512GB {
+            get {
+                object obj = ResourceManager.GetObject("m2_HP_S700_Pro_512GB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m2_Intel_SSD_545s_256GB {
+            get {
+                object obj = ResourceManager.GetObject("m2_Intel_SSD_545s_256GB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m2_Kingston_UV500_240GB {
+            get {
+                object obj = ResourceManager.GetObject("m2_Kingston_UV500_240GB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m2_Lexar_NM710_M_2_1TB {
+            get {
+                object obj = ResourceManager.GetObject("m2_Lexar_NM710_M_2_1TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m2_Mushkin_Enhanced_Vortex_M_2_2280_512GB {
+            get {
+                object obj = ResourceManager.GetObject("m2_Mushkin_Enhanced_Vortex_M_2_2280_512GB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m2_OWC_Aura_Pro_X2_1TB {
+            get {
+                object obj = ResourceManager.GetObject("m2_OWC_Aura_Pro_X2_1TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m2_Patriot_Memory_Scorch_512GB {
+            get {
+                object obj = ResourceManager.GetObject("m2_Patriot_Memory_Scorch_512GB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m2_PNY_CS900_M_2_SATA_III_SSD_500GB {
+            get {
+                object obj = ResourceManager.GetObject("m2_PNY_CS900_M_2_SATA_III_SSD_500GB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m2_Samsung_980_PRO_1TB {
+            get {
+                object obj = ResourceManager.GetObject("m2_Samsung_980_PRO_1TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m2_Sandisk_SSD_Plus_M_2_NVME_500GB {
+            get {
+                object obj = ResourceManager.GetObject("m2_Sandisk_SSD_Plus_M_2_NVME_500GB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m2_Seagate_Barracuda_PCIe_2TB {
+            get {
+                object obj = ResourceManager.GetObject("m2_Seagate_Barracuda_PCIe_2TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m2_Silicon_Power_Ace_A55_1TB {
+            get {
+                object obj = ResourceManager.GetObject("m2_Silicon_Power_Ace_A55_1TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m2_Team_Group_MP33_PRO_1TB {
+            get {
+                object obj = ResourceManager.GetObject("m2_Team_Group_MP33_PRO_1TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m2_Toshiba_XG6_SSD_512GB {
+            get {
+                object obj = ResourceManager.GetObject("m2_Toshiba_XG6_SSD_512GB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m2_Transcend_PCIe_SSD_250H_4TB {
+            get {
+                object obj = ResourceManager.GetObject("m2_Transcend_PCIe_SSD_250H_4TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m2_WD_Black_SN850_2TB {
+            get {
+                object obj = ResourceManager.GetObject("m2_WD_Black_SN850_2TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mb_ASRock_B450M_Steel_Legend {
             get {
                 object obj = ResourceManager.GetObject("mb_ASRock_B450M_Steel_Legend", resourceCulture);

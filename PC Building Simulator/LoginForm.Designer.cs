@@ -94,6 +94,7 @@
             this.txtbox_uname.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_uname.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtbox_uname.TabIndex = 1;
+            this.txtbox_uname.Text = "admin";
             this.txtbox_uname.TextChanged += new System.EventHandler(this.txtbox_uname_TextChanged);
             // 
             // txtbox_pass
@@ -114,6 +115,7 @@
             this.txtbox_pass.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_pass.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtbox_pass.TabIndex = 2;
+            this.txtbox_pass.Text = "123";
             this.txtbox_pass.TextChanged += new System.EventHandler(this.txtbox_pass_TextChanged);
             // 
             // but_login1

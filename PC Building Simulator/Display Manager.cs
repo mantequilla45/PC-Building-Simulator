@@ -19,7 +19,6 @@ namespace PC_Building_Simulator
         {
             this.buildMenuForm = buildMenuForm;
         }
-        
         public DisplayManager(productmenu productMenuForm)
         {
             this.productMenuForm = productMenuForm;
@@ -244,7 +243,7 @@ namespace PC_Building_Simulator
             ButtonAppearance.Reset.Mouse(mainApp);
             ButtonAppearance.Reset.Speakers(mainApp);
         }
-        private void DisposeAllMenuForms()
+        public void DisposeAllMenuForms()
         {
             if (buildMenuForm != null)
             {
@@ -435,7 +434,7 @@ namespace PC_Building_Simulator
                     break;
             }
         }
-        public void cpumenu(int num)
+        public void cpumenu(int num, Label strprice)
         {
             string[] cpuNames = {
                 "Intel Core i9-11900K", "AMD Ryzen 9 5950X", "Intel Core i7-11700K", "AMD Ryzen 7 5800X",
@@ -444,7 +443,7 @@ namespace PC_Building_Simulator
                 "Intel Core i7-12700K", "AMD Ryzen 7 7800X3D", "Intel Core i5-12600K", "AMD Ryzen 7 7700X",
                 "Intel Core i5-12400", "AMD Ryzen 3 3200G", "Intel Core i9-14900K", "AMD Ryzen 9 7900X3D"
             };
-
+            string price = strprice.Text;
             if (num >= 1 && num <= cpuNames.Length)
             {
 
@@ -453,7 +452,7 @@ namespace PC_Building_Simulator
 
                 mainApp.panelmain.Controls.Clear();
 
-                productspecs productspecs = new productspecs(cpuName, 1, mainApp)
+                productspecs productspecs = new productspecs(cpuName, 1, mainApp, price)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
@@ -465,7 +464,7 @@ namespace PC_Building_Simulator
                 productspecs.Show();
             }
         }
-        public void gpumenu(int num)
+        public void gpumenu(int num, Label strprice)
         {
             string[] gpuNames = {
                 "XFX Radeon RX 5700 XT", "PowerColor Radeon RX 580", "Gigabyte GeForce GTX 1080 Ti",
@@ -476,13 +475,15 @@ namespace PC_Building_Simulator
                 "ASUS TUF Gaming RX 7800 XT", "Sapphire NITRO+ Radeon RX 6600 XT",
                 "Nvidia GeForce RTX 3060 Ti Founders Edition", "Sapphire PULSE Radeon RX 570 8G G5",
                 "ASRock AMD Radeon RX 6600 Challenger D 8GB"
-            };
+            }; 
+            
+            string price = strprice.Text;
             if (num >= 1 && num <= gpuNames.Length)
             {
                 string gpuName = gpuNames[num - 1];
                 mainApp.label_menu.Text = $"{gpuName} Specifications";
                 mainApp.panelmain.Controls.Clear();
-                productspecs productspecs = new productspecs(gpuName, 2, mainApp)
+                productspecs productspecs = new productspecs(gpuName, 2, mainApp, price)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
@@ -494,7 +495,7 @@ namespace PC_Building_Simulator
                 productspecs.Show();
             }
         }
-        public void mbmenu(int num)
+        public void mbmenu(int num, Label strprice)
         {
             string[] mbNames = {
                 "MSI MEG Z690 Godlike", "ASUS ROG Strix X570-E Gaming", "Gigabyte B550M Aorus Pro",
@@ -506,13 +507,14 @@ namespace PC_Building_Simulator
                 "Gigabyte B450M DS3H WIFI", "MSI B550M Mortar Micro ATX", "ASRock B460M Pro4"
             };
 
+            string price = strprice.Text;
             if (num >= 1 && num <= mbNames.Length)
             {
                 string mbName = mbNames[num - 1];
                 mainApp.label_menu.Text = $"{mbName} Specifications";
 
                 mainApp.panelmain.Controls.Clear();
-                productspecs productspecs = new productspecs(mbName, 3, mainApp)
+                productspecs productspecs = new productspecs(mbName, 3, mainApp, price)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
@@ -525,7 +527,7 @@ namespace PC_Building_Simulator
             }
         }
 
-        public void rammenu(int num)
+        public void rammenu(int num, Label strprice)
         {
             string[] ramNames = {
                 "Vengeance RGB PRO", "TridentZ RGB Series", "T-Force Delta RGB", "Viper Steel Series DDR4",
@@ -536,13 +538,14 @@ namespace PC_Building_Simulator
                 "T-Force Dark Z Alpha DDR5"
             };
 
+            string price = strprice.Text;
             if (num >= 1 && num <= ramNames.Length)
             {
                 string ramName = ramNames[num - 1];
                 mainApp.label_menu.Text = $"{ramName} Specifications";
 
                 mainApp.panelmain.Controls.Clear();
-                productspecs productspecs = new productspecs(ramName, 4, mainApp)
+                productspecs productspecs = new productspecs(ramName, 4, mainApp, price)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
@@ -554,7 +557,7 @@ namespace PC_Building_Simulator
                 productspecs.Show();
             }
         }
-        public void psumenu(int num)
+        public void psumenu(int num, Label strprice)
         {
             string[] psuNames = {
                 "Asus TUF Gaming 750W Bronze", "Corsair RM1000x", "EVGA B550 Bronze", "Super Flower Leadex III Gold 750W",
@@ -565,13 +568,14 @@ namespace PC_Building_Simulator
                 "Asus ROG Thor 1200W Platinum", "Cooler Master MWE Bronze V650"
             };
 
+            string price = strprice.Text;
             if (num >= 1 && num <= psuNames.Length)
             {
                 string psuName = psuNames[num - 1];
                 mainApp.label_menu.Text = $"{psuName} Specifications";
                 mainApp.panelmain.Controls.Clear();
 
-                productspecs productspecs = new productspecs(psuName, 6, mainApp)
+                productspecs productspecs = new productspecs(psuName, 6, mainApp, price)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
@@ -583,7 +587,7 @@ namespace PC_Building_Simulator
                 productspecs.Show();
             }   
         }
-        public void casemenu(int num)
+        public void casemenu(int num, Label strprice)
         {
             string[] caseNames = {
                 "NZXT H510", "Fractal Design Meshify C", "Corsair 4000D Airflow", "Lian Li Lancool 215",
@@ -594,13 +598,14 @@ namespace PC_Building_Simulator
                 "MasterBox NR200P SE", "Thermaltake H500", "MSI MPG Velox 100"
             };
 
+            string price = strprice.Text;
             if (num >= 1 && num <= caseNames.Length)
             {
                 string caseName = caseNames[num - 1];
                 mainApp.label_menu.Text = $"{caseName} Specifications";
 
                 mainApp.panelmain.Controls.Clear();
-                productspecs productspecs = new productspecs(caseName, 7, mainApp)
+                productspecs productspecs = new productspecs(caseName, 7, mainApp, price)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
@@ -611,7 +616,7 @@ namespace PC_Building_Simulator
                 productspecs.Show();
             }
         }
-        public void monitormenu(int num)
+        public void monitormenu(int num, Label strprice)
         {
             string[] monitorNames = {
                 "Asus ROG Strix XG43UQ", "Samsung Odyssey G9", "LG 27GP950-B", "Acer Predator XB323QK NV",
@@ -622,14 +627,14 @@ namespace PC_Building_Simulator
                 "AOC CQ32G1S"
             };
 
-
+            string price = strprice.Text;
             if (num >= 1 && num <= monitorNames.Length)
             {
                 string monitorName = monitorNames[num - 1];
                 mainApp.label_menu.Text = $"{monitorName} Specifications";
 
                 mainApp.panelmain.Controls.Clear();
-                productspecs productspecs = new productspecs(monitorName, 9, mainApp)
+                productspecs productspecs = new productspecs(monitorName, 9, mainApp, price)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
@@ -640,7 +645,7 @@ namespace PC_Building_Simulator
                 productspecs.Show();
             }
         }
-        public void keyboardmenu(int num)
+        public void keyboardmenu(int num, Label strprice)
         {
             string[] keyboardNames = {
                 "Razer Blackwidow V3 Pro", "Logitech MX Mechanical Mini", "Apple Magic Keyboard", "CORSAIR K100 RGB",
@@ -650,13 +655,14 @@ namespace PC_Building_Simulator
                 "Cooler Master SK622", "NuPhy Air75"
             };
 
+            string price = strprice.Text;
             if (num >= 1 && num <= keyboardNames.Length)
             {
                 string keybName = keyboardNames[num - 1];
                 mainApp.label_menu.Text = $"{keybName} Specifications";
 
                 mainApp.panelmain.Controls.Clear();
-                productspecs productspecs = new productspecs(keybName, 10, mainApp)
+                productspecs productspecs = new productspecs(keybName, 10, mainApp, price)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
@@ -667,7 +673,7 @@ namespace PC_Building_Simulator
                 productspecs.Show();
             }
         }
-        public void mousemenu(int num)
+        public void mousemenu(int num, Label strprice)
         {
             string[] mouseNames = {
                 "Logitech MX Master 3", "Razer DeathAdder V2 Mini", "Apple Magic Mouse 2", "Glorious Model O",
@@ -678,13 +684,14 @@ namespace PC_Building_Simulator
                 "Logitech MX Vertical Ergonomic Mouse"
             };
 
+            string price = strprice.Text;
             if (num >= 1 && num <= mouseNames.Length)
             {
                 string mouseName = mouseNames[num - 1];
                 mainApp.label_menu.Text = $"{mouseName} Specifications";
 
                 mainApp.panelmain.Controls.Clear();
-                productspecs productspecs = new productspecs(mouseName, 11, mainApp)
+                productspecs productspecs = new productspecs(mouseName, 11, mainApp, price)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
@@ -696,7 +703,7 @@ namespace PC_Building_Simulator
             }
         }
 
-        public void speakersmenu(int num)
+        public void speakersmenu(int num, Label strprice)
         {
             string[] speakerNames = {
                 "Bose Companion 20", "Logitech G560 LIGHTSYNC", "Razer Nommo Chroma", "Creative Pebble Plus 2.0",
@@ -706,13 +713,14 @@ namespace PC_Building_Simulator
                 "Klipsch R-41M", "Audioengine HD3"
             };
 
+            string price = strprice.Text;
             if (num >= 1 && num <= speakerNames.Length)
             {
                 string speakerName = speakerNames[num - 1];
                 mainApp.label_menu.Text = $"{speakerName} Specifications";
 
                 mainApp.panelmain.Controls.Clear();
-                productspecs productSpecs = new productspecs(speakerName, 12, mainApp)
+                productspecs productSpecs = new productspecs(speakerName, 12, mainApp, price)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
@@ -723,23 +731,24 @@ namespace PC_Building_Simulator
                 productSpecs.Show();
             }
         }
-        public void hddmenu(int num)
+        public void hddmenu(int num, Label strprice)
         {
             string[] hddNames = {
                 "HGST Deskstar NAS 4TB", "HGST Ultrastar 12TB", "Hitachi Deskstar 500GB", "Hitachi Ultrastar 5TB",
-                "Samsung Spinpoint 1TB", "Seagate Barracuda 3TB", "Seagate BarraCuda Pro 16TB", "Seagate Constellation 3TB",
+                "Samsung Spinpoint 1TB", "Seagate Barracuda 3TB", "Seagate BarraCuda Pro 14TB", "Seagate Constellation 3TB",
                 "Seagate FireCuda 8TB", "Seagate IronWolf 10TB", "Seagate SkyHawk 14TB", "Toshiba DT01ACA 1TB",
                 "Toshiba N300 14TB", "Toshiba P300 3TB", "Toshiba X300 6TB", "WD VelociRaptor 1TB",
                 "Western Digital Black 2.5TB", "Western Digital Blue 2TB", "Western Digital Gold 18TB", "Western Digital Red 8TB"
             };
 
+            string price = strprice.Text;
             if (num >= 1 && num <= hddNames.Length)
             {
                 string hddName = hddNames[num - 1];
                 mainApp.label_menu.Text = $"{hddName} Specifications";
 
                 mainApp.panelmain.Controls.Clear();
-                productspecs productSpecs = new productspecs(hddName, 13, mainApp)
+                productspecs productSpecs = new productspecs(hddName, 13, mainApp, price)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
@@ -751,7 +760,7 @@ namespace PC_Building_Simulator
             }
         }
 
-        public void ssdmenu(int num)
+        public void ssdmenu(int num, Label strprice)
         {
             string[] ssdNames = {
                 "Samsung 870 EVO 1TB", "Crucial MX500 2TB", "Western Digital Blue SSD 1TB", "SanDisk Ultra 3D SSD 2TB",
@@ -761,13 +770,14 @@ namespace PC_Building_Simulator
                 "OWC Mercury Electra 6G SSD 2TB", "SK hynix Gold S31 SSD 1TB", "Mushkin Source SSD 500GB", "Kingston A400 2TB"
             };
 
+            string price = strprice.Text;
             if (num >= 1 && num <= ssdNames.Length)
             {
                 string ssdName = ssdNames[num - 1];
                 mainApp.label_menu.Text = $"{ssdName} Specifications";
 
                 mainApp.panelmain.Controls.Clear();
-                productspecs productSpecs = new productspecs(ssdName, 14, mainApp)
+                productspecs productSpecs = new productspecs(ssdName, 14, mainApp, price)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,

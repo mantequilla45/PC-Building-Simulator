@@ -891,5 +891,65 @@
   <ItemGroup>
     <None Include="Resources\ssd_SanDisk Ultra 3D SSD 2TB.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_Team Group MP33 PRO 1TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_Toshiba XG6 SSD 512GB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_Transcend PCIe SSD 250H 4TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_WD Black SN850 2TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_Adata SU800 512GB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_Corsair Force Series MP510 500GB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_Crucial P5 Plus 2TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_Gigabyte AORUS NVMe Gen4 SSD 1TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_HP S700 Pro 512GB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_Intel SSD 545s 256GB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_Kingston UV500 240GB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_Lexar NM710 M.2 1TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_Mushkin Enhanced Vortex M.2 2280 512GB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_OWC Aura Pro X2 1TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_Patriot Memory Scorch 512GB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_PNY CS900 M.2 SATA III SSD 500GB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_Samsung 980 PRO 1TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_Sandisk SSD Plus M.2 NVME 500GB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_Seagate Barracuda PCIe 2TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2_Silicon Power Ace A55 1TB.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

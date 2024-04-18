@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
+using System.Diagnostics.Tracing;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,11 +17,11 @@ namespace PC_Building_Simulator
         public buildmenu()
         {
             InitializeComponent();
+            InitializeDisplayManager();
         }
 
         private void buildmenu_Load(object sender, EventArgs e)
         {
-
             string cpu = "";
             string gpu = "";
             string mb = "";
@@ -33,6 +34,23 @@ namespace PC_Building_Simulator
             string mouse = "";
             string spk = "";
             string hdd = "";
+            string ssd = "";
+            string m2 = "";
+            string ramquan = "";
+            string cpuprice = "";
+            string gpuprice = "";
+            string mbprice = "";
+            string ramprice = "";
+            string psuprice = "";
+            string caseprice = "";
+            string moniprice = "";
+            string keybprice = "";
+            string mouseprice = "";
+            string spkprice = "";
+            string hddprice = "";
+            string ssdprice = "";
+            string m2price = "";
+
             string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
 
             // Get the current user
@@ -49,7 +67,9 @@ namespace PC_Building_Simulator
                     }
                 }
             }
-            string query = "SELECT CPU, GPU, Motherboard, RAM, PSU, [Computer Case], Monitor, Keyboard, Mouse, Speakers, HDD FROM Builds WHERE [user] = @Username";
+            string query = "SELECT CPU, [CPU price], GPU, [GPU price], Motherboard, [Motherboard price], [RAM quantity], RAM, " +
+                "[RAM price], PSU, [PSU price], [Computer Case], [Case price], Monitor, [Monitor price], Keyboard, [Keyboard price], " +
+                "Mouse, [Mouse price], Speakers, [Speakers price], HDD, [HDD price], SSD, [SSD price], [M2 SSDs], [M2 price] FROM Builds WHERE [user] = @Username";
             using (OleDbConnection connection = new OleDbConnection(connectionString))
             {
                 using (OleDbCommand command = new OleDbCommand(query, connection))
@@ -61,7 +81,9 @@ namespace PC_Building_Simulator
                         if (reader.Read())
                         {
                             cpu = reader["CPU"].ToString();
+                            cpuprice = reader["CPU price"].ToString();
                             gpu = reader["GPU"].ToString();
+                            gpuprice = reader["GPU price"].ToString();
                             mb = reader["Motherboard"].ToString();
                             ram = reader["RAM"].ToString();
                             psu = reader["PSU"].ToString();
@@ -71,6 +93,20 @@ namespace PC_Building_Simulator
                             mouse = reader["Mouse"].ToString();
                             spk = reader["Speakers"].ToString();
                             hdd = reader["HDD"].ToString();
+                            ssd = reader["SSD"].ToString();
+                            m2 = reader["M2 SSDs"].ToString();
+                            ramquan = reader["RAM quantity"].ToString(); 
+                            mbprice = reader["Motherboard price"].ToString();
+                            ramprice = reader["RAM price"].ToString();
+                            psuprice = reader["PSU price"].ToString();
+                            caseprice = reader["Case price"].ToString();
+                            moniprice = reader["Monitor price"].ToString();
+                            keybprice = reader["Keyboard price"].ToString();
+                            mouseprice = reader["Mouse price"].ToString();
+                            spkprice = reader["Speakers price"].ToString();
+                            hddprice = reader["HDD price"].ToString();
+                            ssdprice = reader["SSD price"].ToString();
+                            m2price = reader["M2 price"].ToString();
                         }
                     }
                 }
@@ -86,15 +122,29 @@ namespace PC_Building_Simulator
             label10.Text = keyb;
             label11.Text = mouse;
             label12.Text = spk;
-            InitializeDisplayManager();
-            
+            quan_ram.Text = ramquan;
+            price_cpu.Text = cpuprice;
+            price_gpu.Text = gpuprice;
+            price_mb.Text = mbprice;
+            price_ram.Text = ramprice;
+            price_drive1.Text = hddprice;
+            price_psu.Text = psuprice;
+            price_case.Text = caseprice;
+            price_moni.Text = moniprice;
+            price_keyb.Text = keybprice;
+            price_mou.Text = mouseprice;
+            price_spk.Text = spkprice;
+
+            // Displaying images for components
             string cpuimage = cpu.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
             string resourcecpu = $"cpu_{cpuimage}";
             pBox1.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcecpu);
-            if(cpu != "")
+            if (cpu != "")
             {
                 pBox1.Visible = true;
                 border1.Visible = true;
+                price_cpu.Visible = true;
+                quan_cpu.Visible = true;
             }
 
             string gpuimage = gpu.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
@@ -104,6 +154,8 @@ namespace PC_Building_Simulator
             {
                 pBox2.Visible = true;
                 border2.Visible = true;
+                price_gpu.Visible = true;
+                quan_gpu.Visible = true;
             }
 
             string mbimage = mb.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
@@ -113,6 +165,8 @@ namespace PC_Building_Simulator
             {
                 pBox3.Visible = true;
                 border3.Visible = true;
+                price_mb.Visible = true;
+                quan_mb.Visible = true;
             }
 
             string ramimage = ram.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
@@ -122,8 +176,11 @@ namespace PC_Building_Simulator
             {
                 pBox4.Visible = true;
                 border4.Visible = true;
+                price_ram.Visible = true;
+                quan_ram.Visible = true;
             }
 
+            //panel5.Size = new Size(1017, 110);
             string hddimage = hdd.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
             string resourcehdd = $"hdd_{hddimage}";
             pBox5.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcehdd);
@@ -131,6 +188,8 @@ namespace PC_Building_Simulator
             {
                 pBox5.Visible = true;
                 border5.Visible = true;
+                price_drive1.Visible = true;
+                quan_drive1.Visible = true;
             }
 
             string psuimage = psu.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
@@ -140,7 +199,10 @@ namespace PC_Building_Simulator
             {
                 pBox6.Visible = true;
                 border6.Visible = true;
+                price_psu.Visible = true;
+                quan_psu.Visible = true;
             }
+
             string caseimage = ccase.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
             string resourcecase = $"case_{caseimage}";
             pBox7.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcecase);
@@ -148,6 +210,8 @@ namespace PC_Building_Simulator
             {
                 pBox7.Visible = true;
                 border7.Visible = true;
+                price_case.Visible = true;
+                quan_case.Visible = true;
             }
 
             string monitorimage = moni.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
@@ -157,6 +221,8 @@ namespace PC_Building_Simulator
             {
                 pBox9.Visible = true;
                 border9.Visible = true;
+                price_moni.Visible = true;
+                quan_moni.Visible = true;
             }
 
             string keybimage = keyb.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
@@ -166,16 +232,20 @@ namespace PC_Building_Simulator
             {
                 pBox10.Visible = true;
                 border10.Visible = true;
+                price_keyb.Visible = true;
+                quan_keyb.Visible = true;
             }
+
             string mouseimage = mouse.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
             string resourcemou = $"mou_{mouseimage}";
             pBox11.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcemou);
-            if (keyb != "")
+            if (mouse != "")
             {
                 pBox11.Visible = true;
                 border11.Visible = true;
+                price_mou.Visible = true;
+                quan_mous.Visible = true;
             }
-
 
             string spkimage = spk.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('+', '_').Replace('.', '_');
             string resourcespk = $"spe_{spkimage}";
@@ -184,9 +254,9 @@ namespace PC_Building_Simulator
             {
                 pBox12.Visible = true;
                 border12.Visible = true;
+                price_spk.Visible = true;
+                quan_spk.Visible = true;
             }
-
-
 
         }
         private void InitializeDisplayManager()
@@ -208,39 +278,25 @@ namespace PC_Building_Simulator
             label.Font = new Font(label.Font, FontStyle.Underline);
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void but_remove1_Click(object sender, EventArgs e)
         {
-
+            label1.Text = "";
+            price_cpu.Text = "";
+            pBox1.Visible = false;
+            border1.Visible = false;
+            quan_cpu.Visible = false;
+            remove_cpu.Visible = false;
+        }
+        private void remove_MouseLeave(object sender, EventArgs e)
+        {
+            Label label = sender as Label;
+            label.ForeColor = SystemColors.ControlText;
         }
 
-        private void lab_quanmb_Click(object sender, EventArgs e)
+        private void remove_MouseMove(object sender, MouseEventArgs e)
         {
-
-        }
-
-        private void label_case_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void border7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lab_quancas_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pBox7_Click(object sender, EventArgs e)
-        {
-
+            Label label = sender as Label;
+            label.ForeColor = Color.FromArgb(180,18,0);
         }
     }
 }
