@@ -29,700 +29,107 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(buildmenu));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.border11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.label10 = new System.Windows.Forms.Label();
-            this.border10 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.border9 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.label8 = new System.Windows.Forms.Label();
-            this.border8 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.label7 = new System.Windows.Forms.Label();
-            this.border7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.lab_quanspe = new System.Windows.Forms.Label();
-            this.lab_quanmou = new System.Windows.Forms.Label();
-            this.lab_quankey = new System.Windows.Forms.Label();
-            this.lab_quanmon = new System.Windows.Forms.Label();
-            this.lab_quancoo = new System.Windows.Forms.Label();
-            this.lab_quancas = new System.Windows.Forms.Label();
-            this.lab_quanpsu = new System.Windows.Forms.Label();
-            this.lab_quandri = new System.Windows.Forms.Label();
-            this.lab_quanram = new System.Windows.Forms.Label();
-            this.lab_quanmb = new System.Windows.Forms.Label();
-            this.lab_quangpu = new System.Windows.Forms.Label();
-            this.lab_quancpu = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label_speak = new System.Windows.Forms.Label();
-            this.label_mouse = new System.Windows.Forms.Label();
-            this.label_keyb = new System.Windows.Forms.Label();
-            this.label_moni = new System.Windows.Forms.Label();
-            this.label_cooler = new System.Windows.Forms.Label();
-            this.label_case = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label_psu = new System.Windows.Forms.Label();
-            this.label_storage = new System.Windows.Forms.Label();
-            this.label_ram = new System.Windows.Forms.Label();
-            this.label_mb = new System.Windows.Forms.Label();
-            this.label_gpu = new System.Windows.Forms.Label();
-            this.label_cpu = new System.Windows.Forms.Label();
-            this.border1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.but_guide = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.but_combuild = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.pBox11 = new System.Windows.Forms.PictureBox();
-            this.pBox10 = new System.Windows.Forms.PictureBox();
-            this.pBox9 = new System.Windows.Forms.PictureBox();
-            this.pBox8 = new System.Windows.Forms.PictureBox();
-            this.pBox7 = new System.Windows.Forms.PictureBox();
-            this.pBox5 = new System.Windows.Forms.PictureBox();
-            this.pBox6 = new System.Windows.Forms.PictureBox();
-            this.pBox4 = new System.Windows.Forms.PictureBox();
-            this.pBox3 = new System.Windows.Forms.PictureBox();
-            this.pBox2 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.border1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox2)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label_cpu = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label_gpu = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pBox2 = new System.Windows.Forms.PictureBox();
+            this.border2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label_mb = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pBox3 = new System.Windows.Forms.PictureBox();
+            this.border3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label_ram = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pBox4 = new System.Windows.Forms.PictureBox();
+            this.border4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label_dr = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pBox5 = new System.Windows.Forms.PictureBox();
+            this.border5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton9 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label_psu = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pBox6 = new System.Windows.Forms.PictureBox();
+            this.border6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label_case = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pBox7 = new System.Windows.Forms.PictureBox();
+            this.border7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton13 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label_cool = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pBox8 = new System.Windows.Forms.PictureBox();
+            this.border8 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton15 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label_mon = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pBox9 = new System.Windows.Forms.PictureBox();
+            this.border9 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton17 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label_key = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pBox10 = new System.Windows.Forms.PictureBox();
+            this.border10 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton19 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label_mouse = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pBox11 = new System.Windows.Forms.PictureBox();
+            this.border11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton21 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label_spk = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pBox12 = new System.Windows.Forms.PictureBox();
+            this.border12 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton23 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBox1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox3)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox4)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox5)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox6)).BeginInit();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox7)).BeginInit();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox8)).BeginInit();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox9)).BeginInit();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox10)).BeginInit();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox11)).BeginInit();
+            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox12)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pBox11);
-            this.panel1.Controls.Add(this.border11);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.pBox10);
-            this.panel1.Controls.Add(this.border10);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.pBox9);
-            this.panel1.Controls.Add(this.border9);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.pBox8);
-            this.panel1.Controls.Add(this.border8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.pBox7);
-            this.panel1.Controls.Add(this.border7);
-            this.panel1.Controls.Add(this.pBox5);
-            this.panel1.Controls.Add(this.border5);
-            this.panel1.Controls.Add(this.pBox6);
-            this.panel1.Controls.Add(this.border6);
-            this.panel1.Controls.Add(this.pBox4);
-            this.panel1.Controls.Add(this.border4);
-            this.panel1.Controls.Add(this.pBox3);
-            this.panel1.Controls.Add(this.border3);
-            this.panel1.Controls.Add(this.pBox2);
-            this.panel1.Controls.Add(this.border2);
-            this.panel1.Controls.Add(this.pBox1);
-            this.panel1.Controls.Add(this.lab_quanspe);
-            this.panel1.Controls.Add(this.lab_quanmou);
-            this.panel1.Controls.Add(this.lab_quankey);
-            this.panel1.Controls.Add(this.lab_quanmon);
-            this.panel1.Controls.Add(this.lab_quancoo);
-            this.panel1.Controls.Add(this.lab_quancas);
-            this.panel1.Controls.Add(this.lab_quanpsu);
-            this.panel1.Controls.Add(this.lab_quandri);
-            this.panel1.Controls.Add(this.lab_quanram);
-            this.panel1.Controls.Add(this.lab_quanmb);
-            this.panel1.Controls.Add(this.lab_quangpu);
-            this.panel1.Controls.Add(this.lab_quancpu);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label_speak);
-            this.panel1.Controls.Add(this.label_mouse);
-            this.panel1.Controls.Add(this.label_keyb);
-            this.panel1.Controls.Add(this.label_moni);
-            this.panel1.Controls.Add(this.label_cooler);
-            this.panel1.Controls.Add(this.label_case);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label_psu);
-            this.panel1.Controls.Add(this.label_storage);
-            this.panel1.Controls.Add(this.label_ram);
-            this.panel1.Controls.Add(this.label_mb);
-            this.panel1.Controls.Add(this.label_gpu);
-            this.panel1.Controls.Add(this.label_cpu);
-            this.panel1.Controls.Add(this.border1);
-            this.panel1.Location = new System.Drawing.Point(12, 44);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(974, 643);
-            this.panel1.TabIndex = 77;
-            // 
-            // border11
-            // 
-            this.border11.Enabled = false;
-            this.border11.Location = new System.Drawing.Point(370, 568);
-            this.border11.Name = "border11";
-            this.border11.Size = new System.Drawing.Size(45, 47);
-            this.border11.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border11.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border11.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
-            this.border11.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border11.StateCommon.Border.Rounding = 8;
-            this.border11.TabIndex = 141;
-            this.border11.Values.Text = "";
-            this.border11.Visible = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(432, 574);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(106, 28);
-            this.label10.TabIndex = 139;
-            this.label10.Text = "\"Speakers\"";
-            this.label10.MouseLeave += new System.EventHandler(this.label_MouseLeave);
-            this.label10.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
-            // 
-            // border10
-            // 
-            this.border10.Enabled = false;
-            this.border10.Location = new System.Drawing.Point(370, 520);
-            this.border10.Name = "border10";
-            this.border10.Size = new System.Drawing.Size(45, 47);
-            this.border10.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border10.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border10.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
-            this.border10.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border10.StateCommon.Border.Rounding = 8;
-            this.border10.TabIndex = 138;
-            this.border10.Values.Text = "";
-            this.border10.Visible = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(432, 526);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 28);
-            this.label9.TabIndex = 136;
-            this.label9.Text = "\"Mouse\"";
-            this.label9.MouseLeave += new System.EventHandler(this.label_MouseLeave);
-            this.label9.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
-            // 
-            // border9
-            // 
-            this.border9.Enabled = false;
-            this.border9.Location = new System.Drawing.Point(370, 470);
-            this.border9.Name = "border9";
-            this.border9.Size = new System.Drawing.Size(45, 47);
-            this.border9.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border9.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border9.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
-            this.border9.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border9.StateCommon.Border.Rounding = 8;
-            this.border9.TabIndex = 135;
-            this.border9.Values.Text = "";
-            this.border9.Visible = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(432, 476);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 28);
-            this.label8.TabIndex = 133;
-            this.label8.Text = "\"Keyboard\"";
-            this.label8.MouseLeave += new System.EventHandler(this.label_MouseLeave);
-            this.label8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
-            // 
-            // border8
-            // 
-            this.border8.Enabled = false;
-            this.border8.Location = new System.Drawing.Point(370, 420);
-            this.border8.Name = "border8";
-            this.border8.Size = new System.Drawing.Size(45, 47);
-            this.border8.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border8.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border8.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
-            this.border8.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border8.StateCommon.Border.Rounding = 8;
-            this.border8.TabIndex = 132;
-            this.border8.Values.Text = "";
-            this.border8.Visible = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(432, 428);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 28);
-            this.label7.TabIndex = 130;
-            this.label7.Text = "\"Monitor\"";
-            this.label7.MouseLeave += new System.EventHandler(this.label_MouseLeave);
-            this.label7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
-            // 
-            // border7
-            // 
-            this.border7.Enabled = false;
-            this.border7.Location = new System.Drawing.Point(370, 321);
-            this.border7.Name = "border7";
-            this.border7.Size = new System.Drawing.Size(45, 47);
-            this.border7.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border7.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border7.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
-            this.border7.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border7.StateCommon.Border.Rounding = 8;
-            this.border7.TabIndex = 129;
-            this.border7.Values.Text = "";
-            this.border7.Visible = false;
-            // 
-            // border5
-            // 
-            this.border5.Enabled = false;
-            this.border5.Location = new System.Drawing.Point(370, 221);
-            this.border5.Name = "border5";
-            this.border5.Size = new System.Drawing.Size(45, 47);
-            this.border5.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border5.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border5.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
-            this.border5.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border5.StateCommon.Border.Rounding = 8;
-            this.border5.TabIndex = 127;
-            this.border5.Values.Text = "";
-            this.border5.Visible = false;
-            // 
-            // border6
-            // 
-            this.border6.Enabled = false;
-            this.border6.Location = new System.Drawing.Point(370, 271);
-            this.border6.Name = "border6";
-            this.border6.Size = new System.Drawing.Size(45, 47);
-            this.border6.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border6.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border6.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
-            this.border6.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border6.StateCommon.Border.Rounding = 8;
-            this.border6.TabIndex = 125;
-            this.border6.Values.Text = "";
-            this.border6.Visible = false;
-            // 
-            // border4
-            // 
-            this.border4.Enabled = false;
-            this.border4.Location = new System.Drawing.Point(370, 171);
-            this.border4.Name = "border4";
-            this.border4.Size = new System.Drawing.Size(45, 47);
-            this.border4.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border4.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border4.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
-            this.border4.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border4.StateCommon.Border.Rounding = 8;
-            this.border4.TabIndex = 123;
-            this.border4.Values.Text = "";
-            this.border4.Visible = false;
-            // 
-            // border3
-            // 
-            this.border3.Enabled = false;
-            this.border3.Location = new System.Drawing.Point(370, 121);
-            this.border3.Name = "border3";
-            this.border3.Size = new System.Drawing.Size(45, 47);
-            this.border3.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border3.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border3.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
-            this.border3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border3.StateCommon.Border.Rounding = 8;
-            this.border3.TabIndex = 121;
-            this.border3.Values.Text = "";
-            this.border3.Visible = false;
-            // 
-            // border2
-            // 
-            this.border2.Enabled = false;
-            this.border2.Location = new System.Drawing.Point(370, 71);
-            this.border2.Name = "border2";
-            this.border2.Size = new System.Drawing.Size(45, 47);
-            this.border2.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border2.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border2.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
-            this.border2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border2.StateCommon.Border.Rounding = 8;
-            this.border2.TabIndex = 119;
-            this.border2.Values.Text = "";
-            this.border2.Visible = false;
-            // 
-            // lab_quanspe
-            // 
-            this.lab_quanspe.AutoSize = true;
-            this.lab_quanspe.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_quanspe.Location = new System.Drawing.Point(330, 578);
-            this.lab_quanspe.Name = "lab_quanspe";
-            this.lab_quanspe.Size = new System.Drawing.Size(32, 28);
-            this.lab_quanspe.TabIndex = 112;
-            this.lab_quanspe.Text = "x1";
-            this.lab_quanspe.Visible = false;
-            // 
-            // lab_quanmou
-            // 
-            this.lab_quanmou.AutoSize = true;
-            this.lab_quanmou.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_quanmou.Location = new System.Drawing.Point(330, 530);
-            this.lab_quanmou.Name = "lab_quanmou";
-            this.lab_quanmou.Size = new System.Drawing.Size(32, 28);
-            this.lab_quanmou.TabIndex = 111;
-            this.lab_quanmou.Text = "x1";
-            this.lab_quanmou.Visible = false;
-            // 
-            // lab_quankey
-            // 
-            this.lab_quankey.AutoSize = true;
-            this.lab_quankey.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_quankey.Location = new System.Drawing.Point(330, 480);
-            this.lab_quankey.Name = "lab_quankey";
-            this.lab_quankey.Size = new System.Drawing.Size(32, 28);
-            this.lab_quankey.TabIndex = 110;
-            this.lab_quankey.Text = "x1";
-            this.lab_quankey.Visible = false;
-            // 
-            // lab_quanmon
-            // 
-            this.lab_quanmon.AutoSize = true;
-            this.lab_quanmon.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.lab_quanmon.Location = new System.Drawing.Point(330, 430);
-            this.lab_quanmon.Name = "lab_quanmon";
-            this.lab_quanmon.Size = new System.Drawing.Size(32, 28);
-            this.lab_quanmon.TabIndex = 109;
-            this.lab_quanmon.Text = "x1";
-            this.lab_quanmon.Visible = false;
-            // 
-            // lab_quancoo
-            // 
-            this.lab_quancoo.AutoSize = true;
-            this.lab_quancoo.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_quancoo.Location = new System.Drawing.Point(330, 381);
-            this.lab_quancoo.Name = "lab_quancoo";
-            this.lab_quancoo.Size = new System.Drawing.Size(32, 28);
-            this.lab_quancoo.TabIndex = 108;
-            this.lab_quancoo.Text = "x1";
-            this.lab_quancoo.Visible = false;
-            // 
-            // lab_quancas
-            // 
-            this.lab_quancas.AutoSize = true;
-            this.lab_quancas.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_quancas.Location = new System.Drawing.Point(330, 330);
-            this.lab_quancas.Name = "lab_quancas";
-            this.lab_quancas.Size = new System.Drawing.Size(32, 28);
-            this.lab_quancas.TabIndex = 107;
-            this.lab_quancas.Text = "x1";
-            this.lab_quancas.Visible = false;
-            // 
-            // lab_quanpsu
-            // 
-            this.lab_quanpsu.AutoSize = true;
-            this.lab_quanpsu.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_quanpsu.Location = new System.Drawing.Point(330, 280);
-            this.lab_quanpsu.Name = "lab_quanpsu";
-            this.lab_quanpsu.Size = new System.Drawing.Size(32, 28);
-            this.lab_quanpsu.TabIndex = 106;
-            this.lab_quanpsu.Text = "x1";
-            this.lab_quanpsu.Visible = false;
-            // 
-            // lab_quandri
-            // 
-            this.lab_quandri.AutoSize = true;
-            this.lab_quandri.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_quandri.Location = new System.Drawing.Point(330, 231);
-            this.lab_quandri.Name = "lab_quandri";
-            this.lab_quandri.Size = new System.Drawing.Size(32, 28);
-            this.lab_quandri.TabIndex = 105;
-            this.lab_quandri.Text = "x1";
-            this.lab_quandri.Visible = false;
-            // 
-            // lab_quanram
-            // 
-            this.lab_quanram.AutoSize = true;
-            this.lab_quanram.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_quanram.Location = new System.Drawing.Point(330, 181);
-            this.lab_quanram.Name = "lab_quanram";
-            this.lab_quanram.Size = new System.Drawing.Size(32, 28);
-            this.lab_quanram.TabIndex = 104;
-            this.lab_quanram.Text = "x1";
-            this.lab_quanram.Visible = false;
-            // 
-            // lab_quanmb
-            // 
-            this.lab_quanmb.AutoSize = true;
-            this.lab_quanmb.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_quanmb.Location = new System.Drawing.Point(330, 131);
-            this.lab_quanmb.Name = "lab_quanmb";
-            this.lab_quanmb.Size = new System.Drawing.Size(32, 28);
-            this.lab_quanmb.TabIndex = 103;
-            this.lab_quanmb.Text = "x1";
-            this.lab_quanmb.Visible = false;
-            // 
-            // lab_quangpu
-            // 
-            this.lab_quangpu.AutoSize = true;
-            this.lab_quangpu.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_quangpu.Location = new System.Drawing.Point(330, 81);
-            this.lab_quangpu.Name = "lab_quangpu";
-            this.lab_quangpu.Size = new System.Drawing.Size(32, 28);
-            this.lab_quangpu.TabIndex = 102;
-            this.lab_quangpu.Text = "x1";
-            this.lab_quangpu.Visible = false;
-            // 
-            // lab_quancpu
-            // 
-            this.lab_quancpu.AutoSize = true;
-            this.lab_quancpu.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_quancpu.Location = new System.Drawing.Point(330, 29);
-            this.lab_quancpu.Name = "lab_quancpu";
-            this.lab_quancpu.Size = new System.Drawing.Size(32, 28);
-            this.lab_quancpu.TabIndex = 101;
-            this.lab_quancpu.Text = "x1";
-            this.lab_quancpu.Visible = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(432, 327);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(161, 28);
-            this.label6.TabIndex = 100;
-            this.label6.Text = "\"Computer Case\"";
-            this.label6.MouseLeave += new System.EventHandler(this.label_MouseLeave);
-            this.label6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(432, 277);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 28);
-            this.label5.TabIndex = 99;
-            this.label5.Text = "\"PSU\"";
-            this.label5.MouseLeave += new System.EventHandler(this.label_MouseLeave);
-            this.label5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(432, 179);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 28);
-            this.label4.TabIndex = 98;
-            this.label4.Text = "\"RAM\"";
-            this.label4.MouseLeave += new System.EventHandler(this.label_MouseLeave);
-            this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(432, 129);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 28);
-            this.label3.TabIndex = 97;
-            this.label3.Text = "\"Motherboard\"";
-            this.label3.MouseLeave += new System.EventHandler(this.label_MouseLeave);
-            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
-            // 
-            // label_speak
-            // 
-            this.label_speak.AutoSize = true;
-            this.label_speak.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_speak.Location = new System.Drawing.Point(32, 574);
-            this.label_speak.Name = "label_speak";
-            this.label_speak.Size = new System.Drawing.Size(110, 31);
-            this.label_speak.TabIndex = 96;
-            this.label_speak.Text = "Speakers:";
-            // 
-            // label_mouse
-            // 
-            this.label_mouse.AutoSize = true;
-            this.label_mouse.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_mouse.Location = new System.Drawing.Point(32, 526);
-            this.label_mouse.Name = "label_mouse";
-            this.label_mouse.Size = new System.Drawing.Size(88, 31);
-            this.label_mouse.TabIndex = 95;
-            this.label_mouse.Text = "Mouse:";
-            // 
-            // label_keyb
-            // 
-            this.label_keyb.AutoSize = true;
-            this.label_keyb.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_keyb.Location = new System.Drawing.Point(32, 476);
-            this.label_keyb.Name = "label_keyb";
-            this.label_keyb.Size = new System.Drawing.Size(116, 31);
-            this.label_keyb.TabIndex = 94;
-            this.label_keyb.Text = "Keyboard:";
-            // 
-            // label_moni
-            // 
-            this.label_moni.AutoSize = true;
-            this.label_moni.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_moni.Location = new System.Drawing.Point(32, 426);
-            this.label_moni.Name = "label_moni";
-            this.label_moni.Size = new System.Drawing.Size(101, 31);
-            this.label_moni.TabIndex = 93;
-            this.label_moni.Text = "Monitor:";
-            // 
-            // label_cooler
-            // 
-            this.label_cooler.AutoSize = true;
-            this.label_cooler.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_cooler.Location = new System.Drawing.Point(32, 376);
-            this.label_cooler.Name = "label_cooler";
-            this.label_cooler.Size = new System.Drawing.Size(176, 31);
-            this.label_cooler.TabIndex = 92;
-            this.label_cooler.Text = "Cooling System:";
-            // 
-            // label_case
-            // 
-            this.label_case.AutoSize = true;
-            this.label_case.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_case.Location = new System.Drawing.Point(33, 327);
-            this.label_case.Name = "label_case";
-            this.label_case.Size = new System.Drawing.Size(175, 31);
-            this.label_case.TabIndex = 91;
-            this.label_case.Text = "Computer Case:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(432, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 28);
-            this.label2.TabIndex = 90;
-            this.label2.Text = "\"GPU\"";
-            this.label2.MouseLeave += new System.EventHandler(this.label_MouseLeave);
-            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(432, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 28);
-            this.label1.TabIndex = 89;
-            this.label1.Text = "\"CPU\"";
-            this.label1.MouseLeave += new System.EventHandler(this.label_MouseLeave);
-            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
-            // 
-            // label_psu
-            // 
-            this.label_psu.AutoSize = true;
-            this.label_psu.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_psu.Location = new System.Drawing.Point(32, 280);
-            this.label_psu.Name = "label_psu";
-            this.label_psu.Size = new System.Drawing.Size(55, 31);
-            this.label_psu.TabIndex = 82;
-            this.label_psu.Text = "PSU";
-            // 
-            // label_storage
-            // 
-            this.label_storage.AutoSize = true;
-            this.label_storage.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_storage.Location = new System.Drawing.Point(32, 227);
-            this.label_storage.Name = "label_storage";
-            this.label_storage.Size = new System.Drawing.Size(77, 31);
-            this.label_storage.TabIndex = 81;
-            this.label_storage.Text = "Drives";
-            // 
-            // label_ram
-            // 
-            this.label_ram.AutoSize = true;
-            this.label_ram.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ram.Location = new System.Drawing.Point(32, 177);
-            this.label_ram.Name = "label_ram";
-            this.label_ram.Size = new System.Drawing.Size(64, 31);
-            this.label_ram.TabIndex = 80;
-            this.label_ram.Text = "RAM";
-            // 
-            // label_mb
-            // 
-            this.label_mb.AutoSize = true;
-            this.label_mb.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_mb.Location = new System.Drawing.Point(32, 127);
-            this.label_mb.Name = "label_mb";
-            this.label_mb.Size = new System.Drawing.Size(150, 31);
-            this.label_mb.TabIndex = 79;
-            this.label_mb.Text = "Motherboard";
-            // 
-            // label_gpu
-            // 
-            this.label_gpu.AutoSize = true;
-            this.label_gpu.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_gpu.Location = new System.Drawing.Point(32, 77);
-            this.label_gpu.Name = "label_gpu";
-            this.label_gpu.Size = new System.Drawing.Size(59, 31);
-            this.label_gpu.TabIndex = 78;
-            this.label_gpu.Text = "GPU";
-            // 
-            // label_cpu
-            // 
-            this.label_cpu.AutoSize = true;
-            this.label_cpu.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_cpu.Location = new System.Drawing.Point(32, 27);
-            this.label_cpu.Name = "label_cpu";
-            this.label_cpu.Size = new System.Drawing.Size(57, 31);
-            this.label_cpu.TabIndex = 77;
-            this.label_cpu.Text = "CPU";
-            // 
-            // border1
-            // 
-            this.border1.Enabled = false;
-            this.border1.Location = new System.Drawing.Point(370, 21);
-            this.border1.Name = "border1";
-            this.border1.Size = new System.Drawing.Size(45, 47);
-            this.border1.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border1.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border1.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
-            this.border1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border1.StateCommon.Border.Rounding = 8;
-            this.border1.TabIndex = 117;
-            this.border1.Values.Text = "";
-            this.border1.Visible = false;
             // 
             // but_guide
             // 
@@ -846,228 +253,1082 @@
             this.but_combuild.TabIndex = 90;
             this.but_combuild.Values.Text = "Completed Builds";
             // 
-            // pBox11
+            // flowLayoutPanel1
             // 
-            this.pBox11.BackColor = System.Drawing.Color.White;
-            this.pBox11.Image = ((System.Drawing.Image)(resources.GetObject("pBox11.Image")));
-            this.pBox11.Location = new System.Drawing.Point(374, 574);
-            this.pBox11.Name = "pBox11";
-            this.pBox11.Size = new System.Drawing.Size(37, 35);
-            this.pBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBox11.TabIndex = 140;
-            this.pBox11.TabStop = false;
-            this.pBox11.Visible = false;
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.panel3);
+            this.flowLayoutPanel1.Controls.Add(this.panel1);
+            this.flowLayoutPanel1.Controls.Add(this.panel2);
+            this.flowLayoutPanel1.Controls.Add(this.panel4);
+            this.flowLayoutPanel1.Controls.Add(this.panel5);
+            this.flowLayoutPanel1.Controls.Add(this.panel6);
+            this.flowLayoutPanel1.Controls.Add(this.panel7);
+            this.flowLayoutPanel1.Controls.Add(this.panel8);
+            this.flowLayoutPanel1.Controls.Add(this.panel9);
+            this.flowLayoutPanel1.Controls.Add(this.panel10);
+            this.flowLayoutPanel1.Controls.Add(this.panel11);
+            this.flowLayoutPanel1.Controls.Add(this.panel12);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(63, 41);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1000, 590);
+            this.flowLayoutPanel1.TabIndex = 142;
             // 
-            // pBox10
+            // kryptonButton1
             // 
-            this.pBox10.BackColor = System.Drawing.Color.White;
-            this.pBox10.Image = ((System.Drawing.Image)(resources.GetObject("pBox10.Image")));
-            this.pBox10.Location = new System.Drawing.Point(374, 526);
-            this.pBox10.Name = "pBox10";
-            this.pBox10.Size = new System.Drawing.Size(37, 35);
-            this.pBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBox10.TabIndex = 137;
-            this.pBox10.TabStop = false;
-            this.pBox10.Visible = false;
+            this.kryptonButton1.Enabled = false;
+            this.kryptonButton1.Location = new System.Drawing.Point(1, 1);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(965, 61);
+            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton1.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.kryptonButton1.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top;
+            this.kryptonButton1.StateCommon.Border.Rounding = 8;
+            this.kryptonButton1.TabIndex = 118;
+            this.kryptonButton1.Values.Text = "";
             // 
-            // pBox9
+            // border1
             // 
-            this.pBox9.BackColor = System.Drawing.Color.White;
-            this.pBox9.Image = ((System.Drawing.Image)(resources.GetObject("pBox9.Image")));
-            this.pBox9.Location = new System.Drawing.Point(374, 476);
-            this.pBox9.Name = "pBox9";
-            this.pBox9.Size = new System.Drawing.Size(37, 35);
-            this.pBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBox9.TabIndex = 134;
-            this.pBox9.TabStop = false;
-            this.pBox9.Visible = false;
-            // 
-            // pBox8
-            // 
-            this.pBox8.BackColor = System.Drawing.Color.White;
-            this.pBox8.Image = ((System.Drawing.Image)(resources.GetObject("pBox8.Image")));
-            this.pBox8.Location = new System.Drawing.Point(374, 426);
-            this.pBox8.Name = "pBox8";
-            this.pBox8.Size = new System.Drawing.Size(37, 35);
-            this.pBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBox8.TabIndex = 131;
-            this.pBox8.TabStop = false;
-            this.pBox8.Visible = false;
-            // 
-            // pBox7
-            // 
-            this.pBox7.BackColor = System.Drawing.Color.White;
-            this.pBox7.Image = ((System.Drawing.Image)(resources.GetObject("pBox7.Image")));
-            this.pBox7.Location = new System.Drawing.Point(374, 327);
-            this.pBox7.Name = "pBox7";
-            this.pBox7.Size = new System.Drawing.Size(37, 35);
-            this.pBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBox7.TabIndex = 128;
-            this.pBox7.TabStop = false;
-            this.pBox7.Visible = false;
-            // 
-            // pBox5
-            // 
-            this.pBox5.BackColor = System.Drawing.Color.White;
-            this.pBox5.Image = ((System.Drawing.Image)(resources.GetObject("pBox5.Image")));
-            this.pBox5.Location = new System.Drawing.Point(374, 227);
-            this.pBox5.Name = "pBox5";
-            this.pBox5.Size = new System.Drawing.Size(37, 35);
-            this.pBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBox5.TabIndex = 126;
-            this.pBox5.TabStop = false;
-            this.pBox5.Visible = false;
-            // 
-            // pBox6
-            // 
-            this.pBox6.BackColor = System.Drawing.Color.White;
-            this.pBox6.Image = ((System.Drawing.Image)(resources.GetObject("pBox6.Image")));
-            this.pBox6.Location = new System.Drawing.Point(374, 277);
-            this.pBox6.Name = "pBox6";
-            this.pBox6.Size = new System.Drawing.Size(37, 35);
-            this.pBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBox6.TabIndex = 124;
-            this.pBox6.TabStop = false;
-            this.pBox6.Visible = false;
-            // 
-            // pBox4
-            // 
-            this.pBox4.BackColor = System.Drawing.Color.White;
-            this.pBox4.Image = ((System.Drawing.Image)(resources.GetObject("pBox4.Image")));
-            this.pBox4.Location = new System.Drawing.Point(374, 177);
-            this.pBox4.Name = "pBox4";
-            this.pBox4.Size = new System.Drawing.Size(37, 35);
-            this.pBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBox4.TabIndex = 122;
-            this.pBox4.TabStop = false;
-            this.pBox4.Visible = false;
-            // 
-            // pBox3
-            // 
-            this.pBox3.BackColor = System.Drawing.Color.White;
-            this.pBox3.Image = ((System.Drawing.Image)(resources.GetObject("pBox3.Image")));
-            this.pBox3.Location = new System.Drawing.Point(374, 127);
-            this.pBox3.Name = "pBox3";
-            this.pBox3.Size = new System.Drawing.Size(37, 35);
-            this.pBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBox3.TabIndex = 120;
-            this.pBox3.TabStop = false;
-            this.pBox3.Visible = false;
-            // 
-            // pBox2
-            // 
-            this.pBox2.BackColor = System.Drawing.Color.White;
-            this.pBox2.Image = ((System.Drawing.Image)(resources.GetObject("pBox2.Image")));
-            this.pBox2.Location = new System.Drawing.Point(374, 77);
-            this.pBox2.Name = "pBox2";
-            this.pBox2.Size = new System.Drawing.Size(37, 35);
-            this.pBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBox2.TabIndex = 118;
-            this.pBox2.TabStop = false;
-            this.pBox2.Visible = false;
+            this.border1.Enabled = false;
+            this.border1.Location = new System.Drawing.Point(370, 9);
+            this.border1.Name = "border1";
+            this.border1.Size = new System.Drawing.Size(45, 46);
+            this.border1.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border1.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border1.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.border1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border1.StateCommon.Border.Rounding = 3;
+            this.border1.TabIndex = 119;
+            this.border1.Values.Text = "";
+            this.border1.Visible = false;
             // 
             // pBox1
             // 
             this.pBox1.BackColor = System.Drawing.Color.White;
             this.pBox1.Image = ((System.Drawing.Image)(resources.GetObject("pBox1.Image")));
-            this.pBox1.Location = new System.Drawing.Point(374, 27);
+            this.pBox1.Location = new System.Drawing.Point(374, 15);
             this.pBox1.Name = "pBox1";
-            this.pBox1.Size = new System.Drawing.Size(37, 35);
+            this.pBox1.Size = new System.Drawing.Size(37, 34);
             this.pBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBox1.TabIndex = 114;
+            this.pBox1.TabIndex = 118;
             this.pBox1.TabStop = false;
             this.pBox1.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(421, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 21);
+            this.label1.TabIndex = 90;
+            this.label1.Text = "\"CPU\"";
+            this.label1.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            // 
+            // label_cpu
+            // 
+            this.label_cpu.AutoSize = true;
+            this.label_cpu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_cpu.Location = new System.Drawing.Point(32, 19);
+            this.label_cpu.Name = "label_cpu";
+            this.label_cpu.Size = new System.Drawing.Size(40, 21);
+            this.label_cpu.TabIndex = 78;
+            this.label_cpu.Text = "CPU";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label_cpu);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.pBox1);
+            this.panel3.Controls.Add(this.border1);
+            this.panel3.Controls.Add(this.kryptonButton1);
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(971, 55);
+            this.panel3.TabIndex = 118;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label_gpu);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.pBox2);
+            this.panel1.Controls.Add(this.border2);
+            this.panel1.Controls.Add(this.kryptonButton3);
+            this.panel1.Location = new System.Drawing.Point(3, 64);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(971, 55);
+            this.panel1.TabIndex = 120;
+            // 
+            // label_gpu
+            // 
+            this.label_gpu.AutoSize = true;
+            this.label_gpu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_gpu.Location = new System.Drawing.Point(32, 19);
+            this.label_gpu.Name = "label_gpu";
+            this.label_gpu.Size = new System.Drawing.Size(41, 21);
+            this.label_gpu.TabIndex = 78;
+            this.label_gpu.Text = "GPU";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(421, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 21);
+            this.label2.TabIndex = 90;
+            this.label2.Text = "\"GPU\"";
+            this.label2.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            // 
+            // pBox2
+            // 
+            this.pBox2.BackColor = System.Drawing.Color.White;
+            this.pBox2.Image = ((System.Drawing.Image)(resources.GetObject("pBox2.Image")));
+            this.pBox2.Location = new System.Drawing.Point(374, 15);
+            this.pBox2.Name = "pBox2";
+            this.pBox2.Size = new System.Drawing.Size(37, 34);
+            this.pBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox2.TabIndex = 118;
+            this.pBox2.TabStop = false;
+            this.pBox2.Visible = false;
+            // 
+            // border2
+            // 
+            this.border2.Enabled = false;
+            this.border2.Location = new System.Drawing.Point(370, 9);
+            this.border2.Name = "border2";
+            this.border2.Size = new System.Drawing.Size(45, 46);
+            this.border2.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border2.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border2.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.border2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border2.StateCommon.Border.Rounding = 3;
+            this.border2.TabIndex = 119;
+            this.border2.Values.Text = "";
+            this.border2.Visible = false;
+            // 
+            // kryptonButton3
+            // 
+            this.kryptonButton3.Enabled = false;
+            this.kryptonButton3.Location = new System.Drawing.Point(1, 1);
+            this.kryptonButton3.Name = "kryptonButton3";
+            this.kryptonButton3.Size = new System.Drawing.Size(965, 61);
+            this.kryptonButton3.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton3.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton3.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.kryptonButton3.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top;
+            this.kryptonButton3.StateCommon.Border.Rounding = 8;
+            this.kryptonButton3.TabIndex = 118;
+            this.kryptonButton3.Values.Text = "";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label_mb);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.pBox3);
+            this.panel2.Controls.Add(this.border3);
+            this.panel2.Controls.Add(this.kryptonButton5);
+            this.panel2.Location = new System.Drawing.Point(3, 125);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(971, 55);
+            this.panel2.TabIndex = 121;
+            // 
+            // label_mb
+            // 
+            this.label_mb.AutoSize = true;
+            this.label_mb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_mb.Location = new System.Drawing.Point(32, 19);
+            this.label_mb.Name = "label_mb";
+            this.label_mb.Size = new System.Drawing.Size(102, 21);
+            this.label_mb.TabIndex = 78;
+            this.label_mb.Text = "Motherboard";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(421, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 21);
+            this.label3.TabIndex = 90;
+            this.label3.Text = "\"Motherboard\"";
+            this.label3.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            // 
+            // pBox3
+            // 
+            this.pBox3.BackColor = System.Drawing.Color.White;
+            this.pBox3.Image = ((System.Drawing.Image)(resources.GetObject("pBox3.Image")));
+            this.pBox3.Location = new System.Drawing.Point(374, 15);
+            this.pBox3.Name = "pBox3";
+            this.pBox3.Size = new System.Drawing.Size(37, 34);
+            this.pBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox3.TabIndex = 118;
+            this.pBox3.TabStop = false;
+            this.pBox3.Visible = false;
+            // 
+            // border3
+            // 
+            this.border3.Enabled = false;
+            this.border3.Location = new System.Drawing.Point(370, 9);
+            this.border3.Name = "border3";
+            this.border3.Size = new System.Drawing.Size(45, 46);
+            this.border3.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border3.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border3.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.border3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border3.StateCommon.Border.Rounding = 3;
+            this.border3.TabIndex = 119;
+            this.border3.Values.Text = "";
+            this.border3.Visible = false;
+            // 
+            // kryptonButton5
+            // 
+            this.kryptonButton5.Enabled = false;
+            this.kryptonButton5.Location = new System.Drawing.Point(1, 1);
+            this.kryptonButton5.Name = "kryptonButton5";
+            this.kryptonButton5.Size = new System.Drawing.Size(965, 61);
+            this.kryptonButton5.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton5.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton5.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.kryptonButton5.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top;
+            this.kryptonButton5.StateCommon.Border.Rounding = 8;
+            this.kryptonButton5.TabIndex = 118;
+            this.kryptonButton5.Values.Text = "";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label_ram);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.pBox4);
+            this.panel4.Controls.Add(this.border4);
+            this.panel4.Controls.Add(this.kryptonButton7);
+            this.panel4.Location = new System.Drawing.Point(3, 186);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(971, 55);
+            this.panel4.TabIndex = 122;
+            // 
+            // label_ram
+            // 
+            this.label_ram.AutoSize = true;
+            this.label_ram.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_ram.Location = new System.Drawing.Point(32, 19);
+            this.label_ram.Name = "label_ram";
+            this.label_ram.Size = new System.Drawing.Size(44, 21);
+            this.label_ram.TabIndex = 78;
+            this.label_ram.Text = "RAM";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(421, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 21);
+            this.label4.TabIndex = 90;
+            this.label4.Text = "\"RAM\"";
+            this.label4.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            // 
+            // pBox4
+            // 
+            this.pBox4.BackColor = System.Drawing.Color.White;
+            this.pBox4.Image = ((System.Drawing.Image)(resources.GetObject("pBox4.Image")));
+            this.pBox4.Location = new System.Drawing.Point(374, 15);
+            this.pBox4.Name = "pBox4";
+            this.pBox4.Size = new System.Drawing.Size(37, 34);
+            this.pBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox4.TabIndex = 118;
+            this.pBox4.TabStop = false;
+            this.pBox4.Visible = false;
+            // 
+            // border4
+            // 
+            this.border4.Enabled = false;
+            this.border4.Location = new System.Drawing.Point(370, 9);
+            this.border4.Name = "border4";
+            this.border4.Size = new System.Drawing.Size(45, 46);
+            this.border4.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border4.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border4.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.border4.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border4.StateCommon.Border.Rounding = 3;
+            this.border4.TabIndex = 119;
+            this.border4.Values.Text = "";
+            this.border4.Visible = false;
+            // 
+            // kryptonButton7
+            // 
+            this.kryptonButton7.Enabled = false;
+            this.kryptonButton7.Location = new System.Drawing.Point(1, 1);
+            this.kryptonButton7.Name = "kryptonButton7";
+            this.kryptonButton7.Size = new System.Drawing.Size(965, 61);
+            this.kryptonButton7.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton7.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton7.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.kryptonButton7.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top;
+            this.kryptonButton7.StateCommon.Border.Rounding = 8;
+            this.kryptonButton7.TabIndex = 118;
+            this.kryptonButton7.Values.Text = "";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label_dr);
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.pBox5);
+            this.panel5.Controls.Add(this.border5);
+            this.panel5.Controls.Add(this.kryptonButton9);
+            this.panel5.Location = new System.Drawing.Point(3, 247);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(971, 55);
+            this.panel5.TabIndex = 123;
+            // 
+            // label_dr
+            // 
+            this.label_dr.AutoSize = true;
+            this.label_dr.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_dr.Location = new System.Drawing.Point(32, 19);
+            this.label_dr.Name = "label_dr";
+            this.label_dr.Size = new System.Drawing.Size(47, 21);
+            this.label_dr.TabIndex = 78;
+            this.label_dr.Text = "Drive";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(421, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 21);
+            this.label5.TabIndex = 90;
+            this.label5.Text = "\"Drive\"";
+            this.label5.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            // 
+            // pBox5
+            // 
+            this.pBox5.BackColor = System.Drawing.Color.White;
+            this.pBox5.Image = ((System.Drawing.Image)(resources.GetObject("pBox5.Image")));
+            this.pBox5.Location = new System.Drawing.Point(374, 15);
+            this.pBox5.Name = "pBox5";
+            this.pBox5.Size = new System.Drawing.Size(37, 34);
+            this.pBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox5.TabIndex = 118;
+            this.pBox5.TabStop = false;
+            this.pBox5.Visible = false;
+            // 
+            // border5
+            // 
+            this.border5.Enabled = false;
+            this.border5.Location = new System.Drawing.Point(370, 9);
+            this.border5.Name = "border5";
+            this.border5.Size = new System.Drawing.Size(45, 46);
+            this.border5.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border5.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border5.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.border5.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border5.StateCommon.Border.Rounding = 3;
+            this.border5.TabIndex = 119;
+            this.border5.Values.Text = "";
+            this.border5.Visible = false;
+            // 
+            // kryptonButton9
+            // 
+            this.kryptonButton9.Enabled = false;
+            this.kryptonButton9.Location = new System.Drawing.Point(1, 1);
+            this.kryptonButton9.Name = "kryptonButton9";
+            this.kryptonButton9.Size = new System.Drawing.Size(965, 61);
+            this.kryptonButton9.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton9.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton9.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.kryptonButton9.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top;
+            this.kryptonButton9.StateCommon.Border.Rounding = 8;
+            this.kryptonButton9.TabIndex = 118;
+            this.kryptonButton9.Values.Text = "";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label_psu);
+            this.panel6.Controls.Add(this.label6);
+            this.panel6.Controls.Add(this.pBox6);
+            this.panel6.Controls.Add(this.border6);
+            this.panel6.Controls.Add(this.kryptonButton11);
+            this.panel6.Location = new System.Drawing.Point(3, 308);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(971, 55);
+            this.panel6.TabIndex = 124;
+            // 
+            // label_psu
+            // 
+            this.label_psu.AutoSize = true;
+            this.label_psu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_psu.Location = new System.Drawing.Point(32, 19);
+            this.label_psu.Name = "label_psu";
+            this.label_psu.Size = new System.Drawing.Size(39, 21);
+            this.label_psu.TabIndex = 78;
+            this.label_psu.Text = "PSU";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(421, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 21);
+            this.label6.TabIndex = 90;
+            this.label6.Text = "\"PSU\"";
+            this.label6.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            // 
+            // pBox6
+            // 
+            this.pBox6.BackColor = System.Drawing.Color.White;
+            this.pBox6.Image = ((System.Drawing.Image)(resources.GetObject("pBox6.Image")));
+            this.pBox6.Location = new System.Drawing.Point(374, 15);
+            this.pBox6.Name = "pBox6";
+            this.pBox6.Size = new System.Drawing.Size(37, 34);
+            this.pBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox6.TabIndex = 118;
+            this.pBox6.TabStop = false;
+            this.pBox6.Visible = false;
+            // 
+            // border6
+            // 
+            this.border6.Enabled = false;
+            this.border6.Location = new System.Drawing.Point(370, 9);
+            this.border6.Name = "border6";
+            this.border6.Size = new System.Drawing.Size(45, 46);
+            this.border6.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border6.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border6.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.border6.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border6.StateCommon.Border.Rounding = 3;
+            this.border6.TabIndex = 119;
+            this.border6.Values.Text = "";
+            this.border6.Visible = false;
+            // 
+            // kryptonButton11
+            // 
+            this.kryptonButton11.Enabled = false;
+            this.kryptonButton11.Location = new System.Drawing.Point(1, 1);
+            this.kryptonButton11.Name = "kryptonButton11";
+            this.kryptonButton11.Size = new System.Drawing.Size(965, 61);
+            this.kryptonButton11.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton11.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton11.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.kryptonButton11.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top;
+            this.kryptonButton11.StateCommon.Border.Rounding = 8;
+            this.kryptonButton11.TabIndex = 118;
+            this.kryptonButton11.Values.Text = "";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label_case);
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.Controls.Add(this.pBox7);
+            this.panel7.Controls.Add(this.border7);
+            this.panel7.Controls.Add(this.kryptonButton13);
+            this.panel7.Location = new System.Drawing.Point(3, 369);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(971, 55);
+            this.panel7.TabIndex = 125;
+            // 
+            // label_case
+            // 
+            this.label_case.AutoSize = true;
+            this.label_case.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_case.Location = new System.Drawing.Point(32, 19);
+            this.label_case.Name = "label_case";
+            this.label_case.Size = new System.Drawing.Size(117, 21);
+            this.label_case.TabIndex = 78;
+            this.label_case.Text = "Computer Case";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(421, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 21);
+            this.label7.TabIndex = 90;
+            this.label7.Text = "\"Case\"";
+            this.label7.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            // 
+            // pBox7
+            // 
+            this.pBox7.BackColor = System.Drawing.Color.White;
+            this.pBox7.Image = ((System.Drawing.Image)(resources.GetObject("pBox7.Image")));
+            this.pBox7.Location = new System.Drawing.Point(374, 15);
+            this.pBox7.Name = "pBox7";
+            this.pBox7.Size = new System.Drawing.Size(37, 34);
+            this.pBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox7.TabIndex = 118;
+            this.pBox7.TabStop = false;
+            this.pBox7.Visible = false;
+            // 
+            // border7
+            // 
+            this.border7.Enabled = false;
+            this.border7.Location = new System.Drawing.Point(370, 9);
+            this.border7.Name = "border7";
+            this.border7.Size = new System.Drawing.Size(45, 46);
+            this.border7.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border7.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border7.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.border7.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border7.StateCommon.Border.Rounding = 3;
+            this.border7.TabIndex = 119;
+            this.border7.Values.Text = "";
+            this.border7.Visible = false;
+            // 
+            // kryptonButton13
+            // 
+            this.kryptonButton13.Enabled = false;
+            this.kryptonButton13.Location = new System.Drawing.Point(1, 1);
+            this.kryptonButton13.Name = "kryptonButton13";
+            this.kryptonButton13.Size = new System.Drawing.Size(965, 61);
+            this.kryptonButton13.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton13.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton13.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.kryptonButton13.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top;
+            this.kryptonButton13.StateCommon.Border.Rounding = 8;
+            this.kryptonButton13.TabIndex = 118;
+            this.kryptonButton13.Values.Text = "";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.label_cool);
+            this.panel8.Controls.Add(this.label8);
+            this.panel8.Controls.Add(this.pBox8);
+            this.panel8.Controls.Add(this.border8);
+            this.panel8.Controls.Add(this.kryptonButton15);
+            this.panel8.Location = new System.Drawing.Point(3, 430);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(971, 55);
+            this.panel8.TabIndex = 126;
+            // 
+            // label_cool
+            // 
+            this.label_cool.AutoSize = true;
+            this.label_cool.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_cool.Location = new System.Drawing.Point(32, 19);
+            this.label_cool.Name = "label_cool";
+            this.label_cool.Size = new System.Drawing.Size(119, 21);
+            this.label_cool.TabIndex = 78;
+            this.label_cool.Text = "Cooling System";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(421, 19);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(131, 21);
+            this.label8.TabIndex = 90;
+            this.label8.Text = "\"Cooling System\"";
+            this.label8.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            // 
+            // pBox8
+            // 
+            this.pBox8.BackColor = System.Drawing.Color.White;
+            this.pBox8.Image = ((System.Drawing.Image)(resources.GetObject("pBox8.Image")));
+            this.pBox8.Location = new System.Drawing.Point(374, 15);
+            this.pBox8.Name = "pBox8";
+            this.pBox8.Size = new System.Drawing.Size(37, 34);
+            this.pBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox8.TabIndex = 118;
+            this.pBox8.TabStop = false;
+            this.pBox8.Visible = false;
+            // 
+            // border8
+            // 
+            this.border8.Enabled = false;
+            this.border8.Location = new System.Drawing.Point(370, 9);
+            this.border8.Name = "border8";
+            this.border8.Size = new System.Drawing.Size(45, 46);
+            this.border8.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border8.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border8.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.border8.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border8.StateCommon.Border.Rounding = 3;
+            this.border8.TabIndex = 119;
+            this.border8.Values.Text = "";
+            this.border8.Visible = false;
+            // 
+            // kryptonButton15
+            // 
+            this.kryptonButton15.Enabled = false;
+            this.kryptonButton15.Location = new System.Drawing.Point(1, 1);
+            this.kryptonButton15.Name = "kryptonButton15";
+            this.kryptonButton15.Size = new System.Drawing.Size(965, 61);
+            this.kryptonButton15.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton15.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton15.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.kryptonButton15.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top;
+            this.kryptonButton15.StateCommon.Border.Rounding = 8;
+            this.kryptonButton15.TabIndex = 118;
+            this.kryptonButton15.Values.Text = "";
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.label_mon);
+            this.panel9.Controls.Add(this.label9);
+            this.panel9.Controls.Add(this.pBox9);
+            this.panel9.Controls.Add(this.border9);
+            this.panel9.Controls.Add(this.kryptonButton17);
+            this.panel9.Location = new System.Drawing.Point(3, 491);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(971, 55);
+            this.panel9.TabIndex = 127;
+            // 
+            // label_mon
+            // 
+            this.label_mon.AutoSize = true;
+            this.label_mon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_mon.Location = new System.Drawing.Point(32, 19);
+            this.label_mon.Name = "label_mon";
+            this.label_mon.Size = new System.Drawing.Size(66, 21);
+            this.label_mon.TabIndex = 78;
+            this.label_mon.Text = "Monitor";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(421, 19);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(78, 21);
+            this.label9.TabIndex = 90;
+            this.label9.Text = "\"Monitor\"";
+            this.label9.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label9.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            // 
+            // pBox9
+            // 
+            this.pBox9.BackColor = System.Drawing.Color.White;
+            this.pBox9.Image = ((System.Drawing.Image)(resources.GetObject("pBox9.Image")));
+            this.pBox9.Location = new System.Drawing.Point(374, 15);
+            this.pBox9.Name = "pBox9";
+            this.pBox9.Size = new System.Drawing.Size(37, 34);
+            this.pBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox9.TabIndex = 118;
+            this.pBox9.TabStop = false;
+            this.pBox9.Visible = false;
+            // 
+            // border9
+            // 
+            this.border9.Enabled = false;
+            this.border9.Location = new System.Drawing.Point(370, 9);
+            this.border9.Name = "border9";
+            this.border9.Size = new System.Drawing.Size(45, 46);
+            this.border9.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border9.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border9.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.border9.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border9.StateCommon.Border.Rounding = 3;
+            this.border9.TabIndex = 119;
+            this.border9.Values.Text = "";
+            this.border9.Visible = false;
+            // 
+            // kryptonButton17
+            // 
+            this.kryptonButton17.Enabled = false;
+            this.kryptonButton17.Location = new System.Drawing.Point(1, 1);
+            this.kryptonButton17.Name = "kryptonButton17";
+            this.kryptonButton17.Size = new System.Drawing.Size(965, 61);
+            this.kryptonButton17.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton17.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton17.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.kryptonButton17.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top;
+            this.kryptonButton17.StateCommon.Border.Rounding = 8;
+            this.kryptonButton17.TabIndex = 118;
+            this.kryptonButton17.Values.Text = "";
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.label_key);
+            this.panel10.Controls.Add(this.label10);
+            this.panel10.Controls.Add(this.pBox10);
+            this.panel10.Controls.Add(this.border10);
+            this.panel10.Controls.Add(this.kryptonButton19);
+            this.panel10.Location = new System.Drawing.Point(3, 552);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(971, 55);
+            this.panel10.TabIndex = 128;
+            // 
+            // label_key
+            // 
+            this.label_key.AutoSize = true;
+            this.label_key.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_key.Location = new System.Drawing.Point(32, 19);
+            this.label_key.Name = "label_key";
+            this.label_key.Size = new System.Drawing.Size(76, 21);
+            this.label_key.TabIndex = 78;
+            this.label_key.Text = "Keyboard";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(421, 19);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(88, 21);
+            this.label10.TabIndex = 90;
+            this.label10.Text = "\"Keyboard\"";
+            this.label10.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label10.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            // 
+            // pBox10
+            // 
+            this.pBox10.BackColor = System.Drawing.Color.White;
+            this.pBox10.Image = ((System.Drawing.Image)(resources.GetObject("pBox10.Image")));
+            this.pBox10.Location = new System.Drawing.Point(374, 15);
+            this.pBox10.Name = "pBox10";
+            this.pBox10.Size = new System.Drawing.Size(37, 34);
+            this.pBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox10.TabIndex = 118;
+            this.pBox10.TabStop = false;
+            this.pBox10.Visible = false;
+            // 
+            // border10
+            // 
+            this.border10.Enabled = false;
+            this.border10.Location = new System.Drawing.Point(370, 9);
+            this.border10.Name = "border10";
+            this.border10.Size = new System.Drawing.Size(45, 46);
+            this.border10.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border10.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border10.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.border10.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border10.StateCommon.Border.Rounding = 3;
+            this.border10.TabIndex = 119;
+            this.border10.Values.Text = "";
+            this.border10.Visible = false;
+            // 
+            // kryptonButton19
+            // 
+            this.kryptonButton19.Enabled = false;
+            this.kryptonButton19.Location = new System.Drawing.Point(1, 1);
+            this.kryptonButton19.Name = "kryptonButton19";
+            this.kryptonButton19.Size = new System.Drawing.Size(965, 61);
+            this.kryptonButton19.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton19.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton19.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.kryptonButton19.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top;
+            this.kryptonButton19.StateCommon.Border.Rounding = 8;
+            this.kryptonButton19.TabIndex = 118;
+            this.kryptonButton19.Values.Text = "";
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.label_mouse);
+            this.panel11.Controls.Add(this.label11);
+            this.panel11.Controls.Add(this.pBox11);
+            this.panel11.Controls.Add(this.border11);
+            this.panel11.Controls.Add(this.kryptonButton21);
+            this.panel11.Location = new System.Drawing.Point(3, 613);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(971, 55);
+            this.panel11.TabIndex = 129;
+            // 
+            // label_mouse
+            // 
+            this.label_mouse.AutoSize = true;
+            this.label_mouse.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_mouse.Location = new System.Drawing.Point(32, 19);
+            this.label_mouse.Name = "label_mouse";
+            this.label_mouse.Size = new System.Drawing.Size(57, 21);
+            this.label_mouse.TabIndex = 78;
+            this.label_mouse.Text = "Mouse";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(421, 19);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 21);
+            this.label11.TabIndex = 90;
+            this.label11.Text = "\"Mouse\"";
+            this.label11.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label11.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            // 
+            // pBox11
+            // 
+            this.pBox11.BackColor = System.Drawing.Color.White;
+            this.pBox11.Image = ((System.Drawing.Image)(resources.GetObject("pBox11.Image")));
+            this.pBox11.Location = new System.Drawing.Point(374, 15);
+            this.pBox11.Name = "pBox11";
+            this.pBox11.Size = new System.Drawing.Size(37, 34);
+            this.pBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox11.TabIndex = 118;
+            this.pBox11.TabStop = false;
+            this.pBox11.Visible = false;
+            // 
+            // border11
+            // 
+            this.border11.Enabled = false;
+            this.border11.Location = new System.Drawing.Point(370, 9);
+            this.border11.Name = "border11";
+            this.border11.Size = new System.Drawing.Size(45, 46);
+            this.border11.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border11.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border11.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.border11.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border11.StateCommon.Border.Rounding = 3;
+            this.border11.TabIndex = 119;
+            this.border11.Values.Text = "";
+            this.border11.Visible = false;
+            // 
+            // kryptonButton21
+            // 
+            this.kryptonButton21.Enabled = false;
+            this.kryptonButton21.Location = new System.Drawing.Point(1, 1);
+            this.kryptonButton21.Name = "kryptonButton21";
+            this.kryptonButton21.Size = new System.Drawing.Size(965, 61);
+            this.kryptonButton21.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton21.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton21.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.kryptonButton21.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top;
+            this.kryptonButton21.StateCommon.Border.Rounding = 8;
+            this.kryptonButton21.TabIndex = 118;
+            this.kryptonButton21.Values.Text = "";
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.label_spk);
+            this.panel12.Controls.Add(this.label12);
+            this.panel12.Controls.Add(this.pBox12);
+            this.panel12.Controls.Add(this.border12);
+            this.panel12.Controls.Add(this.kryptonButton23);
+            this.panel12.Location = new System.Drawing.Point(3, 674);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(971, 55);
+            this.panel12.TabIndex = 130;
+            // 
+            // label_spk
+            // 
+            this.label_spk.AutoSize = true;
+            this.label_spk.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_spk.Location = new System.Drawing.Point(32, 19);
+            this.label_spk.Name = "label_spk";
+            this.label_spk.Size = new System.Drawing.Size(73, 21);
+            this.label_spk.TabIndex = 78;
+            this.label_spk.Text = "Speakers";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(421, 19);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(85, 21);
+            this.label12.TabIndex = 90;
+            this.label12.Text = "\"Speakers\"";
+            this.label12.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label12.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            // 
+            // pBox12
+            // 
+            this.pBox12.BackColor = System.Drawing.Color.White;
+            this.pBox12.Image = ((System.Drawing.Image)(resources.GetObject("pBox12.Image")));
+            this.pBox12.Location = new System.Drawing.Point(374, 15);
+            this.pBox12.Name = "pBox12";
+            this.pBox12.Size = new System.Drawing.Size(37, 34);
+            this.pBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox12.TabIndex = 118;
+            this.pBox12.TabStop = false;
+            this.pBox12.Visible = false;
+            // 
+            // border12
+            // 
+            this.border12.Enabled = false;
+            this.border12.Location = new System.Drawing.Point(370, 9);
+            this.border12.Name = "border12";
+            this.border12.Size = new System.Drawing.Size(45, 46);
+            this.border12.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border12.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border12.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.border12.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border12.StateCommon.Border.Rounding = 3;
+            this.border12.TabIndex = 119;
+            this.border12.Values.Text = "";
+            this.border12.Visible = false;
+            // 
+            // kryptonButton23
+            // 
+            this.kryptonButton23.Enabled = false;
+            this.kryptonButton23.Location = new System.Drawing.Point(1, 1);
+            this.kryptonButton23.Name = "kryptonButton23";
+            this.kryptonButton23.Size = new System.Drawing.Size(965, 61);
+            this.kryptonButton23.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton23.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton23.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.kryptonButton23.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top;
+            this.kryptonButton23.StateCommon.Border.Rounding = 8;
+            this.kryptonButton23.TabIndex = 118;
+            this.kryptonButton23.Values.Text = "";
             // 
             // buildmenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(998, 699);
+            this.ClientSize = new System.Drawing.Size(1063, 699);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.but_guide);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.but_combuild);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "buildmenu";
             this.ShowIcon = false;
             this.Text = "buildmenu";
             this.Load += new System.EventHandler(this.buildmenu_Load);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox3)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox4)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox5)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox6)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox7)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox8)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox9)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox10)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox11)).EndInit();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox12)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton but_guide;
         private ComponentFactory.Krypton.Toolkit.KryptonButton but_combuild;
-        private System.Windows.Forms.Label label_psu;
-        private System.Windows.Forms.Label label_storage;
-        private System.Windows.Forms.Label label_ram;
-        private System.Windows.Forms.Label label_mb;
-        private System.Windows.Forms.Label label_gpu;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label_cpu;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label_speak;
-        private System.Windows.Forms.Label label_mouse;
-        private System.Windows.Forms.Label label_keyb;
-        private System.Windows.Forms.Label label_moni;
-        private System.Windows.Forms.Label label_cooler;
-        private System.Windows.Forms.Label label_case;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lab_quancpu;
-        private System.Windows.Forms.Label lab_quangpu;
-        private System.Windows.Forms.Label lab_quanspe;
-        private System.Windows.Forms.Label lab_quanmou;
-        private System.Windows.Forms.Label lab_quankey;
-        private System.Windows.Forms.Label lab_quanmon;
-        private System.Windows.Forms.Label lab_quancoo;
-        private System.Windows.Forms.Label lab_quancas;
-        private System.Windows.Forms.Label lab_quanpsu;
-        private System.Windows.Forms.Label lab_quandri;
-        private System.Windows.Forms.Label lab_quanram;
-        private System.Windows.Forms.Label lab_quanmb;
         private System.Windows.Forms.PictureBox pBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton border1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label_gpu;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton border2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label_mb;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pBox3;
         private ComponentFactory.Krypton.Toolkit.KryptonButton border3;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label_ram;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pBox4;
         private ComponentFactory.Krypton.Toolkit.KryptonButton border4;
-        private System.Windows.Forms.PictureBox pBox7;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton border7;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton7;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label_dr;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pBox5;
         private ComponentFactory.Krypton.Toolkit.KryptonButton border5;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton9;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label_psu;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pBox6;
         private ComponentFactory.Krypton.Toolkit.KryptonButton border6;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton11;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label_case;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pBox7;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border7;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton13;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label_cool;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pBox8;
         private ComponentFactory.Krypton.Toolkit.KryptonButton border8;
-        private System.Windows.Forms.Label label8;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton15;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label_mon;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pBox9;
         private ComponentFactory.Krypton.Toolkit.KryptonButton border9;
-        private System.Windows.Forms.Label label9;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton17;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label_key;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pBox10;
         private ComponentFactory.Krypton.Toolkit.KryptonButton border10;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton19;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label_mouse;
+        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pBox11;
         private ComponentFactory.Krypton.Toolkit.KryptonButton border11;
-        private System.Windows.Forms.Label label10;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton21;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label_spk;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pBox12;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border12;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton23;
     }
 }

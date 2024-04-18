@@ -24,7 +24,7 @@ namespace PC_Building_Simulator
 
         private void InitializeControls()
         {
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 3; i++)
             {
                 Panel panel = (Panel)this.Controls.Find($"panel{i + 1}", true).FirstOrDefault();
                 PictureBox pictureBox = (PictureBox)this.Controls.Find($"pBox{i + 1}", true).FirstOrDefault();
@@ -124,7 +124,7 @@ namespace PC_Building_Simulator
         private void HandlePanelClick(Panel panel)
         {
             DisplayManager displayManager = new DisplayManager(mainApp);
-            Panel[] panels = { panel1, panel2, panel3, panel4 };
+            Panel[] panels = { panel1, panel2, panel3};
 
             for (int i = 0; i < panels.Length; i++)
             {
@@ -135,6 +135,9 @@ namespace PC_Building_Simulator
                     {
                         case 1:
                             displayManager.menuselect(14);
+                            break;
+                        case 2:
+                            displayManager.menuselect(15);
                             break;
                             // Add more cases for other menus if needed
                     }

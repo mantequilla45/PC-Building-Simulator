@@ -744,6 +744,10 @@ namespace PC_Building_Simulator
                     displayManager.menuselect(14);
                     back = 5;
                     break;
+                case 14:
+                    displayManager.menuselect(15);
+                    back = 5;
+                    break;
 
                 default:
                     break;

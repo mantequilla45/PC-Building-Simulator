@@ -521,6 +521,50 @@ namespace PC_Building_Simulator
                         }
                     }
                     break;
+
+                case 14:
+                    string[] ssdNames = {
+                        "Samsung 870 EVO 1TB", "Crucial MX500 2TB", "Western Digital Blue SSD 1TB", "SanDisk Ultra 3D SSD 2TB",
+                        "Kingston UV500 SSD 512GB", "Intel 545s SSD 512GB", "Seagate Barracuda SSD 2TB", "ADATA SU800 SSD 256GB",
+                        "Toshiba TR200 SSD 1TB", "PNY CS900 SSD 4TB", "Silicon Power Ace A55 SSD 512GB", "Transcend SSD230S SSD 2TB",
+                        "HP S700 SSD 1TB", "Team Group L5 3D SSD 1TB", "Patriot Burst SSD 2TB", "Gigabyte UD PRO SSD 1TB",
+                        "OWC Mercury Electra 6G SSD 2TB", "SK hynix Gold S31 SSD 1TB", "Mushkin Source SSD 500GB", "Kingston A400 2TB"
+                    };
+
+                    price = new int[]{
+                        120, 200, 100, 175,
+                        50, 175, 180, 50,
+                        95, 400, 40, 160,
+                        100, 85, 140, 170,
+                        120, 200, 100, 175
+                    };
+
+                    for (int i = 0; i < ssdNames.Length; i++)
+                    {
+                        string ssdName = ssdNames[i];
+                        string ssdImage = ssdName.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('+', '_').Replace('.', '_');
+
+                        PictureBox pictureBox = Controls.Find($"pbox{i + 1}", true).FirstOrDefault() as PictureBox;
+                        if (pictureBox != null)
+                        {
+                            string resourceSSD = $"ssd_{ssdImage}";
+                            pictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourceSSD);
+                        }
+
+                        Label priceLabel = pricelabels[i];
+                        if (priceLabel != null)
+                        {
+                            priceLabel.Text = $"${price[i]}";
+                        }
+
+                        Label nameLabel = namelabels[i];
+                        if (nameLabel != null)
+                        {
+                            nameLabel.Text = ssdName;
+                        }
+                    }
+
+                    break;
             }
         }
         
@@ -570,8 +614,11 @@ namespace PC_Building_Simulator
                             break;
                         case 13:
                             displayManager.hddmenu(menuIndex);
-
                             break;
+                        case 14:
+                            displayManager.ssdmenu(menuIndex);
+                            break;
+
                     }
                     mainApp.backicon.Visible = true;
                 }
@@ -618,6 +665,7 @@ namespace PC_Building_Simulator
             productmenu productmenuform = this;
             MemoryManager displayManager = new MemoryManager(productmenuform);
         }
+
         private void Panel_MouseLeave(object sender, EventArgs e)
         {
             Panel panel = GetPanelFromControl(sender as Control);

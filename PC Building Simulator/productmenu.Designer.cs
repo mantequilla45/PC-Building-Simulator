@@ -33,102 +33,102 @@
             this.labprice1 = new System.Windows.Forms.Label();
             this.labname1 = new System.Windows.Forms.Label();
             this.pbox1 = new System.Windows.Forms.PictureBox();
+            this.border1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labprice2 = new System.Windows.Forms.Label();
             this.pbox2 = new System.Windows.Forms.PictureBox();
             this.labname2 = new System.Windows.Forms.Label();
+            this.border2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.labprice3 = new System.Windows.Forms.Label();
             this.pbox3 = new System.Windows.Forms.PictureBox();
             this.labname3 = new System.Windows.Forms.Label();
+            this.border3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.labprice4 = new System.Windows.Forms.Label();
             this.pbox4 = new System.Windows.Forms.PictureBox();
             this.labname4 = new System.Windows.Forms.Label();
+            this.border4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.labprice5 = new System.Windows.Forms.Label();
             this.pbox5 = new System.Windows.Forms.PictureBox();
             this.labname5 = new System.Windows.Forms.Label();
+            this.border5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.labprice6 = new System.Windows.Forms.Label();
             this.pbox6 = new System.Windows.Forms.PictureBox();
             this.labname6 = new System.Windows.Forms.Label();
+            this.border6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.labprice7 = new System.Windows.Forms.Label();
             this.pbox7 = new System.Windows.Forms.PictureBox();
             this.labname7 = new System.Windows.Forms.Label();
+            this.border7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel8 = new System.Windows.Forms.Panel();
             this.labprice8 = new System.Windows.Forms.Label();
             this.pbox8 = new System.Windows.Forms.PictureBox();
             this.labname8 = new System.Windows.Forms.Label();
+            this.border8 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel9 = new System.Windows.Forms.Panel();
             this.labprice9 = new System.Windows.Forms.Label();
             this.pbox9 = new System.Windows.Forms.PictureBox();
             this.labname9 = new System.Windows.Forms.Label();
+            this.border9 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel10 = new System.Windows.Forms.Panel();
             this.labprice10 = new System.Windows.Forms.Label();
             this.pbox10 = new System.Windows.Forms.PictureBox();
             this.labname10 = new System.Windows.Forms.Label();
+            this.border10 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel11 = new System.Windows.Forms.Panel();
             this.labprice11 = new System.Windows.Forms.Label();
             this.pbox11 = new System.Windows.Forms.PictureBox();
             this.labname11 = new System.Windows.Forms.Label();
+            this.border11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel12 = new System.Windows.Forms.Panel();
             this.labprice12 = new System.Windows.Forms.Label();
             this.pbox12 = new System.Windows.Forms.PictureBox();
             this.labname12 = new System.Windows.Forms.Label();
+            this.border12 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel13 = new System.Windows.Forms.Panel();
             this.labprice13 = new System.Windows.Forms.Label();
             this.pbox13 = new System.Windows.Forms.PictureBox();
             this.labname13 = new System.Windows.Forms.Label();
+            this.border13 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel14 = new System.Windows.Forms.Panel();
             this.labprice14 = new System.Windows.Forms.Label();
             this.pbox14 = new System.Windows.Forms.PictureBox();
             this.labname14 = new System.Windows.Forms.Label();
+            this.border14 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel15 = new System.Windows.Forms.Panel();
             this.labprice15 = new System.Windows.Forms.Label();
             this.pbox15 = new System.Windows.Forms.PictureBox();
             this.labname15 = new System.Windows.Forms.Label();
+            this.border15 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel16 = new System.Windows.Forms.Panel();
             this.labprice16 = new System.Windows.Forms.Label();
             this.pbox16 = new System.Windows.Forms.PictureBox();
             this.labname16 = new System.Windows.Forms.Label();
+            this.border16 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel17 = new System.Windows.Forms.Panel();
             this.labprice17 = new System.Windows.Forms.Label();
             this.pbox17 = new System.Windows.Forms.PictureBox();
             this.labname17 = new System.Windows.Forms.Label();
+            this.border17 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel18 = new System.Windows.Forms.Panel();
             this.labprice18 = new System.Windows.Forms.Label();
             this.pbox18 = new System.Windows.Forms.PictureBox();
             this.labname18 = new System.Windows.Forms.Label();
+            this.border18 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel19 = new System.Windows.Forms.Panel();
             this.labprice19 = new System.Windows.Forms.Label();
             this.pbox19 = new System.Windows.Forms.PictureBox();
             this.labname19 = new System.Windows.Forms.Label();
-            this.labname20 = new System.Windows.Forms.Label();
-            this.pbox20 = new System.Windows.Forms.PictureBox();
-            this.labprice20 = new System.Windows.Forms.Label();
-            this.border20 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.panel20 = new System.Windows.Forms.Panel();
             this.border19 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border18 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border17 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border8 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border9 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border10 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border12 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border13 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border14 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border15 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.border16 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.labprice20 = new System.Windows.Forms.Label();
+            this.pbox20 = new System.Windows.Forms.PictureBox();
+            this.labname20 = new System.Windows.Forms.Label();
+            this.border20 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbox1)).BeginInit();
@@ -168,8 +168,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbox18)).BeginInit();
             this.panel19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbox20)).BeginInit();
             this.panel20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox20)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -249,6 +249,22 @@
             this.pbox1.TabIndex = 0;
             this.pbox1.TabStop = false;
             // 
+            // border1
+            // 
+            this.border1.Enabled = false;
+            this.border1.Location = new System.Drawing.Point(0, 0);
+            this.border1.Name = "border1";
+            this.border1.Size = new System.Drawing.Size(240, 309);
+            this.border1.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border1.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border1.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border1.StateCommon.Border.Rounding = 15;
+            this.border1.TabIndex = 17;
+            this.border1.Values.Text = "";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -294,6 +310,22 @@
             this.labname2.Size = new System.Drawing.Size(58, 21);
             this.labname2.TabIndex = 4;
             this.labname2.Text = "--------";
+            // 
+            // border2
+            // 
+            this.border2.Enabled = false;
+            this.border2.Location = new System.Drawing.Point(0, 0);
+            this.border2.Name = "border2";
+            this.border2.Size = new System.Drawing.Size(240, 309);
+            this.border2.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border2.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border2.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border2.StateCommon.Border.Rounding = 15;
+            this.border2.TabIndex = 18;
+            this.border2.Values.Text = "";
             // 
             // panel3
             // 
@@ -341,6 +373,22 @@
             this.labname3.TabIndex = 7;
             this.labname3.Text = "--------";
             // 
+            // border3
+            // 
+            this.border3.Enabled = false;
+            this.border3.Location = new System.Drawing.Point(0, 0);
+            this.border3.Name = "border3";
+            this.border3.Size = new System.Drawing.Size(240, 309);
+            this.border3.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border3.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border3.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border3.StateCommon.Border.Rounding = 15;
+            this.border3.TabIndex = 19;
+            this.border3.Values.Text = "";
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -386,6 +434,22 @@
             this.labname4.Size = new System.Drawing.Size(58, 21);
             this.labname4.TabIndex = 7;
             this.labname4.Text = "--------";
+            // 
+            // border4
+            // 
+            this.border4.Enabled = false;
+            this.border4.Location = new System.Drawing.Point(0, 0);
+            this.border4.Name = "border4";
+            this.border4.Size = new System.Drawing.Size(240, 309);
+            this.border4.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border4.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border4.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border4.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border4.StateCommon.Border.Rounding = 15;
+            this.border4.TabIndex = 20;
+            this.border4.Values.Text = "";
             // 
             // panel5
             // 
@@ -433,6 +497,22 @@
             this.labname5.TabIndex = 7;
             this.labname5.Text = "--------";
             // 
+            // border5
+            // 
+            this.border5.Enabled = false;
+            this.border5.Location = new System.Drawing.Point(0, 0);
+            this.border5.Name = "border5";
+            this.border5.Size = new System.Drawing.Size(240, 309);
+            this.border5.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border5.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border5.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border5.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border5.StateCommon.Border.Rounding = 15;
+            this.border5.TabIndex = 21;
+            this.border5.Values.Text = "";
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -478,6 +558,22 @@
             this.labname6.Size = new System.Drawing.Size(58, 21);
             this.labname6.TabIndex = 7;
             this.labname6.Text = "--------";
+            // 
+            // border6
+            // 
+            this.border6.Enabled = false;
+            this.border6.Location = new System.Drawing.Point(0, 0);
+            this.border6.Name = "border6";
+            this.border6.Size = new System.Drawing.Size(240, 309);
+            this.border6.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border6.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border6.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border6.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border6.StateCommon.Border.Rounding = 15;
+            this.border6.TabIndex = 22;
+            this.border6.Values.Text = "";
             // 
             // panel7
             // 
@@ -525,6 +621,22 @@
             this.labname7.TabIndex = 7;
             this.labname7.Text = "--------";
             // 
+            // border7
+            // 
+            this.border7.Enabled = false;
+            this.border7.Location = new System.Drawing.Point(0, 0);
+            this.border7.Name = "border7";
+            this.border7.Size = new System.Drawing.Size(240, 309);
+            this.border7.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border7.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border7.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border7.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border7.StateCommon.Border.Rounding = 15;
+            this.border7.TabIndex = 23;
+            this.border7.Values.Text = "";
+            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -570,6 +682,22 @@
             this.labname8.Size = new System.Drawing.Size(58, 21);
             this.labname8.TabIndex = 7;
             this.labname8.Text = "--------";
+            // 
+            // border8
+            // 
+            this.border8.Enabled = false;
+            this.border8.Location = new System.Drawing.Point(0, 0);
+            this.border8.Name = "border8";
+            this.border8.Size = new System.Drawing.Size(240, 309);
+            this.border8.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border8.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border8.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border8.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border8.StateCommon.Border.Rounding = 15;
+            this.border8.TabIndex = 24;
+            this.border8.Values.Text = "";
             // 
             // panel9
             // 
@@ -617,6 +745,22 @@
             this.labname9.TabIndex = 7;
             this.labname9.Text = "--------";
             // 
+            // border9
+            // 
+            this.border9.Enabled = false;
+            this.border9.Location = new System.Drawing.Point(0, 0);
+            this.border9.Name = "border9";
+            this.border9.Size = new System.Drawing.Size(240, 309);
+            this.border9.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border9.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border9.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border9.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border9.StateCommon.Border.Rounding = 15;
+            this.border9.TabIndex = 25;
+            this.border9.Values.Text = "";
+            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -662,6 +806,22 @@
             this.labname10.Size = new System.Drawing.Size(58, 21);
             this.labname10.TabIndex = 7;
             this.labname10.Text = "--------";
+            // 
+            // border10
+            // 
+            this.border10.Enabled = false;
+            this.border10.Location = new System.Drawing.Point(0, 0);
+            this.border10.Name = "border10";
+            this.border10.Size = new System.Drawing.Size(240, 309);
+            this.border10.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border10.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border10.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border10.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border10.StateCommon.Border.Rounding = 15;
+            this.border10.TabIndex = 26;
+            this.border10.Values.Text = "";
             // 
             // panel11
             // 
@@ -709,6 +869,22 @@
             this.labname11.TabIndex = 7;
             this.labname11.Text = "--------";
             // 
+            // border11
+            // 
+            this.border11.Enabled = false;
+            this.border11.Location = new System.Drawing.Point(0, 0);
+            this.border11.Name = "border11";
+            this.border11.Size = new System.Drawing.Size(240, 309);
+            this.border11.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border11.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border11.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border11.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border11.StateCommon.Border.Rounding = 15;
+            this.border11.TabIndex = 27;
+            this.border11.Values.Text = "";
+            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -754,6 +930,22 @@
             this.labname12.Size = new System.Drawing.Size(58, 21);
             this.labname12.TabIndex = 7;
             this.labname12.Text = "--------";
+            // 
+            // border12
+            // 
+            this.border12.Enabled = false;
+            this.border12.Location = new System.Drawing.Point(0, 0);
+            this.border12.Name = "border12";
+            this.border12.Size = new System.Drawing.Size(240, 309);
+            this.border12.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border12.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border12.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border12.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border12.StateCommon.Border.Rounding = 15;
+            this.border12.TabIndex = 28;
+            this.border12.Values.Text = "";
             // 
             // panel13
             // 
@@ -801,6 +993,22 @@
             this.labname13.TabIndex = 7;
             this.labname13.Text = "--------";
             // 
+            // border13
+            // 
+            this.border13.Enabled = false;
+            this.border13.Location = new System.Drawing.Point(0, 0);
+            this.border13.Name = "border13";
+            this.border13.Size = new System.Drawing.Size(240, 309);
+            this.border13.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border13.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border13.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border13.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border13.StateCommon.Border.Rounding = 15;
+            this.border13.TabIndex = 29;
+            this.border13.Values.Text = "";
+            // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -846,6 +1054,22 @@
             this.labname14.Size = new System.Drawing.Size(58, 21);
             this.labname14.TabIndex = 7;
             this.labname14.Text = "--------";
+            // 
+            // border14
+            // 
+            this.border14.Enabled = false;
+            this.border14.Location = new System.Drawing.Point(0, 0);
+            this.border14.Name = "border14";
+            this.border14.Size = new System.Drawing.Size(240, 309);
+            this.border14.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border14.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border14.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border14.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border14.StateCommon.Border.Rounding = 15;
+            this.border14.TabIndex = 30;
+            this.border14.Values.Text = "";
             // 
             // panel15
             // 
@@ -893,6 +1117,22 @@
             this.labname15.TabIndex = 7;
             this.labname15.Text = "--------";
             // 
+            // border15
+            // 
+            this.border15.Enabled = false;
+            this.border15.Location = new System.Drawing.Point(0, 0);
+            this.border15.Name = "border15";
+            this.border15.Size = new System.Drawing.Size(240, 309);
+            this.border15.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border15.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border15.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border15.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border15.StateCommon.Border.Rounding = 15;
+            this.border15.TabIndex = 31;
+            this.border15.Values.Text = "";
+            // 
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -938,6 +1178,22 @@
             this.labname16.Size = new System.Drawing.Size(58, 21);
             this.labname16.TabIndex = 7;
             this.labname16.Text = "--------";
+            // 
+            // border16
+            // 
+            this.border16.Enabled = false;
+            this.border16.Location = new System.Drawing.Point(0, 0);
+            this.border16.Name = "border16";
+            this.border16.Size = new System.Drawing.Size(240, 309);
+            this.border16.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border16.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border16.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border16.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border16.StateCommon.Border.Rounding = 15;
+            this.border16.TabIndex = 32;
+            this.border16.Values.Text = "";
             // 
             // panel17
             // 
@@ -985,6 +1241,22 @@
             this.labname17.TabIndex = 7;
             this.labname17.Text = "--------";
             // 
+            // border17
+            // 
+            this.border17.Enabled = false;
+            this.border17.Location = new System.Drawing.Point(0, 0);
+            this.border17.Name = "border17";
+            this.border17.Size = new System.Drawing.Size(240, 309);
+            this.border17.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border17.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border17.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border17.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border17.StateCommon.Border.Rounding = 15;
+            this.border17.TabIndex = 16;
+            this.border17.Values.Text = "";
+            // 
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -1030,6 +1302,22 @@
             this.labname18.Size = new System.Drawing.Size(58, 21);
             this.labname18.TabIndex = 7;
             this.labname18.Text = "--------";
+            // 
+            // border18
+            // 
+            this.border18.Enabled = false;
+            this.border18.Location = new System.Drawing.Point(0, 0);
+            this.border18.Name = "border18";
+            this.border18.Size = new System.Drawing.Size(240, 309);
+            this.border18.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border18.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border18.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border18.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.border18.StateCommon.Border.Rounding = 15;
+            this.border18.TabIndex = 15;
+            this.border18.Values.Text = "";
             // 
             // panel19
             // 
@@ -1077,68 +1365,6 @@
             this.labname19.TabIndex = 7;
             this.labname19.Text = "--------";
             // 
-            // labname20
-            // 
-            this.labname20.AutoSize = true;
-            this.labname20.BackColor = System.Drawing.Color.White;
-            this.labname20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labname20.Location = new System.Drawing.Point(24, 226);
-            this.labname20.MaximumSize = new System.Drawing.Size(184, 42);
-            this.labname20.Name = "labname20";
-            this.labname20.Size = new System.Drawing.Size(58, 21);
-            this.labname20.TabIndex = 7;
-            this.labname20.Text = "--------";
-            // 
-            // pbox20
-            // 
-            this.pbox20.BackColor = System.Drawing.Color.White;
-            this.pbox20.Location = new System.Drawing.Point(28, 9);
-            this.pbox20.Name = "pbox20";
-            this.pbox20.Size = new System.Drawing.Size(184, 214);
-            this.pbox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbox20.TabIndex = 6;
-            this.pbox20.TabStop = false;
-            // 
-            // labprice20
-            // 
-            this.labprice20.AutoSize = true;
-            this.labprice20.BackColor = System.Drawing.Color.White;
-            this.labprice20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labprice20.Location = new System.Drawing.Point(166, 268);
-            this.labprice20.Name = "labprice20";
-            this.labprice20.Size = new System.Drawing.Size(31, 21);
-            this.labprice20.TabIndex = 8;
-            this.labprice20.Text = "$--";
-            // 
-            // border20
-            // 
-            this.border20.Enabled = false;
-            this.border20.Location = new System.Drawing.Point(0, 0);
-            this.border20.Name = "border20";
-            this.border20.Size = new System.Drawing.Size(240, 309);
-            this.border20.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border20.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border20.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.border20.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border20.StateCommon.Border.Rounding = 15;
-            this.border20.TabIndex = 13;
-            this.border20.Values.Text = "";
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel20.Controls.Add(this.labprice20);
-            this.panel20.Controls.Add(this.pbox20);
-            this.panel20.Controls.Add(this.labname20);
-            this.panel20.Controls.Add(this.border20);
-            this.panel20.Location = new System.Drawing.Point(741, 1263);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(240, 309);
-            this.panel20.TabIndex = 13;
-            // 
             // border19
             // 
             this.border19.Enabled = false;
@@ -1155,293 +1381,67 @@
             this.border19.TabIndex = 14;
             this.border19.Values.Text = "";
             // 
-            // border18
+            // panel20
             // 
-            this.border18.Enabled = false;
-            this.border18.Location = new System.Drawing.Point(0, 0);
-            this.border18.Name = "border18";
-            this.border18.Size = new System.Drawing.Size(240, 309);
-            this.border18.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border18.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border18.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.border18.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.panel20.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel20.Controls.Add(this.labprice20);
+            this.panel20.Controls.Add(this.pbox20);
+            this.panel20.Controls.Add(this.labname20);
+            this.panel20.Controls.Add(this.border20);
+            this.panel20.Location = new System.Drawing.Point(741, 1263);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(240, 309);
+            this.panel20.TabIndex = 13;
+            // 
+            // labprice20
+            // 
+            this.labprice20.AutoSize = true;
+            this.labprice20.BackColor = System.Drawing.Color.White;
+            this.labprice20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labprice20.Location = new System.Drawing.Point(166, 268);
+            this.labprice20.Name = "labprice20";
+            this.labprice20.Size = new System.Drawing.Size(31, 21);
+            this.labprice20.TabIndex = 8;
+            this.labprice20.Text = "$--";
+            // 
+            // pbox20
+            // 
+            this.pbox20.BackColor = System.Drawing.Color.White;
+            this.pbox20.Location = new System.Drawing.Point(28, 9);
+            this.pbox20.Name = "pbox20";
+            this.pbox20.Size = new System.Drawing.Size(184, 214);
+            this.pbox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbox20.TabIndex = 6;
+            this.pbox20.TabStop = false;
+            // 
+            // labname20
+            // 
+            this.labname20.AutoSize = true;
+            this.labname20.BackColor = System.Drawing.Color.White;
+            this.labname20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labname20.Location = new System.Drawing.Point(24, 226);
+            this.labname20.MaximumSize = new System.Drawing.Size(184, 42);
+            this.labname20.Name = "labname20";
+            this.labname20.Size = new System.Drawing.Size(58, 21);
+            this.labname20.TabIndex = 7;
+            this.labname20.Text = "--------";
+            // 
+            // border20
+            // 
+            this.border20.Enabled = false;
+            this.border20.Location = new System.Drawing.Point(0, 0);
+            this.border20.Name = "border20";
+            this.border20.Size = new System.Drawing.Size(240, 309);
+            this.border20.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.border20.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.border20.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.border20.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border18.StateCommon.Border.Rounding = 15;
-            this.border18.TabIndex = 15;
-            this.border18.Values.Text = "";
-            // 
-            // border17
-            // 
-            this.border17.Enabled = false;
-            this.border17.Location = new System.Drawing.Point(0, 0);
-            this.border17.Name = "border17";
-            this.border17.Size = new System.Drawing.Size(240, 309);
-            this.border17.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border17.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border17.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.border17.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border17.StateCommon.Border.Rounding = 15;
-            this.border17.TabIndex = 16;
-            this.border17.Values.Text = "";
-            // 
-            // border1
-            // 
-            this.border1.Enabled = false;
-            this.border1.Location = new System.Drawing.Point(0, 0);
-            this.border1.Name = "border1";
-            this.border1.Size = new System.Drawing.Size(240, 309);
-            this.border1.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border1.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border1.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.border1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border1.StateCommon.Border.Rounding = 15;
-            this.border1.TabIndex = 17;
-            this.border1.Values.Text = "";
-            // 
-            // border2
-            // 
-            this.border2.Enabled = false;
-            this.border2.Location = new System.Drawing.Point(0, 0);
-            this.border2.Name = "border2";
-            this.border2.Size = new System.Drawing.Size(240, 309);
-            this.border2.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border2.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border2.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.border2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border2.StateCommon.Border.Rounding = 15;
-            this.border2.TabIndex = 18;
-            this.border2.Values.Text = "";
-            // 
-            // border3
-            // 
-            this.border3.Enabled = false;
-            this.border3.Location = new System.Drawing.Point(0, 0);
-            this.border3.Name = "border3";
-            this.border3.Size = new System.Drawing.Size(240, 309);
-            this.border3.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border3.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border3.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.border3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border3.StateCommon.Border.Rounding = 15;
-            this.border3.TabIndex = 19;
-            this.border3.Values.Text = "";
-            // 
-            // border4
-            // 
-            this.border4.Enabled = false;
-            this.border4.Location = new System.Drawing.Point(0, 0);
-            this.border4.Name = "border4";
-            this.border4.Size = new System.Drawing.Size(240, 309);
-            this.border4.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border4.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border4.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.border4.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border4.StateCommon.Border.Rounding = 15;
-            this.border4.TabIndex = 20;
-            this.border4.Values.Text = "";
-            // 
-            // border5
-            // 
-            this.border5.Enabled = false;
-            this.border5.Location = new System.Drawing.Point(0, 0);
-            this.border5.Name = "border5";
-            this.border5.Size = new System.Drawing.Size(240, 309);
-            this.border5.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border5.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border5.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.border5.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border5.StateCommon.Border.Rounding = 15;
-            this.border5.TabIndex = 21;
-            this.border5.Values.Text = "";
-            // 
-            // border6
-            // 
-            this.border6.Enabled = false;
-            this.border6.Location = new System.Drawing.Point(0, 0);
-            this.border6.Name = "border6";
-            this.border6.Size = new System.Drawing.Size(240, 309);
-            this.border6.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border6.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border6.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.border6.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border6.StateCommon.Border.Rounding = 15;
-            this.border6.TabIndex = 22;
-            this.border6.Values.Text = "";
-            // 
-            // border7
-            // 
-            this.border7.Enabled = false;
-            this.border7.Location = new System.Drawing.Point(0, 0);
-            this.border7.Name = "border7";
-            this.border7.Size = new System.Drawing.Size(240, 309);
-            this.border7.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border7.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border7.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.border7.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border7.StateCommon.Border.Rounding = 15;
-            this.border7.TabIndex = 23;
-            this.border7.Values.Text = "";
-            // 
-            // border8
-            // 
-            this.border8.Enabled = false;
-            this.border8.Location = new System.Drawing.Point(0, 0);
-            this.border8.Name = "border8";
-            this.border8.Size = new System.Drawing.Size(240, 309);
-            this.border8.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border8.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border8.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.border8.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border8.StateCommon.Border.Rounding = 15;
-            this.border8.TabIndex = 24;
-            this.border8.Values.Text = "";
-            // 
-            // border9
-            // 
-            this.border9.Enabled = false;
-            this.border9.Location = new System.Drawing.Point(0, 0);
-            this.border9.Name = "border9";
-            this.border9.Size = new System.Drawing.Size(240, 309);
-            this.border9.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border9.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border9.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.border9.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border9.StateCommon.Border.Rounding = 15;
-            this.border9.TabIndex = 25;
-            this.border9.Values.Text = "";
-            // 
-            // border10
-            // 
-            this.border10.Enabled = false;
-            this.border10.Location = new System.Drawing.Point(0, 0);
-            this.border10.Name = "border10";
-            this.border10.Size = new System.Drawing.Size(240, 309);
-            this.border10.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border10.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border10.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.border10.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border10.StateCommon.Border.Rounding = 15;
-            this.border10.TabIndex = 26;
-            this.border10.Values.Text = "";
-            // 
-            // border11
-            // 
-            this.border11.Enabled = false;
-            this.border11.Location = new System.Drawing.Point(0, 0);
-            this.border11.Name = "border11";
-            this.border11.Size = new System.Drawing.Size(240, 309);
-            this.border11.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border11.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border11.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.border11.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border11.StateCommon.Border.Rounding = 15;
-            this.border11.TabIndex = 27;
-            this.border11.Values.Text = "";
-            // 
-            // border12
-            // 
-            this.border12.Enabled = false;
-            this.border12.Location = new System.Drawing.Point(0, 0);
-            this.border12.Name = "border12";
-            this.border12.Size = new System.Drawing.Size(240, 309);
-            this.border12.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border12.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border12.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.border12.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border12.StateCommon.Border.Rounding = 15;
-            this.border12.TabIndex = 28;
-            this.border12.Values.Text = "";
-            // 
-            // border13
-            // 
-            this.border13.Enabled = false;
-            this.border13.Location = new System.Drawing.Point(0, 0);
-            this.border13.Name = "border13";
-            this.border13.Size = new System.Drawing.Size(240, 309);
-            this.border13.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border13.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border13.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.border13.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border13.StateCommon.Border.Rounding = 15;
-            this.border13.TabIndex = 29;
-            this.border13.Values.Text = "";
-            // 
-            // border14
-            // 
-            this.border14.Enabled = false;
-            this.border14.Location = new System.Drawing.Point(0, 0);
-            this.border14.Name = "border14";
-            this.border14.Size = new System.Drawing.Size(240, 309);
-            this.border14.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border14.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border14.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.border14.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border14.StateCommon.Border.Rounding = 15;
-            this.border14.TabIndex = 30;
-            this.border14.Values.Text = "";
-            // 
-            // border15
-            // 
-            this.border15.Enabled = false;
-            this.border15.Location = new System.Drawing.Point(0, 0);
-            this.border15.Name = "border15";
-            this.border15.Size = new System.Drawing.Size(240, 309);
-            this.border15.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border15.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border15.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.border15.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border15.StateCommon.Border.Rounding = 15;
-            this.border15.TabIndex = 31;
-            this.border15.Values.Text = "";
-            // 
-            // border16
-            // 
-            this.border16.Enabled = false;
-            this.border16.Location = new System.Drawing.Point(0, 0);
-            this.border16.Name = "border16";
-            this.border16.Size = new System.Drawing.Size(240, 309);
-            this.border16.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.border16.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.border16.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.border16.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.border16.StateCommon.Border.Rounding = 15;
-            this.border16.TabIndex = 32;
-            this.border16.Values.Text = "";
+            this.border20.StateCommon.Border.Rounding = 15;
+            this.border20.TabIndex = 13;
+            this.border20.Values.Text = "";
             // 
             // productmenu
             // 
@@ -1511,9 +1511,9 @@
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbox20)).EndInit();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox20)).EndInit();
             this.ResumeLayout(false);
 
         }

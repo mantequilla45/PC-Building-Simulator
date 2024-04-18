@@ -420,6 +420,17 @@ namespace PC_Building_Simulator
                     productMenuForm = productpanel;
                     break;
 
+                case 15:
+                    mainApp.label_menu.Text = "SSD";
+                    mainApp.panelmain.Controls.Clear();
+                    productpanel = new productmenu(mainApp, 14) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    productpanel.FormBorderStyle = FormBorderStyle.None;
+                    mainApp.panelmain.Controls.Add(productpanel);
+                    productpanel.Show();
+                    DisposeAllMenuForms();
+                    productMenuForm = productpanel;
+                    break;
+
                 default:
                     break;
             }
@@ -729,6 +740,34 @@ namespace PC_Building_Simulator
 
                 mainApp.panelmain.Controls.Clear();
                 productspecs productSpecs = new productspecs(hddName, 13, mainApp)
+                {
+                    Dock = DockStyle.Fill,
+                    TopLevel = false,
+                    TopMost = true,
+                    FormBorderStyle = FormBorderStyle.None
+                };
+                mainApp.panelmain.Controls.Add(productSpecs);
+                productSpecs.Show();
+            }
+        }
+
+        public void ssdmenu(int num)
+        {
+            string[] ssdNames = {
+                "Samsung 870 EVO 1TB", "Crucial MX500 2TB", "Western Digital Blue SSD 1TB", "SanDisk Ultra 3D SSD 2TB",
+                "Kingston UV500 SSD 512GB", "Intel 545s SSD 512GB", "Seagate Barracuda SSD 2TB", "ADATA SU800 SSD 256GB",
+                "Toshiba TR200 SSD 1TB", "PNY CS900 SSD 4TB", "Silicon Power Ace A55 SSD 512GB", "Transcend SSD230S SSD 2TB",
+                "HP S700 SSD 1TB", "Team Group L5 3D SSD 1TB", "Patriot Burst SSD 2TB", "Gigabyte UD PRO SSD 1TB",
+                "OWC Mercury Electra 6G SSD 2TB", "SK hynix Gold S31 SSD 1TB", "Mushkin Source SSD 500GB", "Kingston A400 2TB"
+            };
+
+            if (num >= 1 && num <= ssdNames.Length)
+            {
+                string ssdName = ssdNames[num - 1];
+                mainApp.label_menu.Text = $"{ssdName} Specifications";
+
+                mainApp.panelmain.Controls.Clear();
+                productspecs productSpecs = new productspecs(ssdName, 14, mainApp)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,

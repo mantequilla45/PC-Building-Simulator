@@ -769,6 +769,66 @@
   <data name="spe_Swan_M10_Plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spe_Swan M10 Plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ssd_ADATA_SU800_SSD_256GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_ADATA SU800 SSD 256GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ssd_Crucial_MX500_2TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_Crucial MX500 2TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ssd_Gigabyte_UD_PRO_SSD_1TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_Gigabyte UD PRO SSD 1TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ssd_HP_S700_SSD_1TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_HP S700 SSD 1TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ssd_Intel_545s_SSD_512GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_Intel 545s SSD 512GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ssd_Kingston_A400_2TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_Kingston A400 2TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ssd_Kingston_UV500_SSD_512GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_Kingston UV500 SSD 512GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ssd_Mushkin_Source_SSD_500GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_Mushkin Source SSD 500GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ssd_OWC_Mercury_Electra_6G_SSD_2TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_OWC Mercury Electra 6G SSD 2TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ssd_Patriot_Burst_SSD_2TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_Patriot Burst SSD 2TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ssd_PNY_CS900_SSD_4TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_PNY CS900 SSD 4TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ssd_Samsung_870_EVO_1TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_Samsung 870 EVO 1TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ssd_SanDisk_Ultra_3D_SSD_2TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_SanDisk Ultra 3D SSD 2TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ssd_Seagate_Barracuda_SSD_2TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_Seagate Barracuda SSD 2TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ssd_Silicon_Power_Ace_A55_SSD_512GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_Silicon Power Ace A55 SSD 512GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ssd_SK_hynix_Gold_S31_SSD_1TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_SK hynix Gold S31 SSD 1TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ssd_Team_Group_L5_3D_SSD_1TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_Team Group L5 3D SSD 1TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ssd_Toshiba_TR200_SSD_1TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_Toshiba TR200 SSD 1TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ssd_Transcend_SSD230S_SSD_2TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_Transcend SSD230S SSD 2TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ssd_Western_Digital_Blue_SSD_1TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ssd_Western Digital Blue SSD 1TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="XFX_Radeon_RX_5700_XT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\XFX Radeon RX 5700 XT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

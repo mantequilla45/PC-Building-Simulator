@@ -610,6 +610,56 @@ namespace PC_Building_Simulator
                     }
                     break;
 
+                case 14:
+                    if (userCount > 0)
+                    {
+                        string updateQuery = "UPDATE Builds SET [SSD] = @ssd WHERE [user] = @Username";
+                        try
+                        {
+                            dbManager.OpenConnection();
+                            using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                            {
+                                updateCmd.Parameters.AddWithValue("@ssd", choice);
+                                updateCmd.Parameters.AddWithValue("@Username", user);
+                                label2.Visible = true;
+                                int rowsAffected = updateCmd.ExecuteNonQuery();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error updating SSD for existing user: " + ex.Message);
+                        }
+                        finally
+                        {
+                            dbManager.CloseConnection();
+                        }
+                    }
+                    else
+                    {
+                        string insertQuery = "INSERT INTO Builds ([SSD], [user]) VALUES (@ssd, @Username)";
+                        try
+                        {
+                            dbManager.OpenConnection();
+                            using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
+                            {
+                                insertCmd.Parameters.AddWithValue("@ssd", choice);
+                                insertCmd.Parameters.AddWithValue("@Username", user);
+                                label2.Visible = true;
+                                int rowsAffected = insertCmd.ExecuteNonQuery();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error inserting SSD for new user: " + ex.Message);
+                        }
+                        finally
+                        {
+                            dbManager.CloseConnection();
+                        }
+                    }
+                    break;
+
+
             }
         }
 
@@ -915,6 +965,35 @@ namespace PC_Building_Simulator
                     };
                     query = "SELECT * FROM [HDD specs] WHERE [HDD Name] = @name";
                     break;
+
+                case 14:
+                    mainApp.back = 14;
+                    images = new Dictionary<string, System.Drawing.Image>
+                    {
+                        { "Samsung 870 EVO 1TB", Properties.Resources.ssd_Samsung_870_EVO_1TB },
+                        { "Crucial MX500 2TB", Properties.Resources.ssd_Crucial_MX500_2TB },
+                        { "Western Digital Blue SSD 1TB", Properties.Resources.ssd_Western_Digital_Blue_SSD_1TB },
+                        { "SanDisk Ultra 3D SSD 2TB", Properties.Resources.ssd_SanDisk_Ultra_3D_SSD_2TB },
+                        { "Kingston UV500 SSD 512GB", Properties.Resources.ssd_Kingston_UV500_SSD_512GB },
+                        { "Intel 545s SSD 512GB", Properties.Resources.ssd_Intel_545s_SSD_512GB },
+                        { "Seagate Barracuda SSD 2TB", Properties.Resources.ssd_Seagate_Barracuda_SSD_2TB },
+                        { "ADATA SU800 SSD 256GB", Properties.Resources.ssd_ADATA_SU800_SSD_256GB },
+                        { "Toshiba TR200 SSD 1TB", Properties.Resources.ssd_Toshiba_TR200_SSD_1TB },
+                        { "PNY CS900 SSD 4TB", Properties.Resources.ssd_PNY_CS900_SSD_4TB },
+                        { "Silicon Power Ace A55 SSD 512GB", Properties.Resources.ssd_Silicon_Power_Ace_A55_SSD_512GB },
+                        { "Transcend SSD230S SSD 2TB", Properties.Resources.ssd_Transcend_SSD230S_SSD_2TB },
+                        { "HP S700 SSD 1TB", Properties.Resources.ssd_HP_S700_SSD_1TB },
+                        { "Team Group L5 3D SSD 1TB", Properties.Resources.ssd_Team_Group_L5_3D_SSD_1TB },
+                        { "Patriot Burst SSD 2TB", Properties.Resources.ssd_Patriot_Burst_SSD_2TB },
+                        { "Gigabyte UD PRO SSD 1TB", Properties.Resources.ssd_Gigabyte_UD_PRO_SSD_1TB },
+                        { "OWC Mercury Electra 6G SSD 2TB", Properties.Resources.ssd_OWC_Mercury_Electra_6G_SSD_2TB },
+                        { "SK hynix Gold S31 SSD 1TB", Properties.Resources.ssd_SK_hynix_Gold_S31_SSD_1TB },
+                        { "Mushkin Source SSD 500GB", Properties.Resources.ssd_Mushkin_Source_SSD_500GB },
+                        { "Kingston A400 2TB", Properties.Resources.ssd_Kingston_A400_2TB }
+                    };
+                    query = "SELECT * FROM [SSD specs] WHERE [SSD Name] = @name";
+                    break;
+
             }
             DisplayImageAndSpecs(choice, query, images);
         }

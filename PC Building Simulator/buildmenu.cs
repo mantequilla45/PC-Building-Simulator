@@ -32,6 +32,7 @@ namespace PC_Building_Simulator
             string keyb = "";
             string mouse = "";
             string spk = "";
+            string hdd = "";
             string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
 
             // Get the current user
@@ -48,7 +49,7 @@ namespace PC_Building_Simulator
                     }
                 }
             }
-            string query = "SELECT CPU, GPU, Motherboard, RAM, PSU, [Computer Case], Monitor, Keyboard, Mouse, Speakers FROM Builds WHERE [user] = @Username";
+            string query = "SELECT CPU, GPU, Motherboard, RAM, PSU, [Computer Case], Monitor, Keyboard, Mouse, Speakers, HDD FROM Builds WHERE [user] = @Username";
             using (OleDbConnection connection = new OleDbConnection(connectionString))
             {
                 using (OleDbCommand command = new OleDbCommand(query, connection))
@@ -69,6 +70,7 @@ namespace PC_Building_Simulator
                             keyb = reader["Keyboard"].ToString();
                             mouse = reader["Mouse"].ToString();
                             spk = reader["Speakers"].ToString();
+                            hdd = reader["HDD"].ToString();
                         }
                     }
                 }
@@ -77,12 +79,13 @@ namespace PC_Building_Simulator
             label2.Text = gpu;
             label3.Text = mb;
             label4.Text = ram;
-            label5.Text = psu;
-            label6.Text = ccase;
-            label7.Text = moni;
-            label8.Text = keyb;
-            label9.Text = mouse;
-            label10.Text = spk;
+            label5.Text = hdd;
+            label6.Text = psu;
+            label7.Text = ccase;
+            label9.Text = moni;
+            label10.Text = keyb;
+            label11.Text = mouse;
+            label12.Text = spk;
             InitializeDisplayManager();
             
             string cpuimage = cpu.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
@@ -121,6 +124,15 @@ namespace PC_Building_Simulator
                 border4.Visible = true;
             }
 
+            string hddimage = hdd.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
+            string resourcehdd = $"hdd_{hddimage}";
+            pBox5.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcehdd);
+            if (hdd != "")
+            {
+                pBox5.Visible = true;
+                border5.Visible = true;
+            }
+
             string psuimage = psu.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
             string resourcepsu = $"psu_{psuimage}";
             pBox6.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcepsu);
@@ -140,38 +152,38 @@ namespace PC_Building_Simulator
 
             string monitorimage = moni.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
             string resourcemoni = $"mon_{monitorimage}";
-            pBox8.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcemoni);
+            pBox9.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcemoni);
             if (moni != "")
-            {
-                pBox8.Visible = true;
-                border8.Visible = true;
-            }
-
-            string keybimage = keyb.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
-            string resourcekeyb = $"key_{keybimage}";
-            pBox9.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcekeyb);
-            if (keyb != "")
             {
                 pBox9.Visible = true;
                 border9.Visible = true;
             }
-            string mouseimage = mouse.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
-            string resourcemou = $"mou_{mouseimage}";
-            pBox10.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcemou);
+
+            string keybimage = keyb.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
+            string resourcekeyb = $"key_{keybimage}";
+            pBox10.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcekeyb);
             if (keyb != "")
             {
                 pBox10.Visible = true;
                 border10.Visible = true;
             }
+            string mouseimage = mouse.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
+            string resourcemou = $"mou_{mouseimage}";
+            pBox11.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcemou);
+            if (keyb != "")
+            {
+                pBox11.Visible = true;
+                border11.Visible = true;
+            }
 
 
             string spkimage = spk.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('+', '_').Replace('.', '_');
             string resourcespk = $"spe_{spkimage}";
-            pBox11.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcespk);
+            pBox12.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcespk);
             if (spk != "")
             {
-                pBox11.Visible = true;
-                border11.Visible = true;
+                pBox12.Visible = true;
+                border12.Visible = true;
             }
 
 
@@ -196,7 +208,39 @@ namespace PC_Building_Simulator
             label.Font = new Font(label.Font, FontStyle.Underline);
         }
 
-        
+        private void label1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void lab_quanmb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_case_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void border7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lab_quancas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pBox7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

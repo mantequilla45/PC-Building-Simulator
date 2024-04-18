@@ -2233,6 +2233,206 @@ namespace PC_Building_Simulator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ssd_ADATA_SU800_SSD_256GB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_ADATA_SU800_SSD_256GB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssd_Crucial_MX500_2TB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_Crucial_MX500_2TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssd_Gigabyte_UD_PRO_SSD_1TB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_Gigabyte_UD_PRO_SSD_1TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssd_HP_S700_SSD_1TB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_HP_S700_SSD_1TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssd_Intel_545s_SSD_512GB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_Intel_545s_SSD_512GB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssd_Kingston_A400_2TB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_Kingston_A400_2TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssd_Kingston_UV500_SSD_512GB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_Kingston_UV500_SSD_512GB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssd_Mushkin_Source_SSD_500GB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_Mushkin_Source_SSD_500GB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssd_OWC_Mercury_Electra_6G_SSD_2TB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_OWC_Mercury_Electra_6G_SSD_2TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssd_Patriot_Burst_SSD_2TB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_Patriot_Burst_SSD_2TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssd_PNY_CS900_SSD_4TB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_PNY_CS900_SSD_4TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssd_Samsung_870_EVO_1TB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_Samsung_870_EVO_1TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssd_SanDisk_Ultra_3D_SSD_2TB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_SanDisk_Ultra_3D_SSD_2TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssd_Seagate_Barracuda_SSD_2TB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_Seagate_Barracuda_SSD_2TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssd_Silicon_Power_Ace_A55_SSD_512GB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_Silicon_Power_Ace_A55_SSD_512GB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssd_SK_hynix_Gold_S31_SSD_1TB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_SK_hynix_Gold_S31_SSD_1TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssd_Team_Group_L5_3D_SSD_1TB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_Team_Group_L5_3D_SSD_1TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssd_Toshiba_TR200_SSD_1TB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_Toshiba_TR200_SSD_1TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssd_Transcend_SSD230S_SSD_2TB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_Transcend_SSD230S_SSD_2TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssd_Western_Digital_Blue_SSD_1TB {
+            get {
+                object obj = ResourceManager.GetObject("ssd_Western_Digital_Blue_SSD_1TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap XFX_Radeon_RX_5700_XT {
             get {
                 object obj = ResourceManager.GetObject("XFX_Radeon_RX_5700_XT", resourceCulture);
