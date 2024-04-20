@@ -139,6 +139,9 @@ namespace PC_Building_Simulator
                         case 2:
                             displayManager.menuselect(15);
                             break;
+                        case 3:
+                            displayManager.menuselect(16);
+                            break;
                             // Add more cases for other menus if needed
                     }
                 }

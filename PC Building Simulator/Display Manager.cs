@@ -15,6 +15,7 @@ namespace PC_Building_Simulator
         private buildmenu buildMenuForm;
         private productmenu productMenuForm;
         private productspecs productSpecsForm;
+        private storagemenu storageMenuForm;
         public DisplayManager(buildmenu buildMenuForm)
         {
             this.buildMenuForm = buildMenuForm;
@@ -26,6 +27,10 @@ namespace PC_Building_Simulator
         public DisplayManager(productspecs productSpecsForm)
         {
             this.productSpecsForm = productSpecsForm;
+        }
+        public DisplayManager(storagemenu storageMenuForm)
+        {
+            this.storageMenuForm = storageMenuForm;
         }
         public DisplayManager(MainApp mainApp)
         {
@@ -261,6 +266,13 @@ namespace PC_Building_Simulator
                 productSpecsForm.Dispose();
                 productSpecsForm = null;
             }
+
+            if(storageMenuForm != null)
+            {
+                storageMenuForm.Dispose();
+                storageMenuForm = null;
+            }
+
         }
         public void menuselect(int menuchoice)
         {
@@ -423,6 +435,17 @@ namespace PC_Building_Simulator
                     mainApp.label_menu.Text = "SSD";
                     mainApp.panelmain.Controls.Clear();
                     productpanel = new productmenu(mainApp, 14) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    productpanel.FormBorderStyle = FormBorderStyle.None;
+                    mainApp.panelmain.Controls.Add(productpanel);
+                    productpanel.Show();
+                    DisposeAllMenuForms();
+                    productMenuForm = productpanel;
+                    break;
+
+                case 16:
+                    mainApp.label_menu.Text = "M2 & NVMe SSD";
+                    mainApp.panelmain.Controls.Clear();
+                    productpanel = new productmenu(mainApp, 15) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
                     productpanel.FormBorderStyle = FormBorderStyle.None;
                     mainApp.panelmain.Controls.Add(productpanel);
                     productpanel.Show();
@@ -778,6 +801,34 @@ namespace PC_Building_Simulator
 
                 mainApp.panelmain.Controls.Clear();
                 productspecs productSpecs = new productspecs(ssdName, 14, mainApp, price)
+                {
+                    Dock = DockStyle.Fill,
+                    TopLevel = false,
+                    TopMost = true,
+                    FormBorderStyle = FormBorderStyle.None
+                };
+                mainApp.panelmain.Controls.Add(productSpecs);
+                productSpecs.Show();
+            }
+        }
+        public void m2menu(int num, Label strprice)
+        {
+            string[] m2SsdNames = {
+                "Sandisk SSD Plus M.2 NVME 500GB", "Transcend PCIe SSD 250H 4TB", "Mushkin Enhanced Vortex M.2 2280 512GB", "OWC Aura Pro X2 1TB",
+                "Gigabyte AORUS NVMe Gen4 SSD 1TB", "PNY CS900 M.2 SATA III SSD 500GB", "Lexar NM710 M.2 1TB", "Patriot Memory Scorch 512GB",
+                "Team Group MP33 PRO 1TB", "Silicon Power Ace A55 1TB", "Toshiba XG6 SSD 512GB", "Corsair Force Series MP510 500GB",
+                "Intel SSD 545s 256GB", "Seagate Barracuda PCIe 2TB", "Adata SU800 512GB", "Kingston UV500 240GB", "Crucial P5 Plus 2TB",
+                "WD Black SN850 2TB", "Samsung 980 PRO 1TB", "HP S700 Pro 512GB"
+            };
+
+            string price = strprice.Text;
+            if (num >= 1 && num <= m2SsdNames.Length)
+            {
+                string ssdName = m2SsdNames[num - 1];
+                mainApp.label_menu.Text = $"{ssdName} Specifications";
+
+                mainApp.panelmain.Controls.Clear();
+                productspecs productSpecs = new productspecs(ssdName, 15, mainApp, price)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,

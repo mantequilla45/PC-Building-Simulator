@@ -142,6 +142,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.but_guide = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.but_combuild = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.remove_drive1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBox1)).BeginInit();
@@ -658,6 +659,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.remove_drive1);
             this.panel5.Controls.Add(this.quan_drive1);
             this.panel5.Controls.Add(this.price_drive1);
             this.panel5.Controls.Add(this.label_dr);
@@ -1716,6 +1718,17 @@
             this.but_combuild.TabIndex = 147;
             this.but_combuild.Values.Text = "Completed Builds";
             // 
+            // remove_drive1
+            // 
+            this.remove_drive1.AutoSize = true;
+            this.remove_drive1.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remove_drive1.Location = new System.Drawing.Point(969, 25);
+            this.remove_drive1.Name = "remove_drive1";
+            this.remove_drive1.Size = new System.Drawing.Size(19, 13);
+            this.remove_drive1.TabIndex = 131;
+            this.remove_drive1.Text = "✖";
+            this.remove_drive1.Visible = false;
+            // 
             // buildmenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1889,5 +1902,6 @@
         private System.Windows.Forms.Label remove_keyb;
         private System.Windows.Forms.Label remove_mous;
         private System.Windows.Forms.Label remove_spk;
+        private System.Windows.Forms.Label remove_drive1;
     }
 }

@@ -576,6 +576,47 @@ namespace PC_Building_Simulator
                         }
                     }
                     break;
+
+                case 15:
+                    string[] m2SsdNames = {
+                        "Sandisk SSD Plus M.2 NVME 500GB", "Transcend PCIe SSD 250H 4TB", "Mushkin Enhanced Vortex M.2 2280 512GB", "OWC Aura Pro X2 1TB",
+                        "Gigabyte AORUS NVMe Gen4 SSD 1TB", "PNY CS900 M.2 SATA III SSD 500GB", "Lexar NM710 M.2 1TB", "Patriot Memory Scorch 512GB",
+                        "Team Group MP33 PRO 1TB", "Silicon Power Ace A55 1TB", "Toshiba XG6 SSD 512GB", "Corsair Force Series MP510 500GB",
+                        "Intel SSD 545s 256GB", "Seagate Barracuda PCIe 2TB", "Adata SU800 512GB", "Kingston UV500 240GB", "Crucial P5 Plus 2TB",
+                        "WD Black SN850 2TB", "Samsung 980 PRO 1TB", "HP S700 Pro 512GB"
+                    };
+
+                    price = new int[]{
+                        50, 350, 85, 165, 155, 55, 
+                        150, 85, 130, 110, 100, 90, 
+                        40, 250, 55, 33, 300, 315, 165, 85
+                    };
+
+                    for (int i = 0; i < m2SsdNames.Length; i++)
+                    {
+                        string ssdName = m2SsdNames[i];
+                        string ssdImage = ssdName.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('+', '_').Replace('.', '_');
+
+                        PictureBox pictureBox = Controls.Find($"pbox{i + 1}", true).FirstOrDefault() as PictureBox;
+                        if (pictureBox != null)
+                        {
+                            string resourceSSD = $"m2_{ssdImage}";
+                            pictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourceSSD);
+                        }
+
+                        Label priceLabel = pricelabels[i];
+                        if (priceLabel != null)
+                        {
+                            priceLabel.Text = $"${price[i]}"; // Assign prices for M.2 SSDs
+                        }
+
+                        Label nameLabel = namelabels[i];
+                        if (nameLabel != null)
+                        {
+                            nameLabel.Text = ssdName;
+                        }
+                    }
+                    break;
             }
         }
 
@@ -632,6 +673,9 @@ namespace PC_Building_Simulator
                             break;
                         case 14:
                             displayManager.ssdmenu(menuIndex, prices[i]);
+                            break;
+                        case 15:
+                            displayManager.m2menu(menuIndex, prices[i]);
                             break;
                     }
                     mainApp.backicon.Visible = true;

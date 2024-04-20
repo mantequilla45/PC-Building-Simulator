@@ -701,7 +701,56 @@ namespace PC_Building_Simulator
                         }
                     }
                     break;
-
+                case 15:
+                    if (userCount > 0)
+                    {
+                        string updateQuery = "UPDATE Builds SET [M2 SSD] = @m2Ssd, [M2 price] = @price WHERE [user] = @Username";
+                        try
+                        {
+                            dbManager.OpenConnection();
+                            using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                            {
+                                updateCmd.Parameters.AddWithValue("@m2Ssd", choice);
+                                updateCmd.Parameters.AddWithValue("@price", price);
+                                updateCmd.Parameters.AddWithValue("@Username", user);
+                                label2.Visible = true;
+                                int rowsAffected = updateCmd.ExecuteNonQuery();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error updating M.2 SSD for existing user: " + ex.Message);
+                        }
+                        finally
+                        {
+                            dbManager.CloseConnection();
+                        }
+                    }
+                    else
+                    {
+                        string insertQuery = "INSERT INTO Builds ([M2 SSD], [user], [M2 price]) VALUES (@m2Ssd, @Username, @price)";
+                        try
+                        {
+                            dbManager.OpenConnection();
+                            using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
+                            {
+                                insertCmd.Parameters.AddWithValue("@m2Ssd", choice);
+                                insertCmd.Parameters.AddWithValue("@price", price);
+                                insertCmd.Parameters.AddWithValue("@Username", user);
+                                label2.Visible = true;
+                                int rowsAffected = insertCmd.ExecuteNonQuery();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error inserting M.2 SSD for new user: " + ex.Message);
+                        }
+                        finally
+                        {
+                            dbManager.CloseConnection();
+                        }
+                    }
+                    break;
 
             }
         }
@@ -1038,6 +1087,34 @@ namespace PC_Building_Simulator
                     query = "SELECT * FROM [SSD specs] WHERE [SSD Name] = @name";
                     break;
 
+
+                case 15:
+                    mainApp.back = 15;
+                    images = new Dictionary<string, System.Drawing.Image>
+                    {
+                        { "Sandisk SSD Plus M.2 NVME 500GB", Properties.Resources.m2_Sandisk_SSD_Plus_M_2_NVME_500GB },
+                        { "Transcend PCIe SSD 250H 4TB", Properties.Resources.m2_Transcend_PCIe_SSD_250H_4TB },
+                        { "Mushkin Enhanced Vortex M.2 2280 512GB", Properties.Resources.m2_Mushkin_Enhanced_Vortex_M_2_2280_512GB },
+                        { "OWC Aura Pro X2 1TB", Properties.Resources.m2_OWC_Aura_Pro_X2_1TB },
+                        { "Gigabyte AORUS NVMe Gen4 SSD 1TB", Properties.Resources.m2_Gigabyte_AORUS_NVMe_Gen4_SSD_1TB },
+                        { "PNY CS900 M.2 SATA III SSD 500GB", Properties.Resources.m2_PNY_CS900_M_2_SATA_III_SSD_500GB },
+                        { "Lexar NM710 M.2 1TB", Properties.Resources.m2_Lexar_NM710_M_2_1TB },
+                        { "Patriot Memory Scorch 512GB", Properties.Resources.m2_Patriot_Memory_Scorch_512GB },
+                        { "Team Group MP33 PRO 1TB", Properties.Resources.m2_Team_Group_MP33_PRO_1TB },
+                        { "Silicon Power Ace A55 1TB", Properties.Resources.m2_Silicon_Power_Ace_A55_1TB },
+                        { "Toshiba XG6 SSD 512GB", Properties.Resources.m2_Toshiba_XG6_SSD_512GB },
+                        { "Corsair Force Series MP510 500GB", Properties.Resources.m2_Corsair_Force_Series_MP510_500GB },
+                        { "Intel SSD 545s 256GB", Properties.Resources.m2_Intel_SSD_545s_256GB },
+                        { "Seagate Barracuda PCIe 2TB", Properties.Resources.m2_Seagate_Barracuda_PCIe_2TB },
+                        { "Adata SU800 512GB", Properties.Resources.m2_Adata_SU800_512GB },
+                        { "Kingston UV500 240GB", Properties.Resources.m2_Kingston_UV500_240GB },
+                        { "Crucial P5 Plus 2TB", Properties.Resources.m2_Crucial_P5_Plus_2TB },
+                        { "WD Black SN850 2TB", Properties.Resources.m2_WD_Black_SN850_2TB },
+                        { "Samsung 980 PRO 1TB", Properties.Resources.m2_Samsung_980_PRO_1TB },
+                        { "HP S700 Pro 512GB", Properties.Resources.m2_HP_S700_Pro_512GB }
+                    };
+                    query = "SELECT * FROM [M2 SSD specs] WHERE [M2 Name] = @name";
+                    break;
             }
             DisplayImageAndSpecs(choice, query, images);
         }
