@@ -16,6 +16,16 @@ namespace PC_Building_Simulator
 {
     public partial class buildmenu : Form
     {
+        private PictureBox pBoxdrive2 = new PictureBox();
+        private PictureBox pBoxdrive3 = new PictureBox();
+        private KryptonButton borderdrive2 = new KryptonButton();
+        private KryptonButton borderdrive3 = new KryptonButton();
+        private Label labeldrive2 = new Label();
+        private Label labelprice2 = new Label();
+        private Label labelquan2 = new Label();
+        private Label labelquan3 = new Label();
+        private Label labeldrive3 = new Label();
+        private Label labelprice3 = new Label();
         private string user = "";
         public buildmenu()
         {
@@ -186,6 +196,7 @@ namespace PC_Building_Simulator
             //hdd = "";
             //ssd = "";
             //m2 = "";
+
             if (hdd != "" && ssd == "" && m2 == "")
             {
                 string hddimage = hdd.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
@@ -200,6 +211,7 @@ namespace PC_Building_Simulator
                     price_drive1.Visible = true;
                     quan_drive1.Visible = true;
                     remove_drive1.Visible = true;
+                    remove_drive1.Click += removehdd_Click;
                 }
             }
 
@@ -211,11 +223,13 @@ namespace PC_Building_Simulator
                 {
                     label5.Text = ssd;
                     price_drive1.Text = ssdprice;
-                    pBox5.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcessd);
+                    pBox5.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourcessd);
                     pBox5.Visible = true;
                     border5.Visible = true;
                     price_drive1.Visible = true;
                     quan_drive1.Visible = true;
+                    remove_drive1.Visible = true;
+                    remove_drive1.Click += removessd_Click;
                 }
             }
 
@@ -232,6 +246,8 @@ namespace PC_Building_Simulator
                     border5.Visible = true;
                     price_drive1.Visible = true;
                     quan_drive1.Visible = true;
+                    remove_drive1.Visible = true;
+                    remove_drive1.Click += removem2_Click;
                 }
             }
 
@@ -252,7 +268,6 @@ namespace PC_Building_Simulator
                     quan_drive1.Visible = true;
                 }
 
-                PictureBox pBoxdrive2 = new PictureBox();
                 pBoxdrive2.Size = pBox5.Size;
                 pBoxdrive2.SizeMode = pBox5.SizeMode;
                 pBoxdrive2.Location = new Point(314, 68);
@@ -260,7 +275,6 @@ namespace PC_Building_Simulator
 
                 // border 2
                 
-                KryptonButton borderdrive2 = new KryptonButton();
                 borderdrive2.Enabled = false;
                 borderdrive2.StateCommon.Back.Color1 = Color.White;
                 borderdrive2.StateCommon.Back.Color2 = Color.White;
@@ -273,7 +287,6 @@ namespace PC_Building_Simulator
 
                 // name 2 label
 
-                Label labeldrive2 = new Label();
                 labeldrive2.Location = new Point(361, 74);
                 labeldrive2.Font = label5.Font;
                 labeldrive2.AutoSize = true;
@@ -283,15 +296,12 @@ namespace PC_Building_Simulator
 
                 // quantitiy 2 label
 
-                Label labelquan2 = new Label();
                 labelquan2.Location = new Point(781, 74);
                 labelquan2.Font = label5.Font;
                 labelquan2.AutoSize = true;
                 panel5.Controls.Add(labelquan2);
 
                 // price 2 label
-
-                Label labelprice2 = new Label();
                 labelprice2.Location = new Point(885, 74);
                 labelprice2.Font = label5.Font;
                 labelprice2.AutoSize = true;
@@ -329,8 +339,6 @@ namespace PC_Building_Simulator
                     price_drive1.Visible = true;
                     quan_drive1.Visible = true;
                 }
-
-                PictureBox pBoxdrive2 = new PictureBox();
                 pBoxdrive2.Size = pBox5.Size;
                 pBoxdrive2.SizeMode = pBox5.SizeMode;
                 pBoxdrive2.Location = new Point(314, 68);
@@ -338,7 +346,6 @@ namespace PC_Building_Simulator
 
                 // border 2
 
-                KryptonButton borderdrive2 = new KryptonButton();
                 borderdrive2.Enabled = false;
                 borderdrive2.StateCommon.Back.Color1 = Color.White;
                 borderdrive2.StateCommon.Back.Color2 = Color.White;
@@ -351,7 +358,6 @@ namespace PC_Building_Simulator
 
                 // name 2 label
 
-                Label labeldrive2 = new Label();
                 labeldrive2.Location = new Point(361, 74);
                 labeldrive2.Font = label5.Font;
                 labeldrive2.AutoSize = true;
@@ -361,7 +367,6 @@ namespace PC_Building_Simulator
 
                 // quantitiy 2 label
 
-                Label labelquan2 = new Label();
                 labelquan2.Location = new Point(781, 74);
                 labelquan2.Font = label5.Font;
                 labelquan2.AutoSize = true;
@@ -369,7 +374,6 @@ namespace PC_Building_Simulator
 
                 // price 2 label
 
-                Label labelprice2 = new Label();
                 labelprice2.Location = new Point(885, 74);
                 labelprice2.Font = label5.Font;
                 labelprice2.AutoSize = true;
@@ -408,7 +412,6 @@ namespace PC_Building_Simulator
                     quan_drive1.Visible = true;
                 }
 
-                PictureBox pBoxdrive2 = new PictureBox();
                 pBoxdrive2.Size = pBox5.Size;
                 pBoxdrive2.SizeMode = pBox5.SizeMode;
                 pBoxdrive2.Location = new Point(314, 68);
@@ -416,7 +419,6 @@ namespace PC_Building_Simulator
 
                 // border 2
 
-                KryptonButton borderdrive2 = new KryptonButton();
                 borderdrive2.Enabled = false;
                 borderdrive2.StateCommon.Back.Color1 = Color.White;
                 borderdrive2.StateCommon.Back.Color2 = Color.White;
@@ -429,7 +431,6 @@ namespace PC_Building_Simulator
 
                 // name 2 label
 
-                Label labeldrive2 = new Label();
                 labeldrive2.Location = new Point(361, 74);
                 labeldrive2.Font = label5.Font;
                 labeldrive2.AutoSize = true;
@@ -439,7 +440,6 @@ namespace PC_Building_Simulator
 
                 // quantitiy 2 label
 
-                Label labelquan2 = new Label();
                 labelquan2.Location = new Point(781, 74);
                 labelquan2.Font = label5.Font;
                 labelquan2.AutoSize = true;
@@ -447,7 +447,6 @@ namespace PC_Building_Simulator
 
                 // price 2 label
 
-                Label labelprice2 = new Label();
                 labelprice2.Location = new Point(885, 74);
                 labelprice2.Font = label5.Font;
                 labelprice2.AutoSize = true;
@@ -488,7 +487,6 @@ namespace PC_Building_Simulator
                     quan_drive1.Visible = true;
                 }
 
-                PictureBox pBoxdrive2 = new PictureBox();
                 pBoxdrive2.Size = pBox5.Size;
                 pBoxdrive2.SizeMode = pBox5.SizeMode;
                 pBoxdrive2.Location = new Point(314, 68);
@@ -496,7 +494,6 @@ namespace PC_Building_Simulator
 
                 // border 2
 
-                KryptonButton borderdrive2 = new KryptonButton();
                 borderdrive2.Enabled = false;
                 borderdrive2.StateCommon.Back.Color1 = Color.White;
                 borderdrive2.StateCommon.Back.Color2 = Color.White;
@@ -509,7 +506,6 @@ namespace PC_Building_Simulator
 
                 // name 2 label
 
-                Label labeldrive2 = new Label();
                 labeldrive2.Location = new Point(361, 74);
                 labeldrive2.Font = label5.Font;
                 labeldrive2.AutoSize = true;
@@ -519,7 +515,6 @@ namespace PC_Building_Simulator
 
                 // quantitiy 2 label
 
-                Label labelquan2 = new Label();
                 labelquan2.Location = new Point(781, 74);
                 labelquan2.Font = label5.Font;
                 labelquan2.AutoSize = true;
@@ -527,7 +522,6 @@ namespace PC_Building_Simulator
 
                 // price 2 label
 
-                Label labelprice2 = new Label();
                 labelprice2.Location = new Point(885, 74);
                 labelprice2.Font = label5.Font;
                 labelprice2.AutoSize = true;
@@ -548,7 +542,6 @@ namespace PC_Building_Simulator
                     labelquan2.Visible = true;
                 }
 
-                PictureBox pBoxdrive3 = new PictureBox();
                 pBoxdrive3.Size = pBox5.Size;
                 pBoxdrive3.SizeMode = pBox5.SizeMode;
                 pBoxdrive3.Location = new Point(314, 121);
@@ -556,7 +549,7 @@ namespace PC_Building_Simulator
 
                 // border 3
 
-                KryptonButton borderdrive3 = new KryptonButton();
+                
                 borderdrive3.Enabled = false;
                 borderdrive3.StateCommon.Back.Color1 = Color.White;
                 borderdrive3.StateCommon.Back.Color2 = Color.White;
@@ -569,7 +562,6 @@ namespace PC_Building_Simulator
 
                 // name 3 label
 
-                Label labeldrive3 = new Label();
                 labeldrive3.Location = new Point(361, 127);
                 labeldrive3.Font = label5.Font;
                 labeldrive3.AutoSize = true;
@@ -579,7 +571,6 @@ namespace PC_Building_Simulator
 
                 // quantitiy 3 label
 
-                Label labelquan3 = new Label();
                 labelquan3.Location = new Point(781, 127);
                 labelquan3.Font = label5.Font;
                 labelquan3.AutoSize = true;
@@ -587,7 +578,6 @@ namespace PC_Building_Simulator
 
                 // price 3 label
 
-                Label labelprice3 = new Label();
                 labelprice3.Location = new Point(885, 127);
                 labelprice3.Font = label5.Font;
                 labelprice3.AutoSize = true;
@@ -608,11 +598,6 @@ namespace PC_Building_Simulator
                     labelquan3.Visible = true;
                 }
             }
-
-
-
-
-
 
             string psuimage = psu.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
             string resourcepsu = $"psu_{psuimage}";
@@ -1031,6 +1016,104 @@ namespace PC_Building_Simulator
             }
         }
 
+        private void removehdd_Click(object sender, EventArgs e)
+        {
+
+            label5.Text = "";
+            price_drive1.Text = "";
+            pBox5.Visible = false;
+            border5.Visible = false;
+            price_drive1.Visible = false;
+            quan_drive1.Visible = false;
+            string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
+            string userToUpdate = user;
+
+            string updateQuery = "UPDATE Builds SET HDD = '', [HDD price] = '' WHERE [user] = @UserToUpdate";
+
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    using (OleDbCommand command = new OleDbCommand(updateQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserToUpdate", userToUpdate);
+
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating data: " + ex.Message);
+            }
+        }
+        private void removessd_Click(object sender, EventArgs e)
+        {
+
+            label5.Text = "";
+            price_drive1.Text = "";
+            pBox5.Visible = false;
+            border5.Visible = false;
+            price_drive1.Visible = false;
+            quan_drive1.Visible = false;
+            string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
+            string userToUpdate = user;
+
+            string updateQuery = "UPDATE Builds SET SSD = '', [SSD price] = '' WHERE [user] = @UserToUpdate";
+
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    using (OleDbCommand command = new OleDbCommand(updateQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserToUpdate", userToUpdate);
+
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating data: " + ex.Message);
+            }
+        }
+
+        private void removem2_Click(object sender, EventArgs e)
+        {
+
+            label5.Text = "";
+            price_drive1.Text = "";
+            pBox5.Visible = false;
+            border5.Visible = false;
+            price_drive1.Visible = false;
+            quan_drive1.Visible = false;
+            string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
+            string userToUpdate = user;
+
+            string updateQuery = "UPDATE Builds SET [M2 SSD] = '', [M2 price] = '' WHERE [user] = @UserToUpdate";
+
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    using (OleDbCommand command = new OleDbCommand(updateQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserToUpdate", userToUpdate);
+
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating data: " + ex.Message);
+            }
+        }
+
 
         private void remove_MouseLeave(object sender, EventArgs e)
         {
@@ -1043,5 +1126,6 @@ namespace PC_Building_Simulator
             Label label = sender as Label;
             label.ForeColor = Color.FromArgb(180,18,0);
         }
+        
     }
 }

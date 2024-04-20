@@ -67,6 +67,7 @@
             this.border4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.remove_drive1 = new System.Windows.Forms.Label();
             this.quan_drive1 = new System.Windows.Forms.Label();
             this.price_drive1 = new System.Windows.Forms.Label();
             this.label_dr = new System.Windows.Forms.Label();
@@ -142,7 +143,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.but_guide = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.but_combuild = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.remove_drive1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBox1)).BeginInit();
@@ -671,6 +671,19 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1017, 55);
             this.panel5.TabIndex = 123;
+            // 
+            // remove_drive1
+            // 
+            this.remove_drive1.AutoSize = true;
+            this.remove_drive1.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remove_drive1.Location = new System.Drawing.Point(969, 25);
+            this.remove_drive1.Name = "remove_drive1";
+            this.remove_drive1.Size = new System.Drawing.Size(19, 13);
+            this.remove_drive1.TabIndex = 131;
+            this.remove_drive1.Text = "✖";
+            this.remove_drive1.Visible = false;
+            this.remove_drive1.MouseLeave += new System.EventHandler(this.remove_MouseLeave);
+            this.remove_drive1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.remove_MouseMove);
             // 
             // quan_drive1
             // 
@@ -1717,17 +1730,6 @@
             this.but_combuild.StateTracking.Border.Width = 1;
             this.but_combuild.TabIndex = 147;
             this.but_combuild.Values.Text = "Completed Builds";
-            // 
-            // remove_drive1
-            // 
-            this.remove_drive1.AutoSize = true;
-            this.remove_drive1.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.remove_drive1.Location = new System.Drawing.Point(969, 25);
-            this.remove_drive1.Name = "remove_drive1";
-            this.remove_drive1.Size = new System.Drawing.Size(19, 13);
-            this.remove_drive1.TabIndex = 131;
-            this.remove_drive1.Text = "✖";
-            this.remove_drive1.Visible = false;
             // 
             // buildmenu
             // 

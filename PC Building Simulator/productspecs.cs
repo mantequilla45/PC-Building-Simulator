@@ -861,7 +861,7 @@ namespace PC_Building_Simulator
                         { "T-Force Delta RGB DDR5", Properties.Resources.ram_T_Force_Delta_RGB_DDR5 },
                         { "Ballistix MAX RGB DDR5", Properties.Resources.ram_Ballistix_MAX_RGB_DDR5 },
                         { "XPG Lancer RGB DDR5", Properties.Resources.ram_XPG_Lancer_RGB_DDR5 },
-                        { "Dominator Platinum 32GB DDR5", Properties.Resources.ram_Dominator_Platinum_32GB_DDR5_5200 },
+                        { "Dominator Platinum 32GB DDR5-5200", Properties.Resources.ram_Dominator_Platinum_32GB_DDR5_5200 },
                         { "Ripjaws S5 Series DDR5", Properties.Resources.ram_Ripjaws_S5_Series_DDR5 },
                         { "Fury Renegade RGB DDR5", Properties.Resources.ram_FURY_Renegade_RGB_DDR5 },
                         { "T-Force Dark Z Alpha DDR5", Properties.Resources.ram_T_Force_Dark_Z_Alpha_DDR5 }
