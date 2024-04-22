@@ -63,6 +63,206 @@ namespace PC_Building_Simulator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap air_be_Quiet__Dark_Rock_Pro_4 {
+            get {
+                object obj = ResourceManager.GetObject("air_be_Quiet__Dark_Rock_Pro_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_Be_Quiet__Pure_Rock_2 {
+            get {
+                object obj = ResourceManager.GetObject("air_Be_Quiet__Pure_Rock_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_Cooler_Master_Hyper_212_EVO_V2 {
+            get {
+                object obj = ResourceManager.GetObject("air_Cooler_Master_Hyper_212_EVO_V2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_Cooler_Master_Hyper_212_Halo {
+            get {
+                object obj = ResourceManager.GetObject("air_Cooler_Master_Hyper_212_Halo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_Cooler_Master_Hyper_H412R {
+            get {
+                object obj = ResourceManager.GetObject("air_Cooler_Master_Hyper_H412R", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_Corsair_A115 {
+            get {
+                object obj = ResourceManager.GetObject("air_Corsair_A115", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_Corsair_A500 {
+            get {
+                object obj = ResourceManager.GetObject("air_Corsair_A500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_Cryorig_C7 {
+            get {
+                object obj = ResourceManager.GetObject("air_Cryorig_C7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_Cryorig_H7 {
+            get {
+                object obj = ResourceManager.GetObject("air_Cryorig_H7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_DeepCool_AK620 {
+            get {
+                object obj = ResourceManager.GetObject("air_DeepCool_AK620", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_Deepcool_AS500_Plus {
+            get {
+                object obj = ResourceManager.GetObject("air_Deepcool_AS500_Plus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_DeepCool_Assassin_IV {
+            get {
+                object obj = ResourceManager.GetObject("air_DeepCool_Assassin_IV", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_ID_Cooling_SE_214_XT_ARGB {
+            get {
+                object obj = ResourceManager.GetObject("air_ID_Cooling_SE_214_XT_ARGB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_Jonsbo_CR_1200 {
+            get {
+                object obj = ResourceManager.GetObject("air_Jonsbo_CR_1200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_Noctua_NH_D15_Chromax_Black {
+            get {
+                object obj = ResourceManager.GetObject("air_Noctua_NH_D15_Chromax_Black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_Noctua_NH_L9_series {
+            get {
+                object obj = ResourceManager.GetObject("air_Noctua_NH_L9_series", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_Noctua_NH_U14S {
+            get {
+                object obj = ResourceManager.GetObject("air_Noctua_NH_U14S", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_Thermalright_AXP120_X67 {
+            get {
+                object obj = ResourceManager.GetObject("air_Thermalright_AXP120_X67", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_Thermalright_Peerless_Assassin_120_SE {
+            get {
+                object obj = ResourceManager.GetObject("air_Thermalright_Peerless_Assassin_120_SE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_Thermalright_Phantom_Spirit_120_EVO {
+            get {
+                object obj = ResourceManager.GetObject("air_Thermalright_Phantom_Spirit_120_EVO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ASRock_AMD_Radeon_RX_6600_Challenger_D_8GB {
             get {
                 object obj = ResourceManager.GetObject("ASRock_AMD_Radeon_RX_6600_Challenger_D_8GB", resourceCulture);
@@ -496,6 +696,206 @@ namespace PC_Building_Simulator.Properties {
         internal static System.Drawing.Bitmap EVGA_GeForce_RTX_2080_Super {
             get {
                 object obj = ResourceManager.GetObject("EVGA_GeForce_RTX_2080_Super", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_Asus_TUF_Gaming_TF120_ARGB {
+            get {
+                object obj = ResourceManager.GetObject("fan_Asus_TUF_Gaming_TF120_ARGB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_Be_Quiet__PURE_WINGS_2 {
+            get {
+                object obj = ResourceManager.GetObject("fan_Be_Quiet__PURE_WINGS_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_Be_Quiet__Silent_Wings_3 {
+            get {
+                object obj = ResourceManager.GetObject("fan_Be_Quiet__Silent_Wings_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_Cooler_Master_MasterFan_MF120_Halo_RGB {
+            get {
+                object obj = ResourceManager.GetObject("fan_Cooler_Master_MasterFan_MF120_Halo_RGB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_Corsair_iCUE_AR120_Digital_RGB_120mm {
+            get {
+                object obj = ResourceManager.GetObject("fan_Corsair_iCUE_AR120_Digital_RGB_120mm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_Corsair_iCUE_LINK_QX120_RGB {
+            get {
+                object obj = ResourceManager.GetObject("fan_Corsair_iCUE_LINK_QX120_RGB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_Corsair_ML120_PRO {
+            get {
+                object obj = ResourceManager.GetObject("fan_Corsair_ML120_PRO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_DeepCool_CF120_3_IN_1 {
+            get {
+                object obj = ResourceManager.GetObject("fan_DeepCool_CF120_3_IN_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_EK_Vardar_EVO_120ER_RGB {
+            get {
+                object obj = ResourceManager.GetObject("fan_EK_Vardar_EVO_120ER_RGB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_Lian_Li_UNI_FAN_SL120_V2_RGB {
+            get {
+                object obj = ResourceManager.GetObject("fan_Lian_Li_UNI_FAN_SL120_V2_RGB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_MSI_MAG_MAX_F20A_1 {
+            get {
+                object obj = ResourceManager.GetObject("fan_MSI_MAG_MAX_F20A_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_MSI_MEG_SILENT_GALE_P12 {
+            get {
+                object obj = ResourceManager.GetObject("fan_MSI_MEG_SILENT_GALE_P12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_Noctua_NF_A12x25_PWM {
+            get {
+                object obj = ResourceManager.GetObject("fan_Noctua_NF_A12x25_PWM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_Noctua_NF_P12_redux_1700 {
+            get {
+                object obj = ResourceManager.GetObject("fan_Noctua_NF_P12_redux_1700", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_NZXT_Aer_P_120MM {
+            get {
+                object obj = ResourceManager.GetObject("fan_NZXT_Aer_P_120MM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_NZXT_F120_RGB_Duo {
+            get {
+                object obj = ResourceManager.GetObject("fan_NZXT_F120_RGB_Duo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_Phanteks_PH_F120MP {
+            get {
+                object obj = ResourceManager.GetObject("fan_Phanteks_PH_F120MP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_ROG_STRIX_XF_120 {
+            get {
+                object obj = ResourceManager.GetObject("fan_ROG_STRIX_XF_120", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_Scythe_Kaze_Flex_120_PWM {
+            get {
+                object obj = ResourceManager.GetObject("fan_Scythe_Kaze_Flex_120_PWM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fan_Thermaltake_ToughFan_12_Turbo {
+            get {
+                object obj = ResourceManager.GetObject("fan_Thermaltake_ToughFan_12_Turbo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

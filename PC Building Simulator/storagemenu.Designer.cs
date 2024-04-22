@@ -53,7 +53,7 @@
             // 
             this.labname1.AutoSize = true;
             this.labname1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labname1.Location = new System.Drawing.Point(116, 384);
+            this.labname1.Location = new System.Drawing.Point(116, 386);
             this.labname1.MaximumSize = new System.Drawing.Size(184, 42);
             this.labname1.Name = "labname1";
             this.labname1.Size = new System.Drawing.Size(147, 42);
@@ -64,7 +64,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(451, 384);
+            this.label1.Location = new System.Drawing.Point(451, 386);
             this.label1.MaximumSize = new System.Drawing.Size(184, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 42);
@@ -75,7 +75,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(772, 384);
+            this.label2.Location = new System.Drawing.Point(772, 386);
             this.label2.MaximumSize = new System.Drawing.Size(184, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(176, 25);
@@ -167,7 +167,7 @@
             // 
             this.panel1.Controls.Add(this.pBox1);
             this.panel1.Controls.Add(this.border1);
-            this.panel1.Location = new System.Drawing.Point(27, 10);
+            this.panel1.Location = new System.Drawing.Point(27, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(328, 361);
             this.panel1.TabIndex = 16;
@@ -176,7 +176,7 @@
             // 
             this.panel2.Controls.Add(this.pBox2);
             this.panel2.Controls.Add(this.border2);
-            this.panel2.Location = new System.Drawing.Point(361, 10);
+            this.panel2.Location = new System.Drawing.Point(361, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(328, 361);
             this.panel2.TabIndex = 17;
@@ -185,7 +185,7 @@
             // 
             this.panel3.Controls.Add(this.pBox3);
             this.panel3.Controls.Add(this.border3);
-            this.panel3.Location = new System.Drawing.Point(695, 10);
+            this.panel3.Location = new System.Drawing.Point(695, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(328, 361);
             this.panel3.TabIndex = 17;

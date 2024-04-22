@@ -16,17 +16,51 @@ namespace PC_Building_Simulator
 {
     public partial class buildmenu : Form
     {
-        private PictureBox pBoxdrive2 = new PictureBox();
-        private PictureBox pBoxdrive3 = new PictureBox();
-        private KryptonButton borderdrive2 = new KryptonButton();
-        private KryptonButton borderdrive3 = new KryptonButton();
-        private Label labeldrive2 = new Label();
-        private Label labelprice2 = new Label();
-        private Label labelquan2 = new Label();
-        private Label labelquan3 = new Label();
-        private Label labeldrive3 = new Label();
-        private Label labelprice3 = new Label();
+        private PictureBox drive2pbox = new PictureBox();
+        private PictureBox drive3pbox = new PictureBox();
+        private KryptonButton drive2border = new KryptonButton();
+        private KryptonButton drive3border = new KryptonButton();
+        private Label drive2price = new Label();
+        private Label drive3price = new Label();
+        private Label drive2quan = new Label();
+        private Label drive3quan = new Label();
+        private Label drive2name = new Label();
+        private Label drive3name = new Label();
+        private Label remove_drive2 = new Label();
+        private Label remove_drive3 = new Label();
+        private int drivecount = 1;
         private string user = "";
+        public static string cpu = "";
+        public static string gpu = "";
+        public static string mb = "";
+        public static string ram = "";
+        public static string psu = "";
+        public static string ccase = "";
+        public static string moni = "";
+        public static string keyb = "";
+        public static string mouse = "";
+        public static string spk = "";
+        public static string hdd = "";
+        public static string ssd = "";
+        public static string m2 = "";
+        public static string fans = "";
+        public static string aircooler = "";
+        public static string ramquan = "";
+        public static string cpuprice = "";
+        public static string gpuprice = "";
+        public static string mbprice = "";
+        public static string ramprice = "";
+        public static string psuprice = "";
+        public static string caseprice = "";
+        public static string moniprice = "";
+        public static string keybprice = "";
+        public static string mouseprice = "";
+        public static string spkprice = "";
+        public static string hddprice = "";
+        public static string ssdprice = "";
+        public static string m2price = "";
+        public static string fanprice = "";
+        public static string aircoolerprice = "";
         public buildmenu()
         {
             InitializeComponent();
@@ -35,33 +69,6 @@ namespace PC_Building_Simulator
 
         private void buildmenu_Load(object sender, EventArgs e)
         {
-            string cpu = "";
-            string gpu = "";
-            string mb = "";
-            string ram = "";
-            string psu = "";
-            string ccase = "";
-            string moni = "";
-            string keyb = "";
-            string mouse = "";
-            string spk = "";
-            string hdd = "";
-            string ssd = "";
-            string m2 = "";
-            string ramquan = "";
-            string cpuprice = "";
-            string gpuprice = "";
-            string mbprice = "";
-            string ramprice = "";
-            string psuprice = "";
-            string caseprice = "";
-            string moniprice = "";
-            string keybprice = "";
-            string mouseprice = "";
-            string spkprice = "";
-            string hddprice = "";
-            string ssdprice = "";
-            string m2price = "";
 
             string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
 
@@ -80,7 +87,8 @@ namespace PC_Building_Simulator
             }
             string query = "SELECT CPU, [CPU price], GPU, [GPU price], Motherboard, [Motherboard price], [RAM quantity], RAM, " +
                 "[RAM price], PSU, [PSU price], [Computer Case], [Case price], Monitor, [Monitor price], Keyboard, [Keyboard price], " +
-                "Mouse, [Mouse price], Speakers, [Speakers price], HDD, [HDD price], SSD, [SSD price], [M2 SSD], [M2 price] FROM Builds WHERE [user] = @Username";
+                "Mouse, [Mouse price], Speakers, [Speakers price], HDD, [HDD price], SSD, [SSD price], [M2 SSD], [M2 price], " +
+                "Fans, [Fan price], [CPU Air Cooler], [CPU Air Cooler price] FROM Builds WHERE [user] = @Username";
             using (OleDbConnection connection = new OleDbConnection(connectionString))
             {
                 using (OleDbCommand command = new OleDbCommand(query, connection))
@@ -106,6 +114,10 @@ namespace PC_Building_Simulator
                             hdd = reader["HDD"].ToString();
                             ssd = reader["SSD"].ToString();
                             m2 = reader["M2 SSD"].ToString();
+                            fans = reader["Fans"].ToString();
+                            aircooler = reader["CPU Air Cooler"].ToString();
+                            aircoolerprice = reader["CPU Air Cooler price"].ToString();
+                            fanprice = reader["Fan price"].ToString();
                             ramquan = reader["RAM quantity"].ToString(); 
                             mbprice = reader["Motherboard price"].ToString();
                             ramprice = reader["RAM price"].ToString();
@@ -118,31 +130,46 @@ namespace PC_Building_Simulator
                             hddprice = reader["HDD price"].ToString();
                             ssdprice = reader["SSD price"].ToString();
                             m2price = reader["M2 price"].ToString();
+
+                        }
+                        else
+                        {
+                            cpu = "";
+                            cpuprice = "";
+                            gpu = "";
+                            gpuprice = "";
+                            mb = "";
+                            ram = "";
+                            psu = "";
+                            ccase = "";
+                            moni = "";
+                            keyb = "";
+                            mouse = "";
+                            spk = "";
+                            hdd = "";
+                            ssd = "";
+                            m2 = "";
+                            fans = "";
+                            aircooler = "";
+                            aircoolerprice = "";
+                            fanprice = "";
+                            ramquan = "";
+                            mbprice = "";
+                            ramprice = "";
+                            psuprice = "";
+                            caseprice = "";
+                            moniprice = "";
+                            keybprice = "";
+                            mouseprice = "";
+                            spkprice = "";
+                            hddprice = "";
+                            ssdprice = "";
+                            m2price = "";
+
                         }
                     }
                 }
             }
-            label1.Text = cpu;
-            label2.Text = gpu;
-            label3.Text = mb;
-            label4.Text = ram;
-            label6.Text = psu;
-            label7.Text = ccase;
-            label9.Text = moni;
-            label10.Text = keyb;
-            label11.Text = mouse;
-            label12.Text = spk;
-            quan_ram.Text = ramquan;
-            price_cpu.Text = cpuprice;
-            price_gpu.Text = gpuprice;
-            price_mb.Text = mbprice;
-            price_ram.Text = ramprice;
-            price_psu.Text = psuprice;
-            price_case.Text = caseprice;
-            price_moni.Text = moniprice;
-            price_keyb.Text = keybprice;
-            price_mou.Text = mouseprice;
-            price_spk.Text = spkprice;
 
             // Displaying images for components
             string cpuimage = cpu.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
@@ -150,6 +177,9 @@ namespace PC_Building_Simulator
             pBox1.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcecpu);
             if (cpu != "")
             {
+                label1.Text = cpu;
+                label1.Visible = true;
+                price_cpu.Text = cpuprice;
                 pBox1.Visible = true;
                 border1.Visible = true;
                 price_cpu.Visible = true;
@@ -162,6 +192,9 @@ namespace PC_Building_Simulator
             pBox2.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcegpu);
             if (gpu != "")
             {
+                label2.Text = gpu;
+                label2.Visible = true;
+                price_gpu.Text = gpuprice;
                 pBox2.Visible = true;
                 border2.Visible = true;
                 price_gpu.Visible = true;
@@ -174,6 +207,9 @@ namespace PC_Building_Simulator
             pBox3.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcemb);
             if (mb != "")
             {
+                label3.Text = mb;
+                label3.Visible = true;
+                price_mb.Text = mbprice;
                 pBox3.Visible = true;
                 border3.Visible = true;
                 price_mb.Visible = true;
@@ -186,6 +222,10 @@ namespace PC_Building_Simulator
             pBox4.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourceram);
             if (ram != "")
             {
+                label4.Text = ram;
+                label4.Visible = true;
+                quan_ram.Text = ramquan;
+                price_ram.Text = ramprice;
                 pBox4.Visible = true;
                 border4.Visible = true;
                 price_ram.Visible = true;
@@ -193,417 +233,14 @@ namespace PC_Building_Simulator
                 remove_ram.Visible = true;
             }
 
-            //hdd = "";
-            //ssd = "";
-            //m2 = "";
-
-            if (hdd != "" && ssd == "" && m2 == "")
-            {
-                string hddimage = hdd.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
-                string resourcehdd = $"hdd_{hddimage}";
-                if (hdd != "")
-                {
-                    label5.Text = hdd;
-                    price_drive1.Text = hddprice;
-                    pBox5.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcehdd);
-                    pBox5.Visible = true;
-                    border5.Visible = true;
-                    price_drive1.Visible = true;
-                    quan_drive1.Visible = true;
-                    remove_drive1.Visible = true;
-                    remove_drive1.Click += removehdd_Click;
-                }
-            }
-
-            else if (hdd == "" && ssd != "" && m2 == "")
-            {
-                string ssdimage = ssd.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
-                string resourcessd = $"ssd_{ssdimage}";
-                if (ssd != "")
-                {
-                    label5.Text = ssd;
-                    price_drive1.Text = ssdprice;
-                    pBox5.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourcessd);
-                    pBox5.Visible = true;
-                    border5.Visible = true;
-                    price_drive1.Visible = true;
-                    quan_drive1.Visible = true;
-                    remove_drive1.Visible = true;
-                    remove_drive1.Click += removessd_Click;
-                }
-            }
-
-            else if (hdd == "" && ssd == "" && m2 != "")
-            {
-                string m2image = m2.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
-                string resourcem2 = $"m2_{m2image}";
-                if (m2 != "")
-                {
-                    label5.Text = m2;
-                    price_drive1.Text = m2price;
-                    pBox5.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcem2);
-                    pBox5.Visible = true;
-                    border5.Visible = true;
-                    price_drive1.Visible = true;
-                    quan_drive1.Visible = true;
-                    remove_drive1.Visible = true;
-                    remove_drive1.Click += removem2_Click;
-                }
-            }
-
-            else if(hdd != "" && ssd != "" && m2 == "")
-            {
-                panel5.Size = new Size(1017, 108);
-
-                string hddimage = hdd.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
-                string resourcehdd = $"hdd_{hddimage}";
-                if (hdd != "")
-                {
-                    label5.Text = hdd;
-                    price_drive1.Text = hddprice;
-                    pBox5.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourcehdd);
-                    pBox5.Visible = true;
-                    border5.Visible = true;
-                    price_drive1.Visible = true;
-                    quan_drive1.Visible = true;
-                }
-
-                pBoxdrive2.Size = pBox5.Size;
-                pBoxdrive2.SizeMode = pBox5.SizeMode;
-                pBoxdrive2.Location = new Point(314, 68);
-                panel5.Controls.Add(pBoxdrive2);
-
-                // border 2
-                
-                borderdrive2.Enabled = false;
-                borderdrive2.StateCommon.Back.Color1 = Color.White;
-                borderdrive2.StateCommon.Back.Color2 = Color.White;
-                borderdrive2.StateCommon.Border.Color1 = Color.LightGray;
-                borderdrive2.StateCommon.Border.Rounding = 3;
-                borderdrive2.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
-                borderdrive2.Size = border5.Size;
-                borderdrive2.Location = new Point(310, 62);
-                panel5.Controls.Add(borderdrive2);
-
-                // name 2 label
-
-                labeldrive2.Location = new Point(361, 74);
-                labeldrive2.Font = label5.Font;
-                labeldrive2.AutoSize = true;
-                labeldrive2.MouseLeave += label_MouseLeave;
-                labeldrive2.MouseMove += label_MouseMove;
-                panel5.Controls.Add(labeldrive2);
-
-                // quantitiy 2 label
-
-                labelquan2.Location = new Point(781, 74);
-                labelquan2.Font = label5.Font;
-                labelquan2.AutoSize = true;
-                panel5.Controls.Add(labelquan2);
-
-                // price 2 label
-                labelprice2.Location = new Point(885, 74);
-                labelprice2.Font = label5.Font;
-                labelprice2.AutoSize = true;
-                panel5.Controls.Add(labelprice2);
-
-
-                string ssdimage = ssd.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
-                string resourcessd = $"ssd_{ssdimage}";
-                if (ssd != "")
-                {
-                    labeldrive2.Text = ssd;
-                    labelprice2.Text = ssdprice;
-                    pBoxdrive2.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourcessd);
-                    labelquan2.Text = "1";
-                    pBoxdrive2.Visible = true;
-                    borderdrive2.Visible = true;
-                    labelprice2.Visible = true;
-                    labelquan2.Visible = true;
-                }
-            }
-
-            else if (hdd != "" && ssd == "" && m2 != "")
-            {
-                panel5.Size = new Size(1017, 108);
-
-                string hddimage = hdd.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
-                string resourcehdd = $"hdd_{hddimage}";
-                if (hdd != "")
-                {
-                    label5.Text = hdd;
-                    price_drive1.Text = hddprice;
-                    pBox5.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourcehdd);
-                    pBox5.Visible = true;
-                    border5.Visible = true;
-                    price_drive1.Visible = true;
-                    quan_drive1.Visible = true;
-                }
-                pBoxdrive2.Size = pBox5.Size;
-                pBoxdrive2.SizeMode = pBox5.SizeMode;
-                pBoxdrive2.Location = new Point(314, 68);
-                panel5.Controls.Add(pBoxdrive2);
-
-                // border 2
-
-                borderdrive2.Enabled = false;
-                borderdrive2.StateCommon.Back.Color1 = Color.White;
-                borderdrive2.StateCommon.Back.Color2 = Color.White;
-                borderdrive2.StateCommon.Border.Color1 = Color.LightGray;
-                borderdrive2.StateCommon.Border.Rounding = 3;
-                borderdrive2.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
-                borderdrive2.Size = border5.Size;
-                borderdrive2.Location = new Point(310, 62);
-                panel5.Controls.Add(borderdrive2);
-
-                // name 2 label
-
-                labeldrive2.Location = new Point(361, 74);
-                labeldrive2.Font = label5.Font;
-                labeldrive2.AutoSize = true;
-                labeldrive2.MouseLeave += label_MouseLeave;
-                labeldrive2.MouseMove += label_MouseMove;
-                panel5.Controls.Add(labeldrive2);
-
-                // quantitiy 2 label
-
-                labelquan2.Location = new Point(781, 74);
-                labelquan2.Font = label5.Font;
-                labelquan2.AutoSize = true;
-                panel5.Controls.Add(labelquan2);
-
-                // price 2 label
-
-                labelprice2.Location = new Point(885, 74);
-                labelprice2.Font = label5.Font;
-                labelprice2.AutoSize = true;
-                panel5.Controls.Add(labelprice2);
-
-
-                string m2image = m2.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
-                string resourcem2 = $"m2_{m2image}";
-                if (m2 != "")
-                {
-                    labeldrive2.Text = m2;
-                    labelprice2.Text = m2price;
-                    pBoxdrive2.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourcem2);
-                    labelquan2.Text = "1";
-                    pBoxdrive2.Visible = true;
-                    borderdrive2.Visible = true;
-                    labelprice2.Visible = true;
-                    labelquan2.Visible = true;
-                }
-            }
-
-            else if (hdd == "" && ssd != "" && m2 != "")
-            {
-                panel5.Size = new Size(1017, 108);
-
-                string ssdimage = ssd.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
-                string resourcessd = $"ssd_{ssdimage}";
-                if (ssd != "")
-                {
-                    label5.Text = ssd;
-                    price_drive1.Text = ssdprice;
-                    pBox5.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourcessd);
-                    pBox5.Visible = true;
-                    border5.Visible = true;
-                    price_drive1.Visible = true;
-                    quan_drive1.Visible = true;
-                }
-
-                pBoxdrive2.Size = pBox5.Size;
-                pBoxdrive2.SizeMode = pBox5.SizeMode;
-                pBoxdrive2.Location = new Point(314, 68);
-                panel5.Controls.Add(pBoxdrive2);
-
-                // border 2
-
-                borderdrive2.Enabled = false;
-                borderdrive2.StateCommon.Back.Color1 = Color.White;
-                borderdrive2.StateCommon.Back.Color2 = Color.White;
-                borderdrive2.StateCommon.Border.Color1 = Color.LightGray;
-                borderdrive2.StateCommon.Border.Rounding = 3;
-                borderdrive2.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
-                borderdrive2.Size = border5.Size;
-                borderdrive2.Location = new Point(310, 62);
-                panel5.Controls.Add(borderdrive2);
-
-                // name 2 label
-
-                labeldrive2.Location = new Point(361, 74);
-                labeldrive2.Font = label5.Font;
-                labeldrive2.AutoSize = true;
-                labeldrive2.MouseLeave += label_MouseLeave;
-                labeldrive2.MouseMove += label_MouseMove;
-                panel5.Controls.Add(labeldrive2);
-
-                // quantitiy 2 label
-
-                labelquan2.Location = new Point(781, 74);
-                labelquan2.Font = label5.Font;
-                labelquan2.AutoSize = true;
-                panel5.Controls.Add(labelquan2);
-
-                // price 2 label
-
-                labelprice2.Location = new Point(885, 74);
-                labelprice2.Font = label5.Font;
-                labelprice2.AutoSize = true;
-                panel5.Controls.Add(labelprice2);
-
-
-                string m2image = m2.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
-                string resourcem2 = $"m2_{m2image}";
-                if (m2 != "")
-                {
-                    labeldrive2.Text = m2;
-                    labelprice2.Text = m2price;
-                    pBoxdrive2.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourcem2);
-                    labelquan2.Text = "1";
-                    pBoxdrive2.Visible = true;
-                    borderdrive2.Visible = true;
-                    labelprice2.Visible = true;
-                    labelquan2.Visible = true;
-                }
-
-            }
-
-
-            else if (hdd != "" && ssd != "" && m2 != "")
-            {
-                panel5.Size = new Size(1017, 161);
-
-                string hddimage = hdd.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
-                string resourcehdd = $"hdd_{hddimage}";
-                if (hdd != "")
-                {
-                    label5.Text = hdd;
-                    price_drive1.Text = hddprice;
-                    pBox5.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourcehdd);
-                    pBox5.Visible = true;
-                    border5.Visible = true;
-                    price_drive1.Visible = true;
-                    quan_drive1.Visible = true;
-                }
-
-                pBoxdrive2.Size = pBox5.Size;
-                pBoxdrive2.SizeMode = pBox5.SizeMode;
-                pBoxdrive2.Location = new Point(314, 68);
-                panel5.Controls.Add(pBoxdrive2);
-
-                // border 2
-
-                borderdrive2.Enabled = false;
-                borderdrive2.StateCommon.Back.Color1 = Color.White;
-                borderdrive2.StateCommon.Back.Color2 = Color.White;
-                borderdrive2.StateCommon.Border.Color1 = Color.LightGray;
-                borderdrive2.StateCommon.Border.Rounding = 3;
-                borderdrive2.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
-                borderdrive2.Size = border5.Size;
-                borderdrive2.Location = new Point(310, 62);
-                panel5.Controls.Add(borderdrive2);
-
-                // name 2 label
-
-                labeldrive2.Location = new Point(361, 74);
-                labeldrive2.Font = label5.Font;
-                labeldrive2.AutoSize = true;
-                labeldrive2.MouseLeave += label_MouseLeave;
-                labeldrive2.MouseMove += label_MouseMove;
-                panel5.Controls.Add(labeldrive2);
-
-                // quantitiy 2 label
-
-                labelquan2.Location = new Point(781, 74);
-                labelquan2.Font = label5.Font;
-                labelquan2.AutoSize = true;
-                panel5.Controls.Add(labelquan2);
-
-                // price 2 label
-
-                labelprice2.Location = new Point(885, 74);
-                labelprice2.Font = label5.Font;
-                labelprice2.AutoSize = true;
-                panel5.Controls.Add(labelprice2);
-
-
-                string ssdimage = ssd.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
-                string resourcessd = $"ssd_{ssdimage}";
-                if (ssd != "")
-                {
-                    labeldrive2.Text = ssd;
-                    labelprice2.Text = ssdprice;
-                    pBoxdrive2.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourcessd);
-                    labelquan2.Text = "1";
-                    pBoxdrive2.Visible = true;
-                    borderdrive2.Visible = true;
-                    labelprice2.Visible = true;
-                    labelquan2.Visible = true;
-                }
-
-                pBoxdrive3.Size = pBox5.Size;
-                pBoxdrive3.SizeMode = pBox5.SizeMode;
-                pBoxdrive3.Location = new Point(314, 121);
-                panel5.Controls.Add(pBoxdrive3);
-
-                // border 3
-
-                
-                borderdrive3.Enabled = false;
-                borderdrive3.StateCommon.Back.Color1 = Color.White;
-                borderdrive3.StateCommon.Back.Color2 = Color.White;
-                borderdrive3.StateCommon.Border.Color1 = Color.LightGray;
-                borderdrive3.StateCommon.Border.Rounding = 3;
-                borderdrive3.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
-                borderdrive3.Size = border5.Size;
-                borderdrive3.Location = new Point(310, 115);
-                panel5.Controls.Add(borderdrive3);
-
-                // name 3 label
-
-                labeldrive3.Location = new Point(361, 127);
-                labeldrive3.Font = label5.Font;
-                labeldrive3.AutoSize = true;
-                labeldrive3.MouseLeave += label_MouseLeave;
-                labeldrive3.MouseMove += label_MouseMove;
-                panel5.Controls.Add(labeldrive3);
-
-                // quantitiy 3 label
-
-                labelquan3.Location = new Point(781, 127);
-                labelquan3.Font = label5.Font;
-                labelquan3.AutoSize = true;
-                panel5.Controls.Add(labelquan3);
-
-                // price 3 label
-
-                labelprice3.Location = new Point(885, 127);
-                labelprice3.Font = label5.Font;
-                labelprice3.AutoSize = true;
-                panel5.Controls.Add(labelprice3);
-
-
-                string m2image = m2.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
-                string resourcem2 = $"m2_{m2image}";
-                if (m2 != "")
-                {
-                    labeldrive3.Text = m2;
-                    labelprice3.Text = m2price;
-                    pBoxdrive3.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourcem2);
-                    labelquan3.Text = "1";
-                    pBoxdrive3.Visible = true;
-                    borderdrive3.Visible = true;
-                    labelprice3.Visible = true;
-                    labelquan3.Visible = true;
-                }
-            }
-
             string psuimage = psu.Replace(' ', '_').Replace('-', '_').Replace('!', '_');
             string resourcepsu = $"psu_{psuimage}";
             pBox6.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcepsu);
             if (psu != "")
             {
+                label6.Text = psu;
+                label6.Visible = true;
+                price_psu.Text = psuprice;
                 pBox6.Visible = true;
                 border6.Visible = true;
                 price_psu.Visible = true;
@@ -616,6 +253,9 @@ namespace PC_Building_Simulator
             pBox7.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcecase);
             if (ccase != "")
             {
+                label7.Text = ccase;
+                label7.Visible = true;
+                price_case.Text = caseprice;
                 pBox7.Visible = true;
                 border7.Visible = true;
                 price_case.Visible = true;
@@ -628,6 +268,9 @@ namespace PC_Building_Simulator
             pBox9.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcemoni);
             if (moni != "")
             {
+                label9.Text = moni;
+                label9.Visible = true;
+                price_moni.Text = moniprice;
                 pBox9.Visible = true;
                 border9.Visible = true;
                 price_moni.Visible = true;
@@ -640,6 +283,9 @@ namespace PC_Building_Simulator
             pBox10.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcekeyb);
             if (keyb != "")
             {
+                label10.Text = keyb;
+                label10.Visible = true;
+                price_keyb.Text = keybprice;
                 pBox10.Visible = true;
                 border10.Visible = true;
                 price_keyb.Visible = true;
@@ -652,6 +298,9 @@ namespace PC_Building_Simulator
             pBox11.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcemou);
             if (mouse != "")
             {
+                label11.Text = mouse;
+                label11.Visible = true;
+                price_mou.Text = mouseprice;
                 pBox11.Visible = true;
                 border11.Visible = true;
                 price_mou.Visible = true;
@@ -664,14 +313,214 @@ namespace PC_Building_Simulator
             pBox12.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcespk);
             if (spk != "")
             {
+                label12.Text = spk;
+                label12.Visible = true;
+                price_spk.Text = spkprice;
                 pBox12.Visible = true;
                 border12.Visible = true;
                 price_spk.Visible = true;
                 quan_spk.Visible = true;
                 remove_spk.Visible = true;
             }
+
+            string fanimage = fans.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('+', '_').Replace('.', '_');
+            string resourcefans = $"fan_{fanimage}";
+            pBoxfans.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcefans);
+            if (fans != "")
+            {
+                label_fans.Text = fans;
+                label_fans.Visible = true ;
+                price_fans.Text = fanprice;
+                pBoxfans.Visible = true;
+                borderfans.Visible = true;
+                price_fans.Visible = true;
+                quan_fans.Visible = true;
+                remove_fans.Visible = true;
+            }
+
+            string cpucoolimage = aircooler.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('+', '_').Replace('.', '_');
+            string resourcecpucool = $"air_{cpucoolimage}";
+            pBoxcpucool.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(resourcecpucool);
+            if (aircooler != "")
+            {
+                label_cpucooler.Text = aircooler;
+                label_cpucooler.Visible = true;
+                price_cpucool.Text = aircoolerprice;
+                pBoxcpucool.Visible = true;
+                bordercpucool.Visible = true;
+                price_cpucool.Visible = true;
+                quan_cpucool.Visible = true;
+                remove_cpucool.Visible = true;
+            }
+
+            if (hdd != "" && ssd != "" && m2 == "")
+            {
+                drivecount = 2;
+            }
+            else if (hdd == "" && ssd != "" && m2 != "")
+            {
+                drivecount = 2;
+            }
+
+            else if (hdd != "" && ssd == "" && m2 != "")
+            {
+                drivecount = 2;
+            }
+
+            else if (hdd != "" && ssd != "" && m2 != "")
+            {
+                drivecount = 3;
+            }
+            drivepanels();
+
+
+            if (drivecount == 1)
+            {
+                panel5.Size = new Size(1017, 55);
+                if (hdd != "")
+                {
+                    selectedhdd_1();
+                }
+
+                else if (ssd != "")
+                {
+                    selectedssd_1();
+                }
+
+                else if (m2 != "")
+                {
+                    selectedm2_1();
+                }
+            }
+
+            else if (drivecount == 2)
+            {
+                panel5.Size = new Size(1017, 108);
+                if (hdd != "" && ssd != "")
+                {
+                    selectedhdd_1();
+                    selectedssd_2();
+                }
+
+                else if(ssd != "" && m2 != "")
+                {
+                    selectedssd_1();
+                    selectedm2_2();
+                }
+
+                else if(hdd != "" && m2 != "")
+                {
+                    selectedhdd_1();
+                    selectedm2_2();
+                }
+
+            }
+
+            else if(drivecount == 3)
+            {
+                panel5.Size = new Size(1017, 161);
+                selectedhdd_1();
+                selectedssd_2();
+                selectedm2_3();
+            }
         }
 
+        private void selectedhdd_1()
+        {
+            string driveimage = hdd.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
+            string image = $"hdd_{driveimage}";
+            drive1name.Visible = true;
+            drive1name.Text = hdd;
+            drive1price.Text = hddprice;
+            drive1pbox.Image = (Image)Properties.Resources.ResourceManager.GetObject(image);
+            drive1pbox.Visible = true;
+            drive1border.Visible = true;
+            drive1price.Visible = true;
+            drive1quan.Visible = true;
+            remove_drive1.Visible = true;
+            remove_drive1.Click += removehdd_Click;
+        }
+
+        private void selectedssd_1()
+        {
+            string driveimage = ssd.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
+            string image = $"ssd_{driveimage}";
+            drive1name.Visible = true;
+            drive1name.Text = ssd;
+            drive1price.Text = ssdprice;
+            drive1pbox.Image = (Image)Properties.Resources.ResourceManager.GetObject(image);
+            drive1pbox.Visible = true;
+            drive1border.Visible = true;
+            drive1price.Visible = true;
+            drive1quan.Visible = true;
+            remove_drive1.Visible = true;
+            remove_drive1.Click += removessd_Click;
+        }
+        private void selectedssd_2()
+        {
+            string driveimage = ssd.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
+            string image = $"ssd_{driveimage}";
+            drive2name.Visible = true;
+            drive2name.Text = ssd;
+            drive2price.Text = ssdprice;
+            drive2pbox.Image = (Image)Properties.Resources.ResourceManager.GetObject(image);
+            drive2pbox.Visible = true;
+            drive2border.Visible = true;
+            drive2price.Visible = true;
+            drive2quan.Text = "1";
+            drive2quan.Visible = true;
+            remove_drive2.Visible = true;
+            remove_drive2.Click += removessd_Click;
+        }
+        private void selectedm2_1()
+        {
+            string driveimage = m2.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
+            string image = $"m2_{driveimage}";
+            drive1name.Visible = true;
+            drive1name.Text = m2;
+            drive1price.Text = m2price;
+            drive1pbox.Image = (Image)Properties.Resources.ResourceManager.GetObject(image);
+            drive1pbox.Visible = true;
+            drive1border.Visible = true;
+            drive1price.Visible = true;
+            drive1quan.Visible = true;
+            remove_drive1.Visible = true;
+            remove_drive1.Click += removem2_Click;
+        }
+
+        private void selectedm2_2()
+        {
+            string driveimage = m2.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
+            string image = $"m2_{driveimage}";
+            drive2name.Visible = true;
+            drive2name.Text = m2;
+            drive2price.Text = m2price;
+            drive2pbox.Image = (Image)Properties.Resources.ResourceManager.GetObject(image);
+            drive2pbox.Visible = true;
+            drive2border.Visible = true;
+            drive2price.Visible = true;
+            drive2quan.Text = "1";
+            drive2quan.Visible = true;
+            remove_drive2.Visible = true;
+            remove_drive2.Click += removem2_Click;
+        }
+
+        private void selectedm2_3()
+        {
+            string driveimage = m2.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
+            string image = $"m2_{driveimage}";
+            drive3name.Visible = true;
+            drive3name.Text = m2;
+            drive3price.Text = m2price;
+            drive3pbox.Image = (Image)Properties.Resources.ResourceManager.GetObject(image);
+            drive3pbox.Visible = true;
+            drive3border.Visible = true;
+            drive3price.Visible = true;
+            drive3quan.Text = "1";
+            drive3quan.Visible = true;
+            remove_drive3.Visible = true;
+            remove_drive3.Click += removem2_Click;
+        }
         private void InitializeDisplayManager()
         {
             buildmenu buildMenuForm = this; 
@@ -1019,12 +868,6 @@ namespace PC_Building_Simulator
         private void removehdd_Click(object sender, EventArgs e)
         {
 
-            label5.Text = "";
-            price_drive1.Text = "";
-            pBox5.Visible = false;
-            border5.Visible = false;
-            price_drive1.Visible = false;
-            quan_drive1.Visible = false;
             string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
             string userToUpdate = user;
 
@@ -1047,16 +890,43 @@ namespace PC_Building_Simulator
             {
                 MessageBox.Show("Error updating data: " + ex.Message);
             }
+
+            if (drivecount == 1)
+            {
+                drive1name.Visible = false;
+                drive1name.Text = "";
+                drive1price.Text = "";
+                drive1pbox.Visible = false;
+                drive1border.Visible = false;
+                drive1price.Visible = false;
+                drive1quan.Visible = false;
+                remove_drive1.Visible = false;
+            }
+
+            else if(drivecount == 2 && ssd != "")
+            {
+                selectedssd_1();
+                panel5.Size = new Size(1017, 55);
+                drivecount = 1;
+            }
+            else if (drivecount == 2 && m2 != "")
+            {
+                selectedm2_1();
+                panel5.Size = new Size(1017, 55);
+                drivecount = 1;
+            }
+
+            else if (drivecount == 3)
+            {
+                selectedssd_1();
+                selectedm2_2();
+                panel5.Size = new Size(1017, 108);
+                drivecount = 2;
+            }
+
         }
         private void removessd_Click(object sender, EventArgs e)
         {
-
-            label5.Text = "";
-            price_drive1.Text = "";
-            pBox5.Visible = false;
-            border5.Visible = false;
-            price_drive1.Visible = false;
-            quan_drive1.Visible = false;
             string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
             string userToUpdate = user;
 
@@ -1079,17 +949,41 @@ namespace PC_Building_Simulator
             {
                 MessageBox.Show("Error updating data: " + ex.Message);
             }
+            if (drivecount == 1)
+            {
+                drive1name.Visible = false;
+                drive1name.Text = "";
+                drive1price.Text = "";
+                drive1pbox.Visible = false;
+                drive1border.Visible = false;
+                drive1price.Visible = false;
+                drive1quan.Visible = false;
+                remove_drive1.Visible = false;
+            }
+            else if(drivecount == 2 && hdd != "")
+            {
+                selectedhdd_1();
+                panel5.Size = new Size(1017, 55);
+                drivecount = 1;
+
+            }
+            else if (drivecount == 2 && m2 != "")
+            {
+                selectedm2_1();
+                panel5.Size = new Size(1017, 55);
+                drivecount = 1;
+            }
+            else if(drivecount == 3)
+            {
+                selectedhdd_1();
+                selectedm2_2();
+                panel5.Size = new Size(1017, 108);
+                drivecount = 2;
+            }
         }
 
         private void removem2_Click(object sender, EventArgs e)
         {
-
-            label5.Text = "";
-            price_drive1.Text = "";
-            pBox5.Visible = false;
-            border5.Visible = false;
-            price_drive1.Visible = false;
-            quan_drive1.Visible = false;
             string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
             string userToUpdate = user;
 
@@ -1112,9 +1006,136 @@ namespace PC_Building_Simulator
             {
                 MessageBox.Show("Error updating data: " + ex.Message);
             }
+            if (drivecount == 1)
+            {
+                drive1name.Text = "";
+                drive1price.Text = "";
+                drive1pbox.Visible = false;
+                drive1border.Visible = false;
+                drive1price.Visible = false;
+                drive1quan.Visible = false;
+                remove_drive1.Visible = false;
+            }
+
+            else if (drivecount == 2 && hdd != "")
+            {
+                selectedhdd_1();
+                panel5.Size = new Size(1017, 55);
+                drivecount = 1;
+
+            }
+            else if (drivecount == 2 && ssd != "")
+            {
+                selectedssd_1();
+                panel5.Size = new Size(1017, 55);
+                drivecount = 1;
+            }
+
+            else if (drivecount == 3)
+            {
+                selectedhdd_1();
+                selectedssd_2();
+                panel5.Size = new Size(1017, 108);
+                drivecount = 2;
+            }
         }
 
+        private void drivepanels()
+        {
+            // pbox 2 and 3
+            drive2pbox.Size = drive1pbox.Size;
+            drive2pbox.BackColor = Color.White;
+            drive2pbox.SizeMode = drive1pbox.SizeMode;
+            drive2pbox.Location = new Point(314, 68);
+            panel5.Controls.Add(drive2pbox);
 
+            drive3pbox.Size = drive1pbox.Size;
+            drive3pbox.BackColor = Color.White;
+            drive3pbox.SizeMode = drive1pbox.SizeMode;
+            drive3pbox.Location = new Point(314, 121);
+            panel5.Controls.Add(drive3pbox);
+
+            // border 2 && 3
+
+            drive2border.Enabled = false;
+            drive2border.StateCommon.Back.Color1 = Color.White;
+            drive2border.StateCommon.Back.Color2 = Color.White;
+            drive2border.StateCommon.Border.Color1 = Color.LightGray;
+            drive2border.StateCommon.Border.Rounding = 3;
+            drive2border.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
+            drive2border.Size = drive1border.Size;
+            drive2border.Location = new Point(310, 62);
+            panel5.Controls.Add(drive2border);
+
+            drive3border.Enabled = false;
+            drive3border.StateCommon.Back.Color1 = Color.White;
+            drive3border.StateCommon.Back.Color2 = Color.White;
+            drive3border.StateCommon.Border.Color1 = Color.LightGray;
+            drive3border.StateCommon.Border.Rounding = 3;
+            drive3border.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
+            drive3border.Size = drive1border.Size;
+            drive3border.Location = new Point(310, 115);
+            panel5.Controls.Add(drive3border);
+
+            // name 2 and 3 label
+
+            drive2name.Location = new Point(361, 74);
+            drive2name.Font = drive1name.Font;
+            drive2name.AutoSize = true;
+            drive2name.MouseLeave += label_MouseLeave;
+            drive2name.MouseMove += label_MouseMove;
+            panel5.Controls.Add(drive2name);
+
+            drive3name.Location = new Point(361, 127);
+            drive3name.Font = drive1name.Font;
+            drive3name.AutoSize = true;
+            drive3name.MouseLeave += label_MouseLeave;
+            drive3name.MouseMove += label_MouseMove;
+            panel5.Controls.Add(drive3name);
+
+            // quantity 2 and 3 label
+
+            drive2quan.Location = new Point(781, 74);
+            drive2quan.Font = drive1name.Font;
+            drive2quan.AutoSize = true;
+            panel5.Controls.Add(drive2quan);
+
+            drive3quan.Location = new Point(781, 127);
+            drive3quan.Font = drive1name.Font;
+            drive3quan.AutoSize = true;
+            panel5.Controls.Add(drive3quan);
+
+            // price 2 and 3 label
+
+            drive2price.Location = new Point(885, 74);
+            drive2price.Font = drive1name.Font;
+            drive2price.AutoSize = true;
+            panel5.Controls.Add(drive2price);
+
+            drive3price.Location = new Point(885, 127);
+            drive3price.Font = drive1name.Font;
+            drive3price.AutoSize = true;
+            panel5.Controls.Add(drive3price);
+
+            // remove 2 and 3
+
+            remove_drive2.Location = new Point(969, 79);
+            remove_drive2.Text = remove_drive1.Text;
+            remove_drive2.Font = remove_drive1.Font; 
+            remove_drive2.MouseLeave += remove_MouseLeave;
+            remove_drive2.MouseMove += remove_MouseMove;
+            remove_drive2.AutoSize = true;
+            panel5.Controls.Add(remove_drive2);
+
+            remove_drive3.Location = new Point(969, 133);
+            remove_drive3.Text = remove_drive1.Text;
+            remove_drive3.Font = remove_drive1.Font;
+            remove_drive3.MouseLeave += remove_MouseLeave;
+            remove_drive3.MouseMove += remove_MouseMove;
+            remove_drive3.AutoSize = true;
+            panel5.Controls.Add(remove_drive3);
+
+        }
         private void remove_MouseLeave(object sender, EventArgs e)
         {
             Label label = sender as Label;

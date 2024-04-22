@@ -118,6 +118,66 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="air_be_Quiet__Dark_Rock_Pro_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_be Quiet! Dark Rock Pro 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_Be_Quiet__Pure_Rock_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_Be_Quiet__Pure_Rock_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_Cooler_Master_Hyper_212_EVO_V2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_Cooler Master Hyper 212 EVO V2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_Cooler_Master_Hyper_212_Halo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_Cooler Master Hyper 212 Halo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_Cooler_Master_Hyper_H412R" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_Cooler Master Hyper H412R.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_Corsair_A115" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_Corsair A115.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_Corsair_A500" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_Corsair A500.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_Cryorig_C7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_Cryorig C7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_Cryorig_H7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_Cryorig H7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_DeepCool_AK620" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_DeepCool AK620.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_Deepcool_AS500_Plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_Deepcool AS500 Plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_DeepCool_Assassin_IV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_DeepCool Assassin IV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_ID_Cooling_SE_214_XT_ARGB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_ID-Cooling SE-214-XT ARGB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_Jonsbo_CR_1200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_Jonsbo CR-1200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_Noctua_NH_D15_Chromax_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_Noctua NH-D15 Chromax Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_Noctua_NH_L9_series" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_Noctua NH-L9 series.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_Noctua_NH_U14S" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_Noctua NH-U14S.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_Thermalright_AXP120_X67" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_Thermalright AXP120-X67.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_Thermalright_Peerless_Assassin_120_SE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_Thermalright Peerless Assassin 120 SE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_Thermalright_Phantom_Spirit_120_EVO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air_Thermalright Phantom Spirit 120 EVO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ASRock_AMD_Radeon_RX_6600_Challenger_D_8GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ASRock AMD Radeon RX 6600 Challenger D 8GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -249,6 +309,66 @@
   </data>
   <data name="EVGA_GeForce_RTX_2080_Super" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EVGA GeForce RTX 2080 Super.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_Asus_TUF_Gaming_TF120_ARGB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_Asus TUF Gaming TF120 ARGB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_Be_Quiet__PURE_WINGS_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_Be Quiet! PURE WINGS 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_Be_Quiet__Silent_Wings_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_Be Quiet! Silent Wings 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_Cooler_Master_MasterFan_MF120_Halo_RGB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_Cooler Master MasterFan MF120 Halo RGB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_Corsair_iCUE_AR120_Digital_RGB_120mm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_Corsair iCUE AR120 Digital RGB 120mm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_Corsair_iCUE_LINK_QX120_RGB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_Corsair iCUE LINK QX120 RGB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_Corsair_ML120_PRO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_Corsair ML120 PRO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_DeepCool_CF120_3_IN_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_DeepCool CF120-3 IN 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_EK_Vardar_EVO_120ER_RGB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_EK-Vardar EVO 120ER RGB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_Lian_Li_UNI_FAN_SL120_V2_RGB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_Lian Li UNI FAN SL120 V2 RGB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_MSI_MAG_MAX_F20A_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_MSI MAG MAX F20A-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_MSI_MEG_SILENT_GALE_P12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_MSI MEG SILENT GALE P12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_Noctua_NF_A12x25_PWM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_Noctua NF-A12x25 PWM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_Noctua_NF_P12_redux_1700" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_Noctua NF-P12 redux-1700.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_NZXT_Aer_P_120MM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_NZXT Aer P 120MM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_NZXT_F120_RGB_Duo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_NZXT F120 RGB Duo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_Phanteks_PH_F120MP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_Phanteks PH-F120MP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_ROG_STRIX_XF_120" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_ROG STRIX XF 120.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_Scythe_Kaze_Flex_120_PWM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_Scythe Kaze Flex 120 PWM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fan_Thermaltake_ToughFan_12_Turbo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fan_Thermaltake ToughFan 12 Turbo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Gigabyte_GeForce_GTX_1070" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gigabyte GeForce GTX 1070.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

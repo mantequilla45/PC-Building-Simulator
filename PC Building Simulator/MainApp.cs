@@ -26,7 +26,8 @@ namespace PC_Building_Simulator
             userlabel.Text = username;
             displayManager = new DisplayManager(this);
 
-            displayManager.menuselect(1);
+
+            
 
             dbManager = new DatabaseManager("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb");
             dbManager.OpenConnection();
@@ -53,10 +54,14 @@ namespace PC_Building_Simulator
             dbManager.CloseConnection();
 
             but_build_Click(this, EventArgs.Empty);
+
+
+            displayManager.menuselect(19);
         }
 
         private void MainApp_Load(object sender, EventArgs e)
         {
+            
         }
         //------------------------------ build button -----------------------------
         private void but_build_Click(object sender, EventArgs e)
@@ -77,7 +82,14 @@ namespace PC_Building_Simulator
         }
         private void but_build_MouseMove(object sender, MouseEventArgs e)
         {
-           if (clicked && !bluebar1.Visible)
+           
+            if (!clicked)
+            {
+                DisplayManager.ButtonAppearance.Activate.Build(displayManager.mainApp);
+                bluebar1.Visible = false;
+            }
+
+            else if (clicked && !bluebar1.Visible)
             {
                 DisplayManager.ButtonAppearance.Activate.Build(displayManager.mainApp);
                 bluebar1.Visible = false;
@@ -85,7 +97,10 @@ namespace PC_Building_Simulator
         }
         private void but_build_MouseLeave(object sender, EventArgs e)
         {
-            if (clicked && !bluebar1.Visible)
+            if (!clicked)
+                DisplayManager.ButtonAppearance.Reset.Build(displayManager.mainApp);
+
+            else if (clicked && !bluebar1.Visible)
             {
                 DisplayManager.ButtonAppearance.Reset.Build(displayManager.mainApp);
             }
@@ -93,7 +108,7 @@ namespace PC_Building_Simulator
         //---------------------------------------------------------------------------
 
         //------------------------------ cpu menu -----------------------------------
-        private void but_cpu_Click(object sender, EventArgs e)
+        public void but_cpu_Click(object sender, EventArgs e)
         {
             if (label_menu.Text == "CPU")
             {
@@ -138,7 +153,7 @@ namespace PC_Building_Simulator
         //---------------------------------------------------------------------------
 
         //------------------------------ gpu menu -----------------------------------
-        private void but_gpu_Click(object sender, EventArgs e)
+        public void but_gpu_Click(object sender, EventArgs e)
         {
             if (label_menu.Text == "GPU")
             {
@@ -752,6 +767,14 @@ namespace PC_Building_Simulator
                     displayManager.menuselect(16);
                     back = 5;
                     break;
+                case 16:
+                    displayManager.menuselect(17);
+                    back = 8;
+                    break;
+                case 17:
+                    displayManager.menuselect(18);
+                    back = 8;
+                    break;
 
                 default:
                     break;
@@ -774,6 +797,26 @@ namespace PC_Building_Simulator
         private void backicon_MouseLeave(object sender, EventArgs e)
         {
             backicon.BackColor = Color.WhiteSmoke;
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            displayManager.menuselect(19);
+            displayManager.otherButton_Click(true);
+        }
+
+        private void but_guide_Click(object sender, EventArgs e)
+        {
+            displayManager.menuselect(20);
+            displayManager.otherButton_Click(true);
         }
     }
 }

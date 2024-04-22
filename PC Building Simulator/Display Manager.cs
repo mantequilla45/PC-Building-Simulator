@@ -16,6 +16,7 @@ namespace PC_Building_Simulator
         private productmenu productMenuForm;
         private productspecs productSpecsForm;
         private storagemenu storageMenuForm;
+        private coolermenu coolerMenuForm;
         public DisplayManager(buildmenu buildMenuForm)
         {
             this.buildMenuForm = buildMenuForm;
@@ -35,6 +36,10 @@ namespace PC_Building_Simulator
         public DisplayManager(MainApp mainApp)
         {
             this.mainApp = mainApp;
+        }
+        public DisplayManager(coolermenu coolerMenuForm)
+        {
+            this.coolerMenuForm = coolerMenuForm;
         }
         public static class ButtonAppearance
         {
@@ -273,9 +278,16 @@ namespace PC_Building_Simulator
                 storageMenuForm = null;
             }
 
+            if (coolerMenuForm != null)
+            {
+                coolerMenuForm.Dispose();
+                coolerMenuForm = null;
+            }
+
         }
         public void menuselect(int menuchoice)
         {
+            
             MemoryManager memoryManager;
             productmenu productpanel;
             switch (menuchoice)
@@ -370,7 +382,7 @@ namespace PC_Building_Simulator
                 case 9:
                     mainApp.label_menu.Text = "Cooling System";
                     mainApp.panelmain.Controls.Clear();
-                    coolermenu coolerpanel = new coolermenu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    coolermenu coolerpanel = new coolermenu(mainApp) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
                     coolerpanel.FormBorderStyle = FormBorderStyle.None;
                     mainApp.panelmain.Controls.Add(coolerpanel);
                     DisposeAllMenuForms();
@@ -453,8 +465,55 @@ namespace PC_Building_Simulator
                     productMenuForm = productpanel;
                     break;
 
+                case 17:
+                    mainApp.label_menu.Text = "Fans";
+                    mainApp.panelmain.Controls.Clear();
+                    productpanel = new productmenu(mainApp, 16) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    productpanel.FormBorderStyle = FormBorderStyle.None;
+                    mainApp.panelmain.Controls.Add(productpanel);
+                    productpanel.Show();
+                    DisposeAllMenuForms();
+                    productMenuForm = productpanel;
+                    break;
+                case 18:
+                    mainApp.label_menu.Text = "CPU Air Cooler";
+                    mainApp.panelmain.Controls.Clear();
+                    productpanel = new productmenu(mainApp, 17) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    productpanel.FormBorderStyle = FormBorderStyle.None;
+                    mainApp.panelmain.Controls.Add(productpanel);
+                    productpanel.Show();
+                    DisposeAllMenuForms();
+                    productMenuForm = productpanel;
+                    break;
+
+                case 19:
+                    mainApp.label_menu.Text = "Main Menu";
+                    mainApp.panelmain.Controls.Clear();
+                    welcomeform welcome = new welcomeform(mainApp) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    welcome.FormBorderStyle = FormBorderStyle.None;
+                    mainApp.panelmain.Controls.Add(welcome);
+                    welcome.Show();
+                    DisposeAllMenuForms();
+                    break;
+
+                case 20:
+                    mainApp.label_menu.Text = "Guide";
+                    mainApp.panelmain.Controls.Clear();
+                    buildguide buildguide = new buildguide(mainApp) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    buildguide.FormBorderStyle = FormBorderStyle.None;
+                    mainApp.panelmain.Controls.Add(buildguide);
+                    buildguide.Show();
+                    DisposeAllMenuForms();
+                    break;
+
                 default:
                     break;
+            }
+            if (mainApp.label_menu.Text != "Guide")
+            {
+                mainApp.but_guide.StateCommon.Back.Color1 = Color.FromArgb(250, 252, 252);
+                mainApp.but_guide.StateCommon.Back.Color2 = Color.FromArgb(250, 252, 252);
+                mainApp.but_guide.StateCommon.Content.ShortText.Color1 = Color.Gray;
             }
         }
         public void cpumenu(int num, Label strprice)
@@ -839,6 +898,62 @@ namespace PC_Building_Simulator
                 productSpecs.Show();
             }
         }
+        public void fanmenu(int num, Label strprice)
+        {
+            string[] fanNames = {
+                "Be Quiet! Silent Wings 3", "Lian Li UNI FAN SL120 V2 RGB", "EK-Vardar EVO 120ER RGB", "Phanteks PH-F120MP",
+                "Thermaltake ToughFan 12 Turbo", "Be Quiet! PURE WINGS 2", "MSI MEG SILENT GALE P12", "NZXT Aer P 120MM",
+                "Cooler Master MasterFan MF120 Halo RGB", "DeepCool CF120-3 IN 1", "Corsair ML120 PRO", "ROG STRIX XF 120",
+                "Corsair iCUE AR120 Digital RGB 120mm", "MSI MAG MAX F20A-1", "Asus TUF Gaming TF120 ARGB", "Noctua NF-A12x25 PWM",
+                "Noctua NF-P12 redux-1700", "Scythe Kaze Flex 120 PWM", "Corsair iCUE LINK QX120 RGB", "NZXT F120 RGB Duo"
+            };
 
+            string price = strprice.Text;
+            if (num >= 1 && num <= fanNames.Length)
+            {
+                string fanName = fanNames[num - 1];
+                mainApp.label_menu.Text = $"{fanName} Specifications";
+
+                mainApp.panelmain.Controls.Clear();
+                productspecs productSpecs = new productspecs(fanName, 16, mainApp, price)
+                {
+                    Dock = DockStyle.Fill,
+                    TopLevel = false,
+                    TopMost = true,
+                    FormBorderStyle = FormBorderStyle.None
+                };
+                mainApp.panelmain.Controls.Add(productSpecs);
+                productSpecs.Show();
+            }
+        }
+
+        public void aircoolmenu(int num, Label strprice)
+        {
+            string[] cpuCoolerNames = {
+                "Thermalright Phantom Spirit 120 EVO", "Thermalright Peerless Assassin 120 SE", "Deepcool AS500 Plus",
+                "Noctua NH-U14S", "Be Quiet! Pure Rock 2", "Noctua NH-D15 Chromax Black",
+                "Cooler Master Hyper 212 Halo", "Cryorig C7", "Thermalright AXP120-X67", "ID-Cooling SE-214-XT ARGB",
+                "DeepCool Assassin IV", "Jonsbo CR-1200", "Corsair A115", "DeepCool AK620", "Cooler Master Hyper H412R",
+                "Noctua NH-L9 series", "Cooler Master Hyper 212 EVO V2", "Cryorig H7", "be Quiet! Dark Rock Pro 4", "Corsair A500"
+            };
+
+            string price = strprice.Text;
+            if (num >= 1 && num <= cpuCoolerNames.Length)
+            {
+                string coolerName = cpuCoolerNames[num - 1];
+                mainApp.label_menu.Text = $"{coolerName} Specifications";
+
+                mainApp.panelmain.Controls.Clear();
+                productspecs productSpecs = new productspecs(coolerName, 17, mainApp, price)
+                {
+                    Dock = DockStyle.Fill,
+                    TopLevel = false,
+                    TopMost = true,
+                    FormBorderStyle = FormBorderStyle.None
+                };
+                mainApp.panelmain.Controls.Add(productSpecs);
+                productSpecs.Show();
+            }
+        }
     }
 }

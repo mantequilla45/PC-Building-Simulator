@@ -56,6 +56,12 @@
     <Compile Include="adminpanel.Designer.cs">
       <DependentUpon>adminpanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="buildguide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buildguide.Designer.cs">
+      <DependentUpon>buildguide.cs</DependentUpon>
+    </Compile>
     <Compile Include="buildmenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,8 +126,17 @@
     <Compile Include="storagemenu.Designer.cs">
       <DependentUpon>storagemenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="welcomeform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="welcomeform.Designer.cs">
+      <DependentUpon>welcomeform.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="adminpanel.resx">
       <DependentUpon>adminpanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buildguide.resx">
+      <DependentUpon>buildguide.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="buildmenu.resx">
       <DependentUpon>buildmenu.cs</DependentUpon>
@@ -154,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="storagemenu.resx">
       <DependentUpon>storagemenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="welcomeform.resx">
+      <DependentUpon>welcomeform.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -950,6 +968,126 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\m2_Silicon Power Ace A55 1TB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_Asus TUF Gaming TF120 ARGB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_Be Quiet! PURE WINGS 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_Be Quiet! Silent Wings 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_Cooler Master MasterFan MF120 Halo RGB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_Corsair iCUE AR120 Digital RGB 120mm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_Corsair iCUE LINK QX120 RGB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_Corsair ML120 PRO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_DeepCool CF120-3 IN 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_EK-Vardar EVO 120ER RGB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_Lian Li UNI FAN SL120 V2 RGB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_MSI MAG MAX F20A-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_MSI MEG SILENT GALE P12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_Noctua NF-A12x25 PWM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_Noctua NF-P12 redux-1700.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_NZXT Aer P 120MM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_NZXT F120 RGB Duo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_Phanteks PH-F120MP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_ROG STRIX XF 120.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_Scythe Kaze Flex 120 PWM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fan_Thermaltake ToughFan 12 Turbo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_Corsair A115.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_Corsair A500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_Cryorig C7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_Cryorig H7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_DeepCool AK620.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_Deepcool AS500 Plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_DeepCool Assassin IV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_ID-Cooling SE-214-XT ARGB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_Jonsbo CR-1200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_Noctua NH-D15 Chromax Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_Noctua NH-L9 series.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_Noctua NH-U14S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_Thermalright AXP120-X67.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_Thermalright Peerless Assassin 120 SE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_Thermalright Phantom Spirit 120 EVO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_be Quiet! Dark Rock Pro 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_Be_Quiet__Pure_Rock_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_Cooler Master Hyper 212 EVO V2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_Cooler Master Hyper 212 Halo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air_Cooler Master Hyper H412R.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

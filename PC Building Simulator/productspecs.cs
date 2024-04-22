@@ -118,15 +118,15 @@ namespace PC_Building_Simulator
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds (CPU, [user], [CPU price]) VALUES (@CPU, @Username, @price)";
+                        string insertQuery = "INSERT INTO Builds ([user], [CPU], [CPU price]) VALUES (@Username, @CPU, @price)";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
                             {
+                                insertCmd.Parameters.AddWithValue("@Username", user);
                                 insertCmd.Parameters.AddWithValue("@CPU", choice);
                                 insertCmd.Parameters.AddWithValue("@price", price);
-                                insertCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = insertCmd.ExecuteNonQuery();
                             }
@@ -169,15 +169,15 @@ namespace PC_Building_Simulator
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds (GPU, [user], [GPU price]) VALUES (@GPU, @Username, @price)";
+                        string insertQuery = "INSERT INTO Builds ([user], GPU, [GPU price]) VALUES (@Username, @GPU, @price)";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
                             {
+                                insertCmd.Parameters.AddWithValue("@Username", user);
                                 insertCmd.Parameters.AddWithValue("@GPU", choice);
                                 insertCmd.Parameters.AddWithValue("@price", price);
-                                insertCmd.Parameters.AddWithValue("@Username", user);
                                 label2.Visible = true;
                                 int rowsAffected = insertCmd.ExecuteNonQuery();
                             }
@@ -287,7 +287,7 @@ namespace PC_Building_Simulator
                             }
                         }
                         catch (Exception ex)
-                        {
+                        {   
                             MessageBox.Show("Error inserting RAM and RAM quantity for new user: " + ex.Message);
                         }
                         finally
@@ -752,6 +752,108 @@ namespace PC_Building_Simulator
                     }
                     break;
 
+                case 16:
+                    if (userCount > 0)
+                    {
+                        string updateQuery = "UPDATE Builds SET [Fans] = @fans, [Fan price] = @price WHERE [user] = @Username";
+                        try
+                        {
+                            dbManager.OpenConnection();
+                            using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                            {
+                                updateCmd.Parameters.AddWithValue("@fans", choice);
+                                updateCmd.Parameters.AddWithValue("@price", price);
+                                updateCmd.Parameters.AddWithValue("@Username", user);
+                                label2.Visible = true;
+                                int rowsAffected = updateCmd.ExecuteNonQuery();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error updating computer fans for existing user: " + ex.Message);
+                        }
+                        finally
+                        {
+                            dbManager.CloseConnection();
+                        }
+                    }
+                    else
+                    {
+                        string insertQuery = "INSERT INTO Builds ([Fans], [user], [Fan price]) VALUES (@fans, @Username, @price)";
+                        try
+                        {
+                            dbManager.OpenConnection();
+                            using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
+                            {
+                                insertCmd.Parameters.AddWithValue("@fans", choice);
+                                insertCmd.Parameters.AddWithValue("@price", price);
+                                insertCmd.Parameters.AddWithValue("@Username", user);
+                                label2.Visible = true;
+                                int rowsAffected = insertCmd.ExecuteNonQuery();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error inserting computer fans for new user: " + ex.Message);
+                        }
+                        finally
+                        {
+                            dbManager.CloseConnection();
+                        }
+                    }
+                    break;
+
+                case 17:
+                    if (userCount > 0)
+                    {
+                        string updateQuery = "UPDATE Builds SET [CPU Air Cooler] = @cpuCooler, [CPU Air Cooler price] = @price WHERE [user] = @Username";
+                        try
+                        {
+                            dbManager.OpenConnection();
+                            using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                            {
+                                updateCmd.Parameters.AddWithValue("@cpuCooler", choice);
+                                updateCmd.Parameters.AddWithValue("@price", price);
+                                updateCmd.Parameters.AddWithValue("@Username", user);
+                                label2.Visible = true;
+                                int rowsAffected = updateCmd.ExecuteNonQuery();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error updating CPU Cooler for existing user: " + ex.Message);
+                        }
+                        finally
+                        {
+                            dbManager.CloseConnection();
+                        }
+                    }
+                    else
+                    {
+                        string insertQuery = "INSERT INTO Builds ([CPU Air Cooler], [user], [CPU Air Cooler price]) VALUES (@cpuCooler, @Username, @price)";
+                        try
+                        {
+                            dbManager.OpenConnection();
+                            using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
+                            {
+                                insertCmd.Parameters.AddWithValue("@cpuCooler", choice);
+                                insertCmd.Parameters.AddWithValue("@price", price);
+                                insertCmd.Parameters.AddWithValue("@Username", user);
+                                label2.Visible = true;
+                                int rowsAffected = insertCmd.ExecuteNonQuery();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error inserting CPU Cooler for new user: " + ex.Message);
+                        }
+                        finally
+                        {
+                            dbManager.CloseConnection();
+                        }
+                    }
+                    break;
+
             }
         }
 
@@ -1114,6 +1216,62 @@ namespace PC_Building_Simulator
                         { "HP S700 Pro 512GB", Properties.Resources.m2_HP_S700_Pro_512GB }
                     };
                     query = "SELECT * FROM [M2 SSD specs] WHERE [M2 Name] = @name";
+                    break;
+
+                case 16:
+                    mainApp.back = 16;
+                    images = new Dictionary<string, System.Drawing.Image>
+                    {
+                        { "Be Quiet! Silent Wings 3", Properties.Resources.fan_Be_Quiet__Silent_Wings_3 },
+                        { "Lian Li UNI FAN SL120 V2 RGB", Properties.Resources.fan_Lian_Li_UNI_FAN_SL120_V2_RGB },
+                        { "EK-Vardar EVO 120ER RGB", Properties.Resources.fan_EK_Vardar_EVO_120ER_RGB },
+                        { "Phanteks PH-F120MP", Properties.Resources.fan_Phanteks_PH_F120MP },
+                        { "Thermaltake ToughFan 12 Turbo", Properties.Resources.fan_Thermaltake_ToughFan_12_Turbo },
+                        { "Be Quiet! PURE WINGS 2", Properties.Resources.fan_Be_Quiet__PURE_WINGS_2 },
+                        { "MSI MEG SILENT GALE P12", Properties.Resources.fan_MSI_MEG_SILENT_GALE_P12 },
+                        { "NZXT Aer P 120MM", Properties.Resources.fan_NZXT_Aer_P_120MM },
+                        { "Cooler Master MasterFan MF120 Halo RGB", Properties.Resources.fan_Cooler_Master_MasterFan_MF120_Halo_RGB },
+                        { "DeepCool CF120-3 IN 1", Properties.Resources.fan_DeepCool_CF120_3_IN_1 },
+                        { "Corsair ML120 PRO", Properties.Resources.fan_Corsair_ML120_PRO },
+                        { "ROG STRIX XF 120", Properties.Resources.fan_ROG_STRIX_XF_120 },
+                        { "Corsair iCUE AR120 Digital RGB 120mm", Properties.Resources.fan_Corsair_iCUE_AR120_Digital_RGB_120mm },
+                        { "MSI MAG MAX F20A-1", Properties.Resources.fan_MSI_MAG_MAX_F20A_1 },
+                        { "Asus TUF Gaming TF120 ARGB", Properties.Resources.fan_Asus_TUF_Gaming_TF120_ARGB },
+                        { "Noctua NF-A12x25 PWM", Properties.Resources.fan_Noctua_NF_A12x25_PWM },
+                        { "Noctua NF-P12 redux-1700", Properties.Resources.fan_Noctua_NF_P12_redux_1700 },
+                        { "Scythe Kaze Flex 120 PWM", Properties.Resources.fan_Scythe_Kaze_Flex_120_PWM },
+                        { "Corsair iCUE LINK QX120 RGB", Properties.Resources.fan_Corsair_iCUE_LINK_QX120_RGB },
+                        { "NZXT F120 RGB Duo", Properties.Resources.fan_NZXT_F120_RGB_Duo }
+                    };
+                    query = "SELECT * FROM [Fan specs] WHERE [Fan Name] = @name";
+                    break;
+
+                case 17:
+                    mainApp.back = 17;
+                    images = new Dictionary<string, System.Drawing.Image>
+                    {
+                        { "Thermalright Phantom Spirit 120 EVO", Properties.Resources.air_Thermalright_Phantom_Spirit_120_EVO },
+                        { "Thermalright Peerless Assassin 120 SE", Properties.Resources.air_Thermalright_Peerless_Assassin_120_SE },
+                        { "Deepcool AS500 Plus", Properties.Resources.air_Deepcool_AS500_Plus },
+                        { "Noctua NH-U14S", Properties.Resources.air_Noctua_NH_U14S },
+                        { "Be Quiet! Pure Rock 2", Properties.Resources.air_Be_Quiet__Pure_Rock_2 },
+                        { "Noctua NH-D15 Chromax Black", Properties.Resources.air_Noctua_NH_D15_Chromax_Black },
+                        { "Cooler Master Hyper 212 Halo", Properties.Resources.air_Cooler_Master_Hyper_212_Halo },
+                        { "Cryorig C7", Properties.Resources.air_Cryorig_C7 },
+                        { "Thermalright AXP120-X67", Properties.Resources.air_Thermalright_AXP120_X67 },
+                        { "ID-Cooling SE-214-XT ARGB", Properties.Resources.air_ID_Cooling_SE_214_XT_ARGB },
+                        { "DeepCool Assassin IV", Properties.Resources.air_DeepCool_Assassin_IV },
+                        { "Jonsbo CR-1200", Properties.Resources.air_Jonsbo_CR_1200 },
+                        { "Corsair A115", Properties.Resources.air_Corsair_A115 },
+                        { "DeepCool AK620", Properties.Resources.air_DeepCool_AK620 },
+                        { "Cooler Master Hyper H412R", Properties.Resources.air_Cooler_Master_Hyper_H412R },
+                        { "Noctua NH-L9 series", Properties.Resources.air_Noctua_NH_L9_series },
+                        { "Cooler Master Hyper 212 EVO V2", Properties.Resources.air_Cooler_Master_Hyper_212_EVO_V2 },
+                        { "Cryorig H7", Properties.Resources.air_Cryorig_H7 },
+                        { "be Quiet! Dark Rock Pro 4", Properties.Resources.air_be_Quiet__Dark_Rock_Pro_4 },
+                        { "Corsair A500", Properties.Resources.air_Corsair_A500 }
+                    };
+                    query = "SELECT * FROM [CPU Air Cooler specs] WHERE [CPU Air Cooler] = @name";
                     break;
             }
             DisplayImageAndSpecs(choice, query, images);

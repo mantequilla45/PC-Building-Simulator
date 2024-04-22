@@ -617,6 +617,91 @@ namespace PC_Building_Simulator
                         }
                     }
                     break;
+
+                case 16:
+                    string[] fanNames = {
+                        "Be Quiet! Silent Wings 3", "Lian Li UNI FAN SL120 V2 RGB", "EK-Vardar EVO 120ER RGB", "Phanteks PH-F120MP",
+                        "Thermaltake ToughFan 12 Turbo", "Be Quiet! PURE WINGS 2", "MSI MEG SILENT GALE P12", "NZXT Aer P 120MM",
+                        "Cooler Master MasterFan MF120 Halo RGB", "DeepCool CF120-3 IN 1", "Corsair ML120 PRO", "ROG STRIX XF 120",
+                        "Corsair iCUE AR120 Digital RGB 120mm", "MSI MAG MAX F20A-1", "Asus TUF Gaming TF120 ARGB", "Noctua NF-A12x25 PWM",
+                        "Noctua NF-P12 redux-1700", "Scythe Kaze Flex 120 PWM", "Corsair iCUE LINK QX120 RGB", "NZXT F120 RGB Duo"
+                    };
+
+                    price = new int[]{
+                        30, 35, 40, 25, 22,
+                        18, 28, 23, 30, 25,
+                        35, 35, 40, 23, 30,
+                        33, 18, 18, 35, 40
+                    };
+
+                    for (int i = 0; i < fanNames.Length; i++)
+                    {
+                        string fanName = fanNames[i];
+                        string fanImage = fanName.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('+', '_').Replace('.', '_');
+
+                        PictureBox pictureBox = Controls.Find($"pbox{i + 1}", true).FirstOrDefault() as PictureBox;
+                        if (pictureBox != null)
+                        {
+                            string resourceSSD = $"fan_{fanImage}";
+                            pictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourceSSD);
+                        }
+
+                        Label priceLabel = pricelabels[i];
+                        if (priceLabel != null)
+                        {
+                            priceLabel.Text = $"${price[i]}";
+                        }
+
+                        Label nameLabel = namelabels[i];
+                        if (nameLabel != null)
+                        {
+                            nameLabel.Text = fanName;
+                        }
+                    }
+                    break;
+
+                case 17:
+                    string[] airCoolerNames = {
+                        "Thermalright Phantom Spirit 120 EVO", "Thermalright Peerless Assassin 120 SE", "Deepcool AS500 Plus",
+                        "Noctua NH-U14S", "Be Quiet! Pure Rock 2", "Noctua NH-D15 Chromax Black", "Cooler Master Hyper 212 Halo",
+                        "Cryorig C7", "Thermalright AXP120-X67", "ID-Cooling SE-214-XT ARGB", "DeepCool Assassin IV", "Jonsbo CR-1200",
+                        "Corsair A115", "DeepCool AK620", "Cooler Master Hyper H412R", "Noctua NH-L9 series", "Cooler Master Hyper 212 EVO V2",
+                        "Cryorig H7", "be Quiet! Dark Rock Pro 4", "Corsair A500"
+                    };
+
+                    price = new int[]{
+                        35, 45, 45, 85, 45, 
+                        125, 55, 35, 55, 45,
+                        65, 45, 35, 55, 45, 
+                        55, 45, 45, 105, 45
+                    };
+
+                    for (int i = 0; i < airCoolerNames.Length; i++)
+                    {
+                        string coolerName = airCoolerNames[i];
+                        string coolerImage = coolerName.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('+', '_').Replace('.', '_');
+
+                        PictureBox pictureBox = Controls.Find($"pbox{i + 1}", true).FirstOrDefault() as PictureBox;
+                        if (pictureBox != null)
+                        {
+                            string resourceCooler = $"air_{coolerImage}";
+                            pictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourceCooler);
+                        }
+
+                        Label priceLabel = pricelabels[i];
+                        if (priceLabel != null)
+                        {
+                            priceLabel.Text = $"${price[i]}";
+                        }
+
+                        Label nameLabel = namelabels[i];
+                        if (nameLabel != null)
+                        {
+                            nameLabel.Text = coolerName;
+                        }
+                    }
+                    break;
+
             }
         }
 
@@ -624,12 +709,12 @@ namespace PC_Building_Simulator
         {
             DisplayManager displayManager = new DisplayManager(mainApp);
             Panel[] panels = { panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9, panel10,
-        panel11, panel12, panel13, panel14, panel15, panel16, panel17, panel18, panel19, panel20
-    };
-            Label[] prices = { labprice1, labprice2, labprice3, labprice4, labprice5, labprice6, labprice7, labprice8,
-        labprice9, labprice10, labprice11, labprice12, labprice13, labprice14, labprice15, labprice16, labprice17,
-        labprice18, labprice19, labprice20
-    };
+                panel11, panel12, panel13, panel14, panel15, panel16, panel17, panel18, panel19, panel20
+            };
+                    Label[] prices = { labprice1, labprice2, labprice3, labprice4, labprice5, labprice6, labprice7, labprice8,
+                labprice9, labprice10, labprice11, labprice12, labprice13, labprice14, labprice15, labprice16, labprice17,
+                labprice18, labprice19, labprice20
+            };
 
             for (int i = 0; i < panels.Length; i++)
             {
@@ -676,6 +761,12 @@ namespace PC_Building_Simulator
                             break;
                         case 15:
                             displayManager.m2menu(menuIndex, prices[i]);
+                            break;
+                        case 16:
+                            displayManager.fanmenu(menuIndex, prices[i]);
+                            break;
+                        case 17:
+                            displayManager.aircoolmenu(menuIndex, prices[i]);
                             break;
                     }
                     mainApp.backicon.Visible = true;
