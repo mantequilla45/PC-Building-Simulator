@@ -15,6 +15,12 @@ namespace PC_Building_Simulator
             InitializeControls();
             this.mainApp = mainApp;
             displayManager = new DisplayManager(mainApp);
+            InitializeDisplayManager();
+        }
+        private void InitializeDisplayManager()
+        {
+            storagemenu storagemenuform = this;
+            DisplayManager displayManager = new DisplayManager(storagemenuform);
         }
 
         private void storagemenu_Load(object sender, EventArgs e)

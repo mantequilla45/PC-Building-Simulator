@@ -17,6 +17,8 @@ namespace PC_Building_Simulator
         private productspecs productSpecsForm;
         private storagemenu storageMenuForm;
         private coolermenu coolerMenuForm;
+        private welcomeform welcomeForm;
+        private buildguide buildguideForm;
         public DisplayManager(buildmenu buildMenuForm)
         {
             this.buildMenuForm = buildMenuForm;
@@ -40,6 +42,14 @@ namespace PC_Building_Simulator
         public DisplayManager(coolermenu coolerMenuForm)
         {
             this.coolerMenuForm = coolerMenuForm;
+        }
+        public DisplayManager(welcomeform welcomeForm)
+        {
+            this.welcomeForm = welcomeForm;
+        }
+        public DisplayManager(buildguide buildguideForm)
+        {
+            this.buildguideForm = buildguideForm;
         }
         public static class ButtonAppearance
         {
@@ -284,18 +294,22 @@ namespace PC_Building_Simulator
                 coolerMenuForm = null;
             }
 
+            if(welcomeForm != null)
+            {
+                welcomeForm.Dispose();
+                welcomeForm = null;
+            }
+
         }
         public void menuselect(int menuchoice)
         {
-            
-            MemoryManager memoryManager;
             productmenu productpanel;
             switch (menuchoice)
             {
                 case 1:
                     mainApp.label_menu.Text = "Your Build";
                     mainApp.panelmain.Controls.Clear();
-                    buildmenu buildpanel = new buildmenu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    buildmenu buildpanel = new buildmenu(mainApp) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
                     buildpanel.FormBorderStyle = FormBorderStyle.None;
                     mainApp.panelmain.Controls.Add(buildpanel);
                     buildpanel.Show();
@@ -504,6 +518,17 @@ namespace PC_Building_Simulator
                     mainApp.panelmain.Controls.Add(buildguide);
                     buildguide.Show();
                     DisposeAllMenuForms();
+                    break;
+
+                case 21:
+                    mainApp.label_menu.Text = "CPU AIO Cooler";
+                    mainApp.panelmain.Controls.Clear();
+                    productpanel = new productmenu(mainApp, 18) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    productpanel.FormBorderStyle = FormBorderStyle.None;
+                    mainApp.panelmain.Controls.Add(productpanel);
+                    productpanel.Show();
+                    DisposeAllMenuForms();
+                    productMenuForm = productpanel;
                     break;
 
                 default:
@@ -945,6 +970,37 @@ namespace PC_Building_Simulator
 
                 mainApp.panelmain.Controls.Clear();
                 productspecs productSpecs = new productspecs(coolerName, 17, mainApp, price)
+                {
+                    Dock = DockStyle.Fill,
+                    TopLevel = false,
+                    TopMost = true,
+                    FormBorderStyle = FormBorderStyle.None
+                };
+                mainApp.panelmain.Controls.Add(productSpecs);
+                productSpecs.Show();
+            }
+        }
+
+        public void aiocoolmenu(int num, Label strprice)
+        {
+            string[] aioCoolerNames = {
+                "Iceberg Thermal IceFLOE Oasis 360mm", "Silverstone IceMyst 360", "Corsair iCUE H170i Elite LCD XT",
+                "Lian Li Galahad II LCD 280", "Lian Li Galahad II Trinity Performance 240", "Arctic Liquid Freezer III 280 A-RGB",
+                "Corsair iCUE H170i Elite Capellix XT", "Deepcool Gammaxx L240 V2", "Arctic Liquid Freezer II 360 ARGB",
+                "MSI MEG CoreLiquid S360", "NZXT Kraken Elite 360 RGB", "Corsair H55 Liquid Cooler", "Corsair iCUE H100i RGB Elite Liquid CPU Cooler",
+                "Cooler Master MasterLiquid ML240L V2 RGB", "be quiet! Silent Loop 2 120mm", "Antec Vortex 240 ARGB",
+                "EK Nucleus AIO CR240 Lux D-RGB", "Phanteks Glacier One 240 T30", "Thermaltake TH420 V2 ARGB Sync",
+                "Alphacool Eisbaer Aurora"
+            };
+
+            string price = strprice.Text;
+            if (num >= 1 && num <= aioCoolerNames.Length)
+            {
+                string coolerName = aioCoolerNames[num - 1];
+                mainApp.label_menu.Text = $"{coolerName} Specifications";
+
+                mainApp.panelmain.Controls.Clear();
+                productspecs productSpecs = new productspecs(coolerName, 18, mainApp, price)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,

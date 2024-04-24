@@ -1089,5 +1089,65 @@
   <ItemGroup>
     <None Include="Resources\air_Cooler Master Hyper H412R.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_Corsair iCUE H170i Elite LCD XT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_Deepcool Gammaxx L240 V2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_EK Nucleus AIO CR240 Lux D-RGB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_Iceberg Thermal IceFLOE Oasis 360mm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_iCUE H100i RGB Elite Liquid CPU Cooler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_NZXT_Kraken Elite 360.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_Lian Li Galahad II LCD 280.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_Lian Li Galahad II Trinity Performance 240.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_MSI MEG CoreLiquid S360.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_Phanteks Glacier One 240 T30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_Silverstone IceMyst 360.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_Thermaltake TH420 V2 ARGB Sync.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_Alphacool Eisbaer Aurora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_Antec Vortex 240 ARGB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_Arctic Liquid Freezer II 360 ARGB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_Arctic Liquid Freezer III 280 A-RGB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_be quiet! Silent Loop 2 120mm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_CoolerMaster MasterLiquid ML240L V2 RGB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_Corsair H55 Liquid Cooler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_Corsair iCUE H170i Elite Capellix XT.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

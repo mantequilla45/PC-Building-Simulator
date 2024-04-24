@@ -32,15 +32,15 @@ namespace PC_Building_Simulator
             InitializeControls();
             InitializeDisplayManager();
         }
-        private void productmenu_Load(object sender, EventArgs e)
-        {
-        }
-
         private void InitializeDisplayManager()
         {
             productmenu productmenuform = this;
             DisplayManager displayManager = new DisplayManager(productmenuform);
         }
+        private void productmenu_Load(object sender, EventArgs e)
+        {
+        }
+
         private void display(int menuchoice)
         {
             dbManager = new DatabaseManager("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb");
@@ -701,6 +701,48 @@ namespace PC_Building_Simulator
                         }
                     }
                     break;
+                case 18:
+                    string[] aioCoolerNames = {
+                        "Iceberg Thermal IceFLOE Oasis 360mm", "Silverstone IceMyst 360", "Corsair iCUE H170i Elite LCD XT",
+                        "Lian Li Galahad II LCD 280", "Lian Li Galahad II Trinity Performance 240", "Arctic Liquid Freezer III 280 A-RGB",
+                        "Corsair iCUE H170i Elite Capellix XT", "Deepcool Gammaxx L240 V2", "Arctic Liquid Freezer II 360 ARGB",
+                        "MSI MEG CoreLiquid S360", "NZXT Kraken Elite 360", "Corsair H55 Liquid Cooler", "iCUE H100i RGB Elite Liquid CPU Cooler",
+                        "CoolerMaster MasterLiquid ML240L V2 RGB", "be quiet! Silent Loop 2 120mm", "Antec Vortex 240 ARGB",
+                        "EK Nucleus AIO CR240 Lux D-RGB", "Phanteks Glacier One 240 T30", "Thermaltake TH420 V2 ARGB Sync",
+                        "Alphacool Eisbaer Aurora"
+                    };
+                    price = new int[]{
+                        175, 135, 235, 200, 145,
+                        155, 275, 90, 175, 215,
+                        290, 60, 165, 135, 155,
+                        115, 200, 180, 125, 180
+                    };
+
+                    for (int i = 0; i < aioCoolerNames.Length; i++)
+                    {
+                        string coolerName = aioCoolerNames[i];
+                        string coolerImage = coolerName.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('+', '_').Replace('.', '_');
+
+                        PictureBox pictureBox = Controls.Find($"pbox{i + 1}", true).FirstOrDefault() as PictureBox;
+                        if (pictureBox != null)
+                        {
+                            string resourceCooler = $"aio_{coolerImage}";
+                            pictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourceCooler);
+                        }
+
+                        Label priceLabel = pricelabels[i];
+                        if (priceLabel != null)
+                        {
+                            priceLabel.Text = $"${price[i]}";
+                        }
+
+                        Label nameLabel = namelabels[i];
+                        if (nameLabel != null)
+                        {
+                            nameLabel.Text = coolerName;
+                        }
+                    }
+                    break;
 
             }
         }
@@ -767,6 +809,9 @@ namespace PC_Building_Simulator
                             break;
                         case 17:
                             displayManager.aircoolmenu(menuIndex, prices[i]);
+                            break;
+                        case 18:
+                            displayManager.aiocoolmenu(menuIndex, prices[i]);
                             break;
                     }
                     mainApp.backicon.Visible = true;

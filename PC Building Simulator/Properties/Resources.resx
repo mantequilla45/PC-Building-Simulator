@@ -118,6 +118,66 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="aio_Alphacool_Eisbaer_Aurora" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_Alphacool Eisbaer Aurora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aio_Antec_Vortex_240_ARGB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_Antec Vortex 240 ARGB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aio_Arctic_Liquid_Freezer_III_280_A_RGB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_Arctic Liquid Freezer III 280 A-RGB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aio_Arctic_Liquid_Freezer_II_360_ARGB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_Arctic Liquid Freezer II 360 ARGB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aio_be_quiet__Silent_Loop_2_120mm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_be quiet! Silent Loop 2 120mm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aio_CoolerMaster_MasterLiquid_ML240L_V2_RGB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_CoolerMaster MasterLiquid ML240L V2 RGB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aio_Corsair_H55_Liquid_Cooler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_Corsair H55 Liquid Cooler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aio_Corsair_iCUE_H170i_Elite_Capellix_XT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_Corsair iCUE H170i Elite Capellix XT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aio_Corsair_iCUE_H170i_Elite_LCD_XT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_Corsair iCUE H170i Elite LCD XT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aio_Deepcool_Gammaxx_L240_V2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_Deepcool Gammaxx L240 V2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aio_EK_Nucleus_AIO_CR240_Lux_D_RGB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_EK Nucleus AIO CR240 Lux D-RGB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aio_Iceberg_Thermal_IceFLOE_Oasis_360mm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_Iceberg Thermal IceFLOE Oasis 360mm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aio_iCUE_H100i_RGB_Elite_Liquid_CPU_Cooler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_iCUE H100i RGB Elite Liquid CPU Cooler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aio_Lian_Li_Galahad_II_LCD_280" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_Lian Li Galahad II LCD 280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aio_Lian_Li_Galahad_II_Trinity_Performance_240" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_Lian Li Galahad II Trinity Performance 240.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aio_MSI_MEG_CoreLiquid_S360" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_MSI MEG CoreLiquid S360.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aio_NZXT_Kraken_Elite_360" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_NZXT_Kraken Elite 360.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aio_Phanteks_Glacier_One_240_T30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_Phanteks Glacier One 240 T30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aio_Silverstone_IceMyst_360" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_Silverstone IceMyst 360.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aio_Thermaltake_TH420_V2_ARGB_Sync" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aio_Thermaltake TH420 V2 ARGB Sync.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="air_be_Quiet__Dark_Rock_Pro_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\air_be Quiet! Dark Rock Pro 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

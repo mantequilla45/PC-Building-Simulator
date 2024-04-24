@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,6 +32,7 @@ namespace PC_Building_Simulator
             this.price = price;
             this.mainApp = mainApp;
             displayManager = new DisplayManager(mainApp);
+            buildMenu = new buildmenu(mainApp);
             display(choice);
             InitializeDisplayManager();
         }
@@ -47,6 +49,7 @@ namespace PC_Building_Simulator
 
         private void but_add_Click(object sender, EventArgs e)
         {
+            string update;
             string user;
             string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
             string query = "SELECT TOP 1 [user] FROM currentuser";
@@ -601,14 +604,16 @@ namespace PC_Building_Simulator
                     }
                     break;
                 case 13:
+                    quantity = int.Parse(comboBox1.Text);
                     if (userCount > 0)
                     {
-                        string updateQuery = "UPDATE Builds SET [HDD] = @hdd, [HDD price] = @price WHERE [user] = @Username";
+                        string updateQuery = "UPDATE Builds SET [HDD quantity] = @quan, [HDD] = @hdd, [HDD price] = @price WHERE [user] = @Username";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
                             {
+                                updateCmd.Parameters.AddWithValue("@quan", quantity);
                                 updateCmd.Parameters.AddWithValue("@hdd", choice);
                                 updateCmd.Parameters.AddWithValue("@price", price);
                                 updateCmd.Parameters.AddWithValue("@Username", user);
@@ -627,12 +632,13 @@ namespace PC_Building_Simulator
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds ([HDD], [user], [HDD price]) VALUES (@hdd, @Username, @price)";
+                        string insertQuery = "INSERT INTO Builds ([HDD quantity], [HDD], [user], [HDD price]) VALUES (@quan, @hdd, @Username, @price)";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
                             {
+                                insertCmd.Parameters.AddWithValue("@quan", quantity);
                                 insertCmd.Parameters.AddWithValue("@hdd", choice);
                                 insertCmd.Parameters.AddWithValue("@price", price);
                                 insertCmd.Parameters.AddWithValue("@Username", user);
@@ -652,14 +658,16 @@ namespace PC_Building_Simulator
                     break;
 
                 case 14:
+                    quantity = int.Parse(comboBox1.Text);
                     if (userCount > 0)
                     {
-                        string updateQuery = "UPDATE Builds SET [SSD] = @ssd, [SSD price] = @price WHERE [user] = @Username";
+                        string updateQuery = "UPDATE Builds SET [SSD quantity] = @quan, [SSD] = @ssd, [SSD price] = @price WHERE [user] = @Username";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
                             {
+                                updateCmd.Parameters.AddWithValue("@quan", quantity);
                                 updateCmd.Parameters.AddWithValue("@ssd", choice);
                                 updateCmd.Parameters.AddWithValue("@price", price);
                                 updateCmd.Parameters.AddWithValue("@Username", user);
@@ -676,14 +684,16 @@ namespace PC_Building_Simulator
                             dbManager.CloseConnection();
                         }
                     }
+
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds ([SSD], [user], [SSD price]) VALUES (@ssd, @Username, @price)";
+                        string insertQuery = "INSERT INTO Builds ([SSD quantity], [SSD], [user], [SSD price]) VALUES (@quan, @ssd, @Username, @price)";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
                             {
+                                insertCmd.Parameters.AddWithValue("@quan", quantity);
                                 insertCmd.Parameters.AddWithValue("@ssd", choice);
                                 insertCmd.Parameters.AddWithValue("@price", price);
                                 insertCmd.Parameters.AddWithValue("@Username", user);
@@ -700,16 +710,19 @@ namespace PC_Building_Simulator
                             dbManager.CloseConnection();
                         }
                     }
+
                     break;
                 case 15:
+                    quantity = int.Parse(comboBox1.Text);
                     if (userCount > 0)
                     {
-                        string updateQuery = "UPDATE Builds SET [M2 SSD] = @m2Ssd, [M2 price] = @price WHERE [user] = @Username";
+                        string updateQuery = "UPDATE Builds SET [M2 SSD quantity] = @quan, [M2 SSD] = @m2Ssd, [M2 price] = @price WHERE [user] = @Username";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
                             {
+                                updateCmd.Parameters.AddWithValue("@quan", quantity);
                                 updateCmd.Parameters.AddWithValue("@m2Ssd", choice);
                                 updateCmd.Parameters.AddWithValue("@price", price);
                                 updateCmd.Parameters.AddWithValue("@Username", user);
@@ -728,12 +741,13 @@ namespace PC_Building_Simulator
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds ([M2 SSD], [user], [M2 price]) VALUES (@m2Ssd, @Username, @price)";
+                        string insertQuery = "INSERT INTO Builds ([M2 SSD quantity], [M2 SSD], [user], [M2 price]) VALUES (@quan, @m2Ssd, @Username, @price)";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
                             {
+                                insertCmd.Parameters.AddWithValue("@quan", quantity);
                                 insertCmd.Parameters.AddWithValue("@m2Ssd", choice);
                                 insertCmd.Parameters.AddWithValue("@price", price);
                                 insertCmd.Parameters.AddWithValue("@Username", user);
@@ -753,14 +767,16 @@ namespace PC_Building_Simulator
                     break;
 
                 case 16:
+                    quantity = int.Parse(comboBox1.Text);
                     if (userCount > 0)
                     {
-                        string updateQuery = "UPDATE Builds SET [Fans] = @fans, [Fan price] = @price WHERE [user] = @Username";
+                        string updateQuery = "UPDATE Builds SET [Fan quantity] = @quan, [Fans] = @fans, [Fan price] = @price WHERE [user] = @Username";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
                             {
+                                updateCmd.Parameters.AddWithValue("@quan", quantity);
                                 updateCmd.Parameters.AddWithValue("@fans", choice);
                                 updateCmd.Parameters.AddWithValue("@price", price);
                                 updateCmd.Parameters.AddWithValue("@Username", user);
@@ -777,14 +793,16 @@ namespace PC_Building_Simulator
                             dbManager.CloseConnection();
                         }
                     }
+
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds ([Fans], [user], [Fan price]) VALUES (@fans, @Username, @price)";
+                        string insertQuery = "INSERT INTO Builds ([Fans quantity], [Fans], [user], [Fan price]) VALUES (@quan, @fans, @Username, @price)";
                         try
                         {
                             dbManager.OpenConnection();
                             using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
                             {
+                                insertCmd.Parameters.AddWithValue("@quan", quantity);
                                 insertCmd.Parameters.AddWithValue("@fans", choice);
                                 insertCmd.Parameters.AddWithValue("@price", price);
                                 insertCmd.Parameters.AddWithValue("@Username", user);
@@ -801,6 +819,7 @@ namespace PC_Building_Simulator
                             dbManager.CloseConnection();
                         }
                     }
+
                     break;
 
                 case 17:
@@ -852,9 +871,102 @@ namespace PC_Building_Simulator
                             dbManager.CloseConnection();
                         }
                     }
+                    update = "UPDATE Builds SET [AIO Cooler] = '', [AIO Cooler price] = '' WHERE [user] = @UserToUpdate";
+
+                    try
+                    {
+                        using (OleDbConnection connection = new OleDbConnection(connectionString))
+                        {
+                            using (OleDbCommand command = new OleDbCommand(update, connection))
+                            {
+                                command.Parameters.AddWithValue("@UserToUpdate", user);
+
+                                connection.Open();
+                                int rowsAffected = command.ExecuteNonQuery();
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error updating data: " + ex.Message);
+                    }
+
+                    break;
+                case 18:
+                    if (userCount > 0)
+                    {
+                        string updateQuery = "UPDATE Builds SET [AIO Cooler] = @aioCooler, [AIO Cooler price] = @price WHERE [user] = @Username";
+                        try
+                        {
+                            dbManager.OpenConnection();
+                            using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                            {
+                                updateCmd.Parameters.AddWithValue("@aioCooler", choice);
+                                updateCmd.Parameters.AddWithValue("@price", price);
+                                updateCmd.Parameters.AddWithValue("@Username", user);
+                                label2.Visible = true;
+                                int rowsAffected = updateCmd.ExecuteNonQuery();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error updating AIO Cooler for existing user: " + ex.Message);
+                        }
+                        finally
+                        {
+                            dbManager.CloseConnection();
+                        }
+                    }
+                    else
+                    {
+                        string insertQuery = "INSERT INTO Builds ([AIO Cooler], [user], [AIO Cooler price]) VALUES (@aioCooler, @Username, @price)";
+                        try
+                        {
+                            dbManager.OpenConnection();
+                            using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
+                            {
+                                insertCmd.Parameters.AddWithValue("@aioCooler", choice);
+                                insertCmd.Parameters.AddWithValue("@price", price);
+                                insertCmd.Parameters.AddWithValue("@Username", user);
+                                label2.Visible = true;
+                                int rowsAffected = insertCmd.ExecuteNonQuery();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error inserting AIO Cooler for new user: " + ex.Message);
+                        }
+                        finally
+                        {
+                            dbManager.CloseConnection();
+                        }
+
+                    }
+                    update = "UPDATE Builds SET [CPU Air Cooler] = '', [CPU Air Cooler price] = '' WHERE [user] = @UserToUpdate";
+
+                    try
+                    {
+                        using (OleDbConnection connection = new OleDbConnection(connectionString))
+                        {
+                            using (OleDbCommand command = new OleDbCommand(update, connection))
+                            {
+                                command.Parameters.AddWithValue("@UserToUpdate", user);
+
+                                connection.Open();
+                                int rowsAffected = command.ExecuteNonQuery();
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error updating data: " + ex.Message);
+                    }
                     break;
 
             }
+
+
+            
         }
 
         private void display(string choice)
@@ -1128,7 +1240,7 @@ namespace PC_Building_Simulator
                         { "Kali Audio LP-6", Properties.Resources.spe_Kali_Audio_LP_6 },
                         { "Neumi BS5", Properties.Resources.spe_Neumi_BS5 },
                         { "Monoprice DT-3BT", Properties.Resources.spe_Monoprice_DT_3BT },
-                        { "Wave Master Diamond 10", Properties.Resources.spe_Klipsch_R_41M },
+                        { "Klipsch R-41M", Properties.Resources.spe_Klipsch_R_41M },
                         { "Audioengine HD3", Properties.Resources.spe_Audioengine_HD3 }
                     };
                     query = "SELECT * FROM [Speakers specs] WHERE [Speaker Name] = @name";
@@ -1159,6 +1271,11 @@ namespace PC_Building_Simulator
                         { "Western Digital Red 8TB", Properties.Resources.hdd_Western_Digital_Red_8TB }
                     };
                     query = "SELECT * FROM [HDD specs] WHERE [HDD Name] = @name";
+                    for (int i = 1; i <= 5; i++)
+                    {
+                        comboBox1.Items.Insert(i, i.ToString());
+                    }
+
                     break;
 
                 case 14:
@@ -1187,6 +1304,11 @@ namespace PC_Building_Simulator
                         { "Kingston A400 2TB", Properties.Resources.ssd_Kingston_A400_2TB }
                     };
                     query = "SELECT * FROM [SSD specs] WHERE [SSD Name] = @name";
+                    for (int i = 1; i <= 5; i++)
+                    {
+                        comboBox1.Items.Insert(i, i.ToString());
+                    }
+
                     break;
 
 
@@ -1216,6 +1338,11 @@ namespace PC_Building_Simulator
                         { "HP S700 Pro 512GB", Properties.Resources.m2_HP_S700_Pro_512GB }
                     };
                     query = "SELECT * FROM [M2 SSD specs] WHERE [M2 Name] = @name";
+                    for (int i = 1; i <= 5; i++)
+                    {
+                        comboBox1.Items.Insert(i, i.ToString());
+                    }
+
                     break;
 
                 case 16:
@@ -1244,6 +1371,11 @@ namespace PC_Building_Simulator
                         { "NZXT F120 RGB Duo", Properties.Resources.fan_NZXT_F120_RGB_Duo }
                     };
                     query = "SELECT * FROM [Fan specs] WHERE [Fan Name] = @name";
+                    for (int i = 1; i <= 10; i++)
+                    {
+                        comboBox1.Items.Insert(i, i.ToString());
+                    }
+
                     break;
 
                 case 17:
@@ -1273,6 +1405,35 @@ namespace PC_Building_Simulator
                     };
                     query = "SELECT * FROM [CPU Air Cooler specs] WHERE [CPU Air Cooler] = @name";
                     break;
+
+                case 18:
+                    mainApp.back = 18;
+                    images = new Dictionary<string, System.Drawing.Image>
+                    {
+                        { "Iceberg Thermal IceFLOE Oasis 360mm", Properties.Resources.aio_Iceberg_Thermal_IceFLOE_Oasis_360mm },
+                        { "Silverstone IceMyst 360", Properties.Resources.aio_Silverstone_IceMyst_360 },
+                        { "Corsair iCUE H170i Elite LCD XT", Properties.Resources.aio_Corsair_iCUE_H170i_Elite_LCD_XT },
+                        { "Lian Li Galahad II LCD 280", Properties.Resources.aio_Lian_Li_Galahad_II_LCD_280 },
+                        { "Lian Li Galahad II Trinity Performance 240", Properties.Resources.aio_Lian_Li_Galahad_II_Trinity_Performance_240 },
+                        { "Arctic Liquid Freezer III 280 A-RGB", Properties.Resources.aio_Arctic_Liquid_Freezer_III_280_A_RGB },
+                        { "Corsair iCUE H170i Elite Capellix XT", Properties.Resources.aio_Corsair_iCUE_H170i_Elite_Capellix_XT },
+                        { "Deepcool Gammaxx L240 V2", Properties.Resources.aio_Deepcool_Gammaxx_L240_V2 },
+                        { "Arctic Liquid Freezer II 360 ARGB", Properties.Resources.aio_Arctic_Liquid_Freezer_II_360_ARGB },
+                        { "MSI MEG CoreLiquid S360", Properties.Resources.aio_MSI_MEG_CoreLiquid_S360 },
+                        { "NZXT Kraken Elite 360 RGB", Properties.Resources.aio_NZXT_Kraken_Elite_360 },
+                        { "Corsair H55 Liquid Cooler", Properties.Resources.aio_Corsair_H55_Liquid_Cooler },
+                        { "Corsair iCUE H100i RGB Elite Liquid CPU Cooler", Properties.Resources.aio_iCUE_H100i_RGB_Elite_Liquid_CPU_Cooler },
+                        { "Cooler Master MasterLiquid ML240L V2 RGB", Properties.Resources.aio_CoolerMaster_MasterLiquid_ML240L_V2_RGB },
+                        { "be quiet! Silent Loop 2 120mm", Properties.Resources.aio_be_quiet__Silent_Loop_2_120mm },
+                        { "Antec Vortex 240 ARGB", Properties.Resources.aio_Antec_Vortex_240_ARGB },
+                        { "EK Nucleus AIO CR240 Lux D-RGB", Properties.Resources.aio_EK_Nucleus_AIO_CR240_Lux_D_RGB },
+                        { "Phanteks Glacier One 240 T30", Properties.Resources.aio_Phanteks_Glacier_One_240_T30 },
+                        { "Thermaltake TH420 V2 ARGB Sync", Properties.Resources.aio_Thermaltake_TH420_V2_ARGB_Sync },
+                        { "Alphacool Eisbaer Aurora", Properties.Resources.aio_Alphacool_Eisbaer_Aurora }
+                    };
+                    query = "SELECT * FROM [AIO Cooler specs] WHERE [AIO Cooler Name] = @name";
+                    break;
+
             }
             DisplayImageAndSpecs(choice, query, images);
         }
@@ -1308,6 +1469,11 @@ namespace PC_Building_Simulator
                     dataGridView1.Rows.Add(column.ColumnName, dataTable.Rows[0][column]);
                 }
             }
+        }
+
+        void compatabilitydisplay()
+        {
+
         }
     }
 }

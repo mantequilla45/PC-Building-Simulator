@@ -63,6 +63,206 @@ namespace PC_Building_Simulator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap aio_Alphacool_Eisbaer_Aurora {
+            get {
+                object obj = ResourceManager.GetObject("aio_Alphacool_Eisbaer_Aurora", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_Antec_Vortex_240_ARGB {
+            get {
+                object obj = ResourceManager.GetObject("aio_Antec_Vortex_240_ARGB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_Arctic_Liquid_Freezer_II_360_ARGB {
+            get {
+                object obj = ResourceManager.GetObject("aio_Arctic_Liquid_Freezer_II_360_ARGB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_Arctic_Liquid_Freezer_III_280_A_RGB {
+            get {
+                object obj = ResourceManager.GetObject("aio_Arctic_Liquid_Freezer_III_280_A_RGB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_be_quiet__Silent_Loop_2_120mm {
+            get {
+                object obj = ResourceManager.GetObject("aio_be_quiet__Silent_Loop_2_120mm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_CoolerMaster_MasterLiquid_ML240L_V2_RGB {
+            get {
+                object obj = ResourceManager.GetObject("aio_CoolerMaster_MasterLiquid_ML240L_V2_RGB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_Corsair_H55_Liquid_Cooler {
+            get {
+                object obj = ResourceManager.GetObject("aio_Corsair_H55_Liquid_Cooler", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_Corsair_iCUE_H170i_Elite_Capellix_XT {
+            get {
+                object obj = ResourceManager.GetObject("aio_Corsair_iCUE_H170i_Elite_Capellix_XT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_Corsair_iCUE_H170i_Elite_LCD_XT {
+            get {
+                object obj = ResourceManager.GetObject("aio_Corsair_iCUE_H170i_Elite_LCD_XT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_Deepcool_Gammaxx_L240_V2 {
+            get {
+                object obj = ResourceManager.GetObject("aio_Deepcool_Gammaxx_L240_V2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_EK_Nucleus_AIO_CR240_Lux_D_RGB {
+            get {
+                object obj = ResourceManager.GetObject("aio_EK_Nucleus_AIO_CR240_Lux_D_RGB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_Iceberg_Thermal_IceFLOE_Oasis_360mm {
+            get {
+                object obj = ResourceManager.GetObject("aio_Iceberg_Thermal_IceFLOE_Oasis_360mm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_iCUE_H100i_RGB_Elite_Liquid_CPU_Cooler {
+            get {
+                object obj = ResourceManager.GetObject("aio_iCUE_H100i_RGB_Elite_Liquid_CPU_Cooler", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_Lian_Li_Galahad_II_LCD_280 {
+            get {
+                object obj = ResourceManager.GetObject("aio_Lian_Li_Galahad_II_LCD_280", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_Lian_Li_Galahad_II_Trinity_Performance_240 {
+            get {
+                object obj = ResourceManager.GetObject("aio_Lian_Li_Galahad_II_Trinity_Performance_240", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_MSI_MEG_CoreLiquid_S360 {
+            get {
+                object obj = ResourceManager.GetObject("aio_MSI_MEG_CoreLiquid_S360", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_NZXT_Kraken_Elite_360 {
+            get {
+                object obj = ResourceManager.GetObject("aio_NZXT_Kraken_Elite_360", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_Phanteks_Glacier_One_240_T30 {
+            get {
+                object obj = ResourceManager.GetObject("aio_Phanteks_Glacier_One_240_T30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_Silverstone_IceMyst_360 {
+            get {
+                object obj = ResourceManager.GetObject("aio_Silverstone_IceMyst_360", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_Thermaltake_TH420_V2_ARGB_Sync {
+            get {
+                object obj = ResourceManager.GetObject("aio_Thermaltake_TH420_V2_ARGB_Sync", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap air_be_Quiet__Dark_Rock_Pro_4 {
             get {
                 object obj = ResourceManager.GetObject("air_be_Quiet__Dark_Rock_Pro_4", resourceCulture);

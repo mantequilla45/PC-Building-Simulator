@@ -14,10 +14,19 @@ namespace PC_Building_Simulator
     {
         private MainApp mainApp;
         private buildguide buildGuide;
+        private DisplayManager displayManager;
         public welcomeform(MainApp mainApp)
         {
             InitializeComponent();
             this.mainApp = mainApp;
+            displayManager = new DisplayManager(mainApp);
+            InitializeDisplayManager();
+        }
+
+        private void InitializeDisplayManager()
+        {
+            welcomeform welcomeform = this;
+            DisplayManager displayManager = new DisplayManager(welcomeform);
         }
 
         private void welcomeform_Load(object sender, EventArgs e)

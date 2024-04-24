@@ -19,13 +19,14 @@ namespace PC_Building_Simulator
         public string username;
         private DisplayManager displayManager;
         private DatabaseManager dbManager;
+        private buildmenu buildMenu;
         public MainApp(string username)
         {
             InitializeComponent();
             this.username = username;
             userlabel.Text = username;
             displayManager = new DisplayManager(this);
-
+            buildMenu = new buildmenu(this);
 
             
 
@@ -199,7 +200,7 @@ namespace PC_Building_Simulator
         //---------------------------------------------------------------------------
 
         //------------------------------ motherboard menu ---------------------------
-        private void but_mb_Click(object sender, EventArgs e)
+        public void but_mb_Click(object sender, EventArgs e)
         {
             if (label_menu.Text == "Motherboard")
             {
@@ -245,7 +246,7 @@ namespace PC_Building_Simulator
         //---------------------------------------------------------------------------
 
         //------------------------------ ram menu -----------------------------------
-        private void but_ram_Click(object sender, EventArgs e)
+        public void but_ram_Click(object sender, EventArgs e)
         {
             if (label_menu.Text == "RAM Module")
             {
@@ -290,7 +291,7 @@ namespace PC_Building_Simulator
         //---------------------------------------------------------------------------
 
         //------------------------------ storage menu -------------------------------
-        private void but_storage_Click(object sender, EventArgs e)
+        public void but_storage_Click(object sender, EventArgs e)
         {
             backicon.Visible = false;
             back = 5;
@@ -329,7 +330,7 @@ namespace PC_Building_Simulator
         //---------------------------------------------------------------------------
 
         //------------------------------ psu menu -----------------------------------
-        private void but_psu_Click(object sender, EventArgs e)
+        public void but_psu_Click(object sender, EventArgs e)
         {
             if (label_menu.Text == "PSU")
             {
@@ -374,7 +375,7 @@ namespace PC_Building_Simulator
         //---------------------------------------------------------------------------
 
         //------------------------------ case menu ----------------------------------
-        private void but_case_Click(object sender, EventArgs e)
+        public void but_case_Click(object sender, EventArgs e)
         {
             if (label_menu.Text == "Computer Case")
             {
@@ -420,7 +421,7 @@ namespace PC_Building_Simulator
         //---------------------------------------------------------------------------
 
         //------------------------------ cooler menu --------------------------------
-        private void but_cooler_Click(object sender, EventArgs e)
+        public void but_cooler_Click(object sender, EventArgs e)
         {
             backicon.Visible = false;
             back = 8;
@@ -459,7 +460,7 @@ namespace PC_Building_Simulator
         //---------------------------------------------------------------------------
 
         //------------------------------ monitor menu -------------------------------
-        private void but_monitor_Click(object sender, EventArgs e)
+        public void but_monitor_Click(object sender, EventArgs e)
         {
             if (label_menu.Text == "Monitor")
             {
@@ -506,7 +507,7 @@ namespace PC_Building_Simulator
         //---------------------------------------------------------------------------
 
         //------------------------------ keyboard menu ------------------------------
-        private void but_keyb_Click(object sender, EventArgs e)
+        public void but_keyb_Click(object sender, EventArgs e)
         {
             if (label_menu.Text == "Keyboard")
             {
@@ -552,7 +553,7 @@ namespace PC_Building_Simulator
         //---------------------------------------------------------------------------
 
         //------------------------------ mouse menu ---------------------------------
-        private void but_mouse_Click(object sender, EventArgs e)
+        public void but_mouse_Click(object sender, EventArgs e)
         {
             if (label_menu.Text == "Mouse")
             {
@@ -598,7 +599,7 @@ namespace PC_Building_Simulator
         //---------------------------------------------------------------------------
 
         //------------------------------ speakers menu ------------------------------
-        private void but_speakers_Click(object sender, EventArgs e)
+        public void but_speakers_Click(object sender, EventArgs e)
         {
             if (label_menu.Text == "Speakers")
             {
@@ -773,6 +774,10 @@ namespace PC_Building_Simulator
                     break;
                 case 17:
                     displayManager.menuselect(18);
+                    back = 8;
+                    break;
+                case 18:
+                    displayManager.menuselect(21);
                     back = 8;
                     break;
 

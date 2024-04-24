@@ -21,8 +21,14 @@ namespace PC_Building_Simulator
             InitializeControls();
             this.mainApp = mainApp;
             displayManager = new DisplayManager(mainApp);
+            InitializeDisplayManager();
         }
 
+        private void InitializeDisplayManager()
+        {
+            coolermenu coolermenu = this;
+            DisplayManager displayManager = new DisplayManager(coolermenu);
+        }
         private void coolermenu_Load(object sender, EventArgs e)
         {
 
@@ -146,7 +152,7 @@ namespace PC_Building_Simulator
                             displayManager.menuselect(18);
                             break;
                         case 3:
-                            displayManager.menuselect(16);
+                            displayManager.menuselect(21);
                             break;
                             // Add more cases for other menus if needed
                     }
