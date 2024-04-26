@@ -67,6 +67,18 @@
             this.border4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.remove_drive3 = new System.Windows.Forms.Label();
+            this.drive3quan = new System.Windows.Forms.Label();
+            this.drive3price = new System.Windows.Forms.Label();
+            this.drive3name = new System.Windows.Forms.Label();
+            this.drive3pbox = new System.Windows.Forms.PictureBox();
+            this.drive3border = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.remove_drive2 = new System.Windows.Forms.Label();
+            this.drive2quan = new System.Windows.Forms.Label();
+            this.drive2price = new System.Windows.Forms.Label();
+            this.drive2name = new System.Windows.Forms.Label();
+            this.drive2pbox = new System.Windows.Forms.PictureBox();
+            this.drive2border = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.remove_drive1 = new System.Windows.Forms.Label();
             this.drive1quan = new System.Windows.Forms.Label();
             this.drive1price = new System.Windows.Forms.Label();
@@ -162,6 +174,8 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBox4)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.drive3pbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drive2pbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drive1pbox)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBox6)).BeginInit();
@@ -673,6 +687,18 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.remove_drive3);
+            this.panel5.Controls.Add(this.drive3quan);
+            this.panel5.Controls.Add(this.drive3price);
+            this.panel5.Controls.Add(this.drive3name);
+            this.panel5.Controls.Add(this.drive3pbox);
+            this.panel5.Controls.Add(this.drive3border);
+            this.panel5.Controls.Add(this.remove_drive2);
+            this.panel5.Controls.Add(this.drive2quan);
+            this.panel5.Controls.Add(this.drive2price);
+            this.panel5.Controls.Add(this.drive2name);
+            this.panel5.Controls.Add(this.drive2pbox);
+            this.panel5.Controls.Add(this.drive2border);
             this.panel5.Controls.Add(this.remove_drive1);
             this.panel5.Controls.Add(this.drive1quan);
             this.panel5.Controls.Add(this.drive1price);
@@ -683,8 +709,164 @@
             this.panel5.Controls.Add(this.kryptonButton9);
             this.panel5.Location = new System.Drawing.Point(3, 247);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1017, 55);
+            this.panel5.Size = new System.Drawing.Size(1017, 161);
             this.panel5.TabIndex = 123;
+            // 
+            // remove_drive3
+            // 
+            this.remove_drive3.AutoSize = true;
+            this.remove_drive3.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remove_drive3.Location = new System.Drawing.Point(969, 131);
+            this.remove_drive3.Name = "remove_drive3";
+            this.remove_drive3.Size = new System.Drawing.Size(19, 13);
+            this.remove_drive3.TabIndex = 143;
+            this.remove_drive3.Text = "✖";
+            this.remove_drive3.Visible = false;
+            this.remove_drive3.Click += new System.EventHandler(this.removem2_Click);
+            this.remove_drive3.MouseLeave += new System.EventHandler(this.remove_MouseLeave);
+            this.remove_drive3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.remove_MouseMove);
+            // 
+            // drive3quan
+            // 
+            this.drive3quan.AutoSize = true;
+            this.drive3quan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drive3quan.Location = new System.Drawing.Point(781, 125);
+            this.drive3quan.Name = "drive3quan";
+            this.drive3quan.Size = new System.Drawing.Size(19, 21);
+            this.drive3quan.TabIndex = 142;
+            this.drive3quan.Text = "1";
+            this.drive3quan.Visible = false;
+            // 
+            // drive3price
+            // 
+            this.drive3price.AutoSize = true;
+            this.drive3price.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drive3price.Location = new System.Drawing.Point(885, 125);
+            this.drive3price.Name = "drive3price";
+            this.drive3price.Size = new System.Drawing.Size(19, 21);
+            this.drive3price.TabIndex = 141;
+            this.drive3price.Text = "$";
+            this.drive3price.Visible = false;
+            // 
+            // drive3name
+            // 
+            this.drive3name.AutoSize = true;
+            this.drive3name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drive3name.Location = new System.Drawing.Point(361, 125);
+            this.drive3name.Name = "drive3name";
+            this.drive3name.Size = new System.Drawing.Size(59, 21);
+            this.drive3name.TabIndex = 138;
+            this.drive3name.Text = "\"Drive\"";
+            this.drive3name.Visible = false;
+            this.drive3name.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.drive3name.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            // 
+            // drive3pbox
+            // 
+            this.drive3pbox.BackColor = System.Drawing.Color.White;
+            this.drive3pbox.Image = ((System.Drawing.Image)(resources.GetObject("drive3pbox.Image")));
+            this.drive3pbox.Location = new System.Drawing.Point(314, 121);
+            this.drive3pbox.Name = "drive3pbox";
+            this.drive3pbox.Size = new System.Drawing.Size(37, 34);
+            this.drive3pbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.drive3pbox.TabIndex = 139;
+            this.drive3pbox.TabStop = false;
+            this.drive3pbox.Visible = false;
+            // 
+            // drive3border
+            // 
+            this.drive3border.Enabled = false;
+            this.drive3border.Location = new System.Drawing.Point(310, 115);
+            this.drive3border.Name = "drive3border";
+            this.drive3border.Size = new System.Drawing.Size(45, 46);
+            this.drive3border.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.drive3border.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.drive3border.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.drive3border.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.drive3border.StateCommon.Border.Rounding = 3;
+            this.drive3border.TabIndex = 140;
+            this.drive3border.Values.Text = "";
+            this.drive3border.Visible = false;
+            // 
+            // remove_drive2
+            // 
+            this.remove_drive2.AutoSize = true;
+            this.remove_drive2.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remove_drive2.Location = new System.Drawing.Point(969, 78);
+            this.remove_drive2.Name = "remove_drive2";
+            this.remove_drive2.Size = new System.Drawing.Size(19, 13);
+            this.remove_drive2.TabIndex = 137;
+            this.remove_drive2.Text = "✖";
+            this.remove_drive2.Visible = false;
+            this.remove_drive2.Click += new System.EventHandler(this.removessd_Click);
+            this.remove_drive2.MouseLeave += new System.EventHandler(this.remove_MouseLeave);
+            this.remove_drive2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.remove_MouseMove);
+            // 
+            // drive2quan
+            // 
+            this.drive2quan.AutoSize = true;
+            this.drive2quan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drive2quan.Location = new System.Drawing.Point(781, 72);
+            this.drive2quan.Name = "drive2quan";
+            this.drive2quan.Size = new System.Drawing.Size(19, 21);
+            this.drive2quan.TabIndex = 136;
+            this.drive2quan.Text = "1";
+            this.drive2quan.Visible = false;
+            // 
+            // drive2price
+            // 
+            this.drive2price.AutoSize = true;
+            this.drive2price.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drive2price.Location = new System.Drawing.Point(885, 72);
+            this.drive2price.Name = "drive2price";
+            this.drive2price.Size = new System.Drawing.Size(19, 21);
+            this.drive2price.TabIndex = 135;
+            this.drive2price.Text = "$";
+            this.drive2price.Visible = false;
+            // 
+            // drive2name
+            // 
+            this.drive2name.AutoSize = true;
+            this.drive2name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drive2name.Location = new System.Drawing.Point(361, 72);
+            this.drive2name.Name = "drive2name";
+            this.drive2name.Size = new System.Drawing.Size(59, 21);
+            this.drive2name.TabIndex = 132;
+            this.drive2name.Text = "\"Drive\"";
+            this.drive2name.Visible = false;
+            this.drive2name.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.drive2name.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            // 
+            // drive2pbox
+            // 
+            this.drive2pbox.BackColor = System.Drawing.Color.White;
+            this.drive2pbox.Image = ((System.Drawing.Image)(resources.GetObject("drive2pbox.Image")));
+            this.drive2pbox.Location = new System.Drawing.Point(314, 68);
+            this.drive2pbox.Name = "drive2pbox";
+            this.drive2pbox.Size = new System.Drawing.Size(37, 34);
+            this.drive2pbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.drive2pbox.TabIndex = 133;
+            this.drive2pbox.TabStop = false;
+            this.drive2pbox.Visible = false;
+            // 
+            // drive2border
+            // 
+            this.drive2border.Enabled = false;
+            this.drive2border.Location = new System.Drawing.Point(310, 62);
+            this.drive2border.Name = "drive2border";
+            this.drive2border.Size = new System.Drawing.Size(45, 46);
+            this.drive2border.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.drive2border.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.drive2border.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.drive2border.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.drive2border.StateCommon.Border.Rounding = 3;
+            this.drive2border.TabIndex = 134;
+            this.drive2border.Values.Text = "";
+            this.drive2border.Visible = false;
             // 
             // remove_drive1
             // 
@@ -696,6 +878,7 @@
             this.remove_drive1.TabIndex = 131;
             this.remove_drive1.Text = "✖";
             this.remove_drive1.Visible = false;
+            this.remove_drive1.Click += new System.EventHandler(this.removehdd_Click);
             this.remove_drive1.MouseLeave += new System.EventHandler(this.remove_MouseLeave);
             this.remove_drive1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.remove_MouseMove);
             // 
@@ -797,7 +980,7 @@
             this.panel6.Controls.Add(this.pBox6);
             this.panel6.Controls.Add(this.border6);
             this.panel6.Controls.Add(this.kryptonButton11);
-            this.panel6.Location = new System.Drawing.Point(3, 308);
+            this.panel6.Location = new System.Drawing.Point(3, 414);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1017, 55);
             this.panel6.TabIndex = 124;
@@ -914,7 +1097,7 @@
             this.panel7.Controls.Add(this.pBox7);
             this.panel7.Controls.Add(this.border7);
             this.panel7.Controls.Add(this.kryptonButton13);
-            this.panel7.Location = new System.Drawing.Point(3, 369);
+            this.panel7.Location = new System.Drawing.Point(3, 475);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1017, 55);
             this.panel7.TabIndex = 125;
@@ -1037,7 +1220,7 @@
             this.panel8.Controls.Add(this.pBoxfans);
             this.panel8.Controls.Add(this.borderfans);
             this.panel8.Controls.Add(this.kryptonButton15);
-            this.panel8.Location = new System.Drawing.Point(3, 430);
+            this.panel8.Location = new System.Drawing.Point(3, 536);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1017, 55);
             this.panel8.TabIndex = 126;
@@ -1230,7 +1413,7 @@
             this.panel9.Controls.Add(this.pBox9);
             this.panel9.Controls.Add(this.border9);
             this.panel9.Controls.Add(this.kryptonButton17);
-            this.panel9.Location = new System.Drawing.Point(3, 491);
+            this.panel9.Location = new System.Drawing.Point(3, 597);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1017, 55);
             this.panel9.TabIndex = 127;
@@ -1347,7 +1530,7 @@
             this.panel10.Controls.Add(this.pBox10);
             this.panel10.Controls.Add(this.border10);
             this.panel10.Controls.Add(this.kryptonButton19);
-            this.panel10.Location = new System.Drawing.Point(3, 552);
+            this.panel10.Location = new System.Drawing.Point(3, 658);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(1017, 55);
             this.panel10.TabIndex = 128;
@@ -1464,7 +1647,7 @@
             this.panel11.Controls.Add(this.pBox11);
             this.panel11.Controls.Add(this.border11);
             this.panel11.Controls.Add(this.kryptonButton21);
-            this.panel11.Location = new System.Drawing.Point(3, 613);
+            this.panel11.Location = new System.Drawing.Point(3, 719);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1017, 55);
             this.panel11.TabIndex = 129;
@@ -1581,7 +1764,7 @@
             this.panel12.Controls.Add(this.pBox12);
             this.panel12.Controls.Add(this.border12);
             this.panel12.Controls.Add(this.kryptonButton23);
-            this.panel12.Location = new System.Drawing.Point(3, 674);
+            this.panel12.Location = new System.Drawing.Point(3, 780);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(1017, 59);
             this.panel12.TabIndex = 130;
@@ -1809,6 +1992,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBox4)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.drive3pbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drive2pbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.drive1pbox)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -1961,5 +2146,17 @@
         private System.Windows.Forms.Label total_price;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
         private System.Windows.Forms.Label delete_all;
+        private System.Windows.Forms.Label remove_drive3;
+        private System.Windows.Forms.Label drive3quan;
+        private System.Windows.Forms.Label drive3price;
+        private System.Windows.Forms.Label drive3name;
+        private System.Windows.Forms.PictureBox drive3pbox;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton drive3border;
+        private System.Windows.Forms.Label remove_drive2;
+        private System.Windows.Forms.Label drive2quan;
+        private System.Windows.Forms.Label drive2price;
+        private System.Windows.Forms.Label drive2name;
+        private System.Windows.Forms.PictureBox drive2pbox;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton drive2border;
     }
 }

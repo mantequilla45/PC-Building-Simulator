@@ -28,8 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.spec2 = new System.Windows.Forms.Label();
+            this.comp2 = new System.Windows.Forms.Label();
+            this.spec1 = new System.Windows.Forms.Label();
+            this.border1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.comp1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -38,6 +44,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.border2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.spec3 = new System.Windows.Forms.Label();
+            this.comp3 = new System.Windows.Forms.Label();
+            this.border3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -47,23 +57,106 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.spec3);
+            this.panel1.Controls.Add(this.comp3);
+            this.panel1.Controls.Add(this.border3);
+            this.panel1.Controls.Add(this.spec2);
+            this.panel1.Controls.Add(this.comp2);
+            this.panel1.Controls.Add(this.spec1);
+            this.panel1.Controls.Add(this.border1);
+            this.panel1.Controls.Add(this.comp1);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.but_add);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.border2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1063, 699);
             this.panel1.TabIndex = 6;
             // 
+            // spec2
+            // 
+            this.spec2.AutoSize = true;
+            this.spec2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spec2.Location = new System.Drawing.Point(222, 472);
+            this.spec2.MaximumSize = new System.Drawing.Size(160, 34);
+            this.spec2.Name = "spec2";
+            this.spec2.Size = new System.Drawing.Size(42, 17);
+            this.spec2.TabIndex = 24;
+            this.spec2.Text = "Specs";
+            this.spec2.Visible = false;
+            // 
+            // comp2
+            // 
+            this.comp2.AutoSize = true;
+            this.comp2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comp2.Location = new System.Drawing.Point(38, 472);
+            this.comp2.MaximumSize = new System.Drawing.Size(160, 34);
+            this.comp2.Name = "comp2";
+            this.comp2.Size = new System.Drawing.Size(43, 17);
+            this.comp2.TabIndex = 23;
+            this.comp2.Text = "Comp";
+            this.comp2.Visible = false;
+            // 
+            // spec1
+            // 
+            this.spec1.AutoSize = true;
+            this.spec1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spec1.Location = new System.Drawing.Point(222, 423);
+            this.spec1.MaximumSize = new System.Drawing.Size(160, 34);
+            this.spec1.Name = "spec1";
+            this.spec1.Size = new System.Drawing.Size(42, 17);
+            this.spec1.TabIndex = 16;
+            this.spec1.Text = "Specs";
+            this.spec1.Visible = false;
+            // 
+            // border1
+            // 
+            this.border1.Enabled = false;
+            this.border1.Location = new System.Drawing.Point(209, 423);
+            this.border1.Name = "border1";
+            this.border1.Size = new System.Drawing.Size(74, 35);
+            this.border1.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
+            this.border1.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
+            this.border1.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.border1.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left;
+            this.border1.TabIndex = 22;
+            this.border1.Values.Text = "";
+            this.border1.Visible = false;
+            // 
+            // comp1
+            // 
+            this.comp1.AutoSize = true;
+            this.comp1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comp1.Location = new System.Drawing.Point(38, 423);
+            this.comp1.MaximumSize = new System.Drawing.Size(160, 34);
+            this.comp1.Name = "comp1";
+            this.comp1.Size = new System.Drawing.Size(43, 17);
+            this.comp1.TabIndex = 15;
+            this.comp1.Text = "Comp";
+            this.comp1.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(29, 395);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(163, 21);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Compatibility Checker";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(196, 360);
+            this.label2.MaximumSize = new System.Drawing.Size(122, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 13);
             this.label2.TabIndex = 13;
@@ -178,8 +271,8 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ColumnHeadersVisible = false;
@@ -215,6 +308,58 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.dataGridView1.TabIndex = 7;
             // 
+            // border2
+            // 
+            this.border2.Enabled = false;
+            this.border2.Location = new System.Drawing.Point(209, 472);
+            this.border2.Name = "border2";
+            this.border2.Size = new System.Drawing.Size(74, 35);
+            this.border2.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
+            this.border2.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
+            this.border2.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.border2.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left;
+            this.border2.TabIndex = 25;
+            this.border2.Values.Text = "";
+            this.border2.Visible = false;
+            // 
+            // spec3
+            // 
+            this.spec3.AutoSize = true;
+            this.spec3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spec3.Location = new System.Drawing.Point(222, 521);
+            this.spec3.MaximumSize = new System.Drawing.Size(160, 34);
+            this.spec3.Name = "spec3";
+            this.spec3.Size = new System.Drawing.Size(42, 17);
+            this.spec3.TabIndex = 27;
+            this.spec3.Text = "Specs";
+            this.spec3.Visible = false;
+            // 
+            // comp3
+            // 
+            this.comp3.AutoSize = true;
+            this.comp3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comp3.Location = new System.Drawing.Point(38, 521);
+            this.comp3.MaximumSize = new System.Drawing.Size(160, 34);
+            this.comp3.Name = "comp3";
+            this.comp3.Size = new System.Drawing.Size(43, 17);
+            this.comp3.TabIndex = 26;
+            this.comp3.Text = "Comp";
+            this.comp3.Visible = false;
+            // 
+            // border3
+            // 
+            this.border3.Enabled = false;
+            this.border3.Location = new System.Drawing.Point(209, 521);
+            this.border3.Name = "border3";
+            this.border3.Size = new System.Drawing.Size(74, 35);
+            this.border3.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
+            this.border3.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
+            this.border3.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.border3.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left;
+            this.border3.TabIndex = 28;
+            this.border3.Values.Text = "";
+            this.border3.Visible = false;
+            // 
             // productspecs
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -244,5 +389,15 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dataGridView1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label comp1;
+        private System.Windows.Forms.Label spec1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border1;
+        private System.Windows.Forms.Label spec2;
+        private System.Windows.Forms.Label comp2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border2;
+        private System.Windows.Forms.Label spec3;
+        private System.Windows.Forms.Label comp3;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border3;
     }
 }

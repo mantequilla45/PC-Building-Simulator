@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PC_Building_Simulator
 {
@@ -23,6 +24,24 @@ namespace PC_Building_Simulator
         private DisplayManager displayManager;
         private string price;
         private buildmenu buildMenu;
+        private string user;
+        private int userCount = 0;
+        private string update;
+        private string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
+        private string motherboardName = "";
+        private string cpuName = "";
+        private string hddName = "";
+        private string ssdName = "";
+        private string mb_cpuSocket = "";
+        private string cpusocketype = "";
+        private string mbmemoryslots = "";
+        private string mbmemoryType = "";
+        private string ramtype = "";
+        private string mbsataports = "";
+        private string mbm2slots = "";
+        private string pciegen = "";
+        private int hddquan = 0;
+        private int ssdquan = 0;
         public productspecs(string prodchoice, int num, MainApp mainApp, string price)
         {
             InitializeComponent();
@@ -35,23 +54,11 @@ namespace PC_Building_Simulator
             buildMenu = new buildmenu(mainApp);
             display(choice);
             InitializeDisplayManager();
+            compatibilitychecker();
+            getcurrentuser();
         }
-
-        private void productmenu_Load(object sender, EventArgs e)
+        private void getcurrentuser()
         {
-        }
-
-        private void InitializeDisplayManager()
-        {
-            productspecs productspecsform = this;
-            DisplayManager displayManager = new DisplayManager(productspecsform);
-        }
-
-        private void but_add_Click(object sender, EventArgs e)
-        {
-            string update;
-            string user;
-            string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
             string query = "SELECT TOP 1 [user] FROM currentuser";
             using (OleDbConnection connection = new OleDbConnection(connectionString))
             {
@@ -70,7 +77,6 @@ namespace PC_Building_Simulator
                 }
             }
             string selectQuery = "SELECT COUNT(*) FROM Builds WHERE [user] = @Username";
-            int userCount = 0;
 
             try
             {
@@ -89,61 +95,308 @@ namespace PC_Building_Simulator
             {
                 dbManager.CloseConnection();
             }
+        }
+        private void productmenu_Load(object sender, EventArgs e)
+        {
+        }
 
+        private void InitializeDisplayManager()
+        {
+            productspecs productspecsform = this;
+            DisplayManager displayManager = new DisplayManager(productspecsform);
+        }
+        string GetSingleValue(string query, string parameterName, string parameterValue, string columnName)
+        {
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            using (OleDbCommand command = new OleDbCommand(query, connection))
+            {
+                command.Parameters.AddWithValue(parameterName, parameterValue);
+                connection.Open();
+                using (OleDbDataReader reader = command.ExecuteReader())
+                {
+                    return reader.Read() ? reader[columnName].ToString() : "";
+                }
+            }
+        }
+        Dictionary<string, string> GetMultipleValues(string query, string parameterName, string parameterValue, params string[] columnNames)
+        {
+            Dictionary<string, string> values = new Dictionary<string, string>();
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            using (OleDbCommand command = new OleDbCommand(query, connection))
+            {
+                command.Parameters.AddWithValue(parameterName, parameterValue);
+                connection.Open();
+                using (OleDbDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        foreach (string columnName in columnNames)
+                        {
+                            values[columnName] = reader[columnName].ToString();
+                        }
+                    }
+                }
+            }
+
+            return values;
+        }
+        private void compatibilitychecker()
+        {
+            getcurrentuser();
+            string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
+            string userToUpdate = user;
+
+            motherboardName = GetSingleValue("SELECT Motherboard FROM Builds WHERE [user] = @UserToUpdate", "@UserToUpdate", userToUpdate, "Motherboard");
+            hddName = GetSingleValue("SELECT HDD FROM Builds WHERE [user] = @UserToUpdate", "@UserToUpdate", userToUpdate, "HDD");
+            cpuName = GetSingleValue("SELECT CPU FROM Builds WHERE [user] = @UserToUpdate", "@UserToUpdate", userToUpdate, "CPU");
+            ssdName = GetSingleValue("SELECT SSD FROM Builds WHERE [user] = @UserToUpdate", "@UserToUpdate", userToUpdate, "SSD");
+
+            Dictionary<string, string> motherboardstports = GetMultipleValues("SELECT [SATA Ports], [M2 Slots], [PCIe Generation] FROM [Motherboard specs] WHERE [Motherboard Name] = @MotherboardName", "@MotherboardName", motherboardName, "SATA Ports", "M2 Slots", "PCIe Generation");
+            mbsataports = motherboardstports.ContainsKey("SATA Ports") ? motherboardstports["SATA Ports"] : "";
+            mbm2slots = motherboardstports.ContainsKey("M2 Slots") ? motherboardstports["M2 Slots"] : "";
+            pciegen = motherboardstports.ContainsKey("PCIe Generation") ? motherboardstports["PCIe Generation"] : "";
+
+            Dictionary<string, string> sataquan = GetMultipleValues("SELECT [HDD quantity], [SSD quantity] FROM [Builds] WHERE [user] = @user", "@user", user, "HDD quantity", "SSD quantity");
+            hddquan = sataquan.ContainsKey("HDD quantity") && !string.IsNullOrEmpty(sataquan["HDD quantity"]) ? int.Parse(sataquan["HDD quantity"]) : 0;
+            ssdquan = sataquan.ContainsKey("SSD quantity") && !string.IsNullOrEmpty(sataquan["SSD quantity"]) ? int.Parse(sataquan["SSD quantity"]) : 0;
+
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                connection.Open();
+
+                switch (menuchoice)
+                {
+                    case 1: //CPU
+                        mb_cpuSocket = GetSingleValue("SELECT [CPU Socket] FROM [Motherboard specs] WHERE [Motherboard Name] = @MotherboardName", "@MotherboardName", motherboardName, "CPU Socket");
+                        cpusocketype = GetSingleValue("SELECT [Socket Type] FROM [CPU specs] WHERE [Processor Name] = @prodchoice", "@prodchoice", choice, "Socket Type");
+                        comp1.Visible = true;
+                        spec1.Visible = true;
+                        border1.Visible = true;
+
+                        if (motherboardName != "")
+                        {
+                            comp1.Text = $"{motherboardName} CPU Slot";
+                            spec1.Text = mb_cpuSocket;
+                        }
+                        else
+                        {
+                            comp1.Text = "No motherboard selected.";
+                            spec1.Visible = false;
+                            border1.Visible = false;
+                        }
+                        break;
+
+                    case 3: //MB
+                        cpusocketype = GetSingleValue("SELECT [Socket Type] FROM [CPU specs] WHERE [Processor Name] = @prodchoice", "@prodchoice", cpuName, "Socket Type");
+                        mb_cpuSocket = GetSingleValue("SELECT [CPU Socket] FROM [Motherboard specs] WHERE [Motherboard Name] = @prodchoice", "@prodchoice", choice, "CPU Socket");
+
+                        comp1.Visible = true;
+                        spec1.Visible = true;
+                        border1.Visible = true;
+                        if (cpuName != "")
+                        {
+                            comp1.Text = $"{cpuName} Socket Type";
+                            spec1.Text = cpusocketype;
+                        }
+                        else
+                        {
+                            comp1.Text = "No CPU selected.";
+                            spec1.Visible = false;
+                            border1.Visible = false;
+                        }
+                        break;
+
+                    case 4: //RAM
+
+                        Dictionary<string, string> motherboardsockets = GetMultipleValues("SELECT [Memory Slots], [Memory Type] FROM [Motherboard specs] WHERE [Motherboard Name] = @MotherboardName", "@MotherboardName", motherboardName, "Memory Slots", "Memory Type");
+                        mbmemoryslots = motherboardsockets.ContainsKey("Memory Slots") ? motherboardsockets["Memory Slots"] : "";
+                        mbmemoryType = motherboardsockets.ContainsKey("Memory Type") ? motherboardsockets["Memory Type"] : "";
+                        ramtype = GetSingleValue("SELECT [Memory Type] FROM [RAM specs] WHERE [RAM Module Name] = @prodchoice", "@prodchoice", choice, "Memory Type");
+
+                        comp1.Visible = true;
+                        spec1.Visible = true;
+                        border1.Visible = true;
+                        comp2.Visible = true;
+                        spec2.Visible = true;
+                        border2.Visible = true;
+                        if (motherboardName != "")
+                        {
+                            comp1.Text = $"{motherboardName} Memory Slots";
+                            spec1.Text = mbmemoryslots;
+                            comp2.Text = $"{motherboardName} Memory Type";
+                            spec2.Text = mbmemoryType;
+                        }
+                        else
+                        {
+                            comp1.Text = "No motherboard selected.";
+                            spec1.Visible = false;
+                            border1.Visible = false;
+                            border2.Visible = false;
+                            comp2.Visible = false;
+                            spec2.Visible = false;
+                        }
+                        break;
+
+                    case 13: //HDD
+                        comp1.Visible = true;
+                        spec1.Visible = true;
+                        comp2.Visible = true;
+                        spec2.Visible = true;
+                        border1.Visible = true;
+                        border2.Visible = true;
+                        if (motherboardName != "")
+                        {
+                            comp1.Text = $"{motherboardName} SATA Ports";
+                            spec1.Text = mbsataports;
+                        }
+                        else
+                        {
+                            comp1.Text = "No motherboard selected.";
+                            spec1.Visible = false;
+                            border1.Visible = false;
+                        }
+                        if(ssdName != "")
+                        {
+                            comp2.Text = ssdName;
+                            spec2.Text = $"x {ssdquan}";
+                        }
+
+                        else
+                        {
+                            comp2.Visible = false;
+                            spec2.Visible = false;
+                            border2.Visible = false;
+                        }
+                        break;
+
+                    case 14: //SSD
+                        comp1.Visible = true;
+                        spec1.Visible = true;
+                        comp2.Visible = true;
+                        spec2.Visible = true;
+                        border1.Visible = true;
+                        border2.Visible = true;
+                        if (motherboardName != "")
+                        {
+                            comp1.Text = $"{motherboardName} SATA Ports";
+                            spec1.Text = mbsataports;
+                        }
+                        else
+                        {
+                            comp1.Text = "No motherboard selected.";
+                            spec1.Visible = false;
+                            border1.Visible = false;
+                        }
+                        if (hddName != "")
+                        {
+                            comp2.Text = hddName;
+                            spec2.Text = $"x {hddquan}";
+                        }
+
+                        else
+                        {
+                            comp2.Visible = false;
+                            spec2.Visible = false;
+                            border2.Visible = false;
+                        }
+                        break;
+
+                    case 15: //M2
+                        comp1.Visible = true;
+                        spec1.Visible = true;
+                        border1.Visible = true;
+                        comp2.Visible = true;
+                        spec2.Visible = true;
+                        border2.Visible = true;
+
+                        if (motherboardName != "")
+                        {
+                            comp1.Text = $"{motherboardName} M2 Slots";
+                            spec1.Text = mbm2slots;
+                            comp2.Text = "PCIe Generation";
+                            spec2.Text = pciegen;
+                        }
+                        else
+                        {
+                            comp1.Text = "No motherboard selected.";
+                            spec1.Visible = false;
+                            border1.Visible = false;
+                        }
+                        break;
+                }
+            }
+        }
+
+        private void but_add_Click(object sender, EventArgs e)
+        {
+            getcurrentuser();
+            int mbsata, m2slot, usedsata;
             switch (menuchoice)
             {
                 case 1:
-
-                    if (userCount > 0)
+                    if (mb_cpuSocket == "" || mb_cpuSocket == cpusocketype)
                     {
-                        string updateQuery = "UPDATE Builds SET CPU = @CPU, [CPU price] = @price WHERE [user] = @Username";
-                        try
+                        if (userCount > 0)
                         {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                            string updateQuery = "UPDATE Builds SET CPU = @CPU, [CPU price] = @price WHERE [user] = @Username";
+                            try
                             {
+                                dbManager.OpenConnection();
+                                using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                                {
 
-                                updateCmd.Parameters.AddWithValue("@CPU", choice);
-                                updateCmd.Parameters.AddWithValue("@price", price);
-                                updateCmd.Parameters.AddWithValue("@Username", user);
-                                label2.Visible = true;
-                                int rowsAffected = updateCmd.ExecuteNonQuery();
+                                    updateCmd.Parameters.AddWithValue("@CPU", choice);
+                                    updateCmd.Parameters.AddWithValue("@price", price);
+                                    updateCmd.Parameters.AddWithValue("@Username", user);
+                                    label2.Visible = true;
+                                    int rowsAffected = updateCmd.ExecuteNonQuery();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error updating CPU for existing user: " + ex.Message);
+                            }
+                            finally
+                            {
+                                dbManager.CloseConnection();
                             }
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            MessageBox.Show("Error updating CPU for existing user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
+                            string insertQuery = "INSERT INTO Builds ([user], [CPU], [CPU price]) VALUES (@Username, @CPU, @price)";
+                            try
+                            {
+                                dbManager.OpenConnection();
+                                using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
+                                {
+                                    insertCmd.Parameters.AddWithValue("@Username", user);
+                                    insertCmd.Parameters.AddWithValue("@CPU", choice);
+                                    insertCmd.Parameters.AddWithValue("@price", price);
+                                    label2.Visible = true;
+                                    int rowsAffected = insertCmd.ExecuteNonQuery();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error inserting CPU for new user: " + ex.Message);
+                            }
+                            finally
+                            {
+                                dbManager.CloseConnection();
+                            }
                         }
                     }
+
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds ([user], [CPU], [CPU price]) VALUES (@Username, @CPU, @price)";
-                        try
-                        {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
-                            {
-                                insertCmd.Parameters.AddWithValue("@Username", user);
-                                insertCmd.Parameters.AddWithValue("@CPU", choice);
-                                insertCmd.Parameters.AddWithValue("@price", price);
-                                label2.Visible = true;
-                                int rowsAffected = insertCmd.ExecuteNonQuery();
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error inserting CPU for new user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
-                        }
+                        label2.Visible = true;
+                        label2.ForeColor = Color.FromArgb(180, 18, 0);
+                        label2.Text = "Incompatible with Motherboard";
                     }
-                break;
+
+                    break;
 
                 case 2:
                     if (userCount > 0)
@@ -196,107 +449,129 @@ namespace PC_Building_Simulator
                     }
                     break;
                 case 3:
-                    if (userCount > 0)
+
+                    if (cpusocketype == "" || cpusocketype == mb_cpuSocket)
                     {
-                        string updateQuery = "UPDATE Builds SET Motherboard = @mb, [Motherboard price] = @price WHERE [user] = @Username";
-                        try
+                        if (userCount > 0)
                         {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                            string updateQuery = "UPDATE Builds SET Motherboard = @mb, [Motherboard price] = @price WHERE [user] = @Username";
+                            try
                             {
-                                updateCmd.Parameters.AddWithValue("@mb", choice);
-                                updateCmd.Parameters.AddWithValue("@price", price);
-                                updateCmd.Parameters.AddWithValue("@Username", user);
-                                label2.Visible = true;
-                                int rowsAffected = updateCmd.ExecuteNonQuery();
+                                dbManager.OpenConnection();
+                                using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                                {
+                                    updateCmd.Parameters.AddWithValue("@mb", choice);
+                                    updateCmd.Parameters.AddWithValue("@price", price);
+                                    updateCmd.Parameters.AddWithValue("@Username", user);
+                                    label2.Visible = true;
+                                    int rowsAffected = updateCmd.ExecuteNonQuery();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error updating Motherboard for existing user: " + ex.Message);
+                            }
+                            finally
+                            {
+                                dbManager.CloseConnection();
                             }
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            MessageBox.Show("Error updating Motherboard for existing user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
+                            string insertQuery = "INSERT INTO Builds (Motherboard, [user], [Motherboard price]) VALUES (@mb, @Username, @price)";
+                            try
+                            {
+                                dbManager.OpenConnection();
+                                using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
+                                {
+                                    insertCmd.Parameters.AddWithValue("@mb", choice);
+                                    insertCmd.Parameters.AddWithValue("@price", price);
+                                    insertCmd.Parameters.AddWithValue("@Username", user);
+                                    label2.Visible = true;
+                                    int rowsAffected = insertCmd.ExecuteNonQuery();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error inserting motherboard for new user: " + ex.Message);
+                            }
+                            finally
+                            {
+                                dbManager.CloseConnection();
+                            }
                         }
                     }
+
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds (Motherboard, [user], [Motherboard price]) VALUES (@mb, @Username, @price)";
-                        try
-                        {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
-                            {
-                                insertCmd.Parameters.AddWithValue("@mb", choice);
-                                insertCmd.Parameters.AddWithValue("@price", price);
-                                insertCmd.Parameters.AddWithValue("@Username", user);
-                                label2.Visible = true;
-                                int rowsAffected = insertCmd.ExecuteNonQuery();
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error inserting motherboard for new user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
-                        }
+                        label2.Visible = true;
+                        label2.ForeColor = Color.FromArgb(180, 18, 0);
+                        label2.Text = "Incompatible with Processor";
                     }
                     break;
 
                 case 4:
-                    if (userCount > 0)
+
+                    if (mbmemoryslots == "" || mbmemoryslots.Substring(2) == ramtype)
                     {
-                        quantity = int.Parse(comboBox1.Text);
-                        string updateQuery = "UPDATE Builds SET RAM = @ram, [RAM Quantity] = @ramQuantity, [RAM price] = @price WHERE [user] = @Username";
-                        try
+                        if (userCount > 0)
                         {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                            quantity = int.Parse(comboBox1.Text);
+                            string updateQuery = "UPDATE Builds SET RAM = @ram, [RAM Quantity] = @ramQuantity, [RAM price] = @price WHERE [user] = @Username";
+                            try
                             {
-                                updateCmd.Parameters.AddWithValue("@ram", choice);
-                                updateCmd.Parameters.AddWithValue("@ramQuantity", quantity);
-                                updateCmd.Parameters.AddWithValue("@price", price);
-                                updateCmd.Parameters.AddWithValue("@Username", user);
-                                label2.Visible = true;
-                                int rowsAffected = updateCmd.ExecuteNonQuery();
+                                dbManager.OpenConnection();
+                                using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                                {
+                                    updateCmd.Parameters.AddWithValue("@ram", choice);
+                                    updateCmd.Parameters.AddWithValue("@ramQuantity", quantity);
+                                    updateCmd.Parameters.AddWithValue("@price", price);
+                                    updateCmd.Parameters.AddWithValue("@Username", user);
+                                    label2.Visible = true;
+                                    int rowsAffected = updateCmd.ExecuteNonQuery();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error updating RAM and RAM quantity for existing user: " + ex.Message);
+                            }
+                            finally
+                            {
+                                dbManager.CloseConnection();
                             }
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            MessageBox.Show("Error updating RAM and RAM quantity for existing user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
+                            string insertQuery = "INSERT INTO Builds (RAM, [RAM Quantity], [user], [RAM price]) VALUES (@ram, @ramQuantity, @Username, @price)";
+                            try
+                            {
+                                dbManager.OpenConnection();
+                                using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
+                                {
+                                    insertCmd.Parameters.AddWithValue("@ram", choice);
+                                    insertCmd.Parameters.AddWithValue("@ramQuantity", quantity);
+                                    insertCmd.Parameters.AddWithValue("@price", price);
+                                    insertCmd.Parameters.AddWithValue("@Username", user);
+                                    label2.Visible = true;
+                                    int rowsAffected = insertCmd.ExecuteNonQuery();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error inserting RAM and RAM quantity for new user: " + ex.Message);
+                            }
+                            finally
+                            {
+                                dbManager.CloseConnection();
+                            }
                         }
                     }
+
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds (RAM, [RAM Quantity], [user], [RAM price]) VALUES (@ram, @ramQuantity, @Username, @price)";
-                        try
-                        {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
-                            {
-                                insertCmd.Parameters.AddWithValue("@ram", choice);
-                                insertCmd.Parameters.AddWithValue("@ramQuantity", quantity);
-                                insertCmd.Parameters.AddWithValue("@price", price);
-                                insertCmd.Parameters.AddWithValue("@Username", user);
-                                label2.Visible = true;
-                                int rowsAffected = insertCmd.ExecuteNonQuery();
-                            }
-                        }
-                        catch (Exception ex)
-                        {   
-                            MessageBox.Show("Error inserting RAM and RAM quantity for new user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
-                        }
+                        label2.Visible = true;
+                        label2.ForeColor = Color.FromArgb(180, 18, 0);
+                        label2.Text = "Incompatible with Motherboard";
                     }
                     break;
 
@@ -604,166 +879,213 @@ namespace PC_Building_Simulator
                     }
                     break;
                 case 13:
-                    quantity = int.Parse(comboBox1.Text);
-                    if (userCount > 0)
+                    quantity = int.Parse(comboBox1.Text); 
+                    mbsata = int.Parse(mbsataports.Substring(0, 1));
+                    usedsata = int.Parse(spec2.Text.Replace("x", "").Replace(" ", "")) + quantity;
+                    MessageBox.Show(usedsata.ToString());
+                    if (mbsata >= usedsata)
                     {
-                        string updateQuery = "UPDATE Builds SET [HDD quantity] = @quan, [HDD] = @hdd, [HDD price] = @price WHERE [user] = @Username";
-                        try
+                        if (userCount > 0)
                         {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                            string updateQuery = "UPDATE Builds SET [HDD quantity] = @quan, [HDD] = @hdd, [HDD price] = @price WHERE [user] = @Username";
+                            try
                             {
-                                updateCmd.Parameters.AddWithValue("@quan", quantity);
-                                updateCmd.Parameters.AddWithValue("@hdd", choice);
-                                updateCmd.Parameters.AddWithValue("@price", price);
-                                updateCmd.Parameters.AddWithValue("@Username", user);
-                                label2.Visible = true;
-                                int rowsAffected = updateCmd.ExecuteNonQuery();
+                                dbManager.OpenConnection();
+                                using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                                {
+                                    updateCmd.Parameters.AddWithValue("@quan", quantity);
+                                    updateCmd.Parameters.AddWithValue("@hdd", choice);
+                                    updateCmd.Parameters.AddWithValue("@price", price);
+                                    updateCmd.Parameters.AddWithValue("@Username", user);
+                                    label2.Visible = true;
+                                    label2.ForeColor = SystemColors.ControlText;
+                                    label2.Text = "Added to your build!";
+                                    int rowsAffected = updateCmd.ExecuteNonQuery();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error updating HDD for existing user: " + ex.Message);
+                            }
+                            finally
+                            {
+                                dbManager.CloseConnection();
                             }
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            MessageBox.Show("Error updating HDD for existing user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
+                            string insertQuery = "INSERT INTO Builds ([HDD quantity], [HDD], [user], [HDD price]) VALUES (@quan, @hdd, @Username, @price)";
+                            try
+                            {
+                                dbManager.OpenConnection();
+                                using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
+                                {
+                                    insertCmd.Parameters.AddWithValue("@quan", quantity);
+                                    insertCmd.Parameters.AddWithValue("@hdd", choice);
+                                    insertCmd.Parameters.AddWithValue("@price", price);
+                                    insertCmd.Parameters.AddWithValue("@Username", user);
+                                    label2.Visible = true; 
+                                    label2.ForeColor = SystemColors.ControlText;
+                                    label2.Text = "Added to your build!";
+                                    int rowsAffected = insertCmd.ExecuteNonQuery();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error inserting HDD for new user: " + ex.Message);
+                            }
+                            finally
+                            {
+                                dbManager.CloseConnection();
+                            }
                         }
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds ([HDD quantity], [HDD], [user], [HDD price]) VALUES (@quan, @hdd, @Username, @price)";
-                        try
-                        {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
-                            {
-                                insertCmd.Parameters.AddWithValue("@quan", quantity);
-                                insertCmd.Parameters.AddWithValue("@hdd", choice);
-                                insertCmd.Parameters.AddWithValue("@price", price);
-                                insertCmd.Parameters.AddWithValue("@Username", user);
-                                label2.Visible = true;
-                                int rowsAffected = insertCmd.ExecuteNonQuery();
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error inserting HDD for new user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
-                        }
+                        label2.Visible = true;
+                        label2.ForeColor = Color.FromArgb(180, 18, 0);
+                        label2.Text = "Not enough SATA ports.";
                     }
                     break;
 
                 case 14:
                     quantity = int.Parse(comboBox1.Text);
-                    if (userCount > 0)
+                    mbsata = int.Parse(mbsataports.Substring(0, 1));
+                    usedsata = int.Parse(spec2.Text.Replace("x", "").Replace(" ", "")) + quantity;
+                    MessageBox.Show(usedsata.ToString());
+                    if (mbsata >= usedsata)
                     {
-                        string updateQuery = "UPDATE Builds SET [SSD quantity] = @quan, [SSD] = @ssd, [SSD price] = @price WHERE [user] = @Username";
-                        try
+                        if (userCount > 0)
                         {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                            string updateQuery = "UPDATE Builds SET [SSD quantity] = @quan, [SSD] = @ssd, [SSD price] = @price WHERE [user] = @Username";
+                            try
                             {
-                                updateCmd.Parameters.AddWithValue("@quan", quantity);
-                                updateCmd.Parameters.AddWithValue("@ssd", choice);
-                                updateCmd.Parameters.AddWithValue("@price", price);
-                                updateCmd.Parameters.AddWithValue("@Username", user);
-                                label2.Visible = true;
-                                int rowsAffected = updateCmd.ExecuteNonQuery();
+                                dbManager.OpenConnection();
+                                using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                                {
+                                    updateCmd.Parameters.AddWithValue("@quan", quantity);
+                                    updateCmd.Parameters.AddWithValue("@ssd", choice);
+                                    updateCmd.Parameters.AddWithValue("@price", price);
+                                    updateCmd.Parameters.AddWithValue("@Username", user);
+                                    label2.Visible = true;
+                                    label2.ForeColor = SystemColors.ControlText;
+                                    label2.Text = "Added to your build!";
+                                    int rowsAffected = updateCmd.ExecuteNonQuery();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error updating SSD for existing user: " + ex.Message);
+                            }
+                            finally
+                            {
+                                dbManager.CloseConnection();
                             }
                         }
-                        catch (Exception ex)
+
+                        else
                         {
-                            MessageBox.Show("Error updating SSD for existing user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
+                            string insertQuery = "INSERT INTO Builds ([SSD quantity], [SSD], [user], [SSD price]) VALUES (@quan, @ssd, @Username, @price)";
+                            try
+                            {
+                                dbManager.OpenConnection();
+                                using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
+                                {
+                                    insertCmd.Parameters.AddWithValue("@quan", quantity);
+                                    insertCmd.Parameters.AddWithValue("@ssd", choice);
+                                    insertCmd.Parameters.AddWithValue("@price", price);
+                                    insertCmd.Parameters.AddWithValue("@Username", user);
+                                    label2.Visible = true;
+                                    label2.ForeColor = SystemColors.ControlText;
+                                    label2.Text = "Added to your build!";
+                                    int rowsAffected = insertCmd.ExecuteNonQuery();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error inserting SSD for new user: " + ex.Message);
+                            }
+                            finally
+                            {
+                                dbManager.CloseConnection();
+                            }
                         }
                     }
-
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds ([SSD quantity], [SSD], [user], [SSD price]) VALUES (@quan, @ssd, @Username, @price)";
-                        try
-                        {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
-                            {
-                                insertCmd.Parameters.AddWithValue("@quan", quantity);
-                                insertCmd.Parameters.AddWithValue("@ssd", choice);
-                                insertCmd.Parameters.AddWithValue("@price", price);
-                                insertCmd.Parameters.AddWithValue("@Username", user);
-                                label2.Visible = true;
-                                int rowsAffected = insertCmd.ExecuteNonQuery();
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error inserting SSD for new user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
-                        }
+                        label2.Visible = true;
+                        label2.ForeColor = Color.FromArgb(180, 18, 0);
+                        label2.Text = "Not enough SATA ports.";
                     }
 
                     break;
                 case 15:
                     quantity = int.Parse(comboBox1.Text);
-                    if (userCount > 0)
+                    m2slot = int.Parse(mbm2slots.Substring(0, 1));
+                    if (m2slot >= quantity)
                     {
-                        string updateQuery = "UPDATE Builds SET [M2 SSD quantity] = @quan, [M2 SSD] = @m2Ssd, [M2 price] = @price WHERE [user] = @Username";
-                        try
+                        if (userCount > 0)
                         {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                            string updateQuery = "UPDATE Builds SET [M2 SSD quantity] = @quan, [M2 SSD] = @m2Ssd, [M2 price] = @price WHERE [user] = @Username";
+                            try
                             {
-                                updateCmd.Parameters.AddWithValue("@quan", quantity);
-                                updateCmd.Parameters.AddWithValue("@m2Ssd", choice);
-                                updateCmd.Parameters.AddWithValue("@price", price);
-                                updateCmd.Parameters.AddWithValue("@Username", user);
-                                label2.Visible = true;
-                                int rowsAffected = updateCmd.ExecuteNonQuery();
+                                dbManager.OpenConnection();
+                                using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                                {
+                                    updateCmd.Parameters.AddWithValue("@quan", quantity);
+                                    updateCmd.Parameters.AddWithValue("@m2Ssd", choice);
+                                    updateCmd.Parameters.AddWithValue("@price", price);
+                                    updateCmd.Parameters.AddWithValue("@Username", user);
+                                    label2.Visible = true;
+                                    label2.ForeColor = SystemColors.ControlText;
+                                    label2.Text = "Added to your build!";
+                                    int rowsAffected = updateCmd.ExecuteNonQuery();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error updating M.2 SSD for existing user: " + ex.Message);
+                            }
+                            finally
+                            {
+                                dbManager.CloseConnection();
                             }
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            MessageBox.Show("Error updating M.2 SSD for existing user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
+                            string insertQuery = "INSERT INTO Builds ([M2 SSD quantity], [M2 SSD], [user], [M2 price]) VALUES (@quan, @m2Ssd, @Username, @price)";
+                            try
+                            {
+                                dbManager.OpenConnection();
+                                using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
+                                {
+                                    insertCmd.Parameters.AddWithValue("@quan", quantity);
+                                    insertCmd.Parameters.AddWithValue("@m2Ssd", choice);
+                                    insertCmd.Parameters.AddWithValue("@price", price);
+                                    insertCmd.Parameters.AddWithValue("@Username", user);
+                                    label2.Visible = true;
+                                    label2.ForeColor = SystemColors.ControlText;
+                                    label2.Text = "Added to your build!";
+                                    int rowsAffected = insertCmd.ExecuteNonQuery();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error inserting M.2 SSD for new user: " + ex.Message);
+                            }
+                            finally
+                            {
+                                dbManager.CloseConnection();
+                            }
                         }
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds ([M2 SSD quantity], [M2 SSD], [user], [M2 price]) VALUES (@quan, @m2Ssd, @Username, @price)";
-                        try
-                        {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
-                            {
-                                insertCmd.Parameters.AddWithValue("@quan", quantity);
-                                insertCmd.Parameters.AddWithValue("@m2Ssd", choice);
-                                insertCmd.Parameters.AddWithValue("@price", price);
-                                insertCmd.Parameters.AddWithValue("@Username", user);
-                                label2.Visible = true;
-                                int rowsAffected = insertCmd.ExecuteNonQuery();
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error inserting M.2 SSD for new user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
-                        }
+                        label2.Visible = true;
+                        label2.ForeColor = Color.FromArgb(180, 18, 0);
+                        label2.Text = "Not enough M2 slots.";
                     }
+
                     break;
 
                 case 16:
@@ -1271,9 +1593,9 @@ namespace PC_Building_Simulator
                         { "Western Digital Red 8TB", Properties.Resources.hdd_Western_Digital_Red_8TB }
                     };
                     query = "SELECT * FROM [HDD specs] WHERE [HDD Name] = @name";
-                    for (int i = 1; i <= 5; i++)
+                    for (int i = 2; i <= 10; i++)
                     {
-                        comboBox1.Items.Insert(i, i.ToString());
+                        comboBox1.Items.Add(i.ToString());
                     }
 
                     break;
@@ -1304,9 +1626,9 @@ namespace PC_Building_Simulator
                         { "Kingston A400 2TB", Properties.Resources.ssd_Kingston_A400_2TB }
                     };
                     query = "SELECT * FROM [SSD specs] WHERE [SSD Name] = @name";
-                    for (int i = 1; i <= 5; i++)
+                    for (int i = 2; i <= 10; i++)
                     {
-                        comboBox1.Items.Insert(i, i.ToString());
+                        comboBox1.Items.Add(i.ToString());
                     }
 
                     break;
@@ -1338,9 +1660,9 @@ namespace PC_Building_Simulator
                         { "HP S700 Pro 512GB", Properties.Resources.m2_HP_S700_Pro_512GB }
                     };
                     query = "SELECT * FROM [M2 SSD specs] WHERE [M2 Name] = @name";
-                    for (int i = 1; i <= 5; i++)
+                    for (int i = 2; i <= 5; i++)
                     {
-                        comboBox1.Items.Insert(i, i.ToString());
+                        comboBox1.Items.Add(i.ToString());
                     }
 
                     break;
@@ -1371,9 +1693,9 @@ namespace PC_Building_Simulator
                         { "NZXT F120 RGB Duo", Properties.Resources.fan_NZXT_F120_RGB_Duo }
                     };
                     query = "SELECT * FROM [Fan specs] WHERE [Fan Name] = @name";
-                    for (int i = 1; i <= 10; i++)
+                    for (int i = 2; i <= 10; i++)
                     {
-                        comboBox1.Items.Insert(i, i.ToString());
+                        comboBox1.Items.Add(i.ToString());
                     }
 
                     break;

@@ -33,32 +33,14 @@
             this.kryptonPalette = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label_logout = new System.Windows.Forms.Label();
-            this.but_speakers = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.but_mouse = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.but_keyb = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.but_monitor = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.but_cooler = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.but_case = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.but_storage = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.but_ram = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.but_mb = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.but_gpu = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lab_profile = new System.Windows.Forms.Label();
-            this.label_admin = new System.Windows.Forms.Label();
-            this.userlabel = new System.Windows.Forms.Label();
-            this.but_cpu = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.but_psu = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.but_build = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.panelmain = new System.Windows.Forms.Panel();
-            this.label_menu = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.speakersicon2 = new System.Windows.Forms.PictureBox();
             this.speakersicon1 = new System.Windows.Forms.PictureBox();
             this.bluebar13 = new System.Windows.Forms.PictureBox();
+            this.but_speakers = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.mouseicon2 = new System.Windows.Forms.PictureBox();
             this.mouseicon1 = new System.Windows.Forms.PictureBox();
             this.bluebar12 = new System.Windows.Forms.PictureBox();
+            this.but_mouse = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.keybicon2 = new System.Windows.Forms.PictureBox();
             this.keybicon1 = new System.Windows.Forms.PictureBox();
             this.monitoricon2 = new System.Windows.Forms.PictureBox();
@@ -72,35 +54,54 @@
             this.storageicon2 = new System.Windows.Forms.PictureBox();
             this.ramicon2 = new System.Windows.Forms.PictureBox();
             this.bluebar11 = new System.Windows.Forms.PictureBox();
+            this.but_keyb = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.monitoricon1 = new System.Windows.Forms.PictureBox();
             this.bluebar10 = new System.Windows.Forms.PictureBox();
+            this.but_monitor = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.coolericon1 = new System.Windows.Forms.PictureBox();
             this.bluebar9 = new System.Windows.Forms.PictureBox();
+            this.but_cooler = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.caseicon1 = new System.Windows.Forms.PictureBox();
             this.bluebar8 = new System.Windows.Forms.PictureBox();
+            this.but_case = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.psuicon1 = new System.Windows.Forms.PictureBox();
             this.bluebar7 = new System.Windows.Forms.PictureBox();
             this.storageicon1 = new System.Windows.Forms.PictureBox();
             this.bluebar6 = new System.Windows.Forms.PictureBox();
+            this.but_storage = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.ramicon1 = new System.Windows.Forms.PictureBox();
             this.bluebar5 = new System.Windows.Forms.PictureBox();
+            this.but_ram = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.mbicon1 = new System.Windows.Forms.PictureBox();
             this.bluebar4 = new System.Windows.Forms.PictureBox();
+            this.but_mb = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.gpuicon1 = new System.Windows.Forms.PictureBox();
             this.bluebar3 = new System.Windows.Forms.PictureBox();
+            this.but_gpu = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.cpuicon1 = new System.Windows.Forms.PictureBox();
             this.bluebar2 = new System.Windows.Forms.PictureBox();
             this.bluebar1 = new System.Windows.Forms.PictureBox();
             this.pcicon1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lab_profile = new System.Windows.Forms.Label();
+            this.label_admin = new System.Windows.Forms.Label();
+            this.userlabel = new System.Windows.Forms.Label();
             this.profilepic = new System.Windows.Forms.PictureBox();
+            this.but_cpu = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.but_psu = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.but_build = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.panelmain = new System.Windows.Forms.Panel();
+            this.label_menu = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.backicon = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.but_guide = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.but_combuild = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.speakersicon2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speakersicon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bluebar13)).BeginInit();
@@ -140,11 +141,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.bluebar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bluebar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcicon1)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backicon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPalette
@@ -275,399 +279,6 @@
             this.label_logout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_logout.Click += new System.EventHandler(this.label_logout_Click);
             // 
-            // but_speakers
-            // 
-            this.but_speakers.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
-            this.but_speakers.Location = new System.Drawing.Point(-1, 635);
-            this.but_speakers.Name = "but_speakers";
-            this.but_speakers.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.but_speakers.Size = new System.Drawing.Size(230, 33);
-            this.but_speakers.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.but_speakers.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.but_speakers.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_speakers.StateCommon.Border.Rounding = 0;
-            this.but_speakers.StateCommon.Border.Width = 0;
-            this.but_speakers.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
-            this.but_speakers.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_speakers.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.but_speakers.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_speakers.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_speakers.TabIndex = 66;
-            this.but_speakers.Values.Text = "      Speakers";
-            this.but_speakers.Click += new System.EventHandler(this.but_speakers_Click);
-            this.but_speakers.MouseLeave += new System.EventHandler(this.but_speakers_MouseLeave);
-            this.but_speakers.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_speakers_MouseMove);
-            // 
-            // but_mouse
-            // 
-            this.but_mouse.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
-            this.but_mouse.Location = new System.Drawing.Point(0, 597);
-            this.but_mouse.Name = "but_mouse";
-            this.but_mouse.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.but_mouse.Size = new System.Drawing.Size(227, 33);
-            this.but_mouse.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.but_mouse.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.but_mouse.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_mouse.StateCommon.Border.Rounding = 0;
-            this.but_mouse.StateCommon.Border.Width = 0;
-            this.but_mouse.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
-            this.but_mouse.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_mouse.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.but_mouse.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_mouse.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_mouse.TabIndex = 62;
-            this.but_mouse.Values.Text = "   Mouse";
-            this.but_mouse.Click += new System.EventHandler(this.but_mouse_Click);
-            this.but_mouse.MouseLeave += new System.EventHandler(this.but_mouse_MouseLeave);
-            this.but_mouse.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_mouse_MouseMove);
-            // 
-            // but_keyb
-            // 
-            this.but_keyb.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
-            this.but_keyb.Location = new System.Drawing.Point(0, 558);
-            this.but_keyb.Name = "but_keyb";
-            this.but_keyb.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.but_keyb.Size = new System.Drawing.Size(224, 33);
-            this.but_keyb.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.but_keyb.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.but_keyb.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_keyb.StateCommon.Border.Rounding = 0;
-            this.but_keyb.StateCommon.Border.Width = 0;
-            this.but_keyb.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
-            this.but_keyb.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_keyb.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.but_keyb.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_keyb.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_keyb.TabIndex = 48;
-            this.but_keyb.Values.Text = "        Keyboard";
-            this.but_keyb.Click += new System.EventHandler(this.but_keyb_Click);
-            this.but_keyb.MouseLeave += new System.EventHandler(this.but_keyb_MouseLeave);
-            this.but_keyb.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_keyb_MouseMove);
-            // 
-            // but_monitor
-            // 
-            this.but_monitor.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
-            this.but_monitor.Location = new System.Drawing.Point(0, 519);
-            this.but_monitor.Name = "but_monitor";
-            this.but_monitor.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.but_monitor.Size = new System.Drawing.Size(225, 33);
-            this.but_monitor.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.but_monitor.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.but_monitor.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_monitor.StateCommon.Border.Rounding = 0;
-            this.but_monitor.StateCommon.Border.Width = 0;
-            this.but_monitor.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
-            this.but_monitor.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_monitor.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.but_monitor.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_monitor.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_monitor.TabIndex = 44;
-            this.but_monitor.Values.Text = "      Monitor";
-            this.but_monitor.Click += new System.EventHandler(this.but_monitor_Click);
-            this.but_monitor.MouseLeave += new System.EventHandler(this.but_monitor_MouseLeave);
-            this.but_monitor.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_monitor_MouseMove);
-            // 
-            // but_cooler
-            // 
-            this.but_cooler.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
-            this.but_cooler.Location = new System.Drawing.Point(0, 480);
-            this.but_cooler.Name = "but_cooler";
-            this.but_cooler.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.but_cooler.Size = new System.Drawing.Size(225, 33);
-            this.but_cooler.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.but_cooler.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.but_cooler.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_cooler.StateCommon.Border.Rounding = 0;
-            this.but_cooler.StateCommon.Border.Width = 0;
-            this.but_cooler.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
-            this.but_cooler.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_cooler.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.but_cooler.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_cooler.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_cooler.TabIndex = 40;
-            this.but_cooler.Values.Text = "                  Cooling System";
-            this.but_cooler.Click += new System.EventHandler(this.but_cooler_Click);
-            this.but_cooler.MouseLeave += new System.EventHandler(this.but_cooler_MouseLeave);
-            this.but_cooler.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_cooler_MouseMove);
-            // 
-            // but_case
-            // 
-            this.but_case.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
-            this.but_case.Location = new System.Drawing.Point(0, 441);
-            this.but_case.Name = "but_case";
-            this.but_case.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.but_case.Size = new System.Drawing.Size(218, 33);
-            this.but_case.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.but_case.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.but_case.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_case.StateCommon.Border.Rounding = 0;
-            this.but_case.StateCommon.Border.Width = 0;
-            this.but_case.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
-            this.but_case.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_case.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.but_case.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_case.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_case.TabIndex = 36;
-            this.but_case.Values.Text = "                   Computer Case";
-            this.but_case.Click += new System.EventHandler(this.but_case_Click);
-            this.but_case.MouseLeave += new System.EventHandler(this.but_case_MouseLeave);
-            this.but_case.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_case_MouseMove);
-            // 
-            // but_storage
-            // 
-            this.but_storage.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
-            this.but_storage.Location = new System.Drawing.Point(0, 363);
-            this.but_storage.Name = "but_storage";
-            this.but_storage.Size = new System.Drawing.Size(224, 33);
-            this.but_storage.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.but_storage.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.but_storage.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_storage.StateCommon.Border.Rounding = 0;
-            this.but_storage.StateCommon.Border.Width = 0;
-            this.but_storage.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
-            this.but_storage.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_storage.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.but_storage.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_storage.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_storage.TabIndex = 24;
-            this.but_storage.Values.Text = "  Drives";
-            this.but_storage.Click += new System.EventHandler(this.but_storage_Click);
-            this.but_storage.MouseLeave += new System.EventHandler(this.but_storage_MouseLeave);
-            this.but_storage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_storage_MouseMove);
-            // 
-            // but_ram
-            // 
-            this.but_ram.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
-            this.but_ram.Location = new System.Drawing.Point(0, 324);
-            this.but_ram.Name = "but_ram";
-            this.but_ram.Size = new System.Drawing.Size(223, 33);
-            this.but_ram.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.but_ram.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.but_ram.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_ram.StateCommon.Border.Rounding = 0;
-            this.but_ram.StateCommon.Border.Width = 0;
-            this.but_ram.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
-            this.but_ram.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_ram.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.but_ram.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_ram.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_ram.TabIndex = 20;
-            this.but_ram.Values.Text = "RAM";
-            this.but_ram.Click += new System.EventHandler(this.but_ram_Click);
-            this.but_ram.MouseLeave += new System.EventHandler(this.but_ram_MouseLeave);
-            this.but_ram.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_ram_MouseMove);
-            // 
-            // but_mb
-            // 
-            this.but_mb.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
-            this.but_mb.Location = new System.Drawing.Point(0, 285);
-            this.but_mb.Name = "but_mb";
-            this.but_mb.Size = new System.Drawing.Size(222, 33);
-            this.but_mb.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.but_mb.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.but_mb.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_mb.StateCommon.Border.Rounding = 0;
-            this.but_mb.StateCommon.Border.Width = 0;
-            this.but_mb.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
-            this.but_mb.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_mb.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.but_mb.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_mb.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_mb.TabIndex = 16;
-            this.but_mb.Values.Text = "              Motherboard";
-            this.but_mb.Click += new System.EventHandler(this.but_mb_Click);
-            this.but_mb.MouseLeave += new System.EventHandler(this.but_mb_MouseLeave);
-            this.but_mb.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_mb_MouseMove);
-            // 
-            // but_gpu
-            // 
-            this.but_gpu.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
-            this.but_gpu.Location = new System.Drawing.Point(0, 246);
-            this.but_gpu.Name = "but_gpu";
-            this.but_gpu.Size = new System.Drawing.Size(221, 33);
-            this.but_gpu.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.but_gpu.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.but_gpu.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_gpu.StateCommon.Border.Rounding = 0;
-            this.but_gpu.StateCommon.Border.Width = 0;
-            this.but_gpu.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
-            this.but_gpu.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_gpu.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_gpu.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_gpu.TabIndex = 12;
-            this.but_gpu.Values.Text = "GPU";
-            this.but_gpu.Click += new System.EventHandler(this.but_gpu_Click);
-            this.but_gpu.MouseLeave += new System.EventHandler(this.but_gpu_MouseLeave);
-            this.but_gpu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_gpu_MouseMove);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lab_profile);
-            this.panel2.Controls.Add(this.label_admin);
-            this.panel2.Controls.Add(this.userlabel);
-            this.panel2.Controls.Add(this.profilepic);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(293, 150);
-            this.panel2.TabIndex = 0;
-            // 
-            // lab_profile
-            // 
-            this.lab_profile.AutoSize = true;
-            this.lab_profile.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_profile.Location = new System.Drawing.Point(24, 109);
-            this.lab_profile.Name = "lab_profile";
-            this.lab_profile.Size = new System.Drawing.Size(47, 19);
-            this.lab_profile.TabIndex = 73;
-            this.lab_profile.Text = "Profile";
-            this.lab_profile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lab_profile.Click += new System.EventHandler(this.lab_profile_Click);
-            this.lab_profile.MouseLeave += new System.EventHandler(this.lab_profile_MouseLeave);
-            this.lab_profile.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lab_profile_MouseMove);
-            // 
-            // label_admin
-            // 
-            this.label_admin.AutoSize = true;
-            this.label_admin.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_admin.Location = new System.Drawing.Point(182, 12);
-            this.label_admin.Name = "label_admin";
-            this.label_admin.Size = new System.Drawing.Size(96, 19);
-            this.label_admin.TabIndex = 69;
-            this.label_admin.Text = "Administrator";
-            this.label_admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_admin.Visible = false;
-            this.label_admin.Click += new System.EventHandler(this.label_admin_Click);
-            this.label_admin.MouseLeave += new System.EventHandler(this.label_admin_MouseLeave);
-            this.label_admin.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_admin_MouseMove);
-            // 
-            // userlabel
-            // 
-            this.userlabel.AutoSize = true;
-            this.userlabel.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userlabel.Location = new System.Drawing.Point(23, 84);
-            this.userlabel.Name = "userlabel";
-            this.userlabel.Size = new System.Drawing.Size(50, 25);
-            this.userlabel.TabIndex = 1;
-            this.userlabel.Text = "User";
-            this.userlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.userlabel.Click += new System.EventHandler(this.lab_profile_Click);
-            // 
-            // but_cpu
-            // 
-            this.but_cpu.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
-            this.but_cpu.Location = new System.Drawing.Point(0, 207);
-            this.but_cpu.Name = "but_cpu";
-            this.but_cpu.Size = new System.Drawing.Size(219, 33);
-            this.but_cpu.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.but_cpu.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.but_cpu.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_cpu.StateCommon.Border.Rounding = 0;
-            this.but_cpu.StateCommon.Border.Width = 0;
-            this.but_cpu.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
-            this.but_cpu.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_cpu.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_cpu.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_cpu.TabIndex = 2;
-            this.but_cpu.Values.Text = "CPU";
-            this.but_cpu.Click += new System.EventHandler(this.but_cpu_Click);
-            this.but_cpu.MouseLeave += new System.EventHandler(this.but_cpu_MouseLeave);
-            this.but_cpu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_cpu_MouseMove);
-            // 
-            // but_psu
-            // 
-            this.but_psu.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
-            this.but_psu.Location = new System.Drawing.Point(0, 402);
-            this.but_psu.Name = "but_psu";
-            this.but_psu.Size = new System.Drawing.Size(220, 33);
-            this.but_psu.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.but_psu.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.but_psu.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_psu.StateCommon.Border.Rounding = 0;
-            this.but_psu.StateCommon.Border.Width = 0;
-            this.but_psu.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
-            this.but_psu.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_psu.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.but_psu.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_psu.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_psu.TabIndex = 32;
-            this.but_psu.Values.Text = "PSU";
-            this.but_psu.Click += new System.EventHandler(this.but_psu_Click);
-            this.but_psu.MouseLeave += new System.EventHandler(this.but_psu_MouseLeave);
-            this.but_psu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_psu_MouseMove);
-            // 
-            // but_build
-            // 
-            this.but_build.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
-            this.but_build.Location = new System.Drawing.Point(0, 168);
-            this.but_build.Name = "but_build";
-            this.but_build.Size = new System.Drawing.Size(226, 33);
-            this.but_build.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
-            this.but_build.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
-            this.but_build.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_build.StateCommon.Border.Rounding = 0;
-            this.but_build.StateCommon.Border.Width = 0;
-            this.but_build.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
-            this.but_build.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_build.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_build.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.but_build.TabIndex = 1;
-            this.but_build.Values.Text = "Build";
-            this.but_build.Click += new System.EventHandler(this.but_build_Click);
-            this.but_build.MouseLeave += new System.EventHandler(this.but_build_MouseLeave);
-            this.but_build.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_build_MouseMove);
-            // 
-            // panelmain
-            // 
-            this.panelmain.Location = new System.Drawing.Point(293, 84);
-            this.panelmain.Name = "panelmain";
-            this.panelmain.Size = new System.Drawing.Size(1080, 699);
-            this.panelmain.TabIndex = 5;
-            // 
-            // label_menu
-            // 
-            this.label_menu.AutoSize = true;
-            this.label_menu.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_menu.Location = new System.Drawing.Point(314, 41);
-            this.label_menu.Name = "label_menu";
-            this.label_menu.Size = new System.Drawing.Size(115, 30);
-            this.label_menu.TabIndex = 2;
-            this.label_menu.Text = "Your Build";
-            this.label_menu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(337, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(26, 29);
-            this.panel3.TabIndex = 10;
-            // 
             // speakersicon2
             // 
             this.speakersicon2.Image = ((System.Drawing.Image)(resources.GetObject("speakersicon2.Image")));
@@ -701,6 +312,31 @@
             this.bluebar13.TabStop = false;
             this.bluebar13.Visible = false;
             // 
+            // but_speakers
+            // 
+            this.but_speakers.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
+            this.but_speakers.Location = new System.Drawing.Point(-1, 635);
+            this.but_speakers.Name = "but_speakers";
+            this.but_speakers.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.but_speakers.Size = new System.Drawing.Size(230, 33);
+            this.but_speakers.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.but_speakers.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.but_speakers.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_speakers.StateCommon.Border.Rounding = 0;
+            this.but_speakers.StateCommon.Border.Width = 0;
+            this.but_speakers.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
+            this.but_speakers.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_speakers.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.but_speakers.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_speakers.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_speakers.TabIndex = 66;
+            this.but_speakers.Values.Text = "      Speakers";
+            this.but_speakers.Click += new System.EventHandler(this.but_speakers_Click);
+            this.but_speakers.MouseLeave += new System.EventHandler(this.but_speakers_MouseLeave);
+            this.but_speakers.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_speakers_MouseMove);
+            // 
             // mouseicon2
             // 
             this.mouseicon2.Image = ((System.Drawing.Image)(resources.GetObject("mouseicon2.Image")));
@@ -733,6 +369,31 @@
             this.bluebar12.TabIndex = 61;
             this.bluebar12.TabStop = false;
             this.bluebar12.Visible = false;
+            // 
+            // but_mouse
+            // 
+            this.but_mouse.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
+            this.but_mouse.Location = new System.Drawing.Point(0, 597);
+            this.but_mouse.Name = "but_mouse";
+            this.but_mouse.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.but_mouse.Size = new System.Drawing.Size(227, 33);
+            this.but_mouse.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.but_mouse.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.but_mouse.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_mouse.StateCommon.Border.Rounding = 0;
+            this.but_mouse.StateCommon.Border.Width = 0;
+            this.but_mouse.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
+            this.but_mouse.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_mouse.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.but_mouse.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_mouse.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_mouse.TabIndex = 62;
+            this.but_mouse.Values.Text = "   Mouse";
+            this.but_mouse.Click += new System.EventHandler(this.but_mouse_Click);
+            this.but_mouse.MouseLeave += new System.EventHandler(this.but_mouse_MouseLeave);
+            this.but_mouse.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_mouse_MouseMove);
             // 
             // keybicon2
             // 
@@ -878,6 +539,31 @@
             this.bluebar11.TabStop = false;
             this.bluebar11.Visible = false;
             // 
+            // but_keyb
+            // 
+            this.but_keyb.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
+            this.but_keyb.Location = new System.Drawing.Point(0, 558);
+            this.but_keyb.Name = "but_keyb";
+            this.but_keyb.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.but_keyb.Size = new System.Drawing.Size(224, 33);
+            this.but_keyb.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.but_keyb.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.but_keyb.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_keyb.StateCommon.Border.Rounding = 0;
+            this.but_keyb.StateCommon.Border.Width = 0;
+            this.but_keyb.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
+            this.but_keyb.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_keyb.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.but_keyb.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_keyb.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_keyb.TabIndex = 48;
+            this.but_keyb.Values.Text = "        Keyboard";
+            this.but_keyb.Click += new System.EventHandler(this.but_keyb_Click);
+            this.but_keyb.MouseLeave += new System.EventHandler(this.but_keyb_MouseLeave);
+            this.but_keyb.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_keyb_MouseMove);
+            // 
             // monitoricon1
             // 
             this.monitoricon1.Image = ((System.Drawing.Image)(resources.GetObject("monitoricon1.Image")));
@@ -899,6 +585,31 @@
             this.bluebar10.TabIndex = 43;
             this.bluebar10.TabStop = false;
             this.bluebar10.Visible = false;
+            // 
+            // but_monitor
+            // 
+            this.but_monitor.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
+            this.but_monitor.Location = new System.Drawing.Point(0, 519);
+            this.but_monitor.Name = "but_monitor";
+            this.but_monitor.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.but_monitor.Size = new System.Drawing.Size(225, 33);
+            this.but_monitor.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.but_monitor.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.but_monitor.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_monitor.StateCommon.Border.Rounding = 0;
+            this.but_monitor.StateCommon.Border.Width = 0;
+            this.but_monitor.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
+            this.but_monitor.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_monitor.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.but_monitor.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_monitor.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_monitor.TabIndex = 44;
+            this.but_monitor.Values.Text = "      Monitor";
+            this.but_monitor.Click += new System.EventHandler(this.but_monitor_Click);
+            this.but_monitor.MouseLeave += new System.EventHandler(this.but_monitor_MouseLeave);
+            this.but_monitor.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_monitor_MouseMove);
             // 
             // coolericon1
             // 
@@ -922,6 +633,31 @@
             this.bluebar9.TabStop = false;
             this.bluebar9.Visible = false;
             // 
+            // but_cooler
+            // 
+            this.but_cooler.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
+            this.but_cooler.Location = new System.Drawing.Point(0, 480);
+            this.but_cooler.Name = "but_cooler";
+            this.but_cooler.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.but_cooler.Size = new System.Drawing.Size(225, 33);
+            this.but_cooler.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.but_cooler.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.but_cooler.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_cooler.StateCommon.Border.Rounding = 0;
+            this.but_cooler.StateCommon.Border.Width = 0;
+            this.but_cooler.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
+            this.but_cooler.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_cooler.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.but_cooler.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_cooler.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_cooler.TabIndex = 40;
+            this.but_cooler.Values.Text = "                  Cooling System";
+            this.but_cooler.Click += new System.EventHandler(this.but_cooler_Click);
+            this.but_cooler.MouseLeave += new System.EventHandler(this.but_cooler_MouseLeave);
+            this.but_cooler.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_cooler_MouseMove);
+            // 
             // caseicon1
             // 
             this.caseicon1.Image = ((System.Drawing.Image)(resources.GetObject("caseicon1.Image")));
@@ -943,6 +679,31 @@
             this.bluebar8.TabIndex = 35;
             this.bluebar8.TabStop = false;
             this.bluebar8.Visible = false;
+            // 
+            // but_case
+            // 
+            this.but_case.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
+            this.but_case.Location = new System.Drawing.Point(0, 441);
+            this.but_case.Name = "but_case";
+            this.but_case.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.but_case.Size = new System.Drawing.Size(218, 33);
+            this.but_case.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.but_case.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.but_case.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_case.StateCommon.Border.Rounding = 0;
+            this.but_case.StateCommon.Border.Width = 0;
+            this.but_case.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
+            this.but_case.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_case.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.but_case.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_case.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_case.TabIndex = 36;
+            this.but_case.Values.Text = "                   Computer Case";
+            this.but_case.Click += new System.EventHandler(this.but_case_Click);
+            this.but_case.MouseLeave += new System.EventHandler(this.but_case_MouseLeave);
+            this.but_case.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_case_MouseMove);
             // 
             // psuicon1
             // 
@@ -988,6 +749,30 @@
             this.bluebar6.TabStop = false;
             this.bluebar6.Visible = false;
             // 
+            // but_storage
+            // 
+            this.but_storage.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
+            this.but_storage.Location = new System.Drawing.Point(0, 363);
+            this.but_storage.Name = "but_storage";
+            this.but_storage.Size = new System.Drawing.Size(224, 33);
+            this.but_storage.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.but_storage.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.but_storage.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_storage.StateCommon.Border.Rounding = 0;
+            this.but_storage.StateCommon.Border.Width = 0;
+            this.but_storage.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
+            this.but_storage.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_storage.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.but_storage.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_storage.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_storage.TabIndex = 24;
+            this.but_storage.Values.Text = "  Drives";
+            this.but_storage.Click += new System.EventHandler(this.but_storage_Click);
+            this.but_storage.MouseLeave += new System.EventHandler(this.but_storage_MouseLeave);
+            this.but_storage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_storage_MouseMove);
+            // 
             // ramicon1
             // 
             this.ramicon1.Image = ((System.Drawing.Image)(resources.GetObject("ramicon1.Image")));
@@ -1009,6 +794,30 @@
             this.bluebar5.TabIndex = 23;
             this.bluebar5.TabStop = false;
             this.bluebar5.Visible = false;
+            // 
+            // but_ram
+            // 
+            this.but_ram.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
+            this.but_ram.Location = new System.Drawing.Point(0, 324);
+            this.but_ram.Name = "but_ram";
+            this.but_ram.Size = new System.Drawing.Size(223, 33);
+            this.but_ram.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.but_ram.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.but_ram.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_ram.StateCommon.Border.Rounding = 0;
+            this.but_ram.StateCommon.Border.Width = 0;
+            this.but_ram.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
+            this.but_ram.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_ram.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.but_ram.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_ram.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_ram.TabIndex = 20;
+            this.but_ram.Values.Text = "RAM";
+            this.but_ram.Click += new System.EventHandler(this.but_ram_Click);
+            this.but_ram.MouseLeave += new System.EventHandler(this.but_ram_MouseLeave);
+            this.but_ram.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_ram_MouseMove);
             // 
             // mbicon1
             // 
@@ -1032,6 +841,30 @@
             this.bluebar4.TabStop = false;
             this.bluebar4.Visible = false;
             // 
+            // but_mb
+            // 
+            this.but_mb.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
+            this.but_mb.Location = new System.Drawing.Point(0, 285);
+            this.but_mb.Name = "but_mb";
+            this.but_mb.Size = new System.Drawing.Size(222, 33);
+            this.but_mb.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.but_mb.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.but_mb.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_mb.StateCommon.Border.Rounding = 0;
+            this.but_mb.StateCommon.Border.Width = 0;
+            this.but_mb.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
+            this.but_mb.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_mb.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.but_mb.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_mb.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_mb.TabIndex = 16;
+            this.but_mb.Values.Text = "              Motherboard";
+            this.but_mb.Click += new System.EventHandler(this.but_mb_Click);
+            this.but_mb.MouseLeave += new System.EventHandler(this.but_mb_MouseLeave);
+            this.but_mb.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_mb_MouseMove);
+            // 
             // gpuicon1
             // 
             this.gpuicon1.Image = ((System.Drawing.Image)(resources.GetObject("gpuicon1.Image")));
@@ -1053,6 +886,29 @@
             this.bluebar3.TabIndex = 15;
             this.bluebar3.TabStop = false;
             this.bluebar3.Visible = false;
+            // 
+            // but_gpu
+            // 
+            this.but_gpu.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
+            this.but_gpu.Location = new System.Drawing.Point(0, 246);
+            this.but_gpu.Name = "but_gpu";
+            this.but_gpu.Size = new System.Drawing.Size(221, 33);
+            this.but_gpu.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.but_gpu.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.but_gpu.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_gpu.StateCommon.Border.Rounding = 0;
+            this.but_gpu.StateCommon.Border.Width = 0;
+            this.but_gpu.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
+            this.but_gpu.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_gpu.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_gpu.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_gpu.TabIndex = 12;
+            this.but_gpu.Values.Text = "GPU";
+            this.but_gpu.Click += new System.EventHandler(this.but_gpu_Click);
+            this.but_gpu.MouseLeave += new System.EventHandler(this.but_gpu_MouseLeave);
+            this.but_gpu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_gpu_MouseMove);
             // 
             // cpuicon1
             // 
@@ -1098,6 +954,59 @@
             this.pcicon1.MouseLeave += new System.EventHandler(this.but_build_MouseLeave);
             this.pcicon1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_build_MouseMove);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lab_profile);
+            this.panel2.Controls.Add(this.label_admin);
+            this.panel2.Controls.Add(this.userlabel);
+            this.panel2.Controls.Add(this.profilepic);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(293, 150);
+            this.panel2.TabIndex = 0;
+            // 
+            // lab_profile
+            // 
+            this.lab_profile.AutoSize = true;
+            this.lab_profile.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_profile.Location = new System.Drawing.Point(24, 109);
+            this.lab_profile.Name = "lab_profile";
+            this.lab_profile.Size = new System.Drawing.Size(47, 19);
+            this.lab_profile.TabIndex = 73;
+            this.lab_profile.Text = "Profile";
+            this.lab_profile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lab_profile.Click += new System.EventHandler(this.lab_profile_Click);
+            this.lab_profile.MouseLeave += new System.EventHandler(this.lab_profile_MouseLeave);
+            this.lab_profile.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lab_profile_MouseMove);
+            // 
+            // label_admin
+            // 
+            this.label_admin.AutoSize = true;
+            this.label_admin.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_admin.Location = new System.Drawing.Point(182, 12);
+            this.label_admin.Name = "label_admin";
+            this.label_admin.Size = new System.Drawing.Size(96, 19);
+            this.label_admin.TabIndex = 69;
+            this.label_admin.Text = "Administrator";
+            this.label_admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_admin.Visible = false;
+            this.label_admin.Click += new System.EventHandler(this.label_admin_Click);
+            this.label_admin.MouseLeave += new System.EventHandler(this.label_admin_MouseLeave);
+            this.label_admin.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_admin_MouseMove);
+            // 
+            // userlabel
+            // 
+            this.userlabel.AutoSize = true;
+            this.userlabel.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userlabel.Location = new System.Drawing.Point(23, 84);
+            this.userlabel.Name = "userlabel";
+            this.userlabel.Size = new System.Drawing.Size(50, 25);
+            this.userlabel.TabIndex = 1;
+            this.userlabel.Text = "User";
+            this.userlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.userlabel.Click += new System.EventHandler(this.lab_profile_Click);
+            // 
             // profilepic
             // 
             this.profilepic.Image = ((System.Drawing.Image)(resources.GetObject("profilepic.Image")));
@@ -1107,6 +1016,101 @@
             this.profilepic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.profilepic.TabIndex = 0;
             this.profilepic.TabStop = false;
+            // 
+            // but_cpu
+            // 
+            this.but_cpu.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
+            this.but_cpu.Location = new System.Drawing.Point(0, 207);
+            this.but_cpu.Name = "but_cpu";
+            this.but_cpu.Size = new System.Drawing.Size(219, 33);
+            this.but_cpu.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.but_cpu.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.but_cpu.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_cpu.StateCommon.Border.Rounding = 0;
+            this.but_cpu.StateCommon.Border.Width = 0;
+            this.but_cpu.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
+            this.but_cpu.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_cpu.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_cpu.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_cpu.TabIndex = 2;
+            this.but_cpu.Values.Text = "CPU";
+            this.but_cpu.Click += new System.EventHandler(this.but_cpu_Click);
+            this.but_cpu.MouseLeave += new System.EventHandler(this.but_cpu_MouseLeave);
+            this.but_cpu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_cpu_MouseMove);
+            // 
+            // but_psu
+            // 
+            this.but_psu.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
+            this.but_psu.Location = new System.Drawing.Point(0, 402);
+            this.but_psu.Name = "but_psu";
+            this.but_psu.Size = new System.Drawing.Size(220, 33);
+            this.but_psu.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.but_psu.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.but_psu.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_psu.StateCommon.Border.Rounding = 0;
+            this.but_psu.StateCommon.Border.Width = 0;
+            this.but_psu.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
+            this.but_psu.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_psu.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.but_psu.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_psu.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_psu.TabIndex = 32;
+            this.but_psu.Values.Text = "PSU";
+            this.but_psu.Click += new System.EventHandler(this.but_psu_Click);
+            this.but_psu.MouseLeave += new System.EventHandler(this.but_psu_MouseLeave);
+            this.but_psu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_psu_MouseMove);
+            // 
+            // but_build
+            // 
+            this.but_build.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
+            this.but_build.Location = new System.Drawing.Point(0, 168);
+            this.but_build.Name = "but_build";
+            this.but_build.Size = new System.Drawing.Size(226, 33);
+            this.but_build.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
+            this.but_build.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
+            this.but_build.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_build.StateCommon.Border.Rounding = 0;
+            this.but_build.StateCommon.Border.Width = 0;
+            this.but_build.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
+            this.but_build.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_build.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_build.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.but_build.TabIndex = 1;
+            this.but_build.Values.Text = "Build";
+            this.but_build.Click += new System.EventHandler(this.but_build_Click);
+            this.but_build.MouseLeave += new System.EventHandler(this.but_build_MouseLeave);
+            this.but_build.MouseMove += new System.Windows.Forms.MouseEventHandler(this.but_build_MouseMove);
+            // 
+            // panelmain
+            // 
+            this.panelmain.Location = new System.Drawing.Point(293, 84);
+            this.panelmain.Name = "panelmain";
+            this.panelmain.Size = new System.Drawing.Size(1080, 699);
+            this.panelmain.TabIndex = 5;
+            // 
+            // label_menu
+            // 
+            this.label_menu.AutoSize = true;
+            this.label_menu.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_menu.Location = new System.Drawing.Point(314, 41);
+            this.label_menu.Name = "label_menu";
+            this.label_menu.Size = new System.Drawing.Size(115, 30);
+            this.label_menu.TabIndex = 2;
+            this.label_menu.Text = "Your Build";
+            this.label_menu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(337, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(26, 29);
+            this.panel3.TabIndex = 10;
             // 
             // backicon
             // 
@@ -1160,7 +1164,7 @@
             // 
             // but_guide
             // 
-            this.but_guide.Location = new System.Drawing.Point(383, 0);
+            this.but_guide.Location = new System.Drawing.Point(412, 0);
             this.but_guide.Name = "but_guide";
             this.but_guide.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.but_guide.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
@@ -1222,7 +1226,7 @@
             // 
             // but_combuild
             // 
-            this.but_combuild.Location = new System.Drawing.Point(443, 0);
+            this.but_combuild.Location = new System.Drawing.Point(472, 0);
             this.but_combuild.Name = "but_combuild";
             this.but_combuild.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.but_combuild.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
@@ -1281,22 +1285,46 @@
             this.but_combuild.TabIndex = 149;
             this.but_combuild.Values.Text = "Completed Builds";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(369, 2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(26, 29);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 150;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Visible = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(369, 2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(26, 29);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 151;
+            this.pictureBox5.TabStop = false;
+            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1375, 807);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.but_guide);
             this.Controls.Add(this.but_combuild);
             this.Controls.Add(this.label_menu);
             this.Controls.Add(this.panelmain);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.backicon);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.backicon);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox3);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1316,8 +1344,6 @@
             this.Load += new System.EventHandler(this.MainApp_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.speakersicon2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.speakersicon1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bluebar13)).EndInit();
@@ -1357,11 +1383,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.bluebar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bluebar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcicon1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backicon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1438,5 +1468,7 @@
         private System.Windows.Forms.Panel panel3;
         private ComponentFactory.Krypton.Toolkit.KryptonButton but_combuild;
         public ComponentFactory.Krypton.Toolkit.KryptonButton but_guide;
+        public System.Windows.Forms.PictureBox pictureBox4;
+        public System.Windows.Forms.PictureBox pictureBox5;
     }
 }

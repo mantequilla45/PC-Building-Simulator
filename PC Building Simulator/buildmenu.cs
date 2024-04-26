@@ -24,18 +24,6 @@ namespace PC_Building_Simulator
         private DisplayManager displayManager;
         private productspecs productSpecsForm;
         private MainApp mainApp;
-        private PictureBox drive2pbox = new PictureBox();
-        private PictureBox drive3pbox = new PictureBox();
-        private KryptonButton drive2border = new KryptonButton();
-        private KryptonButton drive3border = new KryptonButton();
-        private Label drive2price = new Label();
-        private Label drive3price = new Label();
-        private Label drive2quan = new Label();
-        private Label drive3quan = new Label();
-        private Label drive2name = new Label();
-        private Label drive3name = new Label();
-        private Label remove_drive2 = new Label();
-        private Label remove_drive3 = new Label();
         private int showspecs = 0;
         private int drivecount = 1;
         private string user = "";
@@ -90,7 +78,7 @@ namespace PC_Building_Simulator
         private void buildmenu_Load(object sender, EventArgs e)
         {
             LoadUserData();
-            UpdateTotalPrice();
+            total_price.Text = "$"+CalculateTotalPrice().ToString();
 
             string cpuimage = cpu.Replace(' ', '_').Replace('-', '_').Replace('!', '_').Replace('.', '_');
             string resourcecpu = $"cpu_{cpuimage}";
@@ -358,7 +346,6 @@ namespace PC_Building_Simulator
             {
                 drivecount = 3;
             }
-            drivepanels();
 
 
             if (drivecount == 1)
@@ -640,7 +627,26 @@ namespace PC_Building_Simulator
             }
         }
 
-        private void UpdateTotalPrice()
+
+        private void InitializeDisplayManager()
+        {
+            buildmenu buildMenuForm = this;
+            DisplayManager displayManager = new DisplayManager(buildMenuForm);
+        }
+        private void label_MouseLeave(object sender, EventArgs e)
+        {
+            Label label = sender as Label;
+            label.ForeColor = SystemColors.ControlText;
+            label.Font = new Font(label.Font, FontStyle.Regular);
+        }
+
+        private void label_MouseMove(object sender, MouseEventArgs e)
+        {
+            Label label = sender as Label;
+            label.ForeColor = Color.FromArgb(44, 135, 195);
+            label.Font = new Font(label.Font, FontStyle.Underline);
+        }
+        private int CalculateTotalPrice()
         {
             double totalPrice = 0.0;
 
@@ -691,28 +697,10 @@ namespace PC_Building_Simulator
                 totalPrice += m2Price * m2Quantity;
             }
 
-            string formattedTotalPrice = totalPrice.ToString("0");
-            total_price.Text = $"${formattedTotalPrice}";
-
-        }
-        private void InitializeDisplayManager()
-        {
-            buildmenu buildMenuForm = this; 
-            DisplayManager displayManager = new DisplayManager(buildMenuForm);
-        }
-        private void label_MouseLeave(object sender, EventArgs e)
-        {
-            Label label = sender as Label;
-            label.ForeColor = SystemColors.ControlText;
-            label.Font = new Font(label.Font, FontStyle.Regular);
+            // Return the total price as an integer
+            return (int)totalPrice;
         }
 
-        private void label_MouseMove(object sender, MouseEventArgs e)
-        {
-            Label label = sender as Label;
-            label.ForeColor = Color.FromArgb(44, 135, 195);
-            label.Font = new Font(label.Font, FontStyle.Underline);
-        }
 
         private void removecpu_Click(object sender, EventArgs e)
         {
@@ -722,6 +710,7 @@ namespace PC_Building_Simulator
             border1.Visible = false;
             quan_cpu.Visible = false;
             remove_cpu.Visible = false;
+
 
             string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
             string userToUpdate = user;
@@ -745,8 +734,6 @@ namespace PC_Building_Simulator
             {
                 MessageBox.Show("Error updating data: " + ex.Message);
             }
-
-            total_price.Text = $"${formattedTotalPrice}";
         }
 
         private void removegpu_Click(object sender, EventArgs e)
@@ -1125,7 +1112,6 @@ namespace PC_Building_Simulator
 
             string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
             string userToUpdate = user;
-
             string updateQuery = "UPDATE Builds SET [AIO Cooler] = '', [AIO Cooler price] = ''WHERE [user] = @UserToUpdate";
 
             try
@@ -1145,13 +1131,15 @@ namespace PC_Building_Simulator
             {
                 MessageBox.Show("Error updating data: " + ex.Message);
             }
+            if (panel5.Size == new Size(1017, 55))
+            {
+                
+            }    
         }
         private void removehdd_Click(object sender, EventArgs e)
         {
-
             string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
             string userToUpdate = user;
-
             string updateQuery = "UPDATE Builds SET [HDD quantity] = '', HDD = '', [HDD price] = '' WHERE [user] = @UserToUpdate";
 
             try
@@ -1172,59 +1160,27 @@ namespace PC_Building_Simulator
                 MessageBox.Show("Error updating data: " + ex.Message);
             }
 
-
-            if (drivecount == 1)
+            if (panel5.Size == new Size(1017, 161))
             {
-                drive1name.Visible = false;
-                drive1name.Text = "";
-                drive1price.Text = "";
-                drive1pbox.Visible = false;
-                drive1border.Visible = false;
-                drive1price.Visible = false;
-                drive1quan.Visible = false;
-                remove_drive1.Visible = false;
-            }
-
-            if (drivecount == 1 && hdd == "" && ssd == "")
-            {
-                selectedm2_1();
-            }
-            else if (drivecount == 1 && ssd == "" && m2 == "")
-            {
-                selectedhdd_1();
-            }
-            else if (drivecount == 1 && m2 == "" && hdd == "")
-            {
-                selectedssd_1();
-            }
-
-            else if(drivecount == 2 && ssd != "")
-            {
-                selectedssd_1();
-                panel5.Size = new Size(1017, 55);
-                drivecount = 1;
-            }
-            else if (drivecount == 2 && m2 != "")
-            {
-                selectedm2_1();
-                panel5.Size = new Size(1017, 55);
-                drivecount = 1;
-            }
-
-            else if (drivecount == 3)
-            {
-                selectedssd_1();
-                selectedm2_2();
                 panel5.Size = new Size(1017, 108);
-                drivecount = 2;
             }
+            else if (panel5.Size == new Size(1017, 55))
+            {
+                border1.Visible = false;
+                drive1pbox.Visible = false;
+                drive1price.Visible = false;
+                drive1name.Visible = false;
+                remove_drive1.Visible = false;
+                drive1border.Visible = false;
+                drive1quan.Visible = false;
 
+            }
         }
+
         private void removessd_Click(object sender, EventArgs e)
         {
             string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
             string userToUpdate = user;
-
             string updateQuery = "UPDATE Builds SET [SSD quantity] = '', SSD = '', [SSD price] = '' WHERE [user] = @UserToUpdate";
 
             try
@@ -1244,46 +1200,20 @@ namespace PC_Building_Simulator
             {
                 MessageBox.Show("Error updating data: " + ex.Message);
             }
-            if (drivecount == 1 && hdd == "" && ssd == "")
+            if (panel5.Size == new Size(1017, 161))
             {
-                selectedm2_1();
-            }
-            else if (drivecount == 1 && ssd == "" && m2 == "")
-            {
-                selectedhdd_1();
-            }
-            else if(drivecount ==1 && m2 == "" && hdd == "")
-            {
-                selectedssd_1();
-            }
-            else if (drivecount == 2 && hdd != "")
-            {
-                selectedhdd_1();
-                panel5.Size = new Size(1017, 55);
-                drivecount = 1;
-
-            }
-            else if (drivecount == 2 && m2 != "")
-            {
-                selectedm2_1();
-                panel5.Size = new Size(1017, 55);
-                drivecount = 1;
-            }
-            else if (drivecount == 3)
-            {
-                selectedhdd_1();
-                selectedm2_2();
                 panel5.Size = new Size(1017, 108);
-                drivecount = 2;
             }
-            
+            else if (panel5.Size == new Size(1017, 108))
+            {
+                panel5.Size = new Size(1017, 55);
+            }
         }
 
         private void removem2_Click(object sender, EventArgs e)
         {
             string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
             string userToUpdate = user;
-
             string updateQuery = "UPDATE Builds SET [M2 SSD quantity] = '', [M2 SSD] = '', [M2 price] = '' WHERE [user] = @UserToUpdate";
 
             try
@@ -1303,137 +1233,15 @@ namespace PC_Building_Simulator
             {
                 MessageBox.Show("Error updating data: " + ex.Message);
             }
-            if (drivecount == 1 && hdd == "" && ssd == "")
+            if(panel5.Size == new Size(1017, 161))
             {
-                selectedm2_1();
-            }
-            else if (drivecount == 1 && ssd == "" && m2 == "")
-            {
-                selectedhdd_1();
-            }
-            else if (drivecount == 1 && m2 == "" && hdd == "")
-            {
-                selectedssd_1();
-            }
-
-            else if (drivecount == 2 && hdd != "")
-            {
-                selectedhdd_1();
-                panel5.Size = new Size(1017, 55);
-                drivecount = 1;
-
-            }
-            else if (drivecount == 2 && ssd != "")
-            {
-                selectedssd_1();
-                panel5.Size = new Size(1017, 55);
-                drivecount = 1;
-            }
-
-            else if (drivecount == 3)
-            {
-                selectedhdd_1();
-                selectedssd_2();
                 panel5.Size = new Size(1017, 108);
-                drivecount = 2;
             }
-        }
+            else if(panel5.Size == new Size(1017, 161))
+            {
+                panel5.Size = new Size(1017, 55);
 
-        private void drivepanels()
-        {
-            // pbox 2 and 3
-            drive2pbox.Size = drive1pbox.Size;
-            drive2pbox.BackColor = Color.White;
-            drive2pbox.SizeMode = drive1pbox.SizeMode;
-            drive2pbox.Location = new Point(314, 68);
-            panel5.Controls.Add(drive2pbox);
-
-            drive3pbox.Size = drive1pbox.Size;
-            drive3pbox.BackColor = Color.White;
-            drive3pbox.SizeMode = drive1pbox.SizeMode;
-            drive3pbox.Location = new Point(314, 121);
-            panel5.Controls.Add(drive3pbox);
-
-            // border 2 && 3
-
-            drive2border.Enabled = false;
-            drive2border.StateCommon.Back.Color1 = Color.White;
-            drive2border.StateCommon.Back.Color2 = Color.White;
-            drive2border.StateCommon.Border.Color1 = Color.LightGray;
-            drive2border.StateCommon.Border.Rounding = 3;
-            drive2border.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
-            drive2border.Size = drive1border.Size;
-            drive2border.Location = new Point(310, 62);
-            panel5.Controls.Add(drive2border);
-
-            drive3border.Enabled = false;
-            drive3border.StateCommon.Back.Color1 = Color.White;
-            drive3border.StateCommon.Back.Color2 = Color.White;
-            drive3border.StateCommon.Border.Color1 = Color.LightGray;
-            drive3border.StateCommon.Border.Rounding = 3;
-            drive3border.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
-            drive3border.Size = drive1border.Size;
-            drive3border.Location = new Point(310, 115);
-            panel5.Controls.Add(drive3border);
-
-            // name 2 and 3 label
-
-            drive2name.Location = new Point(361, 74);
-            drive2name.Font = drive1name.Font;
-            drive2name.AutoSize = true;
-            drive2name.MouseLeave += label_MouseLeave;
-            drive2name.MouseMove += label_MouseMove;
-            panel5.Controls.Add(drive2name);
-
-            drive3name.Location = new Point(361, 127);
-            drive3name.Font = drive1name.Font;
-            drive3name.AutoSize = true;
-            drive3name.MouseLeave += label_MouseLeave;
-            drive3name.MouseMove += label_MouseMove;
-            panel5.Controls.Add(drive3name);
-
-            // quantity 2 and 3 label
-
-            drive2quan.Location = new Point(781, 74);
-            drive2quan.Font = drive1name.Font;
-            drive2quan.AutoSize = true;
-            panel5.Controls.Add(drive2quan);
-
-            drive3quan.Location = new Point(781, 127);
-            drive3quan.Font = drive1name.Font;
-            drive3quan.AutoSize = true;
-            panel5.Controls.Add(drive3quan);
-
-            // price 2 and 3 label
-
-            drive2price.Location = new Point(885, 74);
-            drive2price.Font = drive1name.Font;
-            drive2price.AutoSize = true;
-            panel5.Controls.Add(drive2price);
-
-            drive3price.Location = new Point(885, 127);
-            drive3price.Font = drive1name.Font;
-            drive3price.AutoSize = true;
-            panel5.Controls.Add(drive3price);
-
-            // remove 2 and 3
-
-            remove_drive2.Location = new Point(969, 79);
-            remove_drive2.Text = remove_drive1.Text;
-            remove_drive2.Font = remove_drive1.Font; 
-            remove_drive2.MouseLeave += remove_MouseLeave;
-            remove_drive2.MouseMove += remove_MouseMove;
-            remove_drive2.AutoSize = true;
-            panel5.Controls.Add(remove_drive2);
-
-            remove_drive3.Location = new Point(969, 133);
-            remove_drive3.Text = remove_drive1.Text;
-            remove_drive3.Font = remove_drive1.Font;
-            remove_drive3.MouseLeave += remove_MouseLeave;
-            remove_drive3.MouseMove += remove_MouseMove;
-            remove_drive3.AutoSize = true;
-            panel5.Controls.Add(remove_drive3);
-
+            }
         }
         private void remove_MouseLeave(object sender, EventArgs e)
         {
@@ -1658,7 +1466,7 @@ namespace PC_Building_Simulator
             pbox.Visible = false;
             border.Visible = false;
             remove.Visible = false;
-            remove.Click -= removeClick; // Remove event handler
+            remove.Click -= removeClick;
         }
         private void DeleteUserDataButton_Click(object sender, EventArgs e)
         {
@@ -1687,8 +1495,6 @@ namespace PC_Building_Simulator
                 MessageBox.Show($"Error deleting user data: {ex.Message}");
             }
             total_price.Text = "0";
-            // Reset CPU component
-            // Reset CPU component
             label1.Text = "";
             price_cpu.Text = "";
             pBox1.Image = null;
@@ -1697,7 +1503,6 @@ namespace PC_Building_Simulator
             quan_cpu.Visible = false;
             remove_cpu.Visible = false;
 
-            // Reset GPU component
             label2.Text = "";
             price_gpu.Text = "";
             pBox2.Image = null;
@@ -1706,7 +1511,6 @@ namespace PC_Building_Simulator
             quan_gpu.Visible = false;
             remove_gpu.Visible = false;
 
-            // Reset Motherboard component
             label3.Text = "";
             price_mb.Text = "";
             pBox3.Image = null;
@@ -1715,7 +1519,6 @@ namespace PC_Building_Simulator
             quan_mb.Visible = false;
             remove_mb.Visible = false;
 
-            // Reset RAM component
             label4.Text = "";
             price_ram.Text = "";
             pBox4.Image = null;
@@ -1724,7 +1527,6 @@ namespace PC_Building_Simulator
             quan_ram.Visible = false;
             remove_ram.Visible = false;
 
-            // Reset PSU component
             label6.Text = "";
             price_psu.Text = "";
             pBox6.Image = null;
@@ -1733,7 +1535,6 @@ namespace PC_Building_Simulator
             quan_psu.Visible = false;
             remove_psu.Visible = false;
 
-            // Reset Case component
             label7.Text = "";
             price_case.Text = "";
             pBox7.Image = null;
@@ -1742,7 +1543,6 @@ namespace PC_Building_Simulator
             quan_case.Visible = false;
             remove_case.Visible = false;
 
-            // Reset Monitor component
             label9.Text = "";
             price_moni.Text = "";
             pBox9.Image = null;
@@ -1751,7 +1551,6 @@ namespace PC_Building_Simulator
             quan_moni.Visible = false;
             remove_moni.Visible = false;
 
-            // Reset Keyboard component
             label10.Text = "";
             price_keyb.Text = "";
             pBox10.Image = null;
@@ -1760,7 +1559,6 @@ namespace PC_Building_Simulator
             quan_keyb.Visible = false;
             remove_keyb.Visible = false;
 
-            // Reset Mouse component
             label11.Text = "";
             price_mou.Text = "";
             pBox11.Image = null;
@@ -1769,7 +1567,6 @@ namespace PC_Building_Simulator
             quan_mous.Visible = false;
             remove_mous.Visible = false;
 
-            // Reset Speaker component
             label12.Text = "";
             price_spk.Text = "";
             pBox12.Image = null;
@@ -1778,7 +1575,6 @@ namespace PC_Building_Simulator
             quan_spk.Visible = false;
             remove_spk.Visible = false;
 
-            // Reset Fans component
             label_fans.Text = "";
             price_fans.Text = "";
             pBoxfans.Image = null;
@@ -1786,10 +1582,7 @@ namespace PC_Building_Simulator
             borderfans.Visible = false;
             quan_fans.Visible = false;
             remove_fans.Visible = false;
-            remove_fans.Click -= removefan_Click; // Remove event handler
-            label_fans.Click -= LabelClicked; // Remove event handler
 
-            // Reset CPU Cooler component
             label_cpucooler.Text = "";
             price_cpucool.Text = "";
             pBoxcpucool.Image = null;
@@ -1797,23 +1590,12 @@ namespace PC_Building_Simulator
             bordercpucool.Visible = false;
             quan_cpucool.Visible = false;
             remove_cpucool.Visible = false;
-            remove_cpucool.Click -= removeairc_Click; // Remove event handler
-            remove_cpucool.Click -= removeaioc_Click; // Remove event handler
-            label_cpucooler.Click -= LabelClicked; // Remove event handler
 
-
-            // Reset Drive panels based on drive count
-            panel5.Size = new Size(1017, 55); // Default size
+            panel5.Size = new Size(1017, 55);
             panel8.Size = new Size(1017, 55);
-            drivecount = 1; // Default drive count
-            drivepanels(); // Reset drive panels based on drive count
-
+            drivecount = 1;
             ResetDriveComponent(drive1name, drive1price, drive1quan, drive1pbox, drive1border, remove_drive1, removehdd_Click);
-
-            // Reset Drive 2 component
             ResetDriveComponent(drive2name, drive2price, drive2quan, drive2pbox, drive2border, remove_drive2, removessd_Click);
-
-            // Reset Drive 3 component
             ResetDriveComponent(drive3name, drive3price, drive3quan, drive3pbox, drive3border, remove_drive3, removem2_Click);
         }
     }

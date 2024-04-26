@@ -28,7 +28,7 @@ namespace PC_Building_Simulator
             displayManager = new DisplayManager(this);
             buildMenu = new buildmenu(this);
 
-            
+
 
             dbManager = new DatabaseManager("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb");
             dbManager.OpenConnection();
@@ -54,22 +54,18 @@ namespace PC_Building_Simulator
             }
             dbManager.CloseConnection();
 
-            but_build_Click(this, EventArgs.Empty);
-
-
             displayManager.menuselect(19);
         }
 
         private void MainApp_Load(object sender, EventArgs e)
         {
-            
         }
         //------------------------------ build button -----------------------------
         private void but_build_Click(object sender, EventArgs e)
         {
-            if(label_menu.Text == "Your Build")
+            pictureBox4.Visible = true;
+            if (label_menu.Text == "Your Build")
             {
-
             }
             else
             {
@@ -117,6 +113,7 @@ namespace PC_Building_Simulator
             }
             else
             {
+                pictureBox4.Visible = false;
                 backicon.Visible = false;
                 back = 1;
                 clicked = true;
@@ -162,6 +159,7 @@ namespace PC_Building_Simulator
             }
             else
             {
+                pictureBox4.Visible = false;
                 backicon.Visible = false;
                 back = 2;
                 clicked = true;
@@ -208,6 +206,7 @@ namespace PC_Building_Simulator
             }
             else
             {
+                pictureBox4.Visible = false;
                 backicon.Visible = false;
                 back = 3;
                 clicked = true;
@@ -254,6 +253,7 @@ namespace PC_Building_Simulator
             }
             else
             {
+                pictureBox4.Visible = false;
                 backicon.Visible = false;
                 back = 4;
                 clicked = true;
@@ -293,6 +293,7 @@ namespace PC_Building_Simulator
         //------------------------------ storage menu -------------------------------
         public void but_storage_Click(object sender, EventArgs e)
         {
+            pictureBox4.Visible = false;
             backicon.Visible = false;
             back = 5;
             clicked = true;
@@ -338,6 +339,7 @@ namespace PC_Building_Simulator
             }
             else
             {
+                pictureBox4.Visible = false;
                 backicon.Visible = false;
                 back = 6;
                 clicked = true;
@@ -383,6 +385,7 @@ namespace PC_Building_Simulator
             }
             else
             {
+                pictureBox4.Visible = false;
                 backicon.Visible = false;
                 back = 7;
                 clicked = true;
@@ -423,6 +426,7 @@ namespace PC_Building_Simulator
         //------------------------------ cooler menu --------------------------------
         public void but_cooler_Click(object sender, EventArgs e)
         {
+            pictureBox4.Visible = false;
             backicon.Visible = false;
             back = 8;
             clicked = true;
@@ -468,6 +472,7 @@ namespace PC_Building_Simulator
             }
             else
             {
+                pictureBox4.Visible = false;
                 backicon.Visible = false;
                 back = 9;
                 clicked = true;
@@ -515,6 +520,7 @@ namespace PC_Building_Simulator
             }
             else
             {
+                pictureBox4.Visible = false;
                 backicon.Visible = false;
                 back = 10;
                 clicked = true;
@@ -561,6 +567,7 @@ namespace PC_Building_Simulator
             }
             else
             {
+                pictureBox4.Visible = false;
                 backicon.Visible = false;
                 back = 11;
                 clicked = true;
@@ -607,6 +614,7 @@ namespace PC_Building_Simulator
             }
             else
             {
+                pictureBox4.Visible = false;
                 backicon.Visible = false;
                 back = 12;
                 clicked = true;
@@ -664,6 +672,7 @@ namespace PC_Building_Simulator
 
         private void lab_profile_Click(object sender, EventArgs e)
         {
+            pictureBox4.Visible = false;
             backicon.Visible = false;
             clicked = true;
             panelmain.Controls.Clear();
@@ -822,6 +831,14 @@ namespace PC_Building_Simulator
         {
             displayManager.menuselect(20);
             displayManager.otherButton_Click(true);
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if (label_menu.Text == "Your Build")
+            {
+                displayManager.menuselect(1);
+            }
         }
     }
 }
