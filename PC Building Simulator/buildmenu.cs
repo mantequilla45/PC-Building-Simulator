@@ -1494,7 +1494,7 @@ namespace PC_Building_Simulator
             {
                 MessageBox.Show($"Error deleting user data: {ex.Message}");
             }
-            total_price.Text = "0";
+            total_price.Text = "$0";
             label1.Text = "";
             price_cpu.Text = "";
             pBox1.Image = null;

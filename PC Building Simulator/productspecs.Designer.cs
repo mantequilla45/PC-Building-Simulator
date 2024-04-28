@@ -30,6 +30,9 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.spec3 = new System.Windows.Forms.Label();
+            this.comp3 = new System.Windows.Forms.Label();
+            this.border3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.spec2 = new System.Windows.Forms.Label();
             this.comp2 = new System.Windows.Forms.Label();
             this.spec1 = new System.Windows.Forms.Label();
@@ -45,9 +48,11 @@
             this.pictureBox1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.border2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.spec3 = new System.Windows.Forms.Label();
-            this.comp3 = new System.Windows.Forms.Label();
-            this.border3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.spec4 = new System.Windows.Forms.Label();
+            this.comp4 = new System.Windows.Forms.Label();
+            this.border4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -57,7 +62,15 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.spec4);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.comp4);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.border4);
+            this.panel1.Controls.Add(this.but_add);
             this.panel1.Controls.Add(this.spec3);
+            this.panel1.Controls.Add(this.kryptonButton1);
             this.panel1.Controls.Add(this.comp3);
             this.panel1.Controls.Add(this.border3);
             this.panel1.Controls.Add(this.spec2);
@@ -66,25 +79,66 @@
             this.panel1.Controls.Add(this.border1);
             this.panel1.Controls.Add(this.comp1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.but_add);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.border2);
+            this.panel1.Controls.Add(this.kryptonButton2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1063, 699);
             this.panel1.TabIndex = 6;
             // 
+            // spec3
+            // 
+            this.spec3.AutoSize = true;
+            this.spec3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.spec3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spec3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.spec3.Location = new System.Drawing.Point(221, 511);
+            this.spec3.MaximumSize = new System.Drawing.Size(140, 34);
+            this.spec3.Name = "spec3";
+            this.spec3.Size = new System.Drawing.Size(42, 17);
+            this.spec3.TabIndex = 27;
+            this.spec3.Text = "Specs";
+            this.spec3.Visible = false;
+            // 
+            // comp3
+            // 
+            this.comp3.AutoSize = true;
+            this.comp3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comp3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comp3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.comp3.Location = new System.Drawing.Point(37, 511);
+            this.comp3.MaximumSize = new System.Drawing.Size(160, 34);
+            this.comp3.Name = "comp3";
+            this.comp3.Size = new System.Drawing.Size(43, 17);
+            this.comp3.TabIndex = 26;
+            this.comp3.Text = "Comp";
+            this.comp3.Visible = false;
+            // 
+            // border3
+            // 
+            this.border3.Enabled = false;
+            this.border3.Location = new System.Drawing.Point(208, 511);
+            this.border3.Name = "border3";
+            this.border3.Size = new System.Drawing.Size(74, 35);
+            this.border3.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.border3.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.border3.StateCommon.Border.Color1 = System.Drawing.Color.Silver;
+            this.border3.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left;
+            this.border3.TabIndex = 28;
+            this.border3.Values.Text = "";
+            this.border3.Visible = false;
+            // 
             // spec2
             // 
             this.spec2.AutoSize = true;
+            this.spec2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.spec2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spec2.Location = new System.Drawing.Point(222, 472);
-            this.spec2.MaximumSize = new System.Drawing.Size(160, 34);
+            this.spec2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.spec2.Location = new System.Drawing.Point(221, 462);
+            this.spec2.MaximumSize = new System.Drawing.Size(140, 34);
             this.spec2.Name = "spec2";
             this.spec2.Size = new System.Drawing.Size(42, 17);
             this.spec2.TabIndex = 24;
@@ -94,8 +148,10 @@
             // comp2
             // 
             this.comp2.AutoSize = true;
+            this.comp2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.comp2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comp2.Location = new System.Drawing.Point(38, 472);
+            this.comp2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.comp2.Location = new System.Drawing.Point(37, 462);
             this.comp2.MaximumSize = new System.Drawing.Size(160, 34);
             this.comp2.Name = "comp2";
             this.comp2.Size = new System.Drawing.Size(43, 17);
@@ -106,9 +162,11 @@
             // spec1
             // 
             this.spec1.AutoSize = true;
+            this.spec1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.spec1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spec1.Location = new System.Drawing.Point(222, 423);
-            this.spec1.MaximumSize = new System.Drawing.Size(160, 34);
+            this.spec1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.spec1.Location = new System.Drawing.Point(221, 413);
+            this.spec1.MaximumSize = new System.Drawing.Size(140, 34);
             this.spec1.Name = "spec1";
             this.spec1.Size = new System.Drawing.Size(42, 17);
             this.spec1.TabIndex = 16;
@@ -118,12 +176,12 @@
             // border1
             // 
             this.border1.Enabled = false;
-            this.border1.Location = new System.Drawing.Point(209, 423);
+            this.border1.Location = new System.Drawing.Point(208, 413);
             this.border1.Name = "border1";
             this.border1.Size = new System.Drawing.Size(74, 35);
-            this.border1.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
-            this.border1.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
-            this.border1.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.border1.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.border1.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.border1.StateCommon.Border.Color1 = System.Drawing.Color.Silver;
             this.border1.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left;
             this.border1.TabIndex = 22;
             this.border1.Values.Text = "";
@@ -132,8 +190,10 @@
             // comp1
             // 
             this.comp1.AutoSize = true;
+            this.comp1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.comp1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comp1.Location = new System.Drawing.Point(38, 423);
+            this.comp1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.comp1.Location = new System.Drawing.Point(37, 413);
             this.comp1.MaximumSize = new System.Drawing.Size(160, 34);
             this.comp1.Name = "comp1";
             this.comp1.Size = new System.Drawing.Size(43, 17);
@@ -144,18 +204,21 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 395);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(29, 371);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 21);
+            this.label3.Size = new System.Drawing.Size(149, 21);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Compatibility Checker";
+            this.label3.Text = "Compatibility Check";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(196, 360);
+            this.label2.Location = new System.Drawing.Point(187, 350);
             this.label2.MaximumSize = new System.Drawing.Size(122, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 13);
@@ -166,8 +229,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 326);
+            this.label1.Location = new System.Drawing.Point(58, 316);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 21);
             this.label1.TabIndex = 11;
@@ -180,7 +244,7 @@
             this.comboBox1.ItemHeight = 20;
             this.comboBox1.Items.AddRange(new object[] {
             "1"});
-            this.comboBox1.Location = new System.Drawing.Point(141, 324);
+            this.comboBox1.Location = new System.Drawing.Point(132, 314);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(74, 28);
             this.comboBox1.TabIndex = 10;
@@ -188,7 +252,7 @@
             // 
             // but_add
             // 
-            this.but_add.Location = new System.Drawing.Point(221, 320);
+            this.but_add.Location = new System.Drawing.Point(212, 310);
             this.but_add.Name = "but_add";
             this.but_add.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(135)))), ((int)(((byte)(195)))));
             this.but_add.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(135)))), ((int)(((byte)(195)))));
@@ -236,7 +300,7 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(347, 303);
+            this.panel2.Size = new System.Drawing.Size(347, 296);
             this.panel2.TabIndex = 8;
             // 
             // pictureBox2
@@ -254,7 +318,7 @@
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Location = new System.Drawing.Point(9, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(334, 297);
+            this.pictureBox1.Size = new System.Drawing.Size(334, 291);
             this.pictureBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.pictureBox1.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.pictureBox1.StateCommon.Border.Color1 = System.Drawing.Color.White;
@@ -276,7 +340,7 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ColumnHeadersVisible = false;
-            this.dataGridView1.Location = new System.Drawing.Point(356, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(352, 6);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -311,54 +375,84 @@
             // border2
             // 
             this.border2.Enabled = false;
-            this.border2.Location = new System.Drawing.Point(209, 472);
+            this.border2.Location = new System.Drawing.Point(208, 462);
             this.border2.Name = "border2";
             this.border2.Size = new System.Drawing.Size(74, 35);
-            this.border2.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
-            this.border2.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
-            this.border2.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.border2.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.border2.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.border2.StateCommon.Border.Color1 = System.Drawing.Color.Silver;
             this.border2.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left;
             this.border2.TabIndex = 25;
             this.border2.Values.Text = "";
             this.border2.Visible = false;
             // 
-            // spec3
+            // spec4
             // 
-            this.spec3.AutoSize = true;
-            this.spec3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spec3.Location = new System.Drawing.Point(222, 521);
-            this.spec3.MaximumSize = new System.Drawing.Size(160, 34);
-            this.spec3.Name = "spec3";
-            this.spec3.Size = new System.Drawing.Size(42, 17);
-            this.spec3.TabIndex = 27;
-            this.spec3.Text = "Specs";
-            this.spec3.Visible = false;
+            this.spec4.AutoSize = true;
+            this.spec4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.spec4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spec4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.spec4.Location = new System.Drawing.Point(221, 561);
+            this.spec4.MaximumSize = new System.Drawing.Size(140, 34);
+            this.spec4.Name = "spec4";
+            this.spec4.Size = new System.Drawing.Size(42, 17);
+            this.spec4.TabIndex = 30;
+            this.spec4.Text = "Specs";
+            this.spec4.Visible = false;
             // 
-            // comp3
+            // comp4
             // 
-            this.comp3.AutoSize = true;
-            this.comp3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comp3.Location = new System.Drawing.Point(38, 521);
-            this.comp3.MaximumSize = new System.Drawing.Size(160, 34);
-            this.comp3.Name = "comp3";
-            this.comp3.Size = new System.Drawing.Size(43, 17);
-            this.comp3.TabIndex = 26;
-            this.comp3.Text = "Comp";
-            this.comp3.Visible = false;
+            this.comp4.AutoSize = true;
+            this.comp4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comp4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comp4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.comp4.Location = new System.Drawing.Point(37, 561);
+            this.comp4.MaximumSize = new System.Drawing.Size(160, 34);
+            this.comp4.Name = "comp4";
+            this.comp4.Size = new System.Drawing.Size(43, 17);
+            this.comp4.TabIndex = 29;
+            this.comp4.Text = "Comp";
+            this.comp4.Visible = false;
             // 
-            // border3
+            // border4
             // 
-            this.border3.Enabled = false;
-            this.border3.Location = new System.Drawing.Point(209, 521);
-            this.border3.Name = "border3";
-            this.border3.Size = new System.Drawing.Size(74, 35);
-            this.border3.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
-            this.border3.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
-            this.border3.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.border3.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left;
-            this.border3.TabIndex = 28;
-            this.border3.Values.Text = "";
-            this.border3.Visible = false;
+            this.border4.Enabled = false;
+            this.border4.Location = new System.Drawing.Point(208, 561);
+            this.border4.Name = "border4";
+            this.border4.Size = new System.Drawing.Size(74, 35);
+            this.border4.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.border4.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.border4.StateCommon.Border.Color1 = System.Drawing.Color.Silver;
+            this.border4.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left;
+            this.border4.TabIndex = 31;
+            this.border4.Values.Text = "";
+            this.border4.Visible = false;
+            // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Enabled = false;
+            this.kryptonButton1.Location = new System.Drawing.Point(33, 303);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(290, 35);
+            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton1.StateCommon.Border.Color1 = System.Drawing.Color.Silver;
+            this.kryptonButton1.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top;
+            this.kryptonButton1.TabIndex = 32;
+            this.kryptonButton1.Values.Text = "";
+            // 
+            // kryptonButton2
+            // 
+            this.kryptonButton2.Enabled = false;
+            this.kryptonButton2.Location = new System.Drawing.Point(33, 365);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.Size = new System.Drawing.Size(290, 35);
+            this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton2.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton2.StateCommon.Border.Color1 = System.Drawing.Color.Silver;
+            this.kryptonButton2.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonButton2.TabIndex = 33;
+            this.kryptonButton2.Values.Text = "";
             // 
             // productspecs
             // 
@@ -399,5 +493,10 @@
         private System.Windows.Forms.Label spec3;
         private System.Windows.Forms.Label comp3;
         private ComponentFactory.Krypton.Toolkit.KryptonButton border3;
+        private System.Windows.Forms.Label spec4;
+        private System.Windows.Forms.Label comp4;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton border4;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
     }
 }

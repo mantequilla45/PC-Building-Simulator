@@ -164,6 +164,7 @@
             this.total_price = new System.Windows.Forms.Label();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.delete_all = new System.Windows.Forms.Label();
+            this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBox1)).BeginInit();
@@ -1958,6 +1959,20 @@
             this.delete_all.MouseLeave += new System.EventHandler(this.remove_MouseLeave);
             this.delete_all.MouseMove += new System.Windows.Forms.MouseEventHandler(this.remove_MouseMove);
             // 
+            // kryptonButton4
+            // 
+            this.kryptonButton4.Enabled = false;
+            this.kryptonButton4.Location = new System.Drawing.Point(25, 25);
+            this.kryptonButton4.Name = "kryptonButton4";
+            this.kryptonButton4.Size = new System.Drawing.Size(1013, 35);
+            this.kryptonButton4.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton4.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton4.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.kryptonButton4.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonButton4.StateCommon.Border.Rounding = 8;
+            this.kryptonButton4.TabIndex = 147;
+            this.kryptonButton4.Values.Text = "";
+            // 
             // buildmenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1970,8 +1985,9 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.kryptonButton2);
+            this.Controls.Add(this.kryptonButton4);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "buildmenu";
             this.ShowIcon = false;
@@ -2158,5 +2174,6 @@
         private System.Windows.Forms.Label drive2name;
         private System.Windows.Forms.PictureBox drive2pbox;
         private ComponentFactory.Krypton.Toolkit.KryptonButton drive2border;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
     }
 }

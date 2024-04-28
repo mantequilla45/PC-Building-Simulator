@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Data.SqlClient;
+using System.Linq.Expressions;
 
 namespace PC_Building_Simulator
 {
@@ -29,7 +31,6 @@ namespace PC_Building_Simulator
         private string update;
         private string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
         private string motherboardName = "";
-        private string cpuName = "";
         private string hddName = "";
         private string ssdName = "";
         private string mb_cpuSocket = "";
@@ -42,6 +43,28 @@ namespace PC_Building_Simulator
         private string pciegen = "";
         private int hddquan = 0;
         private int ssdquan = 0;
+        private int m2quan = 0;
+        private int totalwatts = 0;
+        private string gpuwatts = "";
+        private string gpuname = "";
+        private string cpuwatts = "";
+        private string cpuname = "";
+        private string ramName = "";
+        private string mbformfactor = "";
+        private string gpulength = "";
+        private string cpuaircooler = "";
+        private string cpuaircoolerdepth = "";
+        private string gpuclearance = "";
+        private string aircoolerclearance = "";
+        private string radclearance = "";
+        private string radheight = "";
+        private string radiator = "";
+        private string casename = "";
+        private string motherboardSupport = "";
+        private string fanname = "";
+        private int fanquan = 0;
+        private int totalfans = 0;
+        //private string fanslots = "";
         public productspecs(string prodchoice, int num, MainApp mainApp, string price)
         {
             InitializeComponent();
@@ -99,7 +122,6 @@ namespace PC_Building_Simulator
         private void productmenu_Load(object sender, EventArgs e)
         {
         }
-
         private void InitializeDisplayManager()
         {
             productspecs productspecsform = this;
@@ -149,26 +171,35 @@ namespace PC_Building_Simulator
 
             motherboardName = GetSingleValue("SELECT Motherboard FROM Builds WHERE [user] = @UserToUpdate", "@UserToUpdate", userToUpdate, "Motherboard");
             hddName = GetSingleValue("SELECT HDD FROM Builds WHERE [user] = @UserToUpdate", "@UserToUpdate", userToUpdate, "HDD");
-            cpuName = GetSingleValue("SELECT CPU FROM Builds WHERE [user] = @UserToUpdate", "@UserToUpdate", userToUpdate, "CPU");
+            cpuname = GetSingleValue("SELECT CPU FROM Builds WHERE [user] = @UserToUpdate", "@UserToUpdate", userToUpdate, "CPU");
             ssdName = GetSingleValue("SELECT SSD FROM Builds WHERE [user] = @UserToUpdate", "@UserToUpdate", userToUpdate, "SSD");
-
+            ramName = GetSingleValue("SELECT RAM FROM Builds WHERE [user] = @UserToUpdate", "@UserToUpdate", userToUpdate, "RAM");
+            gpuname = GetSingleValue("SELECT GPU FROM Builds WHERE [user] = @UserToUpdate", "@UserToUpdate", userToUpdate, "GPU");
+            casename = GetSingleValue("SELECT [Computer Case] FROM Builds WHERE [user] = @UserToUpdate", "@UserToUpdate", userToUpdate, "Computer Case");
+            radiator = GetSingleValue("SELECT [AIO Cooler] FROM Builds WHERE [user] = @UserToUpdate", "@UserToUpdate", userToUpdate, "AIO Cooler");
+            cpuaircooler = GetSingleValue("SELECT [CPU Air Cooler] FROM Builds WHERE [user] = @UserToUpdate", "@UserToUpdate", userToUpdate, "CPU Air Cooler");
+            fanname = GetSingleValue("SELECT Fans FROM Builds WHERE [user] = @UserToUpdate", "@UserToUpdate", userToUpdate, "Fans");
+            string m2QuantityString = GetSingleValue("SELECT [M2 SSD quantity] FROM Builds WHERE [user] = @UserToUpdate", "@UserToUpdate", userToUpdate, "M2 SSD quantity");
+            if (!string.IsNullOrEmpty(m2QuantityString))
+            {
+                m2quan = int.Parse(m2QuantityString);
+            }
             Dictionary<string, string> motherboardstports = GetMultipleValues("SELECT [SATA Ports], [M2 Slots], [PCIe Generation] FROM [Motherboard specs] WHERE [Motherboard Name] = @MotherboardName", "@MotherboardName", motherboardName, "SATA Ports", "M2 Slots", "PCIe Generation");
             mbsataports = motherboardstports.ContainsKey("SATA Ports") ? motherboardstports["SATA Ports"] : "";
             mbm2slots = motherboardstports.ContainsKey("M2 Slots") ? motherboardstports["M2 Slots"] : "";
             pciegen = motherboardstports.ContainsKey("PCIe Generation") ? motherboardstports["PCIe Generation"] : "";
 
-            Dictionary<string, string> sataquan = GetMultipleValues("SELECT [HDD quantity], [SSD quantity] FROM [Builds] WHERE [user] = @user", "@user", user, "HDD quantity", "SSD quantity");
-            hddquan = sataquan.ContainsKey("HDD quantity") && !string.IsNullOrEmpty(sataquan["HDD quantity"]) ? int.Parse(sataquan["HDD quantity"]) : 0;
-            ssdquan = sataquan.ContainsKey("SSD quantity") && !string.IsNullOrEmpty(sataquan["SSD quantity"]) ? int.Parse(sataquan["SSD quantity"]) : 0;
-
-
+            Dictionary<string, string> quan = GetMultipleValues("SELECT [HDD quantity], [SSD quantity], [Fan quantity] FROM [Builds] WHERE [user] = @user", "@user", user, "HDD quantity", "SSD quantity", "Fan quantity");
+            hddquan = quan.ContainsKey("HDD quantity") && !string.IsNullOrEmpty(quan["HDD quantity"]) ? int.Parse(quan["HDD quantity"]) : 0;
+            ssdquan = quan.ContainsKey("SSD quantity") && !string.IsNullOrEmpty(quan["SSD quantity"]) ? int.Parse(quan["SSD quantity"]) : 0;
+            fanquan = quan.ContainsKey("Fan quantity") && !string.IsNullOrEmpty(quan["Fan quantity"]) ? int.Parse(quan["Fan quantity"]) : 0;
             using (OleDbConnection connection = new OleDbConnection(connectionString))
             {
                 connection.Open();
 
                 switch (menuchoice)
                 {
-                    case 1: //CPU
+                    case 1:
                         mb_cpuSocket = GetSingleValue("SELECT [CPU Socket] FROM [Motherboard specs] WHERE [Motherboard Name] = @MotherboardName", "@MotherboardName", motherboardName, "CPU Socket");
                         cpusocketype = GetSingleValue("SELECT [Socket Type] FROM [CPU specs] WHERE [Processor Name] = @prodchoice", "@prodchoice", choice, "Socket Type");
                         comp1.Visible = true;
@@ -182,29 +213,43 @@ namespace PC_Building_Simulator
                         }
                         else
                         {
-                            comp1.Text = "No motherboard selected.";
-                            spec1.Visible = false;
-                            border1.Visible = false;
+                            comp1.Text = "Motherboard CPU Slot";
+                            spec1.Text = "No motherboard selected.";
                         }
                         break;
 
                     case 3: //MB
-                        cpusocketype = GetSingleValue("SELECT [Socket Type] FROM [CPU specs] WHERE [Processor Name] = @prodchoice", "@prodchoice", cpuName, "Socket Type");
+                        cpusocketype = GetSingleValue("SELECT [Socket Type] FROM [CPU specs] WHERE [Processor Name] = @prodchoice", "@prodchoice", cpuname, "Socket Type");
                         mb_cpuSocket = GetSingleValue("SELECT [CPU Socket] FROM [Motherboard specs] WHERE [Motherboard Name] = @prodchoice", "@prodchoice", choice, "CPU Socket");
+                        
+                        motherboardSupport = GetSingleValue("SELECT [Motherboard Support] FROM [Case specs] WHERE [Computer Case Name] = @casename", "@casename", casename, "Motherboard Support");
+                        string[] motherboardSupportArray = motherboardSupport.Split(',');
 
                         comp1.Visible = true;
                         spec1.Visible = true;
                         border1.Visible = true;
-                        if (cpuName != "")
+                        comp2.Visible = true;
+                        spec2.Visible = true;
+                        border2.Visible = true;
+                        if (cpuname != "")
                         {
-                            comp1.Text = $"{cpuName} Socket Type";
+                            comp1.Text = $"{cpuname} Socket Type";
                             spec1.Text = cpusocketype;
                         }
                         else
                         {
-                            comp1.Text = "No CPU selected.";
-                            spec1.Visible = false;
-                            border1.Visible = false;
+                            comp1.Text = "CPU Socket Type";
+                            spec1.Text = "No CPU selected.";
+                        }
+                        if(casename != "")
+                        {
+                            comp2.Text = $"{casename} Form Factor";
+                            spec2.Text = $"{motherboardSupport}";
+                        }
+                        else
+                        {
+                            comp2.Text = $"Case Supported Form Factor";
+                            spec2.Text = "No case selected.";
                         }
                         break;
 
@@ -238,6 +283,107 @@ namespace PC_Building_Simulator
                             spec2.Visible = false;
                         }
                         break;
+
+                    case 6: //PSU
+                        comp1.Visible = true;
+                        spec1.Visible = true;
+                        border1.Visible = true;
+                        gpuwatts = GetSingleValue("SELECT [TDP (Thermal Design Power)] FROM [GPU specs] WHERE [Graphics Card Name] = @gpuname", "@gpuname", gpuname, "TDP (Thermal Design Power)");
+                        cpuwatts = GetSingleValue("SELECT [TDP (Thermal Design Power)] FROM [CPU specs] WHERE [Processor Name] = @cpuname", "@cpuname", cpuname, "TDP (Thermal Design Power)");
+                        if (gpuwatts == "")
+                        {
+                            gpuwatts = "0W";
+                        }
+                        if (cpuwatts == "")
+                        {
+                            cpuwatts = "0W";
+                        }
+                        totalwatts = int.Parse(gpuwatts.Replace("W", "")) + int.Parse(cpuwatts.Replace("W", "")) + 9 * hddquan + 8 * ssdquan + 9 * m2quan;
+
+                        if (motherboardName != "")
+                        {
+                            totalwatts = totalwatts + 45;
+                        }
+
+                        if (ramName != "")
+                        {
+                            totalwatts = totalwatts + 10;
+                        }
+
+                        comp1.Text = "Estimated Total Power ";
+                        spec1.Text = $"{totalwatts}W";
+                        break;
+
+                    case 7: //Case
+                        mbformfactor = GetSingleValue("SELECT [Form Factor] FROM [Motherboard specs] WHERE [Motherboard Name] = @mbname", "@mbname", motherboardName, "Form Factor");
+                        gpulength = GetSingleValue("SELECT Height FROM [GPU specs] WHERE [Graphics Card Name] = @gpuname", "@gpuname", gpuname, "Height");
+                        cpuaircoolerdepth = GetSingleValue("SELECT Depth FROM [CPU Air Cooler specs] WHERE [CPU Air Cooler] = @aircoolname", "@aircoolname", cpuaircooler, "Depth");
+                        radheight = GetSingleValue("SELECT [Radiator Length] FROM [AIO Cooler specs] WHERE [AIO Cooler Name] = @aioname", "@aioname", radiator, "Radiator Length");
+
+                        comp1.Visible = true;
+                        spec1.Visible = true;
+                        border1.Visible = true;
+                        comp2.Visible = true;
+                        spec2.Visible = true;
+                        border2.Visible = true;
+                        comp3.Visible = true;
+                        spec3.Visible = true;
+                        border3.Visible = true;
+                        comp4.Visible = true;
+                        spec4.Visible = true;
+                        border4.Visible = true;
+
+                        if (motherboardName != "")
+                        {
+                            comp1.Text = $"{motherboardName} Form Factor";
+                            spec1.Text = mbformfactor;
+                        }
+                        else
+                        {
+                            comp1.Text = "Motherboard Form Factor";
+                            spec1.Text = "No motherboard selected.";
+                        }
+
+                        if (gpuname != "")
+                        {
+                            comp2.Text = $"{gpuname} Height";
+                            spec2.Text = gpulength;
+                        }
+                        else
+                        {
+                            comp2.Text = "GPU length";
+                            spec2.Text = "No GPU selected.";
+                        }
+
+                        if (cpuaircooler != "" && radiator == "")
+                        {
+                            comp3.Text = $"{cpuaircooler} Depth";
+                            spec3.Text = cpuaircoolerdepth;
+                        }
+                        else if (cpuaircooler == "" && radiator != "")
+                        {
+                            comp3.Text = $"{radiator} Length";
+                            spec3.Text = radheight;
+                        }
+                        else if (cpuaircooler == "" && radiator == "")
+                        {
+                            comp3.Text = "CPU Cooler Size";
+                            spec3.Text = "No CPU Cooler selected.";
+                        }
+
+                        if(fanname != "")
+                        {
+                            comp4.Text = $"{fanname} Quantity";
+                            spec4.Text = $"x {fanquan}";
+                        }
+                        else
+                        {
+                            comp4.Text = "Fan Quantity";
+                            spec4.Text = "No fan selected.";
+                        }
+
+                        break;
+
 
                     case 13: //HDD
                         comp1.Visible = true;
@@ -285,10 +431,11 @@ namespace PC_Building_Simulator
                         }
                         else
                         {
-                            comp1.Text = "No motherboard selected.";
-                            spec1.Visible = false;
+                            comp1.Text = "Motherboard SATA Ports";
+                            spec1.Text = "No motherboard selected.";
                             border1.Visible = false;
                         }
+
                         if (hddName != "")
                         {
                             comp2.Text = hddName;
@@ -297,9 +444,8 @@ namespace PC_Building_Simulator
 
                         else
                         {
-                            comp2.Visible = false;
-                            spec2.Visible = false;
-                            border2.Visible = false;
+                            comp2.Text = "HDDs using SATA Ports";
+                            spec2.Text = "No HDD selected.";
                         }
                         break;
 
@@ -320,19 +466,42 @@ namespace PC_Building_Simulator
                         }
                         else
                         {
-                            comp1.Text = "No motherboard selected.";
-                            spec1.Visible = false;
-                            border1.Visible = false;
+                            comp1.Text = "Motherboard M2 Slots.";
+                            spec1.Text = "No motherboard selected.";
+                            comp2.Visible = false;
+                            spec2.Visible = false;
+                            border2.Visible = false;
+                        }
+                        break;
+
+                    case 16:
+                        Dictionary<string, string> fanslots = GetMultipleValues("SELECT [Front Fans], [Top Fans], [Rear Fans] FROM [Case specs] WHERE [Computer Case Name] = @ccase", "@ccase", casename, "Front Fans", "Top Fans", "Rear Fans");
+                        string frontslots = fanslots.ContainsKey("Front Fans") && !string.IsNullOrEmpty(fanslots["Front Fans"]) ? fanslots["Front Fans"] : "0";
+                        string topslots = fanslots.ContainsKey("Top Fans") && !string.IsNullOrEmpty(fanslots["Top Fans"]) ? fanslots["Top Fans"] : "0";
+                        string rearslots = fanslots.ContainsKey("Rear Fans") && !string.IsNullOrEmpty(fanslots["Rear Fans"]) ? fanslots["Rear Fans"] : "0";
+
+                        int front = int.Parse(frontslots.Substring(0, 1));
+                        int top = int.Parse(topslots.Substring(0, 1));
+                        int rear = int.Parse(rearslots.Substring(0, 1));
+                        totalfans = front + top + rear;
+
+                        comp1.Visible = true;
+                        spec1.Visible = true;
+                        border1.Visible = true;
+                        if(casename != "")
+                        {
+                            comp1.Text = $"{casename} Fan slots"; 
+                            spec1.Text = $"x {totalfans}";
                         }
                         break;
                 }
             }
-        }
+        } 
 
         private void but_add_Click(object sender, EventArgs e)
         {
             getcurrentuser();
-            int mbsata, m2slot, usedsata;
+            int mbsata, m2slot, usedsata = 0;
             switch (menuchoice)
             {
                 case 1:
@@ -626,54 +795,121 @@ namespace PC_Building_Simulator
                         }
                     }
                     break;
-                case 7:
-                    if (userCount > 0)
+                case 7: // Case
+                    motherboardSupport = GetSingleValue("SELECT [Motherboard Support] FROM [Case specs] WHERE [Computer Case Name] = @casename", "@casename", choice, "Motherboard Support");
+
+                    string[] motherboardSupportArray = motherboardSupport.Split(',');
+
+                    bool isMotherboardSupported = false;
+                    foreach (string support in motherboardSupportArray)
                     {
-                        string updateQuery = "UPDATE Builds SET [Computer Case] = @ccase, [Case price] = @price WHERE [user] = @Username";
-                        try
+                        string trimmedSupport = support.Trim();
+                        if (spec1.Text == trimmedSupport)
                         {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                            isMotherboardSupported = true;
+                            break;
+                        }
+                    }
+
+                    if (isMotherboardSupported || motherboardName == "")
+                    {
+                        gpuclearance = GetSingleValue("SELECT [GPU Clearance] FROM [Case specs] WHERE [Computer Case Name] = @casename", "@casename", choice, "GPU Clearance");
+                        aircoolerclearance = GetSingleValue("SELECT [CPU Cooler Clearance] FROM [Case specs] WHERE [Computer Case Name] = @casename", "@casename", choice, "CPU Cooler Clearance");
+                        radclearance = GetSingleValue("SELECT [Radiator Support (Front/Top)] FROM [Case specs] WHERE [Computer Case Name] = @casename", "@casename", choice, "Radiator Support (Front/Top)");
+                        if (aircoolerclearance == "")
+                            aircoolerclearance = "0mm";
+                        if (cpuaircoolerdepth == "")
+                            cpuaircoolerdepth = "0mm";
+
+                        if (radheight == "")
+                            radheight = "0mm";
+                        if (radclearance == "")
+                            radclearance = "0mm/0mm";
+
+                        int slashIndex = radclearance.IndexOf('/');
+                        string front = radclearance.Substring(0, slashIndex);
+                        string top = radclearance.Substring(slashIndex + 1);
+
+                        if (int.Parse(gpuclearance.Replace("m", "")) >=
+                            int.Parse(gpulength.Replace("m", "")) &&
+                            int.Parse(aircoolerclearance.Replace("m", "")) >=
+                            int.Parse(cpuaircoolerdepth.Replace("m", "")) &&
+                            int.Parse(front.Replace("m", "")) >=
+                            int.Parse(radheight.Replace("m", "")) ||
+                            int.Parse(top.Replace("m", "")) >=
+                            int.Parse(radheight.Replace("m", "")))
+                        {
+                            if (userCount > 0)
                             {
-                                updateCmd.Parameters.AddWithValue("@ccase", choice);
-                                updateCmd.Parameters.AddWithValue("@price", price);
-                                updateCmd.Parameters.AddWithValue("@Username", user);
-                                label2.Visible = true;
-                                int rowsAffected = updateCmd.ExecuteNonQuery();
+                                string updateQuery = "UPDATE Builds SET [Computer Case] = @ccase, [Case price] = @price WHERE [user] = @Username";
+                                try
+                                {
+                                    dbManager.OpenConnection();
+                                    using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                                    {
+                                        updateCmd.Parameters.AddWithValue("@ccase", choice);
+                                        updateCmd.Parameters.AddWithValue("@price", price);
+                                        updateCmd.Parameters.AddWithValue("@Username", user);
+                                        label2.Visible = true;
+                                        int rowsAffected = updateCmd.ExecuteNonQuery();
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show("Error updating Case for existing user: " + ex.Message);
+                                }
+                                finally
+                                {
+                                    dbManager.CloseConnection();
+                                }
+                            }
+                            else
+                            {
+                                string insertQuery = "INSERT INTO Builds ([Computer Case], [user], [Case price]) VALUES (@ccase, @Username, @price)";
+                                try
+                                {
+                                    dbManager.OpenConnection();
+                                    using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
+                                    {
+                                        insertCmd.Parameters.AddWithValue("@ccase", choice);
+                                        insertCmd.Parameters.AddWithValue("@price", price);
+                                        insertCmd.Parameters.AddWithValue("@Username", user);
+                                        label2.Visible = true;
+                                        int rowsAffected = insertCmd.ExecuteNonQuery();
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show("Error inserting Case for new user: " + ex.Message);
+                                }
+                                finally
+                                {
+                                    dbManager.CloseConnection();
+                                }
                             }
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            MessageBox.Show("Error updating Case for existing user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
+                            label2.Visible = true;
+                            label2.ForeColor = Color.FromArgb(180, 18, 0);
+                            if (int.Parse(gpuclearance.Replace("m", "")) < int.Parse(gpulength.Replace("m", "")))
+                                label2.Text = "GPU will not fit in the case.";
+
+                            else if (int.Parse(aircoolerclearance.Replace("m", "")) < int.Parse(cpuaircoolerdepth.Replace("m", "")))
+                                label2.Text = "CPU Air Cooler will not fit in the case.";
+
+                            else if (int.Parse(front.Replace("m", "")) < int.Parse(radheight.Replace("m", "")))
+                                label2.Text = "AIO Cooler will not fit in the case.";
+
+                            else if (int.Parse(top.Replace("m", "")) < int.Parse(radheight.Replace("m", "")))
+                                label2.Text = "AIO Cooler will not fit in the case.";
                         }
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds ([Computer Case], [user], [Case price]) VALUES (@ccase, @Username, @price)";
-                        try
-                        {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
-                            {
-                                insertCmd.Parameters.AddWithValue("@ccase", choice);
-                                insertCmd.Parameters.AddWithValue("@price", price);
-                                insertCmd.Parameters.AddWithValue("@Username", user);
-                                label2.Visible = true;
-                                int rowsAffected = insertCmd.ExecuteNonQuery();
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error inserting Case for new user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
-                        }
+                        label2.Visible = true;
+                        label2.ForeColor = Color.FromArgb(180, 18, 0);
+                        label2.Text = "Motherboard will not fit.";
                     }
                     break;
 
@@ -881,8 +1117,14 @@ namespace PC_Building_Simulator
                 case 13:
                     quantity = int.Parse(comboBox1.Text); 
                     mbsata = int.Parse(mbsataports.Substring(0, 1));
-                    usedsata = int.Parse(spec2.Text.Replace("x", "").Replace(" ", "")) + quantity;
-                    MessageBox.Show(usedsata.ToString());
+                    if(spec2.Visible == false)
+                    {
+                        usedsata = quantity;
+                    }
+                    else
+                    {
+                        usedsata = int.Parse(spec2.Text.Replace("x", "").Replace(" ", "")) + quantity;
+                    }
                     if (mbsata >= usedsata)
                     {
                         if (userCount > 0)
@@ -951,8 +1193,14 @@ namespace PC_Building_Simulator
                 case 14:
                     quantity = int.Parse(comboBox1.Text);
                     mbsata = int.Parse(mbsataports.Substring(0, 1));
-                    usedsata = int.Parse(spec2.Text.Replace("x", "").Replace(" ", "")) + quantity;
-                    MessageBox.Show(usedsata.ToString());
+                    if (spec2.Visible == false)
+                    {
+                        usedsata = quantity;
+                    }
+                    else
+                    {
+                        usedsata = int.Parse(spec2.Text.Replace("x", "").Replace(" ", "")) + quantity;
+                    }
                     if (mbsata >= usedsata)
                     {
                         if (userCount > 0)
@@ -1090,56 +1338,69 @@ namespace PC_Building_Simulator
 
                 case 16:
                     quantity = int.Parse(comboBox1.Text);
-                    if (userCount > 0)
+                    if(totalfans >= quantity)
                     {
-                        string updateQuery = "UPDATE Builds SET [Fan quantity] = @quan, [Fans] = @fans, [Fan price] = @price WHERE [user] = @Username";
-                        try
+                        if (userCount > 0)
                         {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                            string updateQuery = "UPDATE Builds SET [Fan quantity] = @quan, [Fans] = @fans, [Fan price] = @price WHERE [user] = @Username";
+                            try
                             {
-                                updateCmd.Parameters.AddWithValue("@quan", quantity);
-                                updateCmd.Parameters.AddWithValue("@fans", choice);
-                                updateCmd.Parameters.AddWithValue("@price", price);
-                                updateCmd.Parameters.AddWithValue("@Username", user);
-                                label2.Visible = true;
-                                int rowsAffected = updateCmd.ExecuteNonQuery();
+                                dbManager.OpenConnection();
+                                using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                                {
+                                    updateCmd.Parameters.AddWithValue("@quan", quantity);
+                                    updateCmd.Parameters.AddWithValue("@fans", choice);
+                                    updateCmd.Parameters.AddWithValue("@price", price);
+                                    updateCmd.Parameters.AddWithValue("@Username", user);
+                                    label2.Visible = true;
+                                    label2.ForeColor = SystemColors.ControlText;
+                                    label2.Text = "Added to your build!";
+                                    int rowsAffected = updateCmd.ExecuteNonQuery();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error updating computer fans for existing user: " + ex.Message);
+                            }
+                            finally
+                            {
+                                dbManager.CloseConnection();
                             }
                         }
-                        catch (Exception ex)
+
+                        else
                         {
-                            MessageBox.Show("Error updating computer fans for existing user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
+                            string insertQuery = "INSERT INTO Builds ([Fans quantity], [Fans], [user], [Fan price]) VALUES (@quan, @fans, @Username, @price)";
+                            try
+                            {
+                                dbManager.OpenConnection();
+                                using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
+                                {
+                                    insertCmd.Parameters.AddWithValue("@quan", quantity);
+                                    insertCmd.Parameters.AddWithValue("@fans", choice);
+                                    insertCmd.Parameters.AddWithValue("@price", price);
+                                    insertCmd.Parameters.AddWithValue("@Username", user);
+                                    label2.Visible = true;
+                                    label2.ForeColor = SystemColors.ControlText;
+                                    label2.Text = "Added to your build!";
+                                    int rowsAffected = insertCmd.ExecuteNonQuery();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error inserting computer fans for new user: " + ex.Message);
+                            }
+                            finally
+                            {
+                                dbManager.CloseConnection();
+                            }
                         }
                     }
-
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds ([Fans quantity], [Fans], [user], [Fan price]) VALUES (@quan, @fans, @Username, @price)";
-                        try
-                        {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
-                            {
-                                insertCmd.Parameters.AddWithValue("@quan", quantity);
-                                insertCmd.Parameters.AddWithValue("@fans", choice);
-                                insertCmd.Parameters.AddWithValue("@price", price);
-                                insertCmd.Parameters.AddWithValue("@Username", user);
-                                label2.Visible = true;
-                                int rowsAffected = insertCmd.ExecuteNonQuery();
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error inserting computer fans for new user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
-                        }
+                        label2.Visible = true;
+                        label2.ForeColor = Color.FromArgb(180, 18, 0);
+                        label2.Text = "Not enough fan slots.";
                     }
 
                     break;
@@ -1791,11 +2052,6 @@ namespace PC_Building_Simulator
                     dataGridView1.Rows.Add(column.ColumnName, dataTable.Rows[0][column]);
                 }
             }
-        }
-
-        void compatabilitydisplay()
-        {
-
         }
     }
 }
