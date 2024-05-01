@@ -367,6 +367,9 @@
   <data name="cpu_Intel_Core_i9_14900K" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cpu-Intel Core i9-14900K.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="EVGA_GeForce_RTX_2080_Super" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EVGA GeForce RTX 2080 Super.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -504,6 +507,12 @@
   </data>
   <data name="hdd_Western_Digital_Red_8TB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hdd_Western Digital Red 8TB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Home_icon_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Home icon 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Home_icon_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Home icon 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Intel_Arc_A770" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Intel Arc A770.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -823,6 +832,15 @@
   <data name="PowerColor_Radeon_RX_6800_XT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PowerColor Radeon RX 6800 XT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Proceed_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Proceed Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Proceed_Icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Proceed Icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="progicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\progicon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="psu_Asus_ROG_Thor_1200W_Platinum" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\psu_Asus ROG Thor 1200W Platinum.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -942,6 +960,12 @@
   </data>
   <data name="ram_XPG_Lancer_RGB_DDR5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ram_XPG Lancer RGB DDR5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Refresh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Refresh1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Refresh2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Refresh2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sapphire_NITRO+_Radeon_RX_6600_XT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sapphire NITRO+  Radeon RX 6600 XT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

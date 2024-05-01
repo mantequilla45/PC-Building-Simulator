@@ -68,6 +68,18 @@
     <Compile Include="buildmenu.Designer.cs">
       <DependentUpon>buildmenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="completedbuilds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="completedbuilds.Designer.cs">
+      <DependentUpon>completedbuilds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="confirmdelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="confirmdelete.Designer.cs">
+      <DependentUpon>confirmdelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="coolermenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +152,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="buildmenu.resx">
       <DependentUpon>buildmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="completedbuilds.resx">
+      <DependentUpon>completedbuilds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="confirmdelete.resx">
+      <DependentUpon>confirmdelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="coolermenu.resx">
       <DependentUpon>coolermenu.cs</DependentUpon>
@@ -1148,6 +1166,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\aio_Corsair iCUE H170i Elite Capellix XT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Proceed Icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Proceed Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home icon 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home icon 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\progicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

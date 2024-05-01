@@ -19,6 +19,7 @@ namespace PC_Building_Simulator
         private coolermenu coolerMenuForm;
         private welcomeform welcomeForm;
         private buildguide buildguideForm;
+        private completedbuilds completedbuildsForm;
         public DisplayManager(buildmenu buildMenuForm)
         {
             this.buildMenuForm = buildMenuForm;
@@ -50,6 +51,10 @@ namespace PC_Building_Simulator
         public DisplayManager(buildguide buildguideForm)
         {
             this.buildguideForm = buildguideForm;
+        }
+        public DisplayManager(completedbuilds completedbuildsForm)
+        {
+            this.completedbuildsForm = completedbuildsForm;
         }
         public static class ButtonAppearance
         {
@@ -249,6 +254,8 @@ namespace PC_Building_Simulator
         public void otherButton_Click(bool clicked)
         {
             clicked = false;
+            
+            mainApp.butt_home.Image = Properties.Resources.Home_icon_2;
             ButtonAppearance.Reset.Build(mainApp);
             ButtonAppearance.Reset.CPU(mainApp);
             ButtonAppearance.Reset.GPU(mainApp);
@@ -298,6 +305,16 @@ namespace PC_Building_Simulator
             {
                 welcomeForm.Dispose();
                 welcomeForm = null;
+            }
+            if(buildguideForm != null)
+            {
+                buildguideForm.Dispose();
+                buildguideForm = null;
+            }
+            if(completedbuildsForm != null)
+            {
+                completedbuildsForm.Dispose();
+                completedbuildsForm = null;
             }
 
         }

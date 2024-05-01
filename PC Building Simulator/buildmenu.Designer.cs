@@ -165,6 +165,7 @@
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.delete_all = new System.Windows.Forms.Label();
             this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.butt_ex = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBox1)).BeginInit();
@@ -213,7 +214,7 @@
             this.flowLayoutPanel1.Controls.Add(this.panel10);
             this.flowLayoutPanel1.Controls.Add(this.panel11);
             this.flowLayoutPanel1.Controls.Add(this.panel12);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(21, 55);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(21, 40);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1042, 576);
             this.flowLayoutPanel1.TabIndex = 142;
@@ -262,7 +263,7 @@
             // 
             this.price_cpu.AutoSize = true;
             this.price_cpu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price_cpu.Location = new System.Drawing.Point(885, 19);
+            this.price_cpu.Location = new System.Drawing.Point(866, 19);
             this.price_cpu.Name = "price_cpu";
             this.price_cpu.Size = new System.Drawing.Size(19, 21);
             this.price_cpu.TabIndex = 121;
@@ -379,7 +380,7 @@
             // 
             this.price_gpu.AutoSize = true;
             this.price_gpu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price_gpu.Location = new System.Drawing.Point(885, 19);
+            this.price_gpu.Location = new System.Drawing.Point(866, 19);
             this.price_gpu.Name = "price_gpu";
             this.price_gpu.Size = new System.Drawing.Size(19, 21);
             this.price_gpu.TabIndex = 122;
@@ -496,7 +497,7 @@
             // 
             this.price_mb.AutoSize = true;
             this.price_mb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price_mb.Location = new System.Drawing.Point(885, 19);
+            this.price_mb.Location = new System.Drawing.Point(866, 19);
             this.price_mb.Name = "price_mb";
             this.price_mb.Size = new System.Drawing.Size(19, 21);
             this.price_mb.TabIndex = 123;
@@ -602,7 +603,7 @@
             // 
             this.price_ram.AutoSize = true;
             this.price_ram.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price_ram.Location = new System.Drawing.Point(885, 19);
+            this.price_ram.Location = new System.Drawing.Point(866, 19);
             this.price_ram.Name = "price_ram";
             this.price_ram.Size = new System.Drawing.Size(19, 21);
             this.price_ram.TabIndex = 124;
@@ -742,7 +743,7 @@
             // 
             this.drive3price.AutoSize = true;
             this.drive3price.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drive3price.Location = new System.Drawing.Point(885, 125);
+            this.drive3price.Location = new System.Drawing.Point(866, 125);
             this.drive3price.Name = "drive3price";
             this.drive3price.Size = new System.Drawing.Size(19, 21);
             this.drive3price.TabIndex = 141;
@@ -820,7 +821,7 @@
             // 
             this.drive2price.AutoSize = true;
             this.drive2price.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drive2price.Location = new System.Drawing.Point(885, 72);
+            this.drive2price.Location = new System.Drawing.Point(866, 72);
             this.drive2price.Name = "drive2price";
             this.drive2price.Size = new System.Drawing.Size(19, 21);
             this.drive2price.TabIndex = 135;
@@ -898,7 +899,7 @@
             // 
             this.drive1price.AutoSize = true;
             this.drive1price.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drive1price.Location = new System.Drawing.Point(885, 19);
+            this.drive1price.Location = new System.Drawing.Point(866, 19);
             this.drive1price.Name = "drive1price";
             this.drive1price.Size = new System.Drawing.Size(19, 21);
             this.drive1price.TabIndex = 125;
@@ -1015,7 +1016,7 @@
             // 
             this.price_psu.AutoSize = true;
             this.price_psu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price_psu.Location = new System.Drawing.Point(885, 19);
+            this.price_psu.Location = new System.Drawing.Point(866, 19);
             this.price_psu.Name = "price_psu";
             this.price_psu.Size = new System.Drawing.Size(19, 21);
             this.price_psu.TabIndex = 126;
@@ -1132,7 +1133,7 @@
             // 
             this.price_case.AutoSize = true;
             this.price_case.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price_case.Location = new System.Drawing.Point(885, 19);
+            this.price_case.Location = new System.Drawing.Point(866, 19);
             this.price_case.Name = "price_case";
             this.price_case.Size = new System.Drawing.Size(19, 21);
             this.price_case.TabIndex = 127;
@@ -1277,7 +1278,7 @@
             // 
             this.price_cpucool.AutoSize = true;
             this.price_cpucool.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price_cpucool.Location = new System.Drawing.Point(885, 70);
+            this.price_cpucool.Location = new System.Drawing.Point(866, 72);
             this.price_cpucool.Name = "price_cpucool";
             this.price_cpucool.Size = new System.Drawing.Size(19, 21);
             this.price_cpucool.TabIndex = 134;
@@ -1288,7 +1289,7 @@
             // 
             this.label_cpucooler.AutoSize = true;
             this.label_cpucooler.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_cpucooler.Location = new System.Drawing.Point(361, 70);
+            this.label_cpucooler.Location = new System.Drawing.Point(876, 72);
             this.label_cpucooler.Name = "label_cpucooler";
             this.label_cpucooler.Size = new System.Drawing.Size(131, 21);
             this.label_cpucooler.TabIndex = 131;
@@ -1341,7 +1342,7 @@
             // 
             this.price_fans.AutoSize = true;
             this.price_fans.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price_fans.Location = new System.Drawing.Point(885, 19);
+            this.price_fans.Location = new System.Drawing.Point(866, 19);
             this.price_fans.Name = "price_fans";
             this.price_fans.Size = new System.Drawing.Size(19, 21);
             this.price_fans.TabIndex = 128;
@@ -1448,7 +1449,7 @@
             // 
             this.price_moni.AutoSize = true;
             this.price_moni.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price_moni.Location = new System.Drawing.Point(885, 19);
+            this.price_moni.Location = new System.Drawing.Point(866, 21);
             this.price_moni.Name = "price_moni";
             this.price_moni.Size = new System.Drawing.Size(19, 21);
             this.price_moni.TabIndex = 129;
@@ -1565,7 +1566,7 @@
             // 
             this.price_keyb.AutoSize = true;
             this.price_keyb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price_keyb.Location = new System.Drawing.Point(885, 19);
+            this.price_keyb.Location = new System.Drawing.Point(866, 19);
             this.price_keyb.Name = "price_keyb";
             this.price_keyb.Size = new System.Drawing.Size(19, 21);
             this.price_keyb.TabIndex = 130;
@@ -1682,7 +1683,7 @@
             // 
             this.price_mou.AutoSize = true;
             this.price_mou.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price_mou.Location = new System.Drawing.Point(885, 19);
+            this.price_mou.Location = new System.Drawing.Point(866, 19);
             this.price_mou.Name = "price_mou";
             this.price_mou.Size = new System.Drawing.Size(19, 21);
             this.price_mou.TabIndex = 131;
@@ -1799,7 +1800,7 @@
             // 
             this.price_spk.AutoSize = true;
             this.price_spk.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price_spk.Location = new System.Drawing.Point(885, 19);
+            this.price_spk.Location = new System.Drawing.Point(866, 19);
             this.price_spk.Name = "price_spk";
             this.price_spk.Size = new System.Drawing.Size(19, 21);
             this.price_spk.TabIndex = 132;
@@ -1876,7 +1877,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(56, 14);
+            this.label13.Location = new System.Drawing.Point(56, 9);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(91, 21);
             this.label13.TabIndex = 120;
@@ -1886,7 +1887,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(778, 14);
+            this.label14.Location = new System.Drawing.Point(778, 9);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 21);
             this.label14.TabIndex = 143;
@@ -1896,7 +1897,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(330, 14);
+            this.label15.Location = new System.Drawing.Point(330, 9);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 21);
             this.label15.TabIndex = 144;
@@ -1906,7 +1907,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(909, 14);
+            this.label16.Location = new System.Drawing.Point(890, 9);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(42, 21);
             this.label16.TabIndex = 145;
@@ -1935,7 +1936,7 @@
             // kryptonButton2
             // 
             this.kryptonButton2.Enabled = false;
-            this.kryptonButton2.Location = new System.Drawing.Point(25, 631);
+            this.kryptonButton2.Location = new System.Drawing.Point(25, 616);
             this.kryptonButton2.Name = "kryptonButton2";
             this.kryptonButton2.Size = new System.Drawing.Size(1013, 61);
             this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
@@ -1950,7 +1951,7 @@
             // 
             this.delete_all.AutoSize = true;
             this.delete_all.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delete_all.Location = new System.Drawing.Point(967, 14);
+            this.delete_all.Location = new System.Drawing.Point(967, 9);
             this.delete_all.Name = "delete_all";
             this.delete_all.Size = new System.Drawing.Size(84, 21);
             this.delete_all.TabIndex = 146;
@@ -1962,7 +1963,7 @@
             // kryptonButton4
             // 
             this.kryptonButton4.Enabled = false;
-            this.kryptonButton4.Location = new System.Drawing.Point(25, 25);
+            this.kryptonButton4.Location = new System.Drawing.Point(25, 10);
             this.kryptonButton4.Name = "kryptonButton4";
             this.kryptonButton4.Size = new System.Drawing.Size(1013, 35);
             this.kryptonButton4.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
@@ -1973,11 +1974,24 @@
             this.kryptonButton4.TabIndex = 147;
             this.kryptonButton4.Values.Text = "";
             // 
+            // butt_ex
+            // 
+            this.butt_ex.AutoSize = true;
+            this.butt_ex.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butt_ex.Location = new System.Drawing.Point(56, 644);
+            this.butt_ex.Name = "butt_ex";
+            this.butt_ex.Size = new System.Drawing.Size(54, 21);
+            this.butt_ex.TabIndex = 150;
+            this.butt_ex.Text = "Export";
+            this.butt_ex.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.butt_ex.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            // 
             // buildmenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1063, 699);
+            this.Controls.Add(this.butt_ex);
             this.Controls.Add(this.delete_all);
             this.Controls.Add(this.total_price);
             this.Controls.Add(this.label_total);
@@ -2175,5 +2189,6 @@
         private System.Windows.Forms.PictureBox drive2pbox;
         private ComponentFactory.Krypton.Toolkit.KryptonButton drive2border;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
+        private System.Windows.Forms.Label butt_ex;
     }
 }

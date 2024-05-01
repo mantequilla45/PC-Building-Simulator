@@ -893,6 +893,16 @@ namespace PC_Building_Simulator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Delete {
+            get {
+                object obj = ResourceManager.GetObject("Delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EVGA_GeForce_RTX_2080_Super {
             get {
                 object obj = ResourceManager.GetObject("EVGA_GeForce_RTX_2080_Super", resourceCulture);
@@ -1346,6 +1356,26 @@ namespace PC_Building_Simulator.Properties {
         internal static System.Drawing.Bitmap hdd_Western_Digital_Red_8TB {
             get {
                 object obj = ResourceManager.GetObject("hdd_Western_Digital_Red_8TB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Home_icon_1 {
+            get {
+                object obj = ResourceManager.GetObject("Home_icon_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Home_icon_2 {
+            get {
+                object obj = ResourceManager.GetObject("Home_icon_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2413,6 +2443,36 @@ namespace PC_Building_Simulator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Proceed_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Proceed_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Proceed_Icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Proceed_Icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon progicon {
+            get {
+                object obj = ResourceManager.GetObject("progicon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap psu_Asus_ROG_Thor_1200W_Platinum {
             get {
                 object obj = ResourceManager.GetObject("psu_Asus_ROG_Thor_1200W_Platinum", resourceCulture);
@@ -2806,6 +2866,26 @@ namespace PC_Building_Simulator.Properties {
         internal static System.Drawing.Bitmap ram_XPG_Lancer_RGB_DDR5 {
             get {
                 object obj = ResourceManager.GetObject("ram_XPG_Lancer_RGB_DDR5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Refresh1 {
+            get {
+                object obj = ResourceManager.GetObject("Refresh1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Refresh2 {
+            get {
+                object obj = ResourceManager.GetObject("Refresh2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.spec4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comp4 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.border4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.but_add = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.spec3 = new System.Windows.Forms.Label();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.comp3 = new System.Windows.Forms.Label();
             this.border3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.spec2 = new System.Windows.Forms.Label();
@@ -39,19 +47,11 @@
             this.border1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.comp1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.but_add = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.border2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.spec4 = new System.Windows.Forms.Label();
-            this.comp4 = new System.Windows.Forms.Label();
-            this.border4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -89,6 +89,130 @@
             this.panel1.Size = new System.Drawing.Size(1063, 699);
             this.panel1.TabIndex = 6;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(58, 316);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 21);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Quantity";
+            // 
+            // spec4
+            // 
+            this.spec4.AutoSize = true;
+            this.spec4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.spec4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spec4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.spec4.Location = new System.Drawing.Point(221, 561);
+            this.spec4.MaximumSize = new System.Drawing.Size(140, 34);
+            this.spec4.Name = "spec4";
+            this.spec4.Size = new System.Drawing.Size(42, 17);
+            this.spec4.TabIndex = 30;
+            this.spec4.Text = "Specs";
+            this.spec4.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(187, 350);
+            this.label2.MaximumSize = new System.Drawing.Size(122, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Added to your build!";
+            this.label2.Visible = false;
+            // 
+            // comp4
+            // 
+            this.comp4.AutoSize = true;
+            this.comp4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comp4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comp4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.comp4.Location = new System.Drawing.Point(37, 561);
+            this.comp4.MaximumSize = new System.Drawing.Size(160, 34);
+            this.comp4.Name = "comp4";
+            this.comp4.Size = new System.Drawing.Size(43, 17);
+            this.comp4.TabIndex = 29;
+            this.comp4.Text = "Comp";
+            this.comp4.Visible = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 20;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1"});
+            this.comboBox1.Location = new System.Drawing.Point(132, 314);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(74, 28);
+            this.comboBox1.TabIndex = 10;
+            this.comboBox1.Text = "1";
+            // 
+            // border4
+            // 
+            this.border4.Enabled = false;
+            this.border4.Location = new System.Drawing.Point(208, 561);
+            this.border4.Name = "border4";
+            this.border4.Size = new System.Drawing.Size(74, 35);
+            this.border4.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.border4.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.border4.StateCommon.Border.Color1 = System.Drawing.Color.Silver;
+            this.border4.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left;
+            this.border4.TabIndex = 31;
+            this.border4.Values.Text = "";
+            this.border4.Visible = false;
+            // 
+            // but_add
+            // 
+            this.but_add.Location = new System.Drawing.Point(212, 310);
+            this.but_add.Name = "but_add";
+            this.but_add.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(135)))), ((int)(((byte)(195)))));
+            this.but_add.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(135)))), ((int)(((byte)(195)))));
+            this.but_add.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
+            this.but_add.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
+            this.but_add.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
+            this.but_add.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
+            this.but_add.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_add.OverrideFocus.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.but_add.OverrideFocus.Border.Rounding = 5;
+            this.but_add.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.but_add.Size = new System.Drawing.Size(61, 39);
+            this.but_add.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(135)))), ((int)(((byte)(195)))));
+            this.but_add.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(135)))), ((int)(((byte)(195)))));
+            this.but_add.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_add.StateCommon.Border.Rounding = 5;
+            this.but_add.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.but_add.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_add.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
+            this.but_add.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
+            this.but_add.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
+            this.but_add.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
+            this.but_add.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_add.StatePressed.Border.Rounding = 5;
+            this.but_add.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(63)))), ((int)(((byte)(91)))));
+            this.but_add.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(63)))), ((int)(((byte)(91)))));
+            this.but_add.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(63)))), ((int)(((byte)(91)))));
+            this.but_add.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(63)))), ((int)(((byte)(91)))));
+            this.but_add.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_add.StateTracking.Border.Rounding = 5;
+            this.but_add.TabIndex = 9;
+            this.but_add.Values.Text = "Add";
+            this.but_add.Click += new System.EventHandler(this.but_add_Click);
+            // 
             // spec3
             // 
             this.spec3.AutoSize = true;
@@ -102,6 +226,19 @@
             this.spec3.TabIndex = 27;
             this.spec3.Text = "Specs";
             this.spec3.Visible = false;
+            // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Enabled = false;
+            this.kryptonButton1.Location = new System.Drawing.Point(33, 303);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(290, 35);
+            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.kryptonButton1.StateCommon.Border.Color1 = System.Drawing.Color.Silver;
+            this.kryptonButton1.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top;
+            this.kryptonButton1.TabIndex = 32;
+            this.kryptonButton1.Values.Text = "";
             // 
             // comp3
             // 
@@ -213,87 +350,6 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "Compatibility Check";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(187, 350);
-            this.label2.MaximumSize = new System.Drawing.Size(122, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Added to your build!";
-            this.label2.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(58, 316);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 21);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Quantity";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 20;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1"});
-            this.comboBox1.Location = new System.Drawing.Point(132, 314);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(74, 28);
-            this.comboBox1.TabIndex = 10;
-            this.comboBox1.Text = "1";
-            // 
-            // but_add
-            // 
-            this.but_add.Location = new System.Drawing.Point(212, 310);
-            this.but_add.Name = "but_add";
-            this.but_add.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(135)))), ((int)(((byte)(195)))));
-            this.but_add.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(135)))), ((int)(((byte)(195)))));
-            this.but_add.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
-            this.but_add.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
-            this.but_add.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
-            this.but_add.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
-            this.but_add.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_add.OverrideFocus.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.but_add.OverrideFocus.Border.Rounding = 5;
-            this.but_add.Size = new System.Drawing.Size(61, 39);
-            this.but_add.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(135)))), ((int)(((byte)(195)))));
-            this.but_add.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(135)))), ((int)(((byte)(195)))));
-            this.but_add.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_add.StateCommon.Border.Rounding = 5;
-            this.but_add.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.WhiteSmoke;
-            this.but_add.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_add.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
-            this.but_add.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
-            this.but_add.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
-            this.but_add.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(133)))));
-            this.but_add.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_add.StatePressed.Border.Rounding = 5;
-            this.but_add.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(63)))), ((int)(((byte)(91)))));
-            this.but_add.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(63)))), ((int)(((byte)(91)))));
-            this.but_add.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(63)))), ((int)(((byte)(91)))));
-            this.but_add.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(63)))), ((int)(((byte)(91)))));
-            this.but_add.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_add.StateTracking.Border.Rounding = 5;
-            this.but_add.TabIndex = 9;
-            this.but_add.Values.Text = "Add";
-            this.but_add.Click += new System.EventHandler(this.but_add_Click);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.pictureBox2);
@@ -335,8 +391,8 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ColumnHeadersVisible = false;
@@ -385,61 +441,6 @@
             this.border2.TabIndex = 25;
             this.border2.Values.Text = "";
             this.border2.Visible = false;
-            // 
-            // spec4
-            // 
-            this.spec4.AutoSize = true;
-            this.spec4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.spec4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spec4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.spec4.Location = new System.Drawing.Point(221, 561);
-            this.spec4.MaximumSize = new System.Drawing.Size(140, 34);
-            this.spec4.Name = "spec4";
-            this.spec4.Size = new System.Drawing.Size(42, 17);
-            this.spec4.TabIndex = 30;
-            this.spec4.Text = "Specs";
-            this.spec4.Visible = false;
-            // 
-            // comp4
-            // 
-            this.comp4.AutoSize = true;
-            this.comp4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comp4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comp4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.comp4.Location = new System.Drawing.Point(37, 561);
-            this.comp4.MaximumSize = new System.Drawing.Size(160, 34);
-            this.comp4.Name = "comp4";
-            this.comp4.Size = new System.Drawing.Size(43, 17);
-            this.comp4.TabIndex = 29;
-            this.comp4.Text = "Comp";
-            this.comp4.Visible = false;
-            // 
-            // border4
-            // 
-            this.border4.Enabled = false;
-            this.border4.Location = new System.Drawing.Point(208, 561);
-            this.border4.Name = "border4";
-            this.border4.Size = new System.Drawing.Size(74, 35);
-            this.border4.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
-            this.border4.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
-            this.border4.StateCommon.Border.Color1 = System.Drawing.Color.Silver;
-            this.border4.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left;
-            this.border4.TabIndex = 31;
-            this.border4.Values.Text = "";
-            this.border4.Visible = false;
-            // 
-            // kryptonButton1
-            // 
-            this.kryptonButton1.Enabled = false;
-            this.kryptonButton1.Location = new System.Drawing.Point(33, 303);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(290, 35);
-            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
-            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.WhiteSmoke;
-            this.kryptonButton1.StateCommon.Border.Color1 = System.Drawing.Color.Silver;
-            this.kryptonButton1.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top;
-            this.kryptonButton1.TabIndex = 32;
-            this.kryptonButton1.Values.Text = "";
             // 
             // kryptonButton2
             // 

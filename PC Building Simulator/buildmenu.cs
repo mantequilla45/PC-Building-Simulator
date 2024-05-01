@@ -65,6 +65,19 @@ namespace PC_Building_Simulator
         public static string m2quan = "";
         public static string fanquan = "";
         public static string formattedTotalPrice = "";
+        private string compbuildcpu = "";
+        private string compbuildgpu = "";
+        private string compbuildcase = "";
+        private string compbuildmb = "";
+        private string compbuildram = "";
+        private string compbuilddrive1 = "";
+        private string compbuilddrive2 = "";
+        private string compbuilddrive3 = "";
+        private string compbuildpsu = "";
+        private string compbuildfans = "";
+        private string compbuildcpucooler = "";
+        private bool completedbuild = false;
+
         enum CoolerType { None, AirCooler, AioCooler }
         CoolerType currentCoolerType = CoolerType.None;
 
@@ -272,7 +285,7 @@ namespace PC_Building_Simulator
                     bordercpucool.Location = new Point(310, 62);
                     label_cpucooler.Location = new Point(361, 70);
                     quan_cpucool.Location = new Point(781, 70);
-                    price_cpucool.Location = new Point(885, 70);
+                    price_cpucool.Location = new Point(866, 70);
                     remove_cpucool.Location = new Point(969, 76);
                 }
             }
@@ -284,7 +297,7 @@ namespace PC_Building_Simulator
                 bordercpucool.Location = new Point(310, 9);
                 label_cpucooler.Location = new Point(361, 19);
                 quan_cpucool.Location = new Point(781, 19);
-                price_cpucool.Location = new Point(885, 19);
+                price_cpucool.Location = new Point(866, 19);
                 remove_cpucool.Location = new Point(969, 25);
             }
             string cpucoolimage;
@@ -1470,133 +1483,145 @@ namespace PC_Building_Simulator
         }
         private void DeleteUserDataButton_Click(object sender, EventArgs e)
         {
-            string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
-            string setClause = "SET CPU = null, [CPU price] = null, GPU = null, [GPU price] = null, Motherboard = null, [Motherboard price] = null, [RAM quantity] = null, RAM = null, ";
-            setClause += "[RAM price] = null, PSU = null, [PSU price] = null, [Computer Case] = null, [Case price] = null, Monitor = null, [Monitor price] = null, Keyboard = null, [Keyboard price] = null, ";
-            setClause += "Mouse = null, [Mouse price] = null, Speakers = null, [Speakers price] = null, [HDD quantity] = null, HDD = null, [HDD price] = null, [SSD quantity] = null, SSD = null, [SSD price] = null, [M2 SSD quantity] = null, ";
-            setClause += "[M2 SSD] = null, [M2 price] = null, [Fan quantity] = null, Fans = null, [Fan price] = null, [CPU Air Cooler] = null, [CPU Air Cooler price] = null, [AIO Cooler] = null, [AIO Cooler price] = null";
-
-            string query = $"UPDATE Builds {setClause} WHERE [user] = @Username";
-
-            try
+            confirmdelete confirmationDialog = new confirmdelete();
+            if (confirmationDialog.ShowDialog() != DialogResult.OK)
             {
-                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                if (confirmationDialog.remove == true)
                 {
-                    connection.Open();
-                    using (OleDbCommand command = new OleDbCommand(query, connection))
+                    string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb";
+                    string setClause = "SET CPU = null, [CPU price] = null, GPU = null, [GPU price] = null, Motherboard = null, [Motherboard price] = null, [RAM quantity] = null, RAM = null, ";
+                    setClause += "[RAM price] = null, PSU = null, [PSU price] = null, [Computer Case] = null, [Case price] = null, Monitor = null, [Monitor price] = null, Keyboard = null, [Keyboard price] = null, ";
+                    setClause += "Mouse = null, [Mouse price] = null, Speakers = null, [Speakers price] = null, [HDD quantity] = null, HDD = null, [HDD price] = null, [SSD quantity] = null, SSD = null, [SSD price] = null, [M2 SSD quantity] = null, ";
+                    setClause += "[M2 SSD] = null, [M2 price] = null, [Fan quantity] = null, Fans = null, [Fan price] = null, [CPU Air Cooler] = null, [CPU Air Cooler price] = null, [AIO Cooler] = null, [AIO Cooler price] = null";
+
+                    string query = $"UPDATE Builds {setClause} WHERE [user] = @Username";
+
+                    try
                     {
-                        command.Parameters.AddWithValue("@Username", user);
-                        int rowsAffected = command.ExecuteNonQuery();
+                        using (OleDbConnection connection = new OleDbConnection(connectionString))
+                        {
+                            connection.Open();
+                            using (OleDbCommand command = new OleDbCommand(query, connection))
+                            {
+                                command.Parameters.AddWithValue("@Username", user);
+                                int rowsAffected = command.ExecuteNonQuery();
+                            }
+                        }
                     }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error deleting user data: {ex.Message}");
+                    }
+                    total_price.Text = "$0";
+                    label1.Text = "";
+                    price_cpu.Text = "";
+                    pBox1.Image = null;
+                    pBox1.Visible = false;
+                    border1.Visible = false;
+                    quan_cpu.Visible = false;
+                    remove_cpu.Visible = false;
+
+                    label2.Text = "";
+                    price_gpu.Text = "";
+                    pBox2.Image = null;
+                    pBox2.Visible = false;
+                    border2.Visible = false;
+                    quan_gpu.Visible = false;
+                    remove_gpu.Visible = false;
+
+                    label3.Text = "";
+                    price_mb.Text = "";
+                    pBox3.Image = null;
+                    pBox3.Visible = false;
+                    border3.Visible = false;
+                    quan_mb.Visible = false;
+                    remove_mb.Visible = false;
+
+                    label4.Text = "";
+                    price_ram.Text = "";
+                    pBox4.Image = null;
+                    pBox4.Visible = false;
+                    border4.Visible = false;
+                    quan_ram.Visible = false;
+                    remove_ram.Visible = false;
+
+                    label6.Text = "";
+                    price_psu.Text = "";
+                    pBox6.Image = null;
+                    pBox6.Visible = false;
+                    border6.Visible = false;
+                    quan_psu.Visible = false;
+                    remove_psu.Visible = false;
+
+                    label7.Text = "";
+                    price_case.Text = "";
+                    pBox7.Image = null;
+                    pBox7.Visible = false;
+                    border7.Visible = false;
+                    quan_case.Visible = false;
+                    remove_case.Visible = false;
+
+                    label9.Text = "";
+                    price_moni.Text = "";
+                    pBox9.Image = null;
+                    pBox9.Visible = false;
+                    border9.Visible = false;
+                    quan_moni.Visible = false;
+                    remove_moni.Visible = false;
+
+                    label10.Text = "";
+                    price_keyb.Text = "";
+                    pBox10.Image = null;
+                    pBox10.Visible = false;
+                    border10.Visible = false;
+                    quan_keyb.Visible = false;
+                    remove_keyb.Visible = false;
+
+                    label11.Text = "";
+                    price_mou.Text = "";
+                    pBox11.Image = null;
+                    pBox11.Visible = false;
+                    border11.Visible = false;
+                    quan_mous.Visible = false;
+                    remove_mous.Visible = false;
+
+                    label12.Text = "";
+                    price_spk.Text = "";
+                    pBox12.Image = null;
+                    pBox12.Visible = false;
+                    border12.Visible = false;
+                    quan_spk.Visible = false;
+                    remove_spk.Visible = false;
+
+                    label_fans.Text = "";
+                    price_fans.Text = "";
+                    pBoxfans.Image = null;
+                    pBoxfans.Visible = false;
+                    borderfans.Visible = false;
+                    quan_fans.Visible = false;
+                    remove_fans.Visible = false;
+
+                    label_cpucooler.Text = "";
+                    price_cpucool.Text = "";
+                    pBoxcpucool.Image = null;
+                    pBoxcpucool.Visible = false;
+                    bordercpucool.Visible = false;
+                    quan_cpucool.Visible = false;
+                    remove_cpucool.Visible = false;
+
+                    panel5.Size = new Size(1017, 55);
+                    panel8.Size = new Size(1017, 55);
+                    drivecount = 1;
+                    ResetDriveComponent(drive1name, drive1price, drive1quan, drive1pbox, drive1border, remove_drive1, removehdd_Click);
+                    ResetDriveComponent(drive2name, drive2price, drive2quan, drive2pbox, drive2border, remove_drive2, removessd_Click);
+                    ResetDriveComponent(drive3name, drive3price, drive3quan, drive3pbox, drive3border, remove_drive3, removem2_Click);
+                    confirmationDialog.remove = false;
+                }
+                else
+                {
+                    confirmationDialog.remove = false;
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error deleting user data: {ex.Message}");
-            }
-            total_price.Text = "$0";
-            label1.Text = "";
-            price_cpu.Text = "";
-            pBox1.Image = null;
-            pBox1.Visible = false;
-            border1.Visible = false;
-            quan_cpu.Visible = false;
-            remove_cpu.Visible = false;
-
-            label2.Text = "";
-            price_gpu.Text = "";
-            pBox2.Image = null;
-            pBox2.Visible = false;
-            border2.Visible = false;
-            quan_gpu.Visible = false;
-            remove_gpu.Visible = false;
-
-            label3.Text = "";
-            price_mb.Text = "";
-            pBox3.Image = null;
-            pBox3.Visible = false;
-            border3.Visible = false;
-            quan_mb.Visible = false;
-            remove_mb.Visible = false;
-
-            label4.Text = "";
-            price_ram.Text = "";
-            pBox4.Image = null;
-            pBox4.Visible = false;
-            border4.Visible = false;
-            quan_ram.Visible = false;
-            remove_ram.Visible = false;
-
-            label6.Text = "";
-            price_psu.Text = "";
-            pBox6.Image = null;
-            pBox6.Visible = false;
-            border6.Visible = false;
-            quan_psu.Visible = false;
-            remove_psu.Visible = false;
-
-            label7.Text = "";
-            price_case.Text = "";
-            pBox7.Image = null;
-            pBox7.Visible = false;
-            border7.Visible = false;
-            quan_case.Visible = false;
-            remove_case.Visible = false;
-
-            label9.Text = "";
-            price_moni.Text = "";
-            pBox9.Image = null;
-            pBox9.Visible = false;
-            border9.Visible = false;
-            quan_moni.Visible = false;
-            remove_moni.Visible = false;
-
-            label10.Text = "";
-            price_keyb.Text = "";
-            pBox10.Image = null;
-            pBox10.Visible = false;
-            border10.Visible = false;
-            quan_keyb.Visible = false;
-            remove_keyb.Visible = false;
-
-            label11.Text = "";
-            price_mou.Text = "";
-            pBox11.Image = null;
-            pBox11.Visible = false;
-            border11.Visible = false;
-            quan_mous.Visible = false;
-            remove_mous.Visible = false;
-
-            label12.Text = "";
-            price_spk.Text = "";
-            pBox12.Image = null;
-            pBox12.Visible = false;
-            border12.Visible = false;
-            quan_spk.Visible = false;
-            remove_spk.Visible = false;
-
-            label_fans.Text = "";
-            price_fans.Text = "";
-            pBoxfans.Image = null;
-            pBoxfans.Visible = false;
-            borderfans.Visible = false;
-            quan_fans.Visible = false;
-            remove_fans.Visible = false;
-
-            label_cpucooler.Text = "";
-            price_cpucool.Text = "";
-            pBoxcpucool.Image = null;
-            pBoxcpucool.Visible = false;
-            bordercpucool.Visible = false;
-            quan_cpucool.Visible = false;
-            remove_cpucool.Visible = false;
-
-            panel5.Size = new Size(1017, 55);
-            panel8.Size = new Size(1017, 55);
-            drivecount = 1;
-            ResetDriveComponent(drive1name, drive1price, drive1quan, drive1pbox, drive1border, remove_drive1, removehdd_Click);
-            ResetDriveComponent(drive2name, drive2price, drive2quan, drive2pbox, drive2border, remove_drive2, removessd_Click);
-            ResetDriveComponent(drive3name, drive3price, drive3quan, drive3pbox, drive3border, remove_drive3, removem2_Click);
         }
     }
 }

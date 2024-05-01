@@ -29,6 +29,7 @@ namespace PC_Building_Simulator
             buildMenu = new buildmenu(this);
 
 
+            butt_home.Image = Properties.Resources.Home_icon_1;
 
             dbManager = new DatabaseManager("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=buildit_database.mdb");
             dbManager.OpenConnection();
@@ -63,7 +64,7 @@ namespace PC_Building_Simulator
         //------------------------------ build button -----------------------------
         private void but_build_Click(object sender, EventArgs e)
         {
-            pictureBox4.Visible = true;
+            butt_refresh.Image = Properties.Resources.Refresh1;
             if (label_menu.Text == "Your Build")
             {
             }
@@ -113,7 +114,7 @@ namespace PC_Building_Simulator
             }
             else
             {
-                pictureBox4.Visible = false;
+                butt_refresh.Image = Properties.Resources.Refresh2;
                 backicon.Visible = false;
                 back = 1;
                 clicked = true;
@@ -159,7 +160,7 @@ namespace PC_Building_Simulator
             }
             else
             {
-                pictureBox4.Visible = false;
+                butt_refresh.Image = Properties.Resources.Refresh2;
                 backicon.Visible = false;
                 back = 2;
                 clicked = true;
@@ -206,7 +207,7 @@ namespace PC_Building_Simulator
             }
             else
             {
-                pictureBox4.Visible = false;
+                butt_refresh.Image = Properties.Resources.Refresh2;
                 backicon.Visible = false;
                 back = 3;
                 clicked = true;
@@ -253,7 +254,7 @@ namespace PC_Building_Simulator
             }
             else
             {
-                pictureBox4.Visible = false;
+                butt_refresh.Image = Properties.Resources.Refresh2;
                 backicon.Visible = false;
                 back = 4;
                 clicked = true;
@@ -293,7 +294,7 @@ namespace PC_Building_Simulator
         //------------------------------ storage menu -------------------------------
         public void but_storage_Click(object sender, EventArgs e)
         {
-            pictureBox4.Visible = false;
+            butt_refresh.Image = Properties.Resources.Refresh2;
             backicon.Visible = false;
             back = 5;
             clicked = true;
@@ -339,7 +340,7 @@ namespace PC_Building_Simulator
             }
             else
             {
-                pictureBox4.Visible = false;
+                butt_refresh.Image = Properties.Resources.Refresh2;
                 backicon.Visible = false;
                 back = 6;
                 clicked = true;
@@ -385,7 +386,7 @@ namespace PC_Building_Simulator
             }
             else
             {
-                pictureBox4.Visible = false;
+                butt_refresh.Image = Properties.Resources.Refresh2;
                 backicon.Visible = false;
                 back = 7;
                 clicked = true;
@@ -426,7 +427,7 @@ namespace PC_Building_Simulator
         //------------------------------ cooler menu --------------------------------
         public void but_cooler_Click(object sender, EventArgs e)
         {
-            pictureBox4.Visible = false;
+            butt_refresh.Image = Properties.Resources.Refresh2;
             backicon.Visible = false;
             back = 8;
             clicked = true;
@@ -472,7 +473,7 @@ namespace PC_Building_Simulator
             }
             else
             {
-                pictureBox4.Visible = false;
+                butt_refresh.Image = Properties.Resources.Refresh2;
                 backicon.Visible = false;
                 back = 9;
                 clicked = true;
@@ -520,7 +521,7 @@ namespace PC_Building_Simulator
             }
             else
             {
-                pictureBox4.Visible = false;
+                butt_refresh.Image = Properties.Resources.Refresh2;
                 backicon.Visible = false;
                 back = 10;
                 clicked = true;
@@ -567,7 +568,7 @@ namespace PC_Building_Simulator
             }
             else
             {
-                pictureBox4.Visible = false;
+                butt_refresh.Image = Properties.Resources.Refresh2;
                 backicon.Visible = false;
                 back = 11;
                 clicked = true;
@@ -614,7 +615,7 @@ namespace PC_Building_Simulator
             }
             else
             {
-                pictureBox4.Visible = false;
+                butt_refresh.Image = Properties.Resources.Refresh2;
                 backicon.Visible = false;
                 back = 12;
                 clicked = true;
@@ -672,7 +673,7 @@ namespace PC_Building_Simulator
 
         private void lab_profile_Click(object sender, EventArgs e)
         {
-            pictureBox4.Visible = false;
+            butt_refresh.Image = Properties.Resources.Refresh2;
             backicon.Visible = false;
             clicked = true;
             panelmain.Controls.Clear();
@@ -790,6 +791,11 @@ namespace PC_Building_Simulator
                     back = 8;
                     break;
 
+                case 19:
+                    displayManager.menuselect(19);
+                    butt_home.Image = Properties.Resources.Home_icon_1;
+                    backicon.Visible = false;
+                    break;
                 default:
                     break;
 
@@ -815,15 +821,24 @@ namespace PC_Building_Simulator
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
+            butt_home.Image = Properties.Resources.Home_icon_2;
+            if(label_menu.Text == "Main Menu")
+            {
+                butt_home.Image = Properties.Resources.Home_icon_1;
+            }
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
+            butt_home.Image = Properties.Resources.Home_icon_1;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             displayManager.menuselect(19);
+            butt_home.Image = Properties.Resources.Home_icon_2;
+            butt_refresh.Image = Properties.Resources.Refresh2;
+            backicon.Visible = false;
             displayManager.otherButton_Click(true);
         }
 
@@ -838,6 +853,26 @@ namespace PC_Building_Simulator
             if (label_menu.Text == "Your Build")
             {
                 displayManager.menuselect(1);
+            }
+        }
+
+        private void butt_refresh_MouseLeave(object sender, EventArgs e)
+        {
+            if (label_menu.Text != "Your Build")
+                butt_refresh.Image = Properties.Resources.Refresh2;
+        }
+
+        private void butt_refresh_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(label_menu.Text == "Your Build")
+                butt_refresh.Image = Properties.Resources.Refresh1;
+        }
+
+        private void but_combuild_Click(object sender, EventArgs e)
+        {
+            if (label_menu.Text == "Your Build")
+            {
+
             }
         }
     }

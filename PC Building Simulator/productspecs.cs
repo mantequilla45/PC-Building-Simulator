@@ -193,6 +193,13 @@ namespace PC_Building_Simulator
             hddquan = quan.ContainsKey("HDD quantity") && !string.IsNullOrEmpty(quan["HDD quantity"]) ? int.Parse(quan["HDD quantity"]) : 0;
             ssdquan = quan.ContainsKey("SSD quantity") && !string.IsNullOrEmpty(quan["SSD quantity"]) ? int.Parse(quan["SSD quantity"]) : 0;
             fanquan = quan.ContainsKey("Fan quantity") && !string.IsNullOrEmpty(quan["Fan quantity"]) ? int.Parse(quan["Fan quantity"]) : 0;
+
+            Dictionary<string, string> fanslots = GetMultipleValues("SELECT [Front Fans], [Top Fans], [Rear Fans] FROM [Case specs] WHERE [Computer Case Name] = @ccase", "@ccase", casename, "Front Fans", "Top Fans", "Rear Fans");
+            string frontslots = fanslots.ContainsKey("Front Fans") && !string.IsNullOrEmpty(fanslots["Front Fans"]) ? fanslots["Front Fans"] : "0";
+            string topslots = fanslots.ContainsKey("Top Fans") && !string.IsNullOrEmpty(fanslots["Top Fans"]) ? fanslots["Top Fans"] : "0";
+            string rearslots = fanslots.ContainsKey("Rear Fans") && !string.IsNullOrEmpty(fanslots["Rear Fans"]) ? fanslots["Rear Fans"] : "0";
+
+            
             using (OleDbConnection connection = new OleDbConnection(connectionString))
             {
                 connection.Open();
@@ -475,10 +482,7 @@ namespace PC_Building_Simulator
                         break;
 
                     case 16:
-                        Dictionary<string, string> fanslots = GetMultipleValues("SELECT [Front Fans], [Top Fans], [Rear Fans] FROM [Case specs] WHERE [Computer Case Name] = @ccase", "@ccase", casename, "Front Fans", "Top Fans", "Rear Fans");
-                        string frontslots = fanslots.ContainsKey("Front Fans") && !string.IsNullOrEmpty(fanslots["Front Fans"]) ? fanslots["Front Fans"] : "0";
-                        string topslots = fanslots.ContainsKey("Top Fans") && !string.IsNullOrEmpty(fanslots["Top Fans"]) ? fanslots["Top Fans"] : "0";
-                        string rearslots = fanslots.ContainsKey("Rear Fans") && !string.IsNullOrEmpty(fanslots["Rear Fans"]) ? fanslots["Rear Fans"] : "0";
+                        
 
                         int front = int.Parse(frontslots.Substring(0, 1));
                         int top = int.Parse(topslots.Substring(0, 1));
@@ -493,6 +497,46 @@ namespace PC_Building_Simulator
                             comp1.Text = $"{casename} Fan slots"; 
                             spec1.Text = $"x {totalfans}";
                         }
+                        else
+                        {
+                            comp1.Text = $"Case Fan slots";
+                            spec1.Text = "No case selected.";
+                        }
+                        break;
+                    case 17:
+
+                        comp1.Visible = true;
+                        spec1.Visible = true;
+                        border1.Visible = true;
+                        aircoolerclearance = GetSingleValue("SELECT [CPU Cooler Clearance] FROM [Case specs] WHERE [Computer Case Name] = @casename", "@casename", casename, "CPU Cooler Clearance");
+                        if(casename != "")
+                        {
+                            comp1.Text = $"{casename} CPU Air Cooler Clearance";
+                            spec1.Text = $"{aircoolerclearance}";
+                        }
+                        else
+                        {
+                            comp1.Text = $"Case CPU Air Cooler Clearance";
+                            spec1.Text = "No case selected.";
+                        }
+                        break;
+
+                    case 18:
+                        comp1.Visible = true;
+                        spec1.Visible = true;
+                        border1.Visible = true;
+
+                        radclearance = GetSingleValue("SELECT [Radiator Support (Front/Top)] FROM [Case specs] WHERE [Computer Case Name] = @casename", "@casename", casename, "Radiator Support (Front/Top)");
+                        if (casename != "")
+                        {
+                            comp1.Text = $"{casename} Radiator Clearance";
+                            spec1.Text = $"{radclearance}";
+                        }
+                        else
+                        {
+                            comp1.Text = $"Case Radiator Clearance";
+                            spec1.Text = "No case selected.";
+                        }
                         break;
                 }
             }
@@ -500,6 +544,9 @@ namespace PC_Building_Simulator
 
         private void but_add_Click(object sender, EventArgs e)
         {
+            int slashIndex = 0;
+            string front = "";
+            string top = "";
             getcurrentuser();
             int mbsata, m2slot, usedsata = 0;
             switch (menuchoice)
@@ -826,9 +873,9 @@ namespace PC_Building_Simulator
                         if (radclearance == "")
                             radclearance = "0mm/0mm";
 
-                        int slashIndex = radclearance.IndexOf('/');
-                        string front = radclearance.Substring(0, slashIndex);
-                        string top = radclearance.Substring(slashIndex + 1);
+                        slashIndex = radclearance.IndexOf('/');
+                        front = radclearance.Substring(0, slashIndex);
+                        top = radclearance.Substring(slashIndex + 1);
 
                         if (int.Parse(gpuclearance.Replace("m", "")) >=
                             int.Parse(gpulength.Replace("m", "")) &&
@@ -1115,9 +1162,9 @@ namespace PC_Building_Simulator
                     }
                     break;
                 case 13:
-                    quantity = int.Parse(comboBox1.Text); 
+                    quantity = int.Parse(comboBox1.Text);
                     mbsata = int.Parse(mbsataports.Substring(0, 1));
-                    if(spec2.Visible == false)
+                    if (spec2.Visible == false)
                     {
                         usedsata = quantity;
                     }
@@ -1166,7 +1213,7 @@ namespace PC_Building_Simulator
                                     insertCmd.Parameters.AddWithValue("@hdd", choice);
                                     insertCmd.Parameters.AddWithValue("@price", price);
                                     insertCmd.Parameters.AddWithValue("@Username", user);
-                                    label2.Visible = true; 
+                                    label2.Visible = true;
                                     label2.ForeColor = SystemColors.ControlText;
                                     label2.Text = "Added to your build!";
                                     int rowsAffected = insertCmd.ExecuteNonQuery();
@@ -1338,7 +1385,7 @@ namespace PC_Building_Simulator
 
                 case 16:
                     quantity = int.Parse(comboBox1.Text);
-                    if(totalfans >= quantity)
+                    if (totalfans >= quantity || casename == "")
                     {
                         if (userCount > 0)
                         {
@@ -1406,143 +1453,177 @@ namespace PC_Building_Simulator
                     break;
 
                 case 17:
-                    if (userCount > 0)
+                    aircoolerclearance = GetSingleValue("SELECT [CPU Cooler Clearance] FROM [Case specs] WHERE [Computer Case Name] = @casename", "@casename", casename, "CPU Cooler Clearance");
+                    if(aircoolerclearance == "")
                     {
-                        string updateQuery = "UPDATE Builds SET [CPU Air Cooler] = @cpuCooler, [CPU Air Cooler price] = @price WHERE [user] = @Username";
+                        aircoolerclearance = "0 mm";
+                    }
+                    cpuaircoolerdepth = GetSingleValue("SELECT Depth FROM [CPU Air Cooler specs] WHERE [CPU Air Cooler] = @aircoolname", "@aircoolname", choice, "Depth");
+                    if (int.Parse(aircoolerclearance.Replace("m", "").Replace(" ", "")) >= int.Parse(cpuaircoolerdepth.Replace("m", "")) || casename == "")
+                    {
+                        if (userCount > 0)
+                        {
+                            string updateQuery = "UPDATE Builds SET [CPU Air Cooler] = @cpuCooler, [CPU Air Cooler price] = @price WHERE [user] = @Username";
+                            try
+                            {
+                                dbManager.OpenConnection();
+                                using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                                {
+                                    updateCmd.Parameters.AddWithValue("@cpuCooler", choice);
+                                    updateCmd.Parameters.AddWithValue("@price", price);
+                                    updateCmd.Parameters.AddWithValue("@Username", user);
+                                    label2.Visible = true;
+                                    int rowsAffected = updateCmd.ExecuteNonQuery();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error updating CPU Cooler for existing user: " + ex.Message);
+                            }
+                            finally
+                            {
+                                dbManager.CloseConnection();
+                            }
+                        }
+                        else
+                        {
+                            string insertQuery = "INSERT INTO Builds ([CPU Air Cooler], [user], [CPU Air Cooler price]) VALUES (@cpuCooler, @Username, @price)";
+                            try
+                            {
+                                dbManager.OpenConnection();
+                                using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
+                                {
+                                    insertCmd.Parameters.AddWithValue("@cpuCooler", choice);
+                                    insertCmd.Parameters.AddWithValue("@price", price);
+                                    insertCmd.Parameters.AddWithValue("@Username", user);
+                                    label2.Visible = true;
+                                    int rowsAffected = insertCmd.ExecuteNonQuery();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error inserting CPU Cooler for new user: " + ex.Message);
+                            }
+                            finally
+                            {
+                                dbManager.CloseConnection();
+                            }
+                        }
+                        update = "UPDATE Builds SET [AIO Cooler] = '', [AIO Cooler price] = '' WHERE [user] = @UserToUpdate";
+
                         try
                         {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                            using (OleDbConnection connection = new OleDbConnection(connectionString))
                             {
-                                updateCmd.Parameters.AddWithValue("@cpuCooler", choice);
-                                updateCmd.Parameters.AddWithValue("@price", price);
-                                updateCmd.Parameters.AddWithValue("@Username", user);
-                                label2.Visible = true;
-                                int rowsAffected = updateCmd.ExecuteNonQuery();
+                                using (OleDbCommand command = new OleDbCommand(update, connection))
+                                {
+                                    command.Parameters.AddWithValue("@UserToUpdate", user);
+
+                                    connection.Open();
+                                    int rowsAffected = command.ExecuteNonQuery();
+                                }
                             }
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Error updating CPU Cooler for existing user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
+                            MessageBox.Show("Error updating data: " + ex.Message);
                         }
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds ([CPU Air Cooler], [user], [CPU Air Cooler price]) VALUES (@cpuCooler, @Username, @price)";
-                        try
-                        {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
-                            {
-                                insertCmd.Parameters.AddWithValue("@cpuCooler", choice);
-                                insertCmd.Parameters.AddWithValue("@price", price);
-                                insertCmd.Parameters.AddWithValue("@Username", user);
-                                label2.Visible = true;
-                                int rowsAffected = insertCmd.ExecuteNonQuery();
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error inserting CPU Cooler for new user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
-                        }
+                        label2.Visible = true;
+                        label2.ForeColor = Color.FromArgb(180, 18, 0);
+                        label2.Text = "CPU Air Cooler will not fit.";
                     }
-                    update = "UPDATE Builds SET [AIO Cooler] = '', [AIO Cooler price] = '' WHERE [user] = @UserToUpdate";
-
-                    try
-                    {
-                        using (OleDbConnection connection = new OleDbConnection(connectionString))
-                        {
-                            using (OleDbCommand command = new OleDbCommand(update, connection))
-                            {
-                                command.Parameters.AddWithValue("@UserToUpdate", user);
-
-                                connection.Open();
-                                int rowsAffected = command.ExecuteNonQuery();
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error updating data: " + ex.Message);
-                    }
+                    
 
                     break;
                 case 18:
-                    if (userCount > 0)
+                    radheight = GetSingleValue("SELECT [Radiator Length] FROM [AIO Cooler specs] WHERE [AIO Cooler Name] = @aioname", "@aioname", choice, "Radiator Length");
+                    radclearance = GetSingleValue("SELECT [Radiator Support (Front/Top)] FROM [Case specs] WHERE [Computer Case Name] = @casename", "@casename", casename, "Radiator Support (Front/Top)");
+                    
+                    if (radclearance == "")
+                        radclearance = "0mm/0mm";
+                    slashIndex = radclearance.IndexOf('/');
+                    front = radclearance.Substring(0, slashIndex);
+                    top = radclearance.Substring(slashIndex + 1);
+
+                    if (int.Parse(front.Replace("m", "").Replace(" ", "")) >= int.Parse(radheight.Replace("m", "").Replace(" ", "")) || int.Parse(top.Replace("m", "").Replace(" ", "")) >= int.Parse(radheight.Replace("m", "").Replace(" ", "")) || casename == "")
                     {
-                        string updateQuery = "UPDATE Builds SET [AIO Cooler] = @aioCooler, [AIO Cooler price] = @price WHERE [user] = @Username";
+                        if (userCount > 0)
+                        {
+                            string updateQuery = "UPDATE Builds SET [AIO Cooler] = @aioCooler, [AIO Cooler price] = @price WHERE [user] = @Username";
+                            try
+                            {
+                                dbManager.OpenConnection();
+                                using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                                {
+                                    updateCmd.Parameters.AddWithValue("@aioCooler", choice);
+                                    updateCmd.Parameters.AddWithValue("@price", price);
+                                    updateCmd.Parameters.AddWithValue("@Username", user);
+                                    label2.Visible = true;
+                                    int rowsAffected = updateCmd.ExecuteNonQuery();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error updating AIO Cooler for existing user: " + ex.Message);
+                            }
+                            finally
+                            {
+                                dbManager.CloseConnection();
+                            }
+                        }
+                        else
+                        {
+                            string insertQuery = "INSERT INTO Builds ([AIO Cooler], [user], [AIO Cooler price]) VALUES (@aioCooler, @Username, @price)";
+                            try
+                            {
+                                dbManager.OpenConnection();
+                                using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
+                                {
+                                    insertCmd.Parameters.AddWithValue("@aioCooler", choice);
+                                    insertCmd.Parameters.AddWithValue("@price", price);
+                                    insertCmd.Parameters.AddWithValue("@Username", user);
+                                    label2.Visible = true;
+                                    int rowsAffected = insertCmd.ExecuteNonQuery();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error inserting AIO Cooler for new user: " + ex.Message);
+                            }
+                            finally
+                            {
+                                dbManager.CloseConnection();
+                            }
+
+                        }
+                        update = "UPDATE Builds SET [CPU Air Cooler] = '', [CPU Air Cooler price] = '' WHERE [user] = @UserToUpdate";
+
                         try
                         {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, dbManager.GetConnection()))
+                            using (OleDbConnection connection = new OleDbConnection(connectionString))
                             {
-                                updateCmd.Parameters.AddWithValue("@aioCooler", choice);
-                                updateCmd.Parameters.AddWithValue("@price", price);
-                                updateCmd.Parameters.AddWithValue("@Username", user);
-                                label2.Visible = true;
-                                int rowsAffected = updateCmd.ExecuteNonQuery();
+                                using (OleDbCommand command = new OleDbCommand(update, connection))
+                                {
+                                    command.Parameters.AddWithValue("@UserToUpdate", user);
+
+                                    connection.Open();
+                                    int rowsAffected = command.ExecuteNonQuery();
+                                }
                             }
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Error updating AIO Cooler for existing user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
+                            MessageBox.Show("Error updating data: " + ex.Message);
                         }
                     }
                     else
                     {
-                        string insertQuery = "INSERT INTO Builds ([AIO Cooler], [user], [AIO Cooler price]) VALUES (@aioCooler, @Username, @price)";
-                        try
-                        {
-                            dbManager.OpenConnection();
-                            using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, dbManager.GetConnection()))
-                            {
-                                insertCmd.Parameters.AddWithValue("@aioCooler", choice);
-                                insertCmd.Parameters.AddWithValue("@price", price);
-                                insertCmd.Parameters.AddWithValue("@Username", user);
-                                label2.Visible = true;
-                                int rowsAffected = insertCmd.ExecuteNonQuery();
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error inserting AIO Cooler for new user: " + ex.Message);
-                        }
-                        finally
-                        {
-                            dbManager.CloseConnection();
-                        }
-
-                    }
-                    update = "UPDATE Builds SET [CPU Air Cooler] = '', [CPU Air Cooler price] = '' WHERE [user] = @UserToUpdate";
-
-                    try
-                    {
-                        using (OleDbConnection connection = new OleDbConnection(connectionString))
-                        {
-                            using (OleDbCommand command = new OleDbCommand(update, connection))
-                            {
-                                command.Parameters.AddWithValue("@UserToUpdate", user);
-
-                                connection.Open();
-                                int rowsAffected = command.ExecuteNonQuery();
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error updating data: " + ex.Message);
+                        label2.Visible = true;
+                        label2.ForeColor = Color.FromArgb(180, 18, 0);
+                        label2.Text = "Radiator will not fit.";
                     }
                     break;
 

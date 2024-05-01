@@ -92,15 +92,12 @@
             this.but_build = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panelmain = new System.Windows.Forms.Panel();
             this.label_menu = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.backicon = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.but_guide = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.but_combuild = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.butt_refresh = new System.Windows.Forms.PictureBox();
+            this.butt_home = new System.Windows.Forms.PictureBox();
+            this.backicon = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.speakersicon2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speakersicon1)).BeginInit();
@@ -143,12 +140,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcicon1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.butt_refresh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.butt_home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backicon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPalette
@@ -1105,63 +1100,6 @@
             this.label_menu.Text = "Your Build";
             this.label_menu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(337, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(26, 29);
-            this.panel3.TabIndex = 10;
-            // 
-            // backicon
-            // 
-            this.backicon.Image = ((System.Drawing.Image)(resources.GetObject("backicon.Image")));
-            this.backicon.Location = new System.Drawing.Point(305, 2);
-            this.backicon.Name = "backicon";
-            this.backicon.Size = new System.Drawing.Size(26, 29);
-            this.backicon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.backicon.TabIndex = 6;
-            this.backicon.TabStop = false;
-            this.backicon.Visible = false;
-            this.backicon.Click += new System.EventHandler(this.backicon_Click);
-            this.backicon.MouseLeave += new System.EventHandler(this.backicon_MouseLeave);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(305, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(26, 29);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(337, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(337, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(26, 29);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
-            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
-            // 
             // but_guide
             // 
             this.but_guide.Location = new System.Drawing.Point(412, 0);
@@ -1284,28 +1222,56 @@
             this.but_combuild.StateTracking.Border.Width = 1;
             this.but_combuild.TabIndex = 149;
             this.but_combuild.Values.Text = "Completed Builds";
+            this.but_combuild.Click += new System.EventHandler(this.but_combuild_Click);
             // 
-            // pictureBox4
+            // butt_refresh
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(369, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(26, 29);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 150;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Visible = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.butt_refresh.Image = global::PC_Building_Simulator.Properties.Resources.Refresh2;
+            this.butt_refresh.Location = new System.Drawing.Point(369, 2);
+            this.butt_refresh.Name = "butt_refresh";
+            this.butt_refresh.Size = new System.Drawing.Size(26, 29);
+            this.butt_refresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.butt_refresh.TabIndex = 150;
+            this.butt_refresh.TabStop = false;
+            this.butt_refresh.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.butt_refresh.MouseLeave += new System.EventHandler(this.butt_refresh_MouseLeave);
+            this.butt_refresh.MouseMove += new System.Windows.Forms.MouseEventHandler(this.butt_refresh_MouseMove);
             // 
-            // pictureBox5
+            // butt_home
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(369, 2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(26, 29);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 151;
-            this.pictureBox5.TabStop = false;
+            this.butt_home.Image = ((System.Drawing.Image)(resources.GetObject("butt_home.Image")));
+            this.butt_home.Location = new System.Drawing.Point(337, 2);
+            this.butt_home.Name = "butt_home";
+            this.butt_home.Size = new System.Drawing.Size(26, 29);
+            this.butt_home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.butt_home.TabIndex = 7;
+            this.butt_home.TabStop = false;
+            this.butt_home.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.butt_home.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.butt_home.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            // 
+            // backicon
+            // 
+            this.backicon.Image = ((System.Drawing.Image)(resources.GetObject("backicon.Image")));
+            this.backicon.Location = new System.Drawing.Point(305, 2);
+            this.backicon.Name = "backicon";
+            this.backicon.Size = new System.Drawing.Size(26, 29);
+            this.backicon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.backicon.TabIndex = 6;
+            this.backicon.TabStop = false;
+            this.backicon.Visible = false;
+            this.backicon.Click += new System.EventHandler(this.backicon_Click);
+            this.backicon.MouseLeave += new System.EventHandler(this.backicon_MouseLeave);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(305, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(26, 29);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
             // 
             // MainApp
             // 
@@ -1313,18 +1279,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1375, 807);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.but_guide);
             this.Controls.Add(this.but_combuild);
             this.Controls.Add(this.label_menu);
             this.Controls.Add(this.panelmain);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.butt_home);
             this.Controls.Add(this.backicon);
-            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.butt_refresh);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1386,12 +1349,10 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.butt_refresh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.butt_home)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backicon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1462,13 +1423,10 @@
         public System.Windows.Forms.PictureBox backicon;
         private System.Windows.Forms.Label lab_profile;
         public System.Windows.Forms.Label userlabel;
-        public System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.PictureBox butt_home;
         public System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel3;
         private ComponentFactory.Krypton.Toolkit.KryptonButton but_combuild;
         public ComponentFactory.Krypton.Toolkit.KryptonButton but_guide;
-        public System.Windows.Forms.PictureBox pictureBox4;
-        public System.Windows.Forms.PictureBox pictureBox5;
+        public System.Windows.Forms.PictureBox butt_refresh;
     }
 }

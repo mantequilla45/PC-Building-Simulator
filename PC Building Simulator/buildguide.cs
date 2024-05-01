@@ -62,6 +62,75 @@ namespace PC_Building_Simulator
             simulatedSender = kryptonButton1;
             mainApp.but_ram_Click(simulatedSender, simulatedEventArgs);
         }
+
+        private void choosegpu_Click(object sender, EventArgs e)
+        {
+            simulatedSender = kryptonButton1;
+            mainApp.but_gpu_Click(simulatedSender, simulatedEventArgs);
+        }
+
+        private void choosepsu_Click(object sender, EventArgs e)
+        {
+            simulatedSender = kryptonButton1;
+            mainApp.but_psu_Click(simulatedSender, simulatedEventArgs);
+        }
+        private void choosemoni_Click(object sender, EventArgs e)
+        {
+            simulatedSender = kryptonButton1;
+            mainApp.but_monitor_Click(simulatedSender, simulatedEventArgs);
+        }
+
+        private void choosekeyb_Click(object sender, EventArgs e)
+        {
+            simulatedSender = kryptonButton1;
+            mainApp.but_keyb_Click(simulatedSender, simulatedEventArgs);
+        }
+
+        private void choosespk_Click(object sender, EventArgs e)
+        {
+            simulatedSender = kryptonButton1;
+            mainApp.but_speakers_Click(simulatedSender, simulatedEventArgs);
+        }
+
+        private void choosemouse_Click(object sender, EventArgs e)
+        {
+            simulatedSender = kryptonButton1;
+            mainApp.but_mouse_Click(simulatedSender, simulatedEventArgs);
+        }
+        private void choosehdd_Click(object sender, EventArgs e)
+        {
+            DisplayManager.ButtonAppearance.Activate.Storage(displayManager.mainApp);
+            displayManager.menuselect(14);
+        }
+        private void choosessd_Click(object sender, EventArgs e)
+        {
+            DisplayManager.ButtonAppearance.Activate.Storage(displayManager.mainApp);
+            displayManager.menuselect(15);
+        }
+
+        private void choosem2_Click(object sender, EventArgs e)
+        {
+            DisplayManager.ButtonAppearance.Activate.Storage(displayManager.mainApp);
+            displayManager.menuselect(16);
+        }
+        private void choosefans_Click(object sender, EventArgs e)
+        {
+            DisplayManager.ButtonAppearance.Activate.Cooler(displayManager.mainApp);
+            displayManager.menuselect(17);
+        }
+        private void chooseair_Click(object sender, EventArgs e)
+        {
+            DisplayManager.ButtonAppearance.Activate.Cooler(displayManager.mainApp);
+            displayManager.menuselect(18);
+        }
+
+        private void chooseaio_Click(object sender, EventArgs e)
+        {
+            DisplayManager.ButtonAppearance.Activate.Cooler(displayManager.mainApp);
+            displayManager.menuselect(21);
+        }
+
+        
         private void label_MouseLeave(object sender, EventArgs e)
         {
             Label label = sender as Label;
@@ -73,5 +142,16 @@ namespace PC_Building_Simulator
             Label label = sender as Label;
             label.ForeColor = Color.FromArgb(86, 29, 137);
         }
+
+        private void pbox_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void pbox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

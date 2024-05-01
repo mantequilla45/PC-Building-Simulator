@@ -753,9 +753,9 @@ namespace PC_Building_Simulator
             Panel[] panels = { panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9, panel10,
                 panel11, panel12, panel13, panel14, panel15, panel16, panel17, panel18, panel19, panel20
             };
-                    Label[] prices = { labprice1, labprice2, labprice3, labprice4, labprice5, labprice6, labprice7, labprice8,
-                labprice9, labprice10, labprice11, labprice12, labprice13, labprice14, labprice15, labprice16, labprice17,
-                labprice18, labprice19, labprice20
+                Label[] prices = { labprice1, labprice2, labprice3, labprice4, labprice5, labprice6, labprice7, labprice8,
+            labprice9, labprice10, labprice11, labprice12, labprice13, labprice14, labprice15, labprice16, labprice17,
+            labprice18, labprice19, labprice20
             };
 
             for (int i = 0; i < panels.Length; i++)
@@ -820,113 +820,113 @@ namespace PC_Building_Simulator
             }
         }
 
-        private void InitializeControls()
-        {
-            for (int i = 0; i < 20; i++)
+            private void InitializeControls()
             {
-                Panel panel = (Panel)this.Controls.Find($"panel{i + 1}", true).FirstOrDefault();
-                PictureBox pictureBox = (PictureBox)this.Controls.Find($"pbox{i + 1}", true).FirstOrDefault();
-                Label nameLabel = (Label)this.Controls.Find($"labname{i + 1}", true).FirstOrDefault();
-                Label priceLabel = (Label)this.Controls.Find($"labprice{i + 1}", true).FirstOrDefault();
-                KryptonButton border = (KryptonButton)this.Controls.Find($"border{i + 1}", true).FirstOrDefault();
-
-                if (panel != null && pictureBox != null && nameLabel != null && priceLabel != null)
+                for (int i = 0; i < 20; i++)
                 {
-                    panel.MouseLeave += Panel_MouseLeave;
-                    panel.MouseMove += Panel_MouseMove;
-                    panel.MouseDown += Panel_MouseDown;
-                    border.MouseLeave += Panel_MouseLeave;
-                    border.MouseMove += Panel_MouseMove;
-                    border.MouseDown += Panel_MouseDown;
-                    pictureBox.MouseLeave += ChildControl_MouseLeave;
-                    pictureBox.MouseMove += ChildControl_MouseMove;
-                    pictureBox.MouseDown += ChildControl_MouseDown;
-                    nameLabel.MouseLeave += ChildControl_MouseLeave;
-                    nameLabel.MouseMove += ChildControl_MouseMove;
-                    nameLabel.MouseDown += ChildControl_MouseDown;
-                    priceLabel.MouseLeave += ChildControl_MouseLeave;
-                    priceLabel.MouseMove += ChildControl_MouseMove;
-                    priceLabel.MouseDown += ChildControl_MouseDown;
+                    Panel panel = (Panel)this.Controls.Find($"panel{i + 1}", true).FirstOrDefault();
+                    PictureBox pictureBox = (PictureBox)this.Controls.Find($"pbox{i + 1}", true).FirstOrDefault();
+                    Label nameLabel = (Label)this.Controls.Find($"labname{i + 1}", true).FirstOrDefault();
+                    Label priceLabel = (Label)this.Controls.Find($"labprice{i + 1}", true).FirstOrDefault();
+                    KryptonButton border = (KryptonButton)this.Controls.Find($"border{i + 1}", true).FirstOrDefault();
+
+                    if (panel != null && pictureBox != null && nameLabel != null && priceLabel != null)
+                    {
+                        panel.MouseLeave += Panel_MouseLeave;
+                        panel.MouseMove += Panel_MouseMove;
+                        panel.MouseDown += Panel_MouseDown;
+                        border.MouseLeave += Panel_MouseLeave;
+                        border.MouseMove += Panel_MouseMove;
+                        border.MouseDown += Panel_MouseDown;
+                        pictureBox.MouseLeave += ChildControl_MouseLeave;
+                        pictureBox.MouseMove += ChildControl_MouseMove;
+                        pictureBox.MouseDown += ChildControl_MouseDown;
+                        nameLabel.MouseLeave += ChildControl_MouseLeave;
+                        nameLabel.MouseMove += ChildControl_MouseMove;
+                        nameLabel.MouseDown += ChildControl_MouseDown;
+                        priceLabel.MouseLeave += ChildControl_MouseLeave;
+                        priceLabel.MouseMove += ChildControl_MouseMove;
+                        priceLabel.MouseDown += ChildControl_MouseDown;
+                    }
                 }
             }
-        }
 
-        private void Panel_MouseLeave(object sender, EventArgs e)
-        {
-            Panel panel = GetPanelFromControl(sender as Control);
-            if (panel != null)
+            private void Panel_MouseLeave(object sender, EventArgs e)
             {
-                KryptonButton border = GetBorderFromPanel(panel);
-                if (border != null)
+                Panel panel = GetPanelFromControl(sender as Control);
+                if (panel != null)
                 {
-                    border.StateCommon.Border.Color1 = Color.White; // Set border color to White (change as needed)
+                    KryptonButton border = GetBorderFromPanel(panel);
+                    if (border != null)
+                    {
+                        border.StateCommon.Border.Color1 = Color.White; // Set border color to White (change as needed)
+                    }
                 }
             }
-        }
-        private void Panel_MouseMove(object sender, MouseEventArgs e)
-        {
-            Panel panel = GetPanelFromControl(sender as Control);
-            if (panel != null)
+            private void Panel_MouseMove(object sender, MouseEventArgs e)
             {
-                KryptonButton border = GetBorderFromPanel(panel);
-                if (border != null)
+                Panel panel = GetPanelFromControl(sender as Control);
+                if (panel != null)
                 {
-                    border.StateCommon.Border.Color1 = Color.Silver; // Set border color to Red (change as needed)
+                    KryptonButton border = GetBorderFromPanel(panel);
+                    if (border != null)
+                    {
+                        border.StateCommon.Border.Color1 = Color.Silver; // Set border color to Red (change as needed)
+                    }
                 }
             }
-        }
-        private KryptonButton GetBorderFromPanel(Panel panel)
-        {
-
-            foreach (Control control in panel.Controls)
+            private KryptonButton GetBorderFromPanel(Panel panel)
             {
-                if (control is KryptonButton)
+
+                foreach (Control control in panel.Controls)
                 {
-                    return (KryptonButton)control;
+                    if (control is KryptonButton)
+                    {
+                        return (KryptonButton)control;
+                    }
+                }
+                return null;
+            }
+
+            private void Panel_MouseDown(object sender, MouseEventArgs e)
+            {
+                Panel panel = sender as Panel;
+                if (panel != null && e.Button == MouseButtons.Left)
+                {
+                    HandlePanelClick(panel);
                 }
             }
-            return null;
-        }
-
-        private void Panel_MouseDown(object sender, MouseEventArgs e)
-        {
-            Panel panel = sender as Panel;
-            if (panel != null && e.Button == MouseButtons.Left)
+            private void ChildControl_MouseMove(object sender, MouseEventArgs e)
             {
-                HandlePanelClick(panel);
+                Panel panel = GetPanelFromControl(sender as Control);
+                if (panel != null)
+                {
+                    Panel_MouseMove(panel, e);
+                }
             }
-        }
-        private void ChildControl_MouseMove(object sender, MouseEventArgs e)
-        {
-            Panel panel = GetPanelFromControl(sender as Control);
-            if (panel != null)
+            private void ChildControl_MouseLeave(object sender, EventArgs e)
             {
-                Panel_MouseMove(panel, e);
+                Panel panel = GetPanelFromControl(sender as Control);
+                if (panel != null)
+                {
+                    Panel_MouseLeave(panel, e);
+                }
             }
-        }
-        private void ChildControl_MouseLeave(object sender, EventArgs e)
-        {
-            Panel panel = GetPanelFromControl(sender as Control);
-            if (panel != null)
+            private void ChildControl_MouseDown(object sender, MouseEventArgs e)
             {
-                Panel_MouseLeave(panel, e);
+                Panel panel = GetPanelFromControl(sender as Control);
+                if (panel != null && e.Button == MouseButtons.Left)
+                {
+                    HandlePanelClick(panel);
+                }
             }
-        }
-        private void ChildControl_MouseDown(object sender, MouseEventArgs e)
-        {
-            Panel panel = GetPanelFromControl(sender as Control);
-            if (panel != null && e.Button == MouseButtons.Left)
+            private Panel GetPanelFromControl(Control control)
             {
-                HandlePanelClick(panel);
+                while (control != null && !(control is Panel))
+                {
+                    control = control.Parent;
+                }
+                return control as Panel;
             }
-        }
-        private Panel GetPanelFromControl(Control control)
-        {
-            while (control != null && !(control is Panel))
-            {
-                control = control.Parent;
-            }
-            return control as Panel;
-        }
     }
 }
