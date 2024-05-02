@@ -661,6 +661,9 @@
   <data name="mb_ASUS_ROG_Strix_X570_I_Gaming_WiFi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mb-ASUS ROG Strix X570-I Gaming WiFi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="mb_ASUS_ROG_Strix_X670E_E_Gaming_WiFi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mb_ROG-Strix-X670E-E-Gaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="mb_EVGA_X570_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mb-EVGA X570 Dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

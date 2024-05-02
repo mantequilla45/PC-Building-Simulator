@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PC_Building_Simulator.loginform">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <Members>
+      <Field Name="but_login1" Hidden="true" />
+      <Field Name="but_signup1" Hidden="true" />
+      <Field Name="ckbx_showpass" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="kryptonPalette" Hidden="true" />
+      <Field Name="label_empp" Hidden="true" />
+      <Field Name="label_empu" Hidden="true" />
+      <Field Name="label_loger" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Method Name="loginform" Hidden="true" />
+      <Field Name="txtbox_pass" Hidden="true" />
+      <Field Name="txtbox_uname" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAOJCAgQBQAAACUAQADAAIAAAEAgAAAAAIQAAg=</HashCode>
+      <FileName>LoginForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PC_Building_Simulator.adminpanel">
+    <Position X="3.5" Y="0.5" Width="1.75" />
+    <Members>
+      <Method Name="adminpanel" Hidden="true" />
+      <Field Name="but_del" Hidden="true" />
+      <Field Name="butt_add" Hidden="true" />
+      <Field Name="butt_upd" Hidden="true" />
+      <Field Name="cbox_adus" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="dgvadmin" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="kryptonPalette" Hidden="true" />
+      <Field Name="label_adpass" Hidden="true" />
+      <Field Name="label_id" Hidden="true" />
+      <Field Name="label_username" Hidden="true" />
+      <Field Name="label_usertype" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="txt_adpass" Hidden="true" />
+      <Field Name="txt_adusername" Hidden="true" />
+      <Field Name="txt_id" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>CAAAAAggACACAFAAAkGBFCQGAAQAwAAAgAAAAQAgAAE=</HashCode>
+      <FileName>adminpanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PC_Building_Simulator.buildguide">
+    <Position X="5.75" Y="0.5" Width="2" />
+    <Members>
+      <Method Name="buildguide" Hidden="true" />
+      <Field Name="chooseaio" Hidden="true" />
+      <Field Name="chooseair" Hidden="true" />
+      <Field Name="choosecpu" Hidden="true" />
+      <Field Name="choosefans" Hidden="true" />
+      <Field Name="choosegpu" Hidden="true" />
+      <Field Name="choosehdd" Hidden="true" />
+      <Field Name="choosekeyb" Hidden="true" />
+      <Field Name="choosem2" Hidden="true" />
+      <Field Name="choosemb" Hidden="true" />
+      <Field Name="choosemoni" Hidden="true" />
+      <Field Name="choosemouse" Hidden="true" />
+      <Field Name="choosepsu" Hidden="true" />
+      <Field Name="chooseram" Hidden="true" />
+      <Field Name="choosespk" Hidden="true" />
+      <Field Name="choosessd" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="kryptonButton1" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="labname1" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="panel2" Hidden="true" />
+      <Field Name="simulatedEventArgs" Hidden="true" />
+      <Field Name="simulatedSender" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AoQAAAAMAiBAABBA5GCBAgMDgCGAAAANCABJASEQBUI=</HashCode>
+      <FileName>buildguide.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PC_Building_Simulator.buildmenu">
+    <Position X="8" Y="0.5" Width="2.25" />
+    <Members>
+      <Field Name="aiocooler" Hidden="true" />
+      <Field Name="aiocoolerprice" Hidden="true" />
+      <Field Name="aircooler" Hidden="true" />
+      <Field Name="aircoolerprice" Hidden="true" />
+      <Field Name="border1" Hidden="true" />
+      <Field Name="border10" Hidden="true" />
+      <Field Name="border11" Hidden="true" />
+      <Field Name="border12" Hidden="true" />
+      <Field Name="border2" Hidden="true" />
+      <Field Name="border3" Hidden="true" />
+      <Field Name="border4" Hidden="true" />
+      <Field Name="border6" Hidden="true" />
+      <Field Name="border7" Hidden="true" />
+      <Field Name="border9" Hidden="true" />
+      <Field Name="bordercpucool" Hidden="true" />
+      <Field Name="borderfans" Hidden="true" />
+      <Method Name="buildmenu" Hidden="true" />
+      <Field Name="butt_ex" Hidden="true" />
+      <Field Name="caseprice" Hidden="true" />
+      <Field Name="ccase" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="delete_all" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="drive1border" Hidden="true" />
+      <Field Name="drive1name" Hidden="true" />
+      <Field Name="drive1pbox" Hidden="true" />
+      <Field Name="drive1price" Hidden="true" />
+      <Field Name="drive1quan" Hidden="true" />
+      <Field Name="drive2border" Hidden="true" />
+      <Field Name="drive2name" Hidden="true" />
+      <Field Name="drive2pbox" Hidden="true" />
+      <Field Name="drive2price" Hidden="true" />
+      <Field Name="drive2quan" Hidden="true" />
+      <Field Name="drive3border" Hidden="true" />
+      <Field Name="drive3name" Hidden="true" />
+      <Field Name="drive3pbox" Hidden="true" />
+      <Field Name="drive3price" Hidden="true" />
+      <Field Name="drive3quan" Hidden="true" />
+      <Field Name="flowLayoutPanel1" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="kryptonButton1" Hidden="true" />
+      <Field Name="kryptonButton11" Hidden="true" />
+      <Field Name="kryptonButton13" Hidden="true" />
+      <Field Name="kryptonButton15" Hidden="true" />
+      <Field Name="kryptonButton17" Hidden="true" />
+      <Field Name="kryptonButton19" Hidden="true" />
+      <Field Name="kryptonButton2" Hidden="true" />
+      <Field Name="kryptonButton21" Hidden="true" />
+      <Field Name="kryptonButton23" Hidden="true" />
+      <Field Name="kryptonButton3" Hidden="true" />
+      <Field Name="kryptonButton4" Hidden="true" />
+      <Field Name="kryptonButton5" Hidden="true" />
+      <Field Name="kryptonButton7" Hidden="true" />
+      <Field Name="kryptonButton9" Hidden="true" />
+      <Field Name="label_case" Hidden="true" />
+      <Field Name="label_cpu" Hidden="true" />
+      <Field Name="label_cpucooler" Hidden="true" />
+      <Field Name="label_dr" Hidden="true" />
+      <Field Name="label_fans" Hidden="true" />
+      <Field Name="label_gpu" Hidden="true" />
+      <Field Name="label_key" Hidden="true" />
+      <Field Name="label_mb" Hidden="true" />
+      <Field Name="label_mon" Hidden="true" />
+      <Field Name="label_mouse" Hidden="true" />
+      <Field Name="label_psu" Hidden="true" />
+      <Field Name="label_ram" Hidden="true" />
+      <Field Name="label_spk" Hidden="true" />
+      <Field Name="label_total" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label10" Hidden="true" />
+      <Field Name="label11" Hidden="true" />
+      <Field Name="label12" Hidden="true" />
+      <Field Name="label13" Hidden="true" />
+      <Field Name="label14" Hidden="true" />
+      <Field Name="label15" Hidden="true" />
+      <Field Name="label16" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label6" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="label9" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="panel10" Hidden="true" />
+      <Field Name="panel11" Hidden="true" />
+      <Field Name="panel12" Hidden="true" />
+      <Field Name="panel2" Hidden="true" />
+      <Field Name="panel3" Hidden="true" />
+      <Field Name="panel4" Hidden="true" />
+      <Field Name="panel5" Hidden="true" />
+      <Field Name="panel6" Hidden="true" />
+      <Field Name="panel7" Hidden="true" />
+      <Field Name="panel8" Hidden="true" />
+      <Field Name="panel9" Hidden="true" />
+      <Field Name="pBox1" Hidden="true" />
+      <Field Name="pBox10" Hidden="true" />
+      <Field Name="pBox11" Hidden="true" />
+      <Field Name="pBox12" Hidden="true" />
+      <Field Name="pBox2" Hidden="true" />
+      <Field Name="pBox3" Hidden="true" />
+      <Field Name="pBox4" Hidden="true" />
+      <Field Name="pBox6" Hidden="true" />
+      <Field Name="pBox7" Hidden="true" />
+      <Field Name="pBox9" Hidden="true" />
+      <Field Name="pBoxcpucool" Hidden="true" />
+      <Field Name="pBoxfans" Hidden="true" />
+      <Field Name="price_case" Hidden="true" />
+      <Field Name="price_cpu" Hidden="true" />
+      <Field Name="price_cpucool" Hidden="true" />
+      <Field Name="price_fans" Hidden="true" />
+      <Field Name="price_gpu" Hidden="true" />
+      <Field Name="price_keyb" Hidden="true" />
+      <Field Name="price_mb" Hidden="true" />
+      <Field Name="price_moni" Hidden="true" />
+      <Field Name="price_mou" Hidden="true" />
+      <Field Name="price_psu" Hidden="true" />
+      <Field Name="price_ram" Hidden="true" />
+      <Field Name="price_spk" Hidden="true" />
+      <Field Name="quan_case" Hidden="true" />
+      <Field Name="quan_cpu" Hidden="true" />
+      <Field Name="quan_cpucool" Hidden="true" />
+      <Field Name="quan_fans" Hidden="true" />
+      <Field Name="quan_gpu" Hidden="true" />
+      <Field Name="quan_keyb" Hidden="true" />
+      <Field Name="quan_mb" Hidden="true" />
+      <Field Name="quan_moni" Hidden="true" />
+      <Field Name="quan_mous" Hidden="true" />
+      <Field Name="quan_psu" Hidden="true" />
+      <Field Name="quan_ram" Hidden="true" />
+      <Field Name="quan_spk" Hidden="true" />
+      <Field Name="remove_case" Hidden="true" />
+      <Field Name="remove_cpu" Hidden="true" />
+      <Field Name="remove_cpucool" Hidden="true" />
+      <Field Name="remove_drive1" Hidden="true" />
+      <Field Name="remove_drive2" Hidden="true" />
+      <Field Name="remove_drive3" Hidden="true" />
+      <Field Name="remove_fans" Hidden="true" />
+      <Field Name="remove_gpu" Hidden="true" />
+      <Field Name="remove_keyb" Hidden="true" />
+      <Field Name="remove_mb" Hidden="true" />
+      <Field Name="remove_moni" Hidden="true" />
+      <Field Name="remove_mous" Hidden="true" />
+      <Field Name="remove_psu" Hidden="true" />
+      <Field Name="remove_ram" Hidden="true" />
+      <Field Name="remove_spk" Hidden="true" />
+      <Field Name="simulatedEventArgs" Hidden="true" />
+      <Field Name="simulatedSender" Hidden="true" />
+      <Field Name="total_price" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Enum Name="PC_Building_Simulator.buildmenu.CoolerType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>buildmenu.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>99IgqUx/ECeASloc1GjyLHuGQeCzg3d8GPsh+/0fN3o=</HashCode>
+      <FileName>buildmenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PC_Building_Simulator.completedbuilds">
+    <Position X="10.5" Y="0.5" Width="2" />
+    <Members>
+      <Field Name="border1" Hidden="true" />
+      <Field Name="border10" Hidden="true" />
+      <Field Name="border11" Hidden="true" />
+      <Field Name="border12" Hidden="true" />
+      <Field Name="border13" Hidden="true" />
+      <Field Name="border14" Hidden="true" />
+      <Field Name="border15" Hidden="true" />
+      <Field Name="border16" Hidden="true" />
+      <Field Name="border17" Hidden="true" />
+      <Field Name="border18" Hidden="true" />
+      <Field Name="border19" Hidden="true" />
+      <Field Name="border2" Hidden="true" />
+      <Field Name="border20" Hidden="true" />
+      <Field Name="border3" Hidden="true" />
+      <Field Name="border4" Hidden="true" />
+      <Field Name="border5" Hidden="true" />
+      <Field Name="border6" Hidden="true" />
+      <Field Name="border7" Hidden="true" />
+      <Field Name="border8" Hidden="true" />
+      <Field Name="border9" Hidden="true" />
+      <Field Name="but_add" Hidden="true" />
+      <Method Name="completedbuilds" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="flowLayoutPanel2" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label_total" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label10" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label6" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="label8" Hidden="true" />
+      <Field Name="label9" Hidden="true" />
+      <Field Name="labelcom1" Hidden="true" />
+      <Field Name="labname1" Hidden="true" />
+      <Field Name="labname10" Hidden="true" />
+      <Field Name="labname11" Hidden="true" />
+      <Field Name="labname12" Hidden="true" />
+      <Field Name="labname13" Hidden="true" />
+      <Field Name="labname14" Hidden="true" />
+      <Field Name="labname15" Hidden="true" />
+      <Field Name="labname16" Hidden="true" />
+      <Field Name="labname17" Hidden="true" />
+      <Field Name="labname18" Hidden="true" />
+      <Field Name="labname19" Hidden="true" />
+      <Field Name="labname2" Hidden="true" />
+      <Field Name="labname20" Hidden="true" />
+      <Field Name="labname3" Hidden="true" />
+      <Field Name="labname4" Hidden="true" />
+      <Field Name="labname5" Hidden="true" />
+      <Field Name="labname6" Hidden="true" />
+      <Field Name="labname7" Hidden="true" />
+      <Field Name="labname8" Hidden="true" />
+      <Field Name="labname9" Hidden="true" />
+      <Field Name="labprice1" Hidden="true" />
+      <Field Name="labprice10" Hidden="true" />
+      <Field Name="labprice11" Hidden="true" />
+      <Field Name="labprice12" Hidden="true" />
+      <Field Name="labprice13" Hidden="true" />
+      <Field Name="labprice14" Hidden="true" />
+      <Field Name="labprice15" Hidden="true" />
+      <Field Name="labprice16" Hidden="true" />
+      <Field Name="labprice17" Hidden="true" />
+      <Field Name="labprice18" Hidden="true" />
+      <Field Name="labprice19" Hidden="true" />
+      <Field Name="labprice2" Hidden="true" />
+      <Field Name="labprice20" Hidden="true" />
+      <Field Name="labprice3" Hidden="true" />
+      <Field Name="labprice4" Hidden="true" />
+      <Field Name="labprice5" Hidden="true" />
+      <Field Name="labprice6" Hidden="true" />
+      <Field Name="labprice7" Hidden="true" />
+      <Field Name="labprice8" Hidden="true" />
+      <Field Name="labprice9" Hidden="true" />
+      <Field Name="labquan1" Hidden="true" />
+      <Field Name="labquan10" Hidden="true" />
+      <Field Name="labquan11" Hidden="true" />
+      <Field Name="labquan12" Hidden="true" />
+      <Field Name="labquan13" Hidden="true" />
+      <Field Name="labquan14" Hidden="true" />
+      <Field Name="labquan15" Hidden="true" />
+      <Field Name="labquan16" Hidden="true" />
+      <Field Name="labquan17" Hidden="true" />
+      <Field Name="labquan18" Hidden="true" />
+      <Field Name="labquan19" Hidden="true" />
+      <Field Name="labquan2" Hidden="true" />
+      <Field Name="labquan20" Hidden="true" />
+      <Field Name="labquan3" Hidden="true" />
+      <Field Name="labquan4" Hidden="true" />
+      <Field Name="labquan5" Hidden="true" />
+      <Field Name="labquan6" Hidden="true" />
+      <Field Name="labquan7" Hidden="true" />
+      <Field Name="labquan8" Hidden="true" />
+      <Field Name="labquan9" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="panel10" Hidden="true" />
+      <Field Name="panel11" Hidden="true" />
+      <Field Name="panel12" Hidden="true" />
+      <Field Name="panel13" Hidden="true" />
+      <Field Name="panel14" Hidden="true" />
+      <Field Name="panel15" Hidden="true" />
+      <Field Name="panel16" Hidden="true" />
+      <Field Name="panel17" Hidden="true" />
+      <Field Name="panel18" Hidden="true" />
+      <Field Name="panel19" Hidden="true" />
+      <Field Name="panel2" Hidden="true" />
+      <Field Name="panel20" Hidden="true" />
+      <Field Name="panel3" Hidden="true" />
+      <Field Name="panel4" Hidden="true" />
+      <Field Name="panel5" Hidden="true" />
+      <Field Name="panel6" Hidden="true" />
+      <Field Name="panel7" Hidden="true" />
+      <Field Name="panel8" Hidden="true" />
+      <Field Name="panel9" Hidden="true" />
+      <Field Name="pbox1" Hidden="true" />
+      <Field Name="pbox10" Hidden="true" />
+      <Field Name="pbox11" Hidden="true" />
+      <Field Name="pbox12" Hidden="true" />
+      <Field Name="pbox13" Hidden="true" />
+      <Field Name="pbox14" Hidden="true" />
+      <Field Name="pbox15" Hidden="true" />
+      <Field Name="pbox16" Hidden="true" />
+      <Field Name="pbox17" Hidden="true" />
+      <Field Name="pbox18" Hidden="true" />
+      <Field Name="pbox19" Hidden="true" />
+      <Field Name="pbox2" Hidden="true" />
+      <Field Name="pbox20" Hidden="true" />
+      <Field Name="pbox3" Hidden="true" />
+      <Field Name="pbox4" Hidden="true" />
+      <Field Name="pbox5" Hidden="true" />
+      <Field Name="pbox6" Hidden="true" />
+      <Field Name="pbox7" Hidden="true" />
+      <Field Name="pbox8" Hidden="true" />
+      <Field Name="pbox9" Hidden="true" />
+      <Field Name="total_price" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>PJCwgRg00ihMUBgC2UTiUCiKQDKJAQGJBJH8+2f/I0g=</HashCode>
+      <FileName>completedbuilds.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PC_Building_Simulator.confirmdelete">
+    <Position X="12.75" Y="0.5" Width="1.75" />
+    <Members>
+      <Field Name="components" Hidden="true" />
+      <Field Name="confirm_cancel" Hidden="true" />
+      <Field Name="confirm_remove" Hidden="true" />
+      <Method Name="confirmdelete" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="kryptonPalette" Hidden="true" />
+      <Field Name="label_dr" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="pictureBox1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAKAAABAEAACAAAQCAQAAAAAAgACAAABEAAA=</HashCode>
+      <FileName>confirmdelete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PC_Building_Simulator.coolermenu">
+    <Position X="14.75" Y="0.5" Width="2" />
+    <Members>
+      <Field Name="border1" Hidden="true" />
+      <Field Name="border2" Hidden="true" />
+      <Field Name="border3" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="coolermenu" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="labname1" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="panel2" Hidden="true" />
+      <Field Name="panel3" Hidden="true" />
+      <Field Name="pBox1" Hidden="true" />
+      <Field Name="pBox2" Hidden="true" />
+      <Field Name="pBox3" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AoAAAAQAACDAADAAQQCEAAACAACAgEAAIABAOSgCAAA=</HashCode>
+      <FileName>coolermenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PC_Building_Simulator.DisplayManager">
+    <Position X="17" Y="0.5" Width="2.5" />
+    <NestedTypes>
+      <Class Name="PC_Building_Simulator.DisplayManager.ButtonAppearance" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Display Manager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QJAAAAAIgAAAIAAAAEBAAAlWAEgAEBAAAEAACkCBCBA=</HashCode>
+      <FileName>Display Manager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PC_Building_Simulator.MainApp">
+    <Position X="19.75" Y="0.5" Width="2.25" />
+    <Members>
+      <Field Name="adforms" Hidden="true" />
+      <Field Name="backicon" Hidden="true" />
+      <Field Name="bluebar1" Hidden="true" />
+      <Field Name="bluebar10" Hidden="true" />
+      <Field Name="bluebar11" Hidden="true" />
+      <Field Name="bluebar12" Hidden="true" />
+      <Field Name="bluebar13" Hidden="true" />
+      <Field Name="bluebar2" Hidden="true" />
+      <Field Name="bluebar3" Hidden="true" />
+      <Field Name="bluebar4" Hidden="true" />
+      <Field Name="bluebar5" Hidden="true" />
+      <Field Name="bluebar6" Hidden="true" />
+      <Field Name="bluebar7" Hidden="true" />
+      <Field Name="bluebar8" Hidden="true" />
+      <Field Name="bluebar9" Hidden="true" />
+      <Field Name="but_build" Hidden="true" />
+      <Field Name="but_case" Hidden="true" />
+      <Field Name="but_combuild1" Hidden="true" />
+      <Field Name="but_combuild2" Hidden="true" />
+      <Field Name="but_cooler" Hidden="true" />
+      <Field Name="but_cpu" Hidden="true" />
+      <Field Name="but_gpu" Hidden="true" />
+      <Field Name="but_guide" Hidden="true" />
+      <Field Name="but_keyb" Hidden="true" />
+      <Field Name="but_mb" Hidden="true" />
+      <Field Name="but_monitor" Hidden="true" />
+      <Field Name="but_mouse" Hidden="true" />
+      <Field Name="but_psu" Hidden="true" />
+      <Field Name="but_ram" Hidden="true" />
+      <Field Name="but_speakers" Hidden="true" />
+      <Field Name="but_storage" Hidden="true" />
+      <Field Name="butt_home" Hidden="true" />
+      <Field Name="butt_refresh" Hidden="true" />
+      <Field Name="caseicon1" Hidden="true" />
+      <Field Name="caseicon2" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="coolericon1" Hidden="true" />
+      <Field Name="coolericon2" Hidden="true" />
+      <Field Name="cpuicon1" Hidden="true" />
+      <Field Name="cpuicon2" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="gpuicon1" Hidden="true" />
+      <Field Name="gpuicon2" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="keybicon1" Hidden="true" />
+      <Field Name="keybicon2" Hidden="true" />
+      <Field Name="kryptonPalette" Hidden="true" />
+      <Field Name="lab_profile" Hidden="true" />
+      <Field Name="label_admin" Hidden="true" />
+      <Field Name="label_logout" Hidden="true" />
+      <Field Name="label_menu" Hidden="true" />
+      <Field Name="mbicon1" Hidden="true" />
+      <Field Name="mbicon2" Hidden="true" />
+      <Field Name="monitoricon1" Hidden="true" />
+      <Field Name="monitoricon2" Hidden="true" />
+      <Field Name="mouseicon1" Hidden="true" />
+      <Field Name="mouseicon2" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="panel2" Hidden="true" />
+      <Field Name="panelmain" Hidden="true" />
+      <Field Name="pcicon1" Hidden="true" />
+      <Field Name="pcicon2" Hidden="true" />
+      <Field Name="pictureBox3" Hidden="true" />
+      <Field Name="profilepic" Hidden="true" />
+      <Field Name="psuicon1" Hidden="true" />
+      <Field Name="psuicon2" Hidden="true" />
+      <Field Name="ramicon1" Hidden="true" />
+      <Field Name="ramicon2" Hidden="true" />
+      <Field Name="speakersicon1" Hidden="true" />
+      <Field Name="speakersicon2" Hidden="true" />
+      <Field Name="storageicon1" Hidden="true" />
+      <Field Name="storageicon2" Hidden="true" />
+      <Field Name="userlabel" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AA5ibt+TBXnHBqKgIQbOoGNC4QPGM0zBlAIya4EGCIw=</HashCode>
+      <FileName>MainApp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PC_Building_Simulator.MemoryManager">
+    <Position X="22.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AJAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAABA=</HashCode>
+      <FileName>Memory Manager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PC_Building_Simulator.productmenu">
+    <Position X="25" Y="0.5" Width="2" />
+    <Members>
+      <Field Name="border1" Hidden="true" />
+      <Field Name="border10" Hidden="true" />
+      <Field Name="border11" Hidden="true" />
+      <Field Name="border12" Hidden="true" />
+      <Field Name="border13" Hidden="true" />
+      <Field Name="border14" Hidden="true" />
+      <Field Name="border15" Hidden="true" />
+      <Field Name="border16" Hidden="true" />
+      <Field Name="border17" Hidden="true" />
+      <Field Name="border18" Hidden="true" />
+      <Field Name="border19" Hidden="true" />
+      <Field Name="border2" Hidden="true" />
+      <Field Name="border20" Hidden="true" />
+      <Field Name="border3" Hidden="true" />
+      <Field Name="border4" Hidden="true" />
+      <Field Name="border5" Hidden="true" />
+      <Field Name="border6" Hidden="true" />
+      <Field Name="border7" Hidden="true" />
+      <Field Name="border8" Hidden="true" />
+      <Field Name="border9" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="flowLayoutPanel2" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="labname1" Hidden="true" />
+      <Field Name="labname10" Hidden="true" />
+      <Field Name="labname11" Hidden="true" />
+      <Field Name="labname12" Hidden="true" />
+      <Field Name="labname13" Hidden="true" />
+      <Field Name="labname14" Hidden="true" />
+      <Field Name="labname15" Hidden="true" />
+      <Field Name="labname16" Hidden="true" />
+      <Field Name="labname17" Hidden="true" />
+      <Field Name="labname18" Hidden="true" />
+      <Field Name="labname19" Hidden="true" />
+      <Field Name="labname2" Hidden="true" />
+      <Field Name="labname20" Hidden="true" />
+      <Field Name="labname3" Hidden="true" />
+      <Field Name="labname4" Hidden="true" />
+      <Field Name="labname5" Hidden="true" />
+      <Field Name="labname6" Hidden="true" />
+      <Field Name="labname7" Hidden="true" />
+      <Field Name="labname8" Hidden="true" />
+      <Field Name="labname9" Hidden="true" />
+      <Field Name="labprice1" Hidden="true" />
+      <Field Name="labprice10" Hidden="true" />
+      <Field Name="labprice11" Hidden="true" />
+      <Field Name="labprice12" Hidden="true" />
+      <Field Name="labprice13" Hidden="true" />
+      <Field Name="labprice14" Hidden="true" />
+      <Field Name="labprice15" Hidden="true" />
+      <Field Name="labprice16" Hidden="true" />
+      <Field Name="labprice17" Hidden="true" />
+      <Field Name="labprice18" Hidden="true" />
+      <Field Name="labprice19" Hidden="true" />
+      <Field Name="labprice2" Hidden="true" />
+      <Field Name="labprice20" Hidden="true" />
+      <Field Name="labprice3" Hidden="true" />
+      <Field Name="labprice4" Hidden="true" />
+      <Field Name="labprice5" Hidden="true" />
+      <Field Name="labprice6" Hidden="true" />
+      <Field Name="labprice7" Hidden="true" />
+      <Field Name="labprice8" Hidden="true" />
+      <Field Name="labprice9" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="panel10" Hidden="true" />
+      <Field Name="panel11" Hidden="true" />
+      <Field Name="panel12" Hidden="true" />
+      <Field Name="panel13" Hidden="true" />
+      <Field Name="panel14" Hidden="true" />
+      <Field Name="panel15" Hidden="true" />
+      <Field Name="panel16" Hidden="true" />
+      <Field Name="panel17" Hidden="true" />
+      <Field Name="panel18" Hidden="true" />
+      <Field Name="panel19" Hidden="true" />
+      <Field Name="panel2" Hidden="true" />
+      <Field Name="panel20" Hidden="true" />
+      <Field Name="panel3" Hidden="true" />
+      <Field Name="panel4" Hidden="true" />
+      <Field Name="panel5" Hidden="true" />
+      <Field Name="panel6" Hidden="true" />
+      <Field Name="panel7" Hidden="true" />
+      <Field Name="panel8" Hidden="true" />
+      <Field Name="panel9" Hidden="true" />
+      <Field Name="pbox1" Hidden="true" />
+      <Field Name="pbox10" Hidden="true" />
+      <Field Name="pbox11" Hidden="true" />
+      <Field Name="pbox12" Hidden="true" />
+      <Field Name="pbox13" Hidden="true" />
+      <Field Name="pbox14" Hidden="true" />
+      <Field Name="pbox15" Hidden="true" />
+      <Field Name="pbox16" Hidden="true" />
+      <Field Name="pbox17" Hidden="true" />
+      <Field Name="pbox18" Hidden="true" />
+      <Field Name="pbox19" Hidden="true" />
+      <Field Name="pbox2" Hidden="true" />
+      <Field Name="pbox20" Hidden="true" />
+      <Field Name="pbox3" Hidden="true" />
+      <Field Name="pbox4" Hidden="true" />
+      <Field Name="pbox5" Hidden="true" />
+      <Field Name="pbox6" Hidden="true" />
+      <Field Name="pbox7" Hidden="true" />
+      <Field Name="pbox8" Hidden="true" />
+      <Field Name="pbox9" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>IJCAgAw0ACjEQDACyUCmEAAKQCGBAAAAIJH8+2//A0A=</HashCode>
+      <FileName>productmenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PC_Building_Simulator.productspecs">
+    <Position X="27.25" Y="0.5" Width="2" />
+    <Members>
+      <Field Name="border1" Hidden="true" />
+      <Field Name="border2" Hidden="true" />
+      <Field Name="border3" Hidden="true" />
+      <Field Name="border4" Hidden="true" />
+      <Field Name="but_add" Hidden="true" />
+      <Field Name="comboBox1" Hidden="true" />
+      <Field Name="comp1" Hidden="true" />
+      <Field Name="comp2" Hidden="true" />
+      <Field Name="comp3" Hidden="true" />
+      <Field Name="comp4" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="dataGridView1" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="kryptonButton1" Hidden="true" />
+      <Field Name="kryptonButton2" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="panel2" Hidden="true" />
+      <Field Name="pictureBox1" Hidden="true" />
+      <Field Name="pictureBox2" Hidden="true" />
+      <Field Name="spec1" Hidden="true" />
+      <Field Name="spec2" Hidden="true" />
+      <Field Name="spec3" Hidden="true" />
+      <Field Name="spec4" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>IsihAgpggTEMiFoQUD3CURCqDA+AAgC1BBAQOQREIUE=</HashCode>
+      <FileName>productspecs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PC_Building_Simulator.SignupForm">
+    <Position X="29.5" Y="0.5" Width="2.5" />
+    <Members>
+      <Field Name="but_signup2" Hidden="true" />
+      <Field Name="ckbx_showpass2" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="kryptonPalette" Hidden="true" />
+      <Field Name="label_conpassdn2" Hidden="true" />
+      <Field Name="label_cracc" Hidden="true" />
+      <Field Name="label_emptu1" Hidden="true" />
+      <Field Name="label_emptu2" Hidden="true" />
+      <Field Name="label_emptu3" Hidden="true" />
+      <Field Name="label_passdn2" Hidden="true" />
+      <Field Name="label_useral" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="txtbox_conpass2" Hidden="true" />
+      <Field Name="txtbox_pass2" Hidden="true" />
+      <Field Name="txtbox_uname2" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AABoAgQACCCYABQAAAOAQQACQAAACAIAgAAAACEQAAI=</HashCode>
+      <FileName>SignupForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PC_Building_Simulator.storagemenu">
+    <Position X="32.25" Y="0.5" Width="2" />
+    <Members>
+      <Field Name="border1" Hidden="true" />
+      <Field Name="border2" Hidden="true" />
+      <Field Name="border3" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="labname1" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="panel2" Hidden="true" />
+      <Field Name="panel3" Hidden="true" />
+      <Field Name="pBox1" Hidden="true" />
+      <Field Name="pBox2" Hidden="true" />
+      <Field Name="pBox3" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIAAAAQAACDAADAAQQCEAAACAACAgEAAIABAOSgGAAA=</HashCode>
+      <FileName>storagemenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PC_Building_Simulator.welcomeform">
+    <Position X="34.5" Y="0.5" Width="2" />
+    <Members>
+      <Field Name="border1" Hidden="true" />
+      <Field Name="buildborder1" Hidden="true" />
+      <Field Name="buildborder2" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="flowLayoutPanel1" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="kryptonButton1" Hidden="true" />
+      <Field Name="kryptonButton2" Hidden="true" />
+      <Field Name="kryptonButton3" Hidden="true" />
+      <Field Name="kryptonButton5" Hidden="true" />
+      <Field Name="kryptonButton6" Hidden="true" />
+      <Field Name="label_name" Hidden="true" />
+      <Field Name="label_title1" Hidden="true" />
+      <Field Name="label_title2" Hidden="true" />
+      <Field Name="label_welcome" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label10" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label9" Hidden="true" />
+      <Field Name="labelcase1" Hidden="true" />
+      <Field Name="labelcase2" Hidden="true" />
+      <Field Name="labelcpu1" Hidden="true" />
+      <Field Name="labelcpu2" Hidden="true" />
+      <Field Name="labelgpu1" Hidden="true" />
+      <Field Name="labelgpu2" Hidden="true" />
+      <Field Name="labprice2" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="panel2" Hidden="true" />
+      <Field Name="panel3" Hidden="true" />
+      <Field Name="panel5" Hidden="true" />
+      <Field Name="panelbuild1" Hidden="true" />
+      <Field Name="panelbuild2" Hidden="true" />
+      <Field Name="pcase1" Hidden="true" />
+      <Field Name="pcase2" Hidden="true" />
+      <Field Name="pcpu1" Hidden="true" />
+      <Field Name="pcpu2" Hidden="true" />
+      <Field Name="pgpu1" Hidden="true" />
+      <Field Name="pgpu2" Hidden="true" />
+      <Field Name="pictureBox1" Hidden="true" />
+      <Field Name="pictureBox2" Hidden="true" />
+      <Field Name="pictureBox3" Hidden="true" />
+      <Field Name="pictureBox7" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>EIAAgFwgCiGiATgB4RCEACICYICAEAAAAAAQI4FCAUA=</HashCode>
+      <FileName>welcomeform.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

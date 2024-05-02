@@ -158,13 +158,13 @@ namespace PC_Building_Simulator
                         "Gigabyte B460M DS3H", "ASRock B450M Steel Legend", "MSI B560M Mortar WiFi",
                         "ASUS ROG Strix X570-I Gaming WiFi", "Gigabyte Z490 Aorus Elite", "MSI B460M Bazooka V2",
                         "ASRock B550 Phantom Gaming 4", "MSI MPG X570 Gaming Plus", "ASUS Prime B460M-A",
-                        "Gigabyte B450M DS3H WIFI", "MSI B550M Mortar Micro ATX", "ASRock B460M Pro4"
+                        "ASUS ROG Strix X670E-E Gaming WiFi", "MSI B550M Mortar Micro ATX", "ASRock B460M Pro4"
                     };
                     int[] motherboardPrices = {
                         1000, 500, 175, 125, 700,
                         525, 300, 350, 100, 125,
                         145, 350, 300, 100, 215,
-                        400, 85, 145, 175, 150
+                        400, 85, 500, 175, 150
                     };
 
                     for (int i = 0; i < mbNames.Length; i++)

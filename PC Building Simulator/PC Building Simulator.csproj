@@ -191,6 +191,7 @@
     <EmbeddedResource Include="welcomeform.resx">
       <DependentUpon>welcomeform.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1190,6 +1191,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb_ROG-Strix-X670E-E-Gaming.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

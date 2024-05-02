@@ -70,6 +70,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.labprice2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -306,6 +308,7 @@
             // 
             // panelbuild1
             // 
+            this.panelbuild1.Controls.Add(this.labprice2);
             this.panelbuild1.Controls.Add(this.pcpu1);
             this.panelbuild1.Controls.Add(this.pgpu1);
             this.panelbuild1.Controls.Add(this.labelcase1);
@@ -344,7 +347,7 @@
             this.labelcase1.AutoSize = true;
             this.labelcase1.BackColor = System.Drawing.Color.White;
             this.labelcase1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelcase1.Location = new System.Drawing.Point(21, 347);
+            this.labelcase1.Location = new System.Drawing.Point(29, 336);
             this.labelcase1.Name = "labelcase1";
             this.labelcase1.Size = new System.Drawing.Size(184, 20);
             this.labelcase1.TabIndex = 89;
@@ -355,7 +358,7 @@
             this.labelgpu1.AutoSize = true;
             this.labelgpu1.BackColor = System.Drawing.Color.White;
             this.labelgpu1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelgpu1.Location = new System.Drawing.Point(21, 327);
+            this.labelgpu1.Location = new System.Drawing.Point(29, 316);
             this.labelgpu1.Name = "labelgpu1";
             this.labelgpu1.Size = new System.Drawing.Size(290, 20);
             this.labelgpu1.TabIndex = 88;
@@ -366,7 +369,7 @@
             this.labelcpu1.AutoSize = true;
             this.labelcpu1.BackColor = System.Drawing.Color.White;
             this.labelcpu1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelcpu1.Location = new System.Drawing.Point(21, 307);
+            this.labelcpu1.Location = new System.Drawing.Point(29, 296);
             this.labelcpu1.Name = "labelcpu1";
             this.labelcpu1.Size = new System.Drawing.Size(144, 20);
             this.labelcpu1.TabIndex = 87;
@@ -377,11 +380,11 @@
             this.label_title1.AutoSize = true;
             this.label_title1.BackColor = System.Drawing.Color.White;
             this.label_title1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_title1.Location = new System.Drawing.Point(20, 268);
+            this.label_title1.Location = new System.Drawing.Point(28, 267);
             this.label_title1.Name = "label_title1";
-            this.label_title1.Size = new System.Drawing.Size(209, 25);
+            this.label_title1.Size = new System.Drawing.Size(203, 25);
             this.label_title1.TabIndex = 87;
-            this.label_title1.Text = "Ultimate Creator Setup";
+            this.label_title1.Text = "Ultimate Creator Build";
             // 
             // pcase1
             // 
@@ -413,6 +416,7 @@
             // 
             // panelbuild2
             // 
+            this.panelbuild2.Controls.Add(this.label5);
             this.panelbuild2.Controls.Add(this.pcpu2);
             this.panelbuild2.Controls.Add(this.pgpu2);
             this.panelbuild2.Controls.Add(this.labelcase2);
@@ -451,7 +455,7 @@
             this.labelcase2.AutoSize = true;
             this.labelcase2.BackColor = System.Drawing.Color.White;
             this.labelcase2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelcase2.Location = new System.Drawing.Point(21, 347);
+            this.labelcase2.Location = new System.Drawing.Point(29, 336);
             this.labelcase2.Name = "labelcase2";
             this.labelcase2.Size = new System.Drawing.Size(193, 20);
             this.labelcase2.TabIndex = 89;
@@ -462,7 +466,7 @@
             this.labelgpu2.AutoSize = true;
             this.labelgpu2.BackColor = System.Drawing.Color.White;
             this.labelgpu2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelgpu2.Location = new System.Drawing.Point(21, 327);
+            this.labelgpu2.Location = new System.Drawing.Point(29, 316);
             this.labelgpu2.Name = "labelgpu2";
             this.labelgpu2.Size = new System.Drawing.Size(209, 20);
             this.labelgpu2.TabIndex = 88;
@@ -473,7 +477,7 @@
             this.labelcpu2.AutoSize = true;
             this.labelcpu2.BackColor = System.Drawing.Color.White;
             this.labelcpu2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelcpu2.Location = new System.Drawing.Point(21, 307);
+            this.labelcpu2.Location = new System.Drawing.Point(29, 296);
             this.labelcpu2.Name = "labelcpu2";
             this.labelcpu2.Size = new System.Drawing.Size(162, 20);
             this.labelcpu2.TabIndex = 87;
@@ -484,11 +488,11 @@
             this.label_title2.AutoSize = true;
             this.label_title2.BackColor = System.Drawing.Color.White;
             this.label_title2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_title2.Location = new System.Drawing.Point(20, 268);
+            this.label_title2.Location = new System.Drawing.Point(28, 268);
             this.label_title2.Name = "label_title2";
-            this.label_title2.Size = new System.Drawing.Size(212, 25);
+            this.label_title2.Size = new System.Drawing.Size(206, 25);
             this.label_title2.TabIndex = 87;
-            this.label_title2.Text = "Ultimate Gaming Setup";
+            this.label_title2.Text = "Ultimate Gaming Build";
             // 
             // pcase2
             // 
@@ -595,6 +599,28 @@
             this.kryptonButton3.TabIndex = 86;
             this.kryptonButton3.Values.Text = "";
             // 
+            // labprice2
+            // 
+            this.labprice2.AutoSize = true;
+            this.labprice2.BackColor = System.Drawing.Color.White;
+            this.labprice2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labprice2.Location = new System.Drawing.Point(263, 336);
+            this.labprice2.Name = "labprice2";
+            this.labprice2.Size = new System.Drawing.Size(55, 21);
+            this.labprice2.TabIndex = 90;
+            this.labprice2.Text = "$6446";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(263, 335);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 21);
+            this.label5.TabIndex = 91;
+            this.label5.Text = "$5525";
+            // 
             // welcomeform
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -678,5 +704,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton buildborder2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton5;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton6;
+        private System.Windows.Forms.Label labprice2;
+        private System.Windows.Forms.Label label5;
     }
 }

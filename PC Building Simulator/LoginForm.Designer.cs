@@ -263,7 +263,6 @@
             this.label_loger.TabIndex = 20;
             this.label_loger.Text = "The username or password you entered \r\nisn’t connected to an account. ";
             this.label_loger.Visible = false;
-            this.label_loger.Click += new System.EventHandler(this.label_emptu1_Click);
             // 
             // label_empu
             // 

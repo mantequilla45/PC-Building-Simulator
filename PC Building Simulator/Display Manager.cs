@@ -544,8 +544,41 @@ namespace PC_Building_Simulator
                     productpanel.FormBorderStyle = FormBorderStyle.None;
                     mainApp.panelmain.Controls.Add(productpanel);
                     productpanel.Show();
-                    DisposeAllMenuForms();
                     productMenuForm = productpanel;
+                    DisposeAllMenuForms();
+                    break;
+                case 22:
+                    mainApp.panelmain.Controls.Clear();
+                    mainApp.butt_home.Image = Properties.Resources.Home_icon_2;
+                    int buildIndex = 1;
+                    completedbuilds completedbuild = new completedbuilds(mainApp, buildIndex)
+                    {
+                        Dock = DockStyle.Fill,
+                        TopLevel = false,
+                        TopMost = true,
+                        FormBorderStyle = FormBorderStyle.None
+                    };
+
+                    mainApp.panelmain.Controls.Add(completedbuild);
+                    completedbuild.Show();
+                    DisposeAllMenuForms();
+                    break;
+
+                case 23:
+                    mainApp.panelmain.Controls.Clear();
+                    mainApp.butt_home.Image = Properties.Resources.Home_icon_2;
+                    buildIndex = 2;
+                    completedbuild = new completedbuilds(mainApp, buildIndex)
+                    {
+                        Dock = DockStyle.Fill,
+                        TopLevel = false,
+                        TopMost = true,
+                        FormBorderStyle = FormBorderStyle.None
+                    };
+
+                    mainApp.panelmain.Controls.Add(completedbuild);
+                    completedbuild.Show();
+                    DisposeAllMenuForms();
                     break;
 
                 default:
@@ -628,7 +661,7 @@ namespace PC_Building_Simulator
                 "Gigabyte B460M DS3H", "ASRock B450M Steel Legend", "MSI B560M Mortar WiFi",
                 "ASUS ROG Strix X570-I Gaming WiFi", "Gigabyte Z490 Aorus Elite", "MSI B460M Bazooka V2",
                 "ASRock B550 Phantom Gaming 4", "MSI MPG X570 Gaming Plus", "ASUS Prime B460M-A",
-                "Gigabyte B450M DS3H WIFI", "MSI B550M Mortar Micro ATX", "ASRock B460M Pro4"
+                "ASUS ROG Strix X670E-E Gaming WiFi", "MSI B550M Mortar Micro ATX", "ASRock B460M Pro4"
             };
 
             string price = strprice.Text;

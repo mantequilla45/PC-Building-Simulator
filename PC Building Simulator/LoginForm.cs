@@ -104,11 +104,6 @@ namespace PC_Building_Simulator
             }
             con.Close();
         }
-        
-        private void label_emptu1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void ckbx_showpass_CheckedChanged(object sender, EventArgs e)
         {

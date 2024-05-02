@@ -225,20 +225,12 @@ namespace PC_Building_Simulator
 
         private void HandlePanelClick(Panel panel)
         {
-            mainApp.panelmain.Controls.Clear();
-            mainApp.butt_home.Image = Properties.Resources.Home_icon_2;
             int buildIndex = Convert.ToInt32(panel.Tag);
 
-            completedbuilds completedbuild = new completedbuilds(mainApp, buildIndex)
-            {
-                Dock = DockStyle.Fill,
-                TopLevel = false,
-                TopMost = true,
-                FormBorderStyle = FormBorderStyle.None
-            };
-
-            mainApp.panelmain.Controls.Add(completedbuild);
-            completedbuild.Show();
+            if (buildIndex == 1)
+                displayManager.menuselect(22);
+            else if (buildIndex == 2)
+                displayManager.menuselect(23);
         }
 
     }

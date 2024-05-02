@@ -552,6 +552,7 @@ namespace PC_Building_Simulator
             switch (menuchoice)
             {
                 case 1:
+
                     if (mb_cpuSocket == "" || mb_cpuSocket == cpusocketype)
                     {
                         if (userCount > 0)
@@ -1714,7 +1715,7 @@ namespace PC_Building_Simulator
                         { "ASRock B550 Phantom Gaming 4", Properties.Resources.mb_ASRock_B550_Phantom_Gaming_4 },
                         { "MSI MPG X570 Gaming Plus", Properties.Resources.mb_MSI_MPG_X570_Gaming_Plus },
                         { "ASUS Prime B460M-A", Properties.Resources.mb_ASUS_Prime_B460M_A },
-                        { "Gigabyte B450M DS3H WIFI", Properties.Resources.mb_Gigabyte_B450M_DS3H_WIFI },
+                        { "ASUS ROG Strix X670E-E Gaming WiFi", Properties.Resources.mb_ASUS_ROG_Strix_X670E_E_Gaming_WiFi },
                         { "MSI B550M Mortar Micro ATX", Properties.Resources.mb_MSI_B550M_Mortar_Micro_ATX },
                         { "ASRock B460M Pro4", Properties.Resources.mb_ASRock_B460M_Pro4 }
                     };

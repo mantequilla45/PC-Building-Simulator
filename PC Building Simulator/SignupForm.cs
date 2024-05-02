@@ -292,10 +292,5 @@ namespace PC_Building_Simulator
                 txtbox_conpass2.PasswordChar = '•';
             }
         }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

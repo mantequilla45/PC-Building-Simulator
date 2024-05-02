@@ -1927,7 +1927,7 @@
             // 
             this.total_price.AutoSize = true;
             this.total_price.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.total_price.Location = new System.Drawing.Point(909, 642);
+            this.total_price.Location = new System.Drawing.Point(890, 642);
             this.total_price.Name = "total_price";
             this.total_price.Size = new System.Drawing.Size(19, 21);
             this.total_price.TabIndex = 135;

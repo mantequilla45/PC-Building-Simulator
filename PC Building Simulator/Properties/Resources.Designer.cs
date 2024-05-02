@@ -1873,6 +1873,16 @@ namespace PC_Building_Simulator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mb_ASUS_ROG_Strix_X670E_E_Gaming_WiFi {
+            get {
+                object obj = ResourceManager.GetObject("mb_ASUS_ROG_Strix_X670E_E_Gaming_WiFi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mb_EVGA_X570_Dark {
             get {
                 object obj = ResourceManager.GetObject("mb_EVGA_X570_Dark", resourceCulture);

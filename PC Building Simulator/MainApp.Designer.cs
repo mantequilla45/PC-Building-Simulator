@@ -93,11 +93,12 @@
             this.panelmain = new System.Windows.Forms.Panel();
             this.label_menu = new System.Windows.Forms.Label();
             this.but_guide = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.but_combuild = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.but_combuild1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.butt_refresh = new System.Windows.Forms.PictureBox();
             this.butt_home = new System.Windows.Forms.PictureBox();
             this.backicon = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.but_combuild2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.speakersicon2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speakersicon1)).BeginInit();
@@ -1162,67 +1163,67 @@
             this.but_guide.Values.Text = "Guide";
             this.but_guide.Click += new System.EventHandler(this.but_guide_Click);
             // 
-            // but_combuild
+            // but_combuild1
             // 
-            this.but_combuild.Location = new System.Drawing.Point(472, 0);
-            this.but_combuild.Name = "but_combuild";
-            this.but_combuild.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.but_combuild.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.but_combuild.OverrideDefault.Back.ColorAngle = 45F;
-            this.but_combuild.OverrideDefault.Border.Color1 = System.Drawing.Color.Gray;
-            this.but_combuild.OverrideDefault.Border.Color2 = System.Drawing.Color.Gray;
-            this.but_combuild.OverrideDefault.Border.ColorAngle = 45F;
-            this.but_combuild.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.but_combuild1.Location = new System.Drawing.Point(472, 0);
+            this.but_combuild1.Name = "but_combuild1";
+            this.but_combuild1.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.but_combuild1.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.but_combuild1.OverrideDefault.Back.ColorAngle = 45F;
+            this.but_combuild1.OverrideDefault.Border.Color1 = System.Drawing.Color.Gray;
+            this.but_combuild1.OverrideDefault.Border.Color2 = System.Drawing.Color.Gray;
+            this.but_combuild1.OverrideDefault.Border.ColorAngle = 45F;
+            this.but_combuild1.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_combuild.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.but_combuild.OverrideDefault.Border.Rounding = 18;
-            this.but_combuild.OverrideDefault.Border.Width = 1;
-            this.but_combuild.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.but_combuild.Size = new System.Drawing.Size(112, 34);
-            this.but_combuild.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.but_combuild.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.but_combuild.StateCommon.Back.ColorAngle = 45F;
-            this.but_combuild.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.but_combuild.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.but_combuild.StateCommon.Border.ColorAngle = 45F;
-            this.but_combuild.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.but_combuild1.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.but_combuild1.OverrideDefault.Border.Rounding = 18;
+            this.but_combuild1.OverrideDefault.Border.Width = 1;
+            this.but_combuild1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.but_combuild1.Size = new System.Drawing.Size(121, 34);
+            this.but_combuild1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.but_combuild1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.but_combuild1.StateCommon.Back.ColorAngle = 45F;
+            this.but_combuild1.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.but_combuild1.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.but_combuild1.StateCommon.Border.ColorAngle = 45F;
+            this.but_combuild1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_combuild.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.but_combuild.StateCommon.Border.Rounding = 18;
-            this.but_combuild.StateCommon.Border.Width = 1;
-            this.but_combuild.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Gray;
-            this.but_combuild.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.but_combuild.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_combuild.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.but_combuild.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.but_combuild.StatePressed.Back.ColorAngle = 130F;
-            this.but_combuild.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.but_combuild.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.but_combuild.StatePressed.Border.ColorAngle = 130F;
-            this.but_combuild.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.but_combuild1.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.but_combuild1.StateCommon.Border.Rounding = 18;
+            this.but_combuild1.StateCommon.Border.Width = 1;
+            this.but_combuild1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Gray;
+            this.but_combuild1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.but_combuild1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_combuild1.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.but_combuild1.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.but_combuild1.StatePressed.Back.ColorAngle = 130F;
+            this.but_combuild1.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.but_combuild1.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.but_combuild1.StatePressed.Border.ColorAngle = 130F;
+            this.but_combuild1.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_combuild.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.but_combuild.StatePressed.Border.Rounding = 18;
-            this.but_combuild.StatePressed.Border.Width = 1;
-            this.but_combuild.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.but_combuild.StateTracking.Back.Color1 = System.Drawing.Color.WhiteSmoke;
-            this.but_combuild.StateTracking.Back.Color2 = System.Drawing.Color.WhiteSmoke;
-            this.but_combuild.StateTracking.Back.ColorAngle = 45F;
-            this.but_combuild.StateTracking.Border.Color1 = System.Drawing.Color.Gray;
-            this.but_combuild.StateTracking.Border.Color2 = System.Drawing.Color.Gray;
-            this.but_combuild.StateTracking.Border.ColorAngle = 45F;
-            this.but_combuild.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.but_combuild1.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.but_combuild1.StatePressed.Border.Rounding = 18;
+            this.but_combuild1.StatePressed.Border.Width = 1;
+            this.but_combuild1.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.but_combuild1.StateTracking.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.but_combuild1.StateTracking.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.but_combuild1.StateTracking.Back.ColorAngle = 45F;
+            this.but_combuild1.StateTracking.Border.Color1 = System.Drawing.Color.Gray;
+            this.but_combuild1.StateTracking.Border.Color2 = System.Drawing.Color.Gray;
+            this.but_combuild1.StateTracking.Border.ColorAngle = 45F;
+            this.but_combuild1.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.but_combuild.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.but_combuild.StateTracking.Border.Rounding = 18;
-            this.but_combuild.StateTracking.Border.Width = 1;
-            this.but_combuild.TabIndex = 149;
-            this.but_combuild.Values.Text = "Completed Builds";
-            this.but_combuild.Click += new System.EventHandler(this.but_combuild_Click);
+            this.but_combuild1.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.but_combuild1.StateTracking.Border.Rounding = 18;
+            this.but_combuild1.StateTracking.Border.Width = 1;
+            this.but_combuild1.TabIndex = 149;
+            this.but_combuild1.Values.Text = "Completed Build #1";
+            this.but_combuild1.Click += new System.EventHandler(this.but_combuild1_Click);
             // 
             // butt_refresh
             // 
@@ -1273,14 +1274,77 @@
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
             // 
+            // but_combuild2
+            // 
+            this.but_combuild2.Location = new System.Drawing.Point(599, 0);
+            this.but_combuild2.Name = "but_combuild2";
+            this.but_combuild2.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.but_combuild2.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.but_combuild2.OverrideDefault.Back.ColorAngle = 45F;
+            this.but_combuild2.OverrideDefault.Border.Color1 = System.Drawing.Color.Gray;
+            this.but_combuild2.OverrideDefault.Border.Color2 = System.Drawing.Color.Gray;
+            this.but_combuild2.OverrideDefault.Border.ColorAngle = 45F;
+            this.but_combuild2.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_combuild2.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.but_combuild2.OverrideDefault.Border.Rounding = 18;
+            this.but_combuild2.OverrideDefault.Border.Width = 1;
+            this.but_combuild2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.but_combuild2.Size = new System.Drawing.Size(127, 34);
+            this.but_combuild2.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.but_combuild2.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.but_combuild2.StateCommon.Back.ColorAngle = 45F;
+            this.but_combuild2.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.but_combuild2.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.but_combuild2.StateCommon.Border.ColorAngle = 45F;
+            this.but_combuild2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_combuild2.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.but_combuild2.StateCommon.Border.Rounding = 18;
+            this.but_combuild2.StateCommon.Border.Width = 1;
+            this.but_combuild2.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Gray;
+            this.but_combuild2.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.but_combuild2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_combuild2.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.but_combuild2.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.but_combuild2.StatePressed.Back.ColorAngle = 130F;
+            this.but_combuild2.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.but_combuild2.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.but_combuild2.StatePressed.Border.ColorAngle = 130F;
+            this.but_combuild2.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_combuild2.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.but_combuild2.StatePressed.Border.Rounding = 18;
+            this.but_combuild2.StatePressed.Border.Width = 1;
+            this.but_combuild2.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.but_combuild2.StateTracking.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.but_combuild2.StateTracking.Back.Color2 = System.Drawing.Color.WhiteSmoke;
+            this.but_combuild2.StateTracking.Back.ColorAngle = 45F;
+            this.but_combuild2.StateTracking.Border.Color1 = System.Drawing.Color.Gray;
+            this.but_combuild2.StateTracking.Border.Color2 = System.Drawing.Color.Gray;
+            this.but_combuild2.StateTracking.Border.ColorAngle = 45F;
+            this.but_combuild2.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.but_combuild2.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.but_combuild2.StateTracking.Border.Rounding = 18;
+            this.but_combuild2.StateTracking.Border.Width = 1;
+            this.but_combuild2.TabIndex = 151;
+            this.but_combuild2.Values.Text = "Completed Build #2";
+            this.but_combuild2.Click += new System.EventHandler(this.but_combuild2_Click);
+            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1375, 807);
+            this.Controls.Add(this.but_combuild2);
             this.Controls.Add(this.but_guide);
-            this.Controls.Add(this.but_combuild);
+            this.Controls.Add(this.but_combuild1);
             this.Controls.Add(this.label_menu);
             this.Controls.Add(this.panelmain);
             this.Controls.Add(this.panel1);
@@ -1425,8 +1489,9 @@
         public System.Windows.Forms.Label userlabel;
         public System.Windows.Forms.PictureBox butt_home;
         public System.Windows.Forms.PictureBox pictureBox3;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton but_combuild;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton but_combuild1;
         public ComponentFactory.Krypton.Toolkit.KryptonButton but_guide;
         public System.Windows.Forms.PictureBox butt_refresh;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton but_combuild2;
     }
 }

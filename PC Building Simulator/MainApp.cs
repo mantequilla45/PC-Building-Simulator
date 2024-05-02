@@ -868,12 +868,20 @@ namespace PC_Building_Simulator
                 butt_refresh.Image = Properties.Resources.Refresh1;
         }
 
-        private void but_combuild_Click(object sender, EventArgs e)
+        private void but_combuild1_Click(object sender, EventArgs e)
         {
-            if (label_menu.Text == "Your Build")
-            {
 
-            }
+            butt_refresh.Image = Properties.Resources.Refresh2;
+            displayManager.menuselect(22);
+            displayManager.otherButton_Click(clicked);
+        }
+
+        private void but_combuild2_Click(object sender, EventArgs e)
+        {
+            butt_refresh.Image = Properties.Resources.Refresh1;
+            displayManager.menuselect(23);
+            displayManager.otherButton_Click(clicked);
+
         }
     }
 }

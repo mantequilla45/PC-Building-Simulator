@@ -1458,6 +1458,7 @@ namespace PC_Building_Simulator
         {
             mainApp.back = menu;
             mainApp.backicon.Visible = true;
+            mainApp.butt_refresh.Image = Properties.Resources.Refresh2;
             mainApp.label_menu.Text = $"{component} Specifications";
             mainApp.panelmain.Controls.Clear();
             productspecs productspecs = new productspecs(component, menu, mainApp, price)

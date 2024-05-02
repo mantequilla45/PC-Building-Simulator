@@ -322,7 +322,6 @@
             this.label_cracc.TabIndex = 25;
             this.label_cracc.Text = "Account created!";
             this.label_cracc.Visible = false;
-            this.label_cracc.Click += new System.EventHandler(this.label6_Click);
             // 
             // kryptonPalette
             // 
