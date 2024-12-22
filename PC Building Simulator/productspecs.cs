@@ -1418,7 +1418,7 @@ namespace PC_Building_Simulator
 
                         else
                         {
-                            string insertQuery = "INSERT INTO Builds ([Fans quantity], [Fans], [user], [Fan price]) VALUES (@quan, @fans, @Username, @price)";
+                            string insertQuery = "INSERT INTO Builds ([Fan quantity], [Fans], [user], [Fan price]) VALUES (@quan, @fans, @Username, @price)";
                             try
                             {
                                 dbManager.OpenConnection();
