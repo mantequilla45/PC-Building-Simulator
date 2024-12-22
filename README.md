@@ -61,11 +61,13 @@ PC BuildIt is a Windows Forms application developed in C# as part of an Object-O
 ## How to Use
 
 1. Launch the application.
-2. Select the "Build Your PC" option from the main menu.
-3. Browse components by category (e.g., CPU, GPU, RAM, Storage).
-4. Add components to your build and verify compatibility.
-5. View the cost breakdown of your build.
-6. Use the built-in guide to follow assembly steps.
+2. Log on to your account.
+3. Select the "Build Your PC" option from the main menu.
+4. Use the built-in guide to follow assembly steps.
+5. Browse components by category (e.g., CPU, GPU, RAM, Storage).
+6. Add components to your build and verify compatibility.
+7. View the cost breakdown of your build.
+8. Export (.xlsx) your build for reference.
 
 ## Screenshots
 ![Your Build Page](https://github.com/user-attachments/assets/a8d59441-b6d1-4a35-a68b-8368e1434da6)
